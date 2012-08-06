@@ -2,8 +2,6 @@ using FubuCore;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Core.Runtime;
 using FubuMVC.Diagnostics.Core.Configuration.Policies;
-using FubuMVC.Diagnostics.Runtime;
-using FubuMVC.Tests;
 using FubuTestingSupport;
 using NUnit.Framework;
 
@@ -11,8 +9,8 @@ namespace FubuMVC.Diagnostics.Tests.Configuration.Policies
 {
     public class DiagnosticsUrlAttributePolicyTester
     {
-        private DiagnosticsAttributeUrlPolicy _policy;
         private IConfigurationObserver _observer;
+        private DiagnosticsAttributeUrlPolicy _policy;
 
         [SetUp]
         public void Setup()
@@ -49,12 +47,15 @@ namespace FubuMVC.Diagnostics.Tests.Configuration.Policies
                 .ShouldEqual("{0}/my-extension".ToFormat(DiagnosticsUrls.ROOT));
         }
 
+        #region Nested type: InvalidClass
 
         public class InvalidClass
         {
             public void Execute()
             {
             }
-        }   
+        }
+
+        #endregion
     }
 }

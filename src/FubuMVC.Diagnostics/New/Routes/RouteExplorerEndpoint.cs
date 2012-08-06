@@ -11,7 +11,6 @@ using FubuMVC.Core.Resources.Conneg;
 using FubuMVC.Core.Security;
 using FubuMVC.Core.Urls;
 using FubuCore.Reflection;
-using FubuMVC.Diagnostics.Chrome;
 using FubuMVC.Diagnostics.Features.Chains;
 using FubuMVC.SlickGrid;
 
@@ -245,7 +244,6 @@ namespace FubuMVC.Diagnostics.New.Routes
 
     public class RouteExplorerEndpoint
     {
-        [WrapWith(typeof(ChromeBehavior))]
         public RouteExplorerModel get_routes_new()
         {
             return new RouteExplorerModel();

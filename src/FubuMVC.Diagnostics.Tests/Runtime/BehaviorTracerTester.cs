@@ -7,7 +7,6 @@ using FubuMVC.Diagnostics.Runtime.Tracing;
 using FubuTestingSupport;
 using NUnit.Framework;
 using Rhino.Mocks;
-using FubuMVC.Tests;
 
 namespace FubuMVC.Diagnostics.Tests.Runtime
 {

@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using System.Linq;
 using FubuCore.Binding.InMemory;
 using FubuMVC.Core;
+using FubuMVC.Core.Behaviors.Chrome;
 using FubuMVC.Core.Registration;
 using FubuMVC.Core.Resources.Conneg;
 using FubuMVC.Core.Security;
-using FubuMVC.Diagnostics.Chrome;
 using FubuMVC.Diagnostics.Core.Configuration.Policies;
 using FubuMVC.Diagnostics.Core.Infrastructure;
 using FubuMVC.Diagnostics.Features.Html.Preview;
@@ -36,9 +36,7 @@ namespace FubuMVC.Diagnostics
                 .UrlPolicy<DiagnosticsAttributeUrlPolicy>();
 
             Views
-                .TryToAttachWithDefaultConventions()
-                .RegisterActionLessViews(token => token.ViewModel == typeof (ChromeContent));
-
+                .TryToAttachWithDefaultConventions();
             Navigation<DiagnosticsMenu>();
 
             Configure(

@@ -1,6 +1,5 @@
 ﻿using FubuCore;
 using FubuMVC.Diagnostics.Core.Configuration.Policies;
-using FubuMVC.Tests;
 using FubuTestingSupport;
 using NUnit.Framework;
 
