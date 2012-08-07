@@ -80,6 +80,8 @@ end
 
 desc "Compiles the app"
 task :compile => [:restore_if_missing, :clean, :version] do
+  bottles("assembly-pak src/FubuMVC.Diagnostics -p FubuMVC.Diagnostics.csproj")
+
   MSBuildRunner.compile :compilemode => COMPILE_TARGET, :solutionfile => 'src/FubuMVC.Diagnostics.sln', :clrversion => CLR_TOOLS_VERSION
 
   target = COMPILE_TARGET.downcase

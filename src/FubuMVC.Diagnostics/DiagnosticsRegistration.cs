@@ -9,7 +9,7 @@ namespace FubuMVC.Diagnostics
         public void Configure(FubuRegistry registry)
         {
             registry.Policies.Add<ApplyTracing>();
-            registry.Import<AdvancedDiagnosticsRegistry>(DiagnosticUrlPolicy.DIAGNOSTICS_URL_ROOT);
+            registry.Import<DiagnosticsRegistry>(DiagnosticUrlPolicy.DIAGNOSTICS_URL_ROOT);
 
         }
     }

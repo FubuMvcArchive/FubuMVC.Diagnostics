@@ -1,4 +1,7 @@
 using FubuMVC.Core.UI.Navigation;
+using FubuMVC.Diagnostics.Dashboard;
+using FubuMVC.Diagnostics.Features.Packaging;
+using FubuMVC.Diagnostics.Requests;
 
 namespace FubuMVC.Diagnostics.Navigation
 {
@@ -9,11 +12,10 @@ namespace FubuMVC.Diagnostics.Navigation
             ForMenu(DiagnosticKeys.Main);
             //Add += MenuNode.ForInput<DashboardRequestModel>(DiagnosticKeys.Dashboard);
             //Add += MenuNode.ForInput<HtmlConventionsRequestModel>(DiagnosticKeys.HtmlConventions);
-            //Add += MenuNode.ForInput<PackageDiagnosticsRequestModel>(DiagnosticKeys.ApplicationStartup);
+            Add += MenuNode.ForInput<PackageDiagnosticsRequestModel>(DiagnosticKeys.ApplicationStartup);
 
-            // TODO -- add it back in!
-            //Add += MenuNode.ForInput<RequestExplorerRequestModel>(DiagnosticKeys.Requests);
-            //Add += MenuNode.ForInput<DefaultRouteRequestModel>(DiagnosticKeys.Routes);
+            Add += MenuNode.ForInput<RequestsQuery>(DiagnosticKeys.Requests);
+            Add += MenuNode.ForInput<RoutesRequest>(DiagnosticKeys.Routes);
         }
     }
 

@@ -42,8 +42,11 @@
     <Reference Include="FubuLocalization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FubuLocalization.0.9.5.70\lib\FubuLocalization.dll</HintPath>
     </Reference>
-    <Reference Include="FubuMVC.Core, Version=0.9.8.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FubuMVC.References.0.9.8.1080\lib\net40\FubuMVC.Core.dll</HintPath>
+    <Reference Include="FubuMVC.Core">
+      <HintPath>..\packages\FubuMVC.References.0.9.8.1081\lib\net40\FubuMVC.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FubuMVC.JQueryUI">
+      <HintPath>..\packages\FubuMVC.JQueryUI.0.5.0.15\lib\net40\FubuMVC.JQueryUI.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.SlickGrid, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -53,7 +56,7 @@
       <HintPath>..\packages\FubuMVC.Spark.0.9.8.1080\lib\net40\FubuMVC.Spark.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.StructureMap">
-      <HintPath>..\packages\FubuMVC.References.0.9.8.1080\lib\net40\FubuMVC.StructureMap.dll</HintPath>
+      <HintPath>..\packages\FubuMVC.References.0.9.8.1081\lib\net40\FubuMVC.StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.TwitterBootstrap, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -93,35 +96,9 @@
     <Content Include="Content\Images\filter_wrap_right.gif" />
     <Content Include="Content\Images\fubumvc.png" />
     <Content Include="Content\Images\pre_code_bg_blk.gif" />
-    <Content Include="Content\Scripts\diagnostics\bootstrap-alert.js" />
-    <Content Include="Content\Scripts\diagnostics\bootstrap-button.js" />
-    <Content Include="Content\Scripts\diagnostics\bootstrap-carousel.js" />
-    <Content Include="Content\Scripts\diagnostics\bootstrap-collapse.js" />
-    <Content Include="Content\Scripts\diagnostics\bootstrap-dropdown.js" />
-    <Content Include="Content\Scripts\diagnostics\bootstrap-modal.js" />
-    <Content Include="Content\Scripts\diagnostics\bootstrap-popover.js" />
-    <Content Include="Content\Scripts\diagnostics\bootstrap-scrollspy.js" />
-    <Content Include="Content\Scripts\diagnostics\bootstrap-tab.js" />
-    <Content Include="Content\Scripts\diagnostics\bootstrap-tooltip.js" />
-    <Content Include="Content\Scripts\diagnostics\bootstrap-transition.js" />
-    <Content Include="Content\Scripts\diagnostics\bootstrap-typeahead.js" />
     <Content Include="Content\Scripts\diagnostics\jquery-1.7.min.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery-ui-1.8.20.custom.min.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery.event.drag-2.0.min.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery.event.drop-2.0.min.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery.qtip.js" />
-    <Content Include="Content\Scripts\diagnostics\slick.core.js" />
-    <Content Include="Content\Scripts\diagnostics\slick.formatters.js" />
-    <Content Include="Content\Scripts\diagnostics\slick.grid.js" />
-    <Content Include="Content\Scripts\diagnostics\SlickGridActivator.js" />
     <Content Include="Content\Scripts\diagnostics\underscore-min.js" />
-    <Content Include="Content\Scripts\diagnostics\bootstrap-alerts.js" />
-    <Content Include="Content\Scripts\diagnostics\bootstrap-tabs.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\jquery.treeview.js" />
-    <Content Include="Content\Scripts\diagnostics\prettyprint.js" />
     <Content Include="Content\Scripts\diagnostics\requests.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\jquery.hotkeys.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\jquery.tmpl.js" />
     <Content Include="Content\Scripts\diagnostics\json2.js" />
     <Content Include="Content\Scripts\diagnostics\knockout-1.1.2.js" />
     <Content Include="Content\Styles\diagnostics\bootstrap.min.css" />
@@ -173,7 +150,7 @@
     <None Include="Chrome\Chrome.spark" />
     <None Include="Features\Html\Html.spark" />
     <None Include="Features\Html\Preview\Preview.spark" />
-    <None Include="Features\Dashboard\Dashboard.spark" />
+    <None Include="Dashboard\Dashboard.spark" />
     <None Include="Features\Packaging\Packaging.spark" />
     <None Include="Features\Requests\Requests.spark">
       <SubType>Designer</SubType>
@@ -186,40 +163,6 @@
     <None Include="Shared\Application.spark" />
     <Content Include="Content\Images\block.png" />
     <Content Include="Content\Images\logo.png" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-bg.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-bg1251.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-cat.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-cn.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-cs.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-da.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-de.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-el.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-en.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-es.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-fa.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-fi.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-fr.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-gl.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-he.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-hu.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-is.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-it.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-ja.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-nl.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-no.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-pl.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-pt-br.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-pt.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-ro.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-ru.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-sk.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-sr.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-sv.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-tr.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\i18n\grid.locale-ua.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\jquery-ui-1.8.10.custom.min.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\jquery.jqGrid.min.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery\jquery.metadata.js" />
     <Content Include="Content\Scripts\diagnostics\routes.js" />
     <Content Include="Content\Styles\diagnostics\default.css" />
     <Content Include="Content\Styles\diagnostics\jquery\images\bg_fallback.png" />
@@ -275,15 +218,15 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Core\Configuration\Policies\DiagnosticsAttributeUrlPolicy.cs" />
-    <Compile Include="Core\Configuration\Policies\DiagnosticsUrls.cs" />
+    <Compile Include="Chrome\DashboardChrome.cs" />
     <Compile Include="Core\CoreExtensions.cs" />
     <Compile Include="Core\Extensions\TagExtensions.cs" />
     <Compile Include="Core\Infrastructure\DiagnosticsDebugCallHandler.cs" />
     <Compile Include="Navigation\DiagnosticKeys.cs" />
-    <Compile Include="Navigation\DiagnosticNavigationPageExtensions.cs" />
     <Compile Include="Navigation\DiagnosticsMenu.cs" />
     <Compile Include="NoDiagnosticsAttribute.cs" />
+    <Compile Include="Requests\RequestsEndpoint.cs" />
+    <Compile Include="Routes\RequestsEndpoint.cs" />
     <Compile Include="Runtime\ApplyTracing.cs" />
     <Compile Include="Runtime\Assets\BasicAssetDiagnostics.cs" />
     <Compile Include="Runtime\BehaviorFinish.cs" />
@@ -330,18 +273,17 @@
     <Compile Include="Features\Html\Preview\PreviewModelActivator.cs" />
     <Compile Include="Features\Html\Preview\PreviewModelTypeResolver.cs" />
     <Compile Include="Features\Html\Preview\PropertySourceGenerator.cs" />
-    <Compile Include="Features\Dashboard\DashboardModel.cs" />
-    <Compile Include="Features\Dashboard\DashboardRequestModel.cs" />
-    <Compile Include="Features\Dashboard\GetHandler.cs" />
+    <Compile Include="Dashboard\DashboardModel.cs" />
+    <Compile Include="Dashboard\DashboardRequestModel.cs" />
+    <Compile Include="Dashboard\DashboardEndpoint.cs" />
     <Compile Include="Features\DiagnosticsFeatures.cs" />
     <Compile Include="Features\Html\Preview\PostHandler.cs" />
-    <Compile Include="Features\Packaging\GetHandler.cs" />
+    <Compile Include="Features\Packaging\PackageLogEndpoint.cs" />
     <Compile Include="Features\Packaging\PackageDiagnosticsLogModel.cs" />
     <Compile Include="Features\Packaging\PackageDiagnosticsModel.cs" />
     <Compile Include="Features\Packaging\PackageDiagnosticsRequestModel.cs" />
     <Compile Include="Features\Requests\RecordedRequestRequestModel.cs" />
-    <Compile Include="AdvancedDiagnosticsRegistry.cs" />
-    <Compile Include="FubuDiagnosticsUrlAttribute.cs" />
+    <Compile Include="DiagnosticsRegistry.cs" />
     <Compile Include="DiagnosticsException.cs" />
     <Compile Include="New\Routes\RouteExplorerEndpoint.cs" />
   </ItemGroup>
