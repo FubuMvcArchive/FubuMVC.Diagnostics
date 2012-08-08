@@ -8,7 +8,7 @@
 <content:rightColumn>
   <h2>Welcome to FubuMVC!</h2>
   <h3 class="subheader">The MVC framework that gets out of your way</h3>
-  <p>You are viewing the Advanced Diagnostics package that provides detailed insight into the <a href="${this.Urls.UrlFor(new DefaultRouteRequestModel())}">configuration of your application</a>.</p>
+  <p>You are viewing the Advanced Diagnostics package that provides detailed insight into the configuration of your application.</p>
   <hr />
   <h3>Getting started</h3>
   <h4 class="subheader">Some tips on where to go from here</h4>

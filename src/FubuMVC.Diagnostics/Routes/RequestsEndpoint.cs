@@ -1,6 +1,6 @@
 using HtmlTags;
 
-namespace FubuMVC.Diagnostics.Requests
+namespace FubuMVC.Diagnostics.Routes
 {
     public class RoutesEndpoint
     {

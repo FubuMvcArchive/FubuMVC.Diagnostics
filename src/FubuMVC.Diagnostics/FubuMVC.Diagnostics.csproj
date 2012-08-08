@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bottles">
-      <HintPath>..\packages\Bottles.0.9.1.328\lib\Bottles.dll</HintPath>
+      <HintPath>..\packages\Bottles.0.9.1.329\lib\Bottles.dll</HintPath>
     </Reference>
     <Reference Include="FubuCore, Version=0.9.9.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FubuCore.0.9.9.172\lib\FubuCore.dll</HintPath>
@@ -101,56 +101,20 @@
     <Content Include="Content\Scripts\diagnostics\requests.js" />
     <Content Include="Content\Scripts\diagnostics\json2.js" />
     <Content Include="Content\Scripts\diagnostics\knockout-1.1.2.js" />
-    <Content Include="Content\Styles\diagnostics\bootstrap.min.css" />
     <Content Include="Content\Styles\chains\view.css" />
-    <Content Include="Content\Styles\diagnostics\bootstrap.overrides.css" />
-    <Content Include="Content\Styles\diagnostics\examples.css" />
-    <Content Include="Content\Styles\diagnostics\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Content\Styles\diagnostics\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Content\Styles\diagnostics\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Content\Styles\diagnostics\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Content\Styles\diagnostics\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Content\Styles\diagnostics\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Content\Styles\diagnostics\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Content\Styles\diagnostics\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Content\Styles\diagnostics\images\ui-icons_222222_256x240.png" />
-    <Content Include="Content\Styles\diagnostics\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Content\Styles\diagnostics\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\Styles\diagnostics\images\ui-icons_888888_256x240.png" />
-    <Content Include="Content\Styles\diagnostics\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Content\Styles\diagnostics\jquery.qtip.css" />
-    <Content Include="Content\Styles\diagnostics\slick-default-theme.css" />
-    <Content Include="Content\Styles\diagnostics\slick.grid.css" />
-    <Content Include="Content\Styles\diagnostics\spike.js" />
-    <Content Include="Content\Styles\diagnostics\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
-    <Content Include="Content\Styles\diagnostics\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
-    <Content Include="Content\Styles\diagnostics\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
-    <Content Include="Content\Styles\diagnostics\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
-    <Content Include="Content\Styles\diagnostics\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
-    <Content Include="Content\Styles\diagnostics\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Content\Styles\diagnostics\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
-    <Content Include="Content\Styles\diagnostics\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
-    <Content Include="Content\Styles\diagnostics\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
-    <Content Include="Content\Styles\diagnostics\ui-lightness\images\ui-icons_222222_256x240.png" />
-    <Content Include="Content\Styles\diagnostics\ui-lightness\images\ui-icons_228ef1_256x240.png" />
-    <Content Include="Content\Styles\diagnostics\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
-    <Content Include="Content\Styles\diagnostics\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
-    <Content Include="Content\Styles\diagnostics\ui-lightness\images\ui-icons_ffffff_256x240.png" />
-    <Content Include="Content\Styles\diagnostics\ui-lightness\jquery-ui-1.8.20.custom.css" />
     <Content Include="Content\Styles\diagnostics\html\preview.css" />
     <Content Include="Content\Styles\diagnostics\html\selector.css" />
-    <Content Include="Content\Styles\diagnostics\img\glyphicons-halflings-white.png" />
-    <Content Include="Content\Styles\diagnostics\img\glyphicons-halflings.png" />
-    <Content Include="Content\Styles\diagnostics\jquery\ui.jqgrid.overrides.css" />
     <Content Include="Content\Styles\diagnostics\requests\view.css" />
-    <Content Include="diagnostics.script.config">
+    <Content Include="diagnostics.asset.config">
       <SubType>Designer</SubType>
     </Content>
     <None Include=".package-manifest" />
     <None Include="Chrome\Chrome.spark" />
     <None Include="Features\Html\Html.spark" />
     <None Include="Features\Html\Preview\Preview.spark" />
-    <None Include="Dashboard\Dashboard.spark" />
+    <None Include="Dashboard\Dashboard.spark">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Features\Packaging\Packaging.spark" />
     <None Include="Features\Requests\Requests.spark">
       <SubType>Designer</SubType>
@@ -165,14 +129,6 @@
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Scripts\diagnostics\routes.js" />
     <Content Include="Content\Styles\diagnostics\default.css" />
-    <Content Include="Content\Styles\diagnostics\jquery\images\bg_fallback.png" />
-    <Content Include="Content\Styles\diagnostics\jquery\images\icon_sprite.png" />
-    <Content Include="Content\Styles\diagnostics\jquery\images\progress_bar.gif" />
-    <Content Include="Content\Styles\diagnostics\jquery\images\slider_handles.png" />
-    <Content Include="Content\Styles\diagnostics\jquery\images\ui-icons_222222_256x240.png" />
-    <Content Include="Content\Styles\diagnostics\jquery\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\Styles\diagnostics\jquery\jquery-ui-1.8.7.custom.css" />
-    <Content Include="Content\Styles\diagnostics\jquery\ui.jqgrid.css" />
     <Content Include="Content\Styles\diagnostics\master.css" />
     <Content Include="Shared\bindings.xml">
       <SubType>Designer</SubType>
@@ -204,7 +160,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Shared\BehaviorDetails.spark" />
-    <None Include="Shared\_global.spark" />
+    <None Include="Shared\_global.spark">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="web.config" />
     <Content Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>

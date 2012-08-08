@@ -27,7 +27,8 @@ namespace FubuMVC.Diagnostics
             //    .IncludeType<BasicAssetDiagnostics>();
 
             Views
-                .TryToAttachWithDefaultConventions();
+                .TryToAttachWithDefaultConventions()
+                .RegisterActionLessViews(x => x.ViewModel == typeof(DashboardChrome)); // TODO -- hate this.  Make it unnecessary.
 
             Navigation<DiagnosticsMenu>();
 

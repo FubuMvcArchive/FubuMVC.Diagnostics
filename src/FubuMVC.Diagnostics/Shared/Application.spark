@@ -8,7 +8,6 @@
     <meta name="author" content="FubuMVC" />
 	<title><use content="title"/> | FubuMVC Diagnostics</title>
 	<Stylesheet href="diagnostics/default.css" />
-	<Script src="diagnostics" />
 	<use content="head"/>
 	<Styles />
 </head>
