@@ -1,4 +1,7 @@
 ﻿<use namespace="FubuMVC.Diagnostics" />
+<use namespace="FubuMVC.Diagnostics.Navigation" />
+<use namespace="FubuMVC.Diagnostics.Navigation" />
+<use namespace="FubuMVC.TwitterBootstrap" />
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,24 +10,27 @@
 	<meta name="description" content="FubuMVC Advanced Diagnostics" />
     <meta name="author" content="FubuMVC" />
 	<title><use content="title"/> | FubuMVC Diagnostics</title>
+	#{this.Asset('twitterbootstrap');}
 	<Stylesheet href="diagnostics/default.css" />
 	<use content="head"/>
 	<Styles />
 </head>
 <body>
-	<div class="topbar">
-		<div class="topbar-inner">
-			<div class="container-fluid">
-				<a class="brand" href="${this.Urls.UrlFor(new DashboardRequestModel())}">
-					<Image src="fubumvc.png" />
-				</a>
-				!{this.DiagnosticsMenu()}
-			</div>
-		</div>
-	</div>
+  <div id="diagnostic-menu" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="brand" href="${this.Urls.UrlFor(new DashboardRequestModel())}">
+          <Image src="fubumvc.png" />
+        </a>
+        !{this.TwitterNavBarFor(DiagnosticKeys.Main)}
+      </div>
+    </div>
+  </div>
+
 	<div id="Content">
 		<use content="main" />
 	</div>
+  
 	<footer>
 		<div class="container">
 			<p style="margin-bottom:20px"><span>Powered by:</span> <Image src="fubumvc.png" /> <small>${this.FubuVersion()}</small></p>

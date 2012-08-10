@@ -1,0 +1,6 @@
+﻿<use master="" />
+<viewdata model="FubuCore.Descriptions.Description" />
+
+<b>!{Model.Title}</b>
+<p>!{Model.ShortDescription}</p>
+<p>!{Model.LongDescription}</p>

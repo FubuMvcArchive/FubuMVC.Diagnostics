@@ -1,4 +1,6 @@
-﻿<content:main>
+﻿<use master="" />
+
+<content:main>
 	<div class="container-fluid">
 		<div class="sidebar">
 			<div class="well">

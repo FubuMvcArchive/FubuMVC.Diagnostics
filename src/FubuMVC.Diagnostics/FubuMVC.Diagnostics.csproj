@@ -34,33 +34,31 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bottles">
-      <HintPath>..\packages\Bottles.0.9.1.329\lib\Bottles.dll</HintPath>
+      <HintPath>..\packages\Bottles.0.9.1.334\lib\Bottles.dll</HintPath>
     </Reference>
-    <Reference Include="FubuCore, Version=0.9.9.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FubuCore.0.9.9.172\lib\FubuCore.dll</HintPath>
+    <Reference Include="FubuCore">
+      <HintPath>..\packages\FubuCore.0.9.9.174\lib\FubuCore.dll</HintPath>
     </Reference>
-    <Reference Include="FubuLocalization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FubuLocalization.0.9.5.70\lib\FubuLocalization.dll</HintPath>
+    <Reference Include="FubuLocalization">
+      <HintPath>..\packages\FubuLocalization.0.9.5.72\lib\FubuLocalization.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.Core">
-      <HintPath>..\packages\FubuMVC.References.0.9.8.1083\lib\net40\FubuMVC.Core.dll</HintPath>
+      <HintPath>..\packages\FubuMVC.References.0.9.8.1092\lib\net40\FubuMVC.Core.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.JQueryUI">
-      <HintPath>..\packages\FubuMVC.JQueryUI.0.5.0.15\lib\net40\FubuMVC.JQueryUI.dll</HintPath>
+      <HintPath>..\packages\FubuMVC.JQueryUI.0.5.0.24\lib\net40\FubuMVC.JQueryUI.dll</HintPath>
     </Reference>
-    <Reference Include="FubuMVC.SlickGrid, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\FubuMVC.SlickGrid.0.0.0.13\lib\net40\FubuMVC.SlickGrid.dll</HintPath>
+    <Reference Include="FubuMVC.SlickGrid">
+      <HintPath>..\packages\FubuMVC.SlickGrid.0.0.0.23\lib\net40\FubuMVC.SlickGrid.dll</HintPath>
     </Reference>
-    <Reference Include="FubuMVC.Spark, Version=0.9.8.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FubuMVC.Spark.0.9.8.1080\lib\net40\FubuMVC.Spark.dll</HintPath>
+    <Reference Include="FubuMVC.Spark">
+      <HintPath>..\packages\FubuMVC.Spark.0.9.8.1092\lib\net40\FubuMVC.Spark.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.StructureMap">
-      <HintPath>..\packages\FubuMVC.References.0.9.8.1083\lib\net40\FubuMVC.StructureMap.dll</HintPath>
+      <HintPath>..\packages\FubuMVC.References.0.9.8.1092\lib\net40\FubuMVC.StructureMap.dll</HintPath>
     </Reference>
-    <Reference Include="FubuMVC.TwitterBootstrap, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\FubuMVC.TwitterBootstrap.0.0.0.15\lib\net40\FubuMVC.TwitterBootstrap.dll</HintPath>
+    <Reference Include="FubuMVC.TwitterBootstrap">
+      <HintPath>..\packages\FubuMVC.TwitterBootstrap.0.0.0.26\lib\net40\FubuMVC.TwitterBootstrap.dll</HintPath>
     </Reference>
     <Reference Include="HtmlTags, Version=1.1.0.94, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -110,6 +108,7 @@
     </Content>
     <None Include=".package-manifest" />
     <None Include="Chrome\Chrome.spark" />
+    <Content Include="Content\Styles\diagnostics\bootstrap.overrides.css" />
     <None Include="Features\Html\Html.spark" />
     <None Include="Features\Html\Preview\Preview.spark" />
     <None Include="Dashboard\Dashboard.spark">
@@ -124,7 +123,9 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Shared\Application.spark" />
+    <None Include="Shared\Application.spark">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Content\Images\block.png" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Scripts\diagnostics\routes.js" />
@@ -170,6 +171,8 @@
     <Content Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </Content>
+    <None Include="Visualization\BehaviorNode.spark" />
+    <None Include="Visualization\Description.spark" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\CommonAssemblyInfo.cs">
@@ -244,6 +247,7 @@
     <Compile Include="DiagnosticsRegistry.cs" />
     <Compile Include="DiagnosticsException.cs" />
     <Compile Include="New\Routes\RouteExplorerEndpoint.cs" />
+    <Compile Include="Visualization\IVisualizer.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

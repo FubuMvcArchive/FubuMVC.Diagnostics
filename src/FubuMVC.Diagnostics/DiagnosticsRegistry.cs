@@ -1,4 +1,6 @@
+using System;
 using FubuCore.Binding.InMemory;
+using FubuCore.Descriptions;
 using FubuMVC.Core;
 using FubuMVC.Core.Registration;
 using FubuMVC.Core.Registration.Conventions;
@@ -11,6 +13,7 @@ using FubuMVC.Diagnostics.Navigation;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.Diagnostics.Runtime.Assets;
 using FubuMVC.Diagnostics.Runtime.Tracing;
+using FubuMVC.Diagnostics.Visualization;
 
 namespace FubuMVC.Diagnostics
 {
@@ -28,17 +31,13 @@ namespace FubuMVC.Diagnostics
 
             Views
                 .TryToAttachWithDefaultConventions()
-                .RegisterActionLessViews(x => x.ViewModel == typeof(DashboardChrome)); // TODO -- hate this.  Make it unnecessary.
+                .RegisterActionLessViews(x => x.ViewModel == typeof(DashboardChrome))
+                .RegisterActionLessViews(x => x.ViewModel == typeof(Description))
+                .RegisterActionLessViews(x => x.ViewModel == typeof(BehaviorNodeViewModel)); // TODO -- hate this.  Make it unnecessary.
 
-            Navigation<DiagnosticsMenu>();
+            
 
-            ApplyConvention<NavigationRootPolicy>(x =>
-            {
-                x.ForKey(DiagnosticKeys.Main);
-                x.WrapWithChrome<DashboardChrome>();
 
-                x.Alter(chain => chain.Route.Prepend("_fubu"));
-            });
         }
 
         private void setupDiagnosticServices()
@@ -75,6 +74,22 @@ namespace FubuMVC.Diagnostics
                         .AddAllTypesOf<IPreviewModelDecorator>();
                 });
             });
+        }
+    }
+
+    public class DiagnosticsChromeExtension : IFubuRegistryExtension
+    {
+        public void Configure(FubuRegistry registry)
+        {
+            registry.ApplyConvention<NavigationRootPolicy>(x =>
+            {
+                x.ForKey(DiagnosticKeys.Main);
+                x.WrapWithChrome<DashboardChrome>();
+
+                x.Alter(chain => chain.Route.Prepend("_fubu"));
+            });
+
+            registry.Navigation<DiagnosticsMenu>();
         }
     }
 }
