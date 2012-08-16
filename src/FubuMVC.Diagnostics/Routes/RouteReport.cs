@@ -1,55 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using FubuCore;
 using FubuCore.Descriptions;
-using FubuMVC.Core;
-using FubuMVC.Core.Registration;
+using FubuCore.Reflection;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Core.Resources.Conneg;
 using FubuMVC.Core.Security;
 using FubuMVC.Core.Urls;
-using FubuCore.Reflection;
-using FubuMVC.Diagnostics.Features.Chains;
-using FubuMVC.SlickGrid;
+using FubuMVC.Diagnostics.Chains;
 
-namespace FubuMVC.Diagnostics.New.Routes
+namespace FubuMVC.Diagnostics.Routes
 {
-    public class RouteQuery
-    {
-        
-    }
-
-    public class RouteSource : IGridDataSource<RouteReport, RouteQuery>
-    {
-        private readonly BehaviorGraph _graph;
-        private readonly IUrlRegistry _urls;
-
-        public RouteSource(BehaviorGraph graph, IUrlRegistry urls)
-        {
-            _graph = graph;
-            _urls = urls;
-        }
-
-        public IEnumerable<RouteReport> GetData(RouteQuery query)
-        {
-            return _graph.Behaviors.Select(x => new RouteReport(x, _urls));
-        }
-    }
-
-    public class RoutesGrid : GridDefinition<RouteReport>
-    {
-        public RoutesGrid()
-        {
-            SourceIs<RouteSource>();
-
-            Column(x => x.Route).Width(width:300);
-            Column(x => x.Constraints).Width(width: 100);
-            Column(x => x.Action).Formatter(SlickGridFormatter.StringArray);
-        }
-    }
-
     public class RouteReport
     {
         private readonly BehaviorChain _chain;
@@ -66,7 +28,7 @@ namespace FubuMVC.Diagnostics.New.Routes
         {
             get
             {
-                // FubuContinuation does not count!
+                // TODO -- FubuContinuation does not count!
                 return _chain.ResourceType();
             }
         }
@@ -233,20 +195,5 @@ namespace FubuMVC.Diagnostics.New.Routes
                 return _chain.UrlCategory.Category;
             }
         }
-    }
-
-
-
-    public class RouteExplorerModel
-    {
-        
-    }
-
-    public class RouteExplorerEndpoint
-    {
-        public RouteExplorerModel get_routes_new()
-        {
-            return new RouteExplorerModel();
-        } 
     }
 }

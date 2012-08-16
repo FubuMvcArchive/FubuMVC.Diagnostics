@@ -107,6 +107,7 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include=".package-manifest" />
+    <None Include="Chains\Chain.spark" />
     <None Include="Chrome\Chrome.spark" />
     <Content Include="Content\Styles\diagnostics\bootstrap.overrides.css" />
     <None Include="Features\Html\Html.spark" />
@@ -118,7 +119,9 @@
     <None Include="Features\Requests\Requests.spark">
       <SubType>Designer</SubType>
     </None>
-    <None Include="New\Routes\Routes.spark" />
+    <None Include="Routes\Routes.spark">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Features\Requests\View\View.spark" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
@@ -134,33 +137,30 @@
     <Content Include="Shared\bindings.xml">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Shared\AuthorizationReport.spark" />
-    <None Include="Shared\BehaviorStart.spark" />
-    <None Include="Shared\BehaviorFinish.spark" />
-    <None Include="Shared\Route.spark" />
-    <None Include="Shared\Fluid.spark" />
-    <None Include="Shared\TwoColumn.spark" />
-    <None Include="Shared\RequestLogEntry.spark" />
-    <None Include="Shared\FieldAccessReport.spark" />
-    <None Include="Shared\HttpStatusReport.spark" />
-    <None Include="Shared\RedirectReport.spark" />
-    <None Include="Shared\ValueConverterSelection.spark">
+    <None Include="Shared\Old\AuthorizationReport.spark" />
+    <None Include="Shared\Old\BehaviorStart.spark" />
+    <None Include="Shared\Old\BehaviorFinish.spark" />
+    <None Include="Shared\Old\Route.spark" />
+    <None Include="Shared\Old\Fluid.spark" />
+    <None Include="Shared\Old\TwoColumn.spark" />
+    <None Include="Shared\Old\RequestLogEntry.spark" />
+    <None Include="Shared\Old\FieldAccessReport.spark" />
+    <None Include="Shared\Old\HttpStatusReport.spark" />
+    <None Include="Shared\Old\RedirectReport.spark" />
+    <None Include="Shared\Old\ValueConverterSelection.spark">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Shared\PropertyBinderSelection.spark" />
-    <None Include="Shared\ModelBinderSelection.spark" />
-    <None Include="Shared\ModelBindingException.spark" />
-    <None Include="Shared\ModelBindingKey.spark" />
-    <None Include="Shared\FileOutputReport.spark" />
-    <None Include="Shared\ExceptionReport.spark" />
-    <None Include="Shared\Html.spark" />
-    <None Include="Shared\SetValueReport.spark" />
-    <None Include="Shared\OutputReport.spark" />
-    <None Include="Shared\ModelBindingReport.spark" />
-    <None Include="Shared\NavigationMenu.spark">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Shared\BehaviorDetails.spark" />
+    <None Include="Shared\Old\PropertyBinderSelection.spark" />
+    <None Include="Shared\Old\ModelBinderSelection.spark" />
+    <None Include="Shared\Old\ModelBindingException.spark" />
+    <None Include="Shared\Old\ModelBindingKey.spark" />
+    <None Include="Shared\Old\FileOutputReport.spark" />
+    <None Include="Shared\Old\ExceptionReport.spark" />
+    <None Include="Shared\Old\Html.spark" />
+    <None Include="Shared\Old\SetValueReport.spark" />
+    <None Include="Shared\Old\OutputReport.spark" />
+    <None Include="Shared\Old\ModelBindingReport.spark" />
+    <None Include="Shared\Old\BehaviorDetails.spark" />
     <None Include="Shared\_global.spark">
       <SubType>Designer</SubType>
     </None>
@@ -179,6 +179,7 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Chains\ChainEndpoint.cs" />
     <Compile Include="Chrome\DashboardChrome.cs" />
     <Compile Include="Core\CoreExtensions.cs" />
     <Compile Include="Core\Extensions\TagExtensions.cs" />
@@ -187,7 +188,11 @@
     <Compile Include="Navigation\DiagnosticsMenu.cs" />
     <Compile Include="NoDiagnosticsAttribute.cs" />
     <Compile Include="Requests\RequestsEndpoint.cs" />
-    <Compile Include="Routes\RequestsEndpoint.cs" />
+    <Compile Include="Routes\RouteExplorerModel.cs" />
+    <Compile Include="Routes\RouteQuery.cs" />
+    <Compile Include="Routes\RouteReport.cs" />
+    <Compile Include="Routes\RoutesGrid.cs" />
+    <Compile Include="Routes\RouteSource.cs" />
     <Compile Include="Runtime\ApplyTracing.cs" />
     <Compile Include="Runtime\Assets\BasicAssetDiagnostics.cs" />
     <Compile Include="Runtime\BehaviorFinish.cs" />
@@ -211,7 +216,7 @@
     <Compile Include="Runtime\Tracing\DiagnosticBehavior.cs" />
     <Compile Include="Runtime\Tracing\DiagnosticUrlPolicy.cs" />
     <Compile Include="Runtime\Tracing\RecordingAuthorizationPolicyExecutor.cs" />
-    <Compile Include="Features\Chains\ChainRequest.cs" />
+    <Compile Include="Chains\ChainRequest.cs" />
     <Compile Include="Features\Html\HtmlConventionsPreviewRequestModel.cs" />
     <Compile Include="Features\Html\HtmlConventionsPreviewViewModel.cs" />
     <Compile Include="Features\Html\HtmlConventionsRequestModel.cs" />
@@ -246,7 +251,7 @@
     <Compile Include="Features\Requests\RecordedRequestRequestModel.cs" />
     <Compile Include="DiagnosticsRegistry.cs" />
     <Compile Include="DiagnosticsException.cs" />
-    <Compile Include="New\Routes\RouteExplorerEndpoint.cs" />
+    <Compile Include="Routes\RouteExplorerEndpoint.cs" />
     <Compile Include="Visualization\IVisualizer.cs" />
   </ItemGroup>
   <ItemGroup />

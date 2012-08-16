@@ -1,9 +1,6 @@
-<use master="Fluid" />
+<use master="" />
 <viewdata model="FubuMVC.Diagnostics.Features.Packaging.PackageDiagnosticsModel" />
-<content:title>Package Loading Log</content:title>
-<content:head>
-</content:head>
-<content:mainContent>
+
   <h2>Package Loading Log</h2>
   <table class="grid">
     <thead>
@@ -32,4 +29,3 @@
       </for>
     </tbody>
   </table>
-</content:mainContent>
