@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Bottles;
 using Bottles.Diagnostics;
 
-namespace FubuMVC.Diagnostics.Features.Packaging
+namespace FubuMVC.Diagnostics.Packaging
 {
     public class PackageLogEndpoint
     {

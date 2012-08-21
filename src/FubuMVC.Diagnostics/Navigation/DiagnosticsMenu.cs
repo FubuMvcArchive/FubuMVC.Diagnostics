@@ -1,5 +1,5 @@
 using FubuMVC.Core.UI.Navigation;
-using FubuMVC.Diagnostics.Features.Packaging;
+using FubuMVC.Diagnostics.Packaging;
 using FubuMVC.Diagnostics.Requests;
 using FubuMVC.Diagnostics.Routes;
 

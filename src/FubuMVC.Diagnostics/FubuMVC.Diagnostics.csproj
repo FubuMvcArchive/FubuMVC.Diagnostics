@@ -114,7 +114,7 @@
     <None Include="Dashboard\Dashboard.spark">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Features\Packaging\Packaging.spark" />
+    <None Include="Packaging\Packaging.spark" />
     <None Include="Features\Requests\Requests.spark">
       <SubType>Designer</SubType>
     </None>
@@ -245,10 +245,10 @@
     <Compile Include="Dashboard\DashboardEndpoint.cs" />
     <Compile Include="Features\DiagnosticsFeatures.cs" />
     <Compile Include="Features\Html\Preview\PostHandler.cs" />
-    <Compile Include="Features\Packaging\PackageLogEndpoint.cs" />
-    <Compile Include="Features\Packaging\PackageDiagnosticsLogModel.cs" />
-    <Compile Include="Features\Packaging\PackageDiagnosticsModel.cs" />
-    <Compile Include="Features\Packaging\PackageDiagnosticsRequestModel.cs" />
+    <Compile Include="Packaging\PackageLogEndpoint.cs" />
+    <Compile Include="Packaging\PackageDiagnosticsLogModel.cs" />
+    <Compile Include="Packaging\PackageDiagnosticsModel.cs" />
+    <Compile Include="Packaging\PackageDiagnosticsRequestModel.cs" />
     <Compile Include="Features\Requests\RecordedRequestRequestModel.cs" />
     <Compile Include="DiagnosticsRegistry.cs" />
     <Compile Include="DiagnosticsException.cs" />

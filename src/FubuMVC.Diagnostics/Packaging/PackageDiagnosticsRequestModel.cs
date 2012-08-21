@@ -1,4 +1,4 @@
-namespace FubuMVC.Diagnostics.Features.Packaging
+namespace FubuMVC.Diagnostics.Packaging
 {
     public class PackageDiagnosticsRequestModel
     {

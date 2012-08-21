@@ -23,7 +23,7 @@ namespace FubuMVC.Diagnostics.Chains
             _document = document;
         }
 
-        public HtmlDocument get_chain_Id(ChainRequest request)
+        public HtmlTag get_chain_Id(ChainRequest request)
         {
             _document.Asset("twitterbootstrap");
             _document.Asset("diagnostics/bootstrap.overrides.css");
@@ -41,7 +41,7 @@ namespace FubuMVC.Diagnostics.Chains
 
             visualizeChain(chain);
 
-            return _document;
+            return top;
         }
 
         private void visualizeChain(BehaviorChain chain)

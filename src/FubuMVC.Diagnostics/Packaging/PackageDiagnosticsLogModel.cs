@@ -1,6 +1,6 @@
 using FubuCore;
 
-namespace FubuMVC.Diagnostics.Features.Packaging
+namespace FubuMVC.Diagnostics.Packaging
 {
     public class PackageDiagnosticsLogModel
     {

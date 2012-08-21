@@ -1,5 +1,5 @@
 <use master="" />
-<viewdata model="FubuMVC.Diagnostics.Features.Packaging.PackageDiagnosticsModel" />
+<viewdata model="FubuMVC.Diagnostics.Packaging.PackageDiagnosticsModel" />
 
   <h2>Package Loading Log</h2>
   <table class="grid">
