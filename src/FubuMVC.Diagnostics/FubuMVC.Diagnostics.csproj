@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bottles">
-      <HintPath>..\packages\Bottles.0.9.1.334\lib\Bottles.dll</HintPath>
+      <HintPath>..\packages\Bottles.0.9.1.336\lib\Bottles.dll</HintPath>
     </Reference>
     <Reference Include="FubuCore">
       <HintPath>..\packages\FubuCore.0.9.9.174\lib\FubuCore.dll</HintPath>
@@ -43,22 +43,22 @@
       <HintPath>..\packages\FubuLocalization.0.9.5.72\lib\FubuLocalization.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.Core">
-      <HintPath>..\packages\FubuMVC.References.0.9.8.1092\lib\net40\FubuMVC.Core.dll</HintPath>
+      <HintPath>..\packages\FubuMVC.References.0.9.8.1099\lib\net40\FubuMVC.Core.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.JQueryUI">
-      <HintPath>..\packages\FubuMVC.JQueryUI.0.5.0.24\lib\net40\FubuMVC.JQueryUI.dll</HintPath>
+      <HintPath>..\packages\FubuMVC.JQueryUI.0.5.0.31\lib\net40\FubuMVC.JQueryUI.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.SlickGrid">
-      <HintPath>..\packages\FubuMVC.SlickGrid.0.0.0.23\lib\net40\FubuMVC.SlickGrid.dll</HintPath>
+      <HintPath>..\packages\FubuMVC.SlickGrid.0.0.0.31\lib\net40\FubuMVC.SlickGrid.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.Spark">
-      <HintPath>..\packages\FubuMVC.Spark.0.9.8.1092\lib\net40\FubuMVC.Spark.dll</HintPath>
+      <HintPath>..\packages\FubuMVC.Spark.0.9.8.1099\lib\net40\FubuMVC.Spark.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.StructureMap">
-      <HintPath>..\packages\FubuMVC.References.0.9.8.1092\lib\net40\FubuMVC.StructureMap.dll</HintPath>
+      <HintPath>..\packages\FubuMVC.References.0.9.8.1099\lib\net40\FubuMVC.StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.TwitterBootstrap">
-      <HintPath>..\packages\FubuMVC.TwitterBootstrap.0.0.0.26\lib\net40\FubuMVC.TwitterBootstrap.dll</HintPath>
+      <HintPath>..\packages\FubuMVC.TwitterBootstrap.0.0.0.35\lib\net40\FubuMVC.TwitterBootstrap.dll</HintPath>
     </Reference>
     <Reference Include="HtmlTags, Version=1.1.0.94, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -107,7 +107,6 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include=".package-manifest" />
-    <None Include="Chains\Chain.spark" />
     <None Include="Chrome\Chrome.spark" />
     <Content Include="Content\Styles\diagnostics\bootstrap.overrides.css" />
     <None Include="Features\Html\Html.spark" />
@@ -180,6 +179,8 @@
     </Compile>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Chains\ChainEndpoint.cs" />
+    <Compile Include="Shared\TypeEndpoint.cs" />
+    <Compile Include="Shared\Tags\DetailTableBuilder.cs" />
     <Compile Include="Chrome\DashboardChrome.cs" />
     <Compile Include="Core\CoreExtensions.cs" />
     <Compile Include="Core\Extensions\TagExtensions.cs" />
@@ -252,6 +253,8 @@
     <Compile Include="DiagnosticsRegistry.cs" />
     <Compile Include="DiagnosticsException.cs" />
     <Compile Include="Routes\RouteExplorerEndpoint.cs" />
+    <Compile Include="Shared\Tags\ControlGroupDivTag.cs" />
+    <Compile Include="Shared\Tags\DetailsTableTag.cs" />
     <Compile Include="Visualization\IVisualizer.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -6,6 +6,7 @@ using FubuCore.Descriptions;
 using FubuCore.Reflection;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Core.Resources.Conneg;
+using FubuMVC.Core.Runtime;
 using FubuMVC.Core.Security;
 using FubuMVC.Core.Urls;
 using FubuMVC.Diagnostics.Chains;
@@ -108,7 +109,7 @@ namespace FubuMVC.Diagnostics.Routes
             }
         }
 
-        public IEnumerable<string> Accepts
+        public IEnumerable<string> ContentType
         {
             get
             {
@@ -121,14 +122,14 @@ namespace FubuMVC.Diagnostics.Routes
             }
         }
 
-        public IEnumerable<string> ContentType
+        public IEnumerable<string> Accepts
         {
             get
             {
                 // TODO -- what about other types of nodes that can write?
                 // IHaveContentTypes ?????
                 var inputNode = _chain.OfType<InputNode>().FirstOrDefault();
-                if (inputNode == null) return Enumerable.Empty<string>();
+                if (inputNode == null) return new []{MimeType.HttpFormMimetype};
 
                 return inputNode.Readers.SelectMany(x => x.Mimetypes).Distinct();
             }

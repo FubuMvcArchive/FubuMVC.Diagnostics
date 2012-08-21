@@ -2,6 +2,8 @@ using System;
 using FubuMVC.Core.Behaviors;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Core.Registration.Routes;
+using FubuMVC.Core.Resources.Conneg;
+using FubuMVC.Core.Runtime;
 using FubuMVC.Core.Urls;
 using FubuMVC.Diagnostics.Chains;
 using FubuMVC.Diagnostics.Routes;
@@ -184,6 +186,14 @@ namespace FubuMVC.Diagnostics.Tests.New.Routes
             theChain.FirstCall().WrapWith(typeof (AnotherWrapper));
 
             theReport.Wrappers.ShouldHaveTheSameElementsAs("SimpleWrapper", "AnotherWrapper");
+        }
+
+        [Test]
+        public void input_with_no_InputNode_is_assumed_to_be_http_form()
+        {
+            theChain.Any(x => x is InputNode).ShouldBeFalse();
+
+            theReport.Accepts.Single().ShouldEqual(MimeType.HttpFormMimetype);
         }
 
         public class SimpleWrapper : IActionBehavior

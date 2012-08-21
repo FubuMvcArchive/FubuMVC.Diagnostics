@@ -20,3 +20,13 @@
 	min-height: 600px;
 	top: 70px;
 }
+
+table.details th
+{
+	text-align:right;
+}
+
+table.details th span
+{
+	padding-right: 8px;
+}
