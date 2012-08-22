@@ -13,8 +13,7 @@ namespace FubuMVC.Diagnostics.Routes
             Column(x => x.Constraints);
             Column(x => x.Action);
 
-            // Need to be able to add data here
-            
+            Data(x => x.url);
         }
     }
 }

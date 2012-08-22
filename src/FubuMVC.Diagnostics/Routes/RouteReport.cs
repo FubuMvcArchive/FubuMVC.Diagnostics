@@ -16,13 +16,13 @@ namespace FubuMVC.Diagnostics.Routes
     public class RouteReport
     {
         private readonly BehaviorChain _chain;
-        private readonly string _chainUrl;
+        private readonly string _url;
         public const string NoConstraints = "N/A";
 
         public RouteReport(BehaviorChain chain, IUrlRegistry urls)
         {
             _chain = chain;
-            _chainUrl = urls.UrlFor(new ChainRequest { Id = chain.UniqueId });
+            _url = urls.UrlFor(new ChainRequest { Id = chain.UniqueId });
         }
 
         public Type ResourceType
@@ -173,11 +173,11 @@ namespace FubuMVC.Diagnostics.Routes
             }
         }
 
-        public string ChainUrl
+        public string url
         {
             get
             {
-                return _chainUrl;
+                return _url;
             }
         }
 

@@ -3,6 +3,9 @@
 <use namespace="FubuMVC.SlickGrid" />
 <use namespace="FubuMVC.Diagnostics.Routes" />
 <use namespace="System.Linq" />
+<use namespace="FubuMVC.TwitterBootstrap" />
+
+<Script src="diagnostics/routes.js" />
 
 <h1>Route Explorer</h1>
   
@@ -23,10 +26,15 @@
           var cell = grid.getCellFromEvent(e);
           var item = grid.getDataItem(cell.row);
           
-          
-          alert('you double clicked a row!');
-          
+          $('#routeModalBody').load(item.url);
+          $('#routeModalBody .accordion').collapse();
+          $('#routeModal').modal('show');
         });
       }
     }
-  </script> 
+  </script>
+
+
+
+
+  !{this.Modal("routeModal").Label("Route/Chain Visualization").AddCloseButton("Close")}

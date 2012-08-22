@@ -29,6 +29,13 @@ namespace DiagnosticsHarness
         {
             return FubuContinuation.RedirectTo<RouteExplorerEndpoint>(x => x.get_routes(null));
 
+            //var chain = _graph.BehaviorFor<RouteExplorerEndpoint>(x => x.get_routes(null));
+
+
+            //return FubuContinuation.RedirectTo(new ChainRequest
+            //{
+            //    Id = chain.UniqueId
+            //});
 
             //_document.Title = "FubuMVC.Diagnostics Harness";
 

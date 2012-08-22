@@ -1,3 +1,4 @@
+using System;
 using FubuMVC.Diagnostics.Chains;
 using HtmlTags;
 
@@ -24,6 +25,15 @@ namespace FubuMVC.Diagnostics.Shared.Tags
             {
                 x.Header().Add("span").Text(label);
                 x.Cell(text).Encoded(encoding == HtmlEncoding.UseEncoding);
+            });
+        }
+
+        public void AddDetail(string label, HtmlTag behaviorsTag)
+        {
+            AddBodyRow(x =>
+            {
+                x.Header().Add("span").Text(label);
+                x.Cell().Append(behaviorsTag);
             });
         }
     }
