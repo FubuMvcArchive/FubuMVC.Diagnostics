@@ -10,6 +10,20 @@ using System.Linq;
 namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
 {
     [TestFixture]
+    public class when_marking_as_a_Failed_request : InteractionContext<RequestTrace>
+    {
+        [Test]
+        public void mark_as_failed()
+        {
+            ClassUnderTest.Current = new RequestLog();
+
+            ClassUnderTest.MarkAsFailedRequest();
+
+            ClassUnderTest.Current.Failed.ShouldBeTrue();
+        }
+    }
+
+    [TestFixture]
     public class when_starting_a_new_request : InteractionContext<RequestTrace>
     {
         private RequestLog theLog;

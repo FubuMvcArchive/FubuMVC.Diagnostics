@@ -107,7 +107,12 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
             MockFor<IDebugDetector>().Stub(x => x.IsDebugCall()).Return(true);
 
             ClassUnderTest.Inner = inner;
-            ClassUnderTest.Invoke();
+
+            Exception<UnhandledFubuException>.ShouldBeThrownBy(() =>
+            {
+                ClassUnderTest.Invoke();
+            });
+            
         }
 
         [Test]
@@ -160,9 +165,10 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         }
 
         [Test]
-        public void should_allow_the_exception_to_bubble_up()
+        public void should_allow_the_exception_to_bubble_up_wrapped_in_unhandled_exception()
         {
-            Exception<NotImplementedException>.ShouldBeThrownBy(() => ClassUnderTest.Invoke());
+            Exception<UnhandledFubuException>.ShouldBeThrownBy(() => ClassUnderTest.Invoke())
+                .InnerException.ShouldBeTheSameAs(exception);
         }
     }
 
@@ -188,7 +194,11 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
             MockFor<IDebugDetector>().Stub(x => x.IsDebugCall()).Return(true);
 
             ClassUnderTest.Inner = inner;
-            ClassUnderTest.InvokePartial();
+
+            Exception<UnhandledFubuException>.ShouldBeThrownBy(() =>
+            {
+                ClassUnderTest.InvokePartial();
+            });
         }
 
         [Test]
@@ -241,9 +251,10 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         }
 
         [Test]
-        public void should_allow_the_exception_to_bubble_up()
+        public void should_allow_the_exception_to_bubble_up_wrapped_in_unhandled_exception()
         {
-            Exception<NotImplementedException>.ShouldBeThrownBy(() => ClassUnderTest.InvokePartial());
+            Exception<UnhandledFubuException>.ShouldBeThrownBy(() => ClassUnderTest.InvokePartial())
+                .InnerException.ShouldBeTheSameAs(exception);
         }
     }
 

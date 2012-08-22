@@ -28,9 +28,37 @@ namespace FubuMVC.Diagnostics.Runtime
             _steps.Add(new RequestStep(requestTimeInMilliseconds, log));
         }
 
+
+        public bool Failed { get; set; }
+
         public IEnumerable<RequestStep> AllSteps()
         {
             return _steps;
+        }
+
+        public bool Equals(RequestLog other)
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return other.Id.Equals(Id);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != typeof (RequestLog)) return false;
+            return Equals((RequestLog) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return Id.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Id: {0}", Id);
         }
     }
 

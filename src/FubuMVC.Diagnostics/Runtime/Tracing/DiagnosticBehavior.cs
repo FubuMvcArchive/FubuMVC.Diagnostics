@@ -1,41 +1,51 @@
+using System;
 using FubuMVC.Core;
 using FubuMVC.Core.Behaviors;
 using FubuMVC.Core.Runtime;
+using FubuMVC.Core.Runtime.Logging;
 
 namespace FubuMVC.Diagnostics.Runtime.Tracing
 {
-    public class DiagnosticBehavior : BasicBehavior
+    public class DiagnosticBehavior : WrappingBehavior
     {
         private readonly IDebugDetector _detector;
         private readonly IRequestTrace _trace;
         private readonly IOutputWriter _writer;
 
         public DiagnosticBehavior(IRequestTrace trace, IDebugDetector detector, IOutputWriter writer)
-            : base(PartialBehavior.Ignored)
         {
             _trace = trace;
             _detector = detector;
             _writer = writer;
         }
 
-        protected override DoNext performInvoke()
+        protected override void invoke(Action action)
         {
             _trace.Start();
-            return DoNext.Continue;
-        }
 
-        protected override void afterInsideBehavior()
-        {
-            write();
-        }
-
-        private void write()
-        {
-            _trace.MarkFinished();
-
-            if (_detector.IsDebugCall())
+            try
             {
-                _writer.RedirectToUrl(_trace.LogUrl);
+                action();
+            }
+            catch (UnhandledFubuException ex)
+            {
+                _trace.MarkAsFailedRequest();
+                throw ex.InnerException;
+            }
+            catch (Exception ex)
+            {
+                _trace.MarkAsFailedRequest();
+                _trace.Log(new ExceptionReport("Request failed", ex));
+                throw;
+            }
+            finally
+            {
+                _trace.MarkFinished();
+
+                if (_detector.IsDebugCall())
+                {
+                    _writer.RedirectToUrl(_trace.LogUrl);
+                }
             }
         }
     }

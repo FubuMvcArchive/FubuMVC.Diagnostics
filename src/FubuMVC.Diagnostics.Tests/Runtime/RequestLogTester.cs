@@ -1,5 +1,6 @@
 using System;
 using FubuCore.Logging;
+using FubuMVC.Core.Runtime.Logging;
 using FubuMVC.Diagnostics.Runtime;
 using NUnit.Framework;
 using System.Linq;
@@ -8,7 +9,7 @@ using FubuTestingSupport;
 namespace FubuMVC.Diagnostics.Tests.Runtime
 {
     [TestFixture]
-    public class RequestStepTester
+    public class RequestLogTester
     {
         [Test]
         public void add_log()
@@ -22,6 +23,12 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
 
             log.AllSteps()
                 .ShouldHaveTheSameElementsAs(new RequestStep(123.45, stringMessage), new RequestStep(234, "something"));
+        }
+
+        [Test]
+        public void failed_is_false_by_default()
+        {
+            // trivial code, but kind of important
         }
 
         [Test]

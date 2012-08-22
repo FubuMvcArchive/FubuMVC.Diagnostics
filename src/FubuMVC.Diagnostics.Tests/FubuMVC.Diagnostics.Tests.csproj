@@ -101,7 +101,8 @@
     <Compile Include="Runtime\DiagnosticsRegistryTester.cs" />
     <Compile Include="Runtime\DiagnosticsSettingsTester.cs" />
     <Compile Include="Runtime\RequestHistoryCacheTester.cs" />
-    <Compile Include="Runtime\RequestStepTester.cs" />
+    <Compile Include="Runtime\RequestLogTester.cs" />
+    <Compile Include="Runtime\Tracing\RequestLogBuilderTester.cs" />
     <Compile Include="Runtime\Tracing\RequestTraceListenerTester.cs" />
     <Compile Include="Runtime\Tracing\DiagnosticBehaviorTester.cs" />
     <Compile Include="Models\SampleGridModel.cs" />

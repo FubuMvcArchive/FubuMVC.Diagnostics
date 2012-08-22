@@ -1,3 +1,4 @@
+using System;
 using FubuMVC.Core;
 using FubuMVC.Core.Behaviors;
 using FubuMVC.Core.Runtime;
@@ -21,7 +22,37 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
             MockFor<IFubuRequest>().Stub(x => x.Get<CurrentRequest>()).Return(theCurrentRequest);
 
             theInnerBehavior = MockFor<IActionBehavior>();
-            ClassUnderTest.InsideBehavior = theInnerBehavior;
+            ClassUnderTest.Inner = theInnerBehavior;
+        }
+
+        [Test]
+        public void if_the_inner_behavior_fails_with_unhandled_exception_mark_the_request_as_a_failure()
+        {
+            var exception = new NotImplementedException();
+
+            theInnerBehavior.Expect(x => x.Invoke()).Throw(exception);
+
+            Exception<NotImplementedException>.ShouldBeThrownBy(() =>
+            {
+                ClassUnderTest.Invoke();
+            }).ShouldBeTheSameAs(exception);
+
+            MockFor<IRequestTrace>().AssertWasCalled(x => x.MarkAsFailedRequest());
+        }
+
+        [Test]
+        public void if_the_inner_behavior_fails_with_an_unknown_exception_mark_the_request_as_a_failure()
+        {
+            var exception = new UnhandledFubuException("something", new NotImplementedException());
+
+            theInnerBehavior.Expect(x => x.Invoke()).Throw(exception);
+
+            Exception<NotImplementedException>.ShouldBeThrownBy(() =>
+            {
+                ClassUnderTest.Invoke();
+            });
+
+            MockFor<IRequestTrace>().AssertWasCalled(x => x.MarkAsFailedRequest());
         }
 
         [Test]
@@ -32,13 +63,6 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
             MockFor<IRequestTrace>().AssertWasCalled(x => x.Start());
         }
 
-        [Test]
-        public void invoke_partial_does_not_start_a_new_request_history()
-        {
-            ClassUnderTest.InvokePartial();
-
-            MockFor<IRequestTrace>().AssertWasNotCalled(x => x.Start());
-        }
 
         [Test]
         public void invoke_invokes_The_inner()

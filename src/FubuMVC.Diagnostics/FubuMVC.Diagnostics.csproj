@@ -177,7 +177,10 @@
     <Compile Include="Requests\HttpRequestVisualization.cs" />
     <Compile Include="Requests\RequestVisualizationEndpoint.cs" />
     <Compile Include="Runtime\RequestTraceListener.cs" />
+    <Compile Include="Runtime\Tracing\IRequestLogBuilder.cs" />
     <Compile Include="Runtime\Tracing\IRequestTrace.cs" />
+    <Compile Include="Runtime\Tracing\RequestLogBuilder.cs" />
+    <Compile Include="Runtime\Tracing\RequestTrace.cs" />
     <Compile Include="Shared\TypeEndpoint.cs" />
     <Compile Include="Shared\Tags\DetailTableBuilder.cs" />
     <Compile Include="Chrome\DashboardChrome.cs" />

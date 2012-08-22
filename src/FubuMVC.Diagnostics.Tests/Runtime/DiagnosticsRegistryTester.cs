@@ -52,6 +52,12 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         {
             graph.Services.DefaultServiceFor<IRequestTrace>().Type.ShouldEqual(typeof (RequestTrace));
         }
+
+        [Test]
+        public void RequestLogBuilder_is_registered()
+        {
+            graph.Services.DefaultServiceFor<IRequestLogBuilder>().Type.ShouldEqual(typeof(RequestLogBuilder));
+        }
     }
 
     public class WrappingBehavior : BasicBehavior

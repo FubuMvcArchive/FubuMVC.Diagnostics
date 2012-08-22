@@ -35,6 +35,7 @@ namespace FubuMVC.Diagnostics
             AddService<ILogListener, RequestTraceListener>();
 
             SetServiceIfNone<IRequestTrace, RequestTrace>();
+            SetServiceIfNone<IRequestLogBuilder, RequestLogBuilder>();
         }
     }
 }

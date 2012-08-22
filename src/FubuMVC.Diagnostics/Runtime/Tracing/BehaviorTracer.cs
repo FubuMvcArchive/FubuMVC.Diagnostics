@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.Serialization;
 using FubuCore.Logging;
 using FubuMVC.Core.Behaviors;
 
@@ -25,17 +26,40 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
             {
                 action();
             }
+            catch (UnhandledFubuException)
+            {
+                throw;
+            }
             catch (Exception ex)
             {
                 _logger.Error("Behavior Failure", ex);
-
-                if (!_debugDetector.IsDebugCall())
-                {
-                    throw;
-                }
+                throw new UnhandledFubuException("Behavior failed", ex);
+            }
+            finally
+            {
+                _logger.DebugMessage(() => new BehaviorFinish(_correlation));
             }
 
-            _logger.DebugMessage(() => new BehaviorFinish(_correlation));
+            
+        }
+    }
+
+    public class UnhandledFubuException : Exception
+    {
+        public UnhandledFubuException()
+        {
+        }
+
+        public UnhandledFubuException(string message) : base(message)
+        {
+        }
+
+        public UnhandledFubuException(string message, Exception innerException) : base(message, innerException)
+        {
+        }
+
+        protected UnhandledFubuException(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
         }
     }
 }
