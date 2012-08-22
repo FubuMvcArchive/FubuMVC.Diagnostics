@@ -5,11 +5,11 @@ namespace FubuMVC.Diagnostics.Runtime
 {
     public class BindingHistory : IBindingHistory
     {
-        private readonly DebugReport _report;
+        private readonly RequestLog _log;
 
-        public BindingHistory(DebugReport report)
+        public BindingHistory(RequestLog log)
         {
-            _report = report;
+            _log = log;
         }
 
         public void Store(BindingReport report)

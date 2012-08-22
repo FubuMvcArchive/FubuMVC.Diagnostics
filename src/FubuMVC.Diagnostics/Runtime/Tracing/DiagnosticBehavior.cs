@@ -1,26 +1,26 @@
-using System;
 using FubuMVC.Core;
 using FubuMVC.Core.Behaviors;
+using FubuMVC.Core.Runtime;
 
 namespace FubuMVC.Diagnostics.Runtime.Tracing
 {
     public class DiagnosticBehavior : BasicBehavior
     {
         private readonly IDebugDetector _detector;
-        private readonly Action _initialize;
-        private readonly IDebugReport _report;
+        private readonly IRequestTrace _trace;
+        private readonly IOutputWriter _writer;
 
-        public DiagnosticBehavior(IDebugReport report, IDebugDetector detector, IRequestHistoryCache history) : base(PartialBehavior.Ignored)
+        public DiagnosticBehavior(IRequestTrace trace, IDebugDetector detector, IOutputWriter writer)
+            : base(PartialBehavior.Ignored)
         {
-            _report = report;
+            _trace = trace;
             _detector = detector;
-
-            _initialize = () => history.AddReport(report);
+            _writer = writer;
         }
 
         protected override DoNext performInvoke()
         {
-            _initialize();
+            _trace.Start();
             return DoNext.Continue;
         }
 
@@ -31,9 +31,12 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
 
         private void write()
         {
-            _report.MarkFinished();
+            _trace.MarkFinished();
 
-            if (!_detector.IsDebugCall()) return;
+            if (_detector.IsDebugCall())
+            {
+                _writer.RedirectToUrl(_trace.LogUrl);
+            }
         }
     }
 }

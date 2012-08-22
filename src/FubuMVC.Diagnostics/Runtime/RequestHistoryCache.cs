@@ -6,7 +6,7 @@ namespace FubuMVC.Diagnostics.Runtime
 {
     public class RequestHistoryCache : IRequestHistoryCache
     {
-        private readonly Queue<IDebugReport> _reports = new Queue<IDebugReport>();
+        private readonly Queue<RequestLog> _reports = new Queue<RequestLog>();
         private readonly DiagnosticsSettings _settings;
 
         public RequestHistoryCache(DiagnosticsSettings settings)
@@ -14,16 +14,16 @@ namespace FubuMVC.Diagnostics.Runtime
             _settings = settings;
         }
 
-        public void AddReport(IDebugReport report)
+        public void Store(RequestLog log)
         {
-            _reports.Enqueue(report);
+            _reports.Enqueue(log);
             while (_reports.Count > _settings.MaxRequests)
             {
                 _reports.Dequeue();
             }
         }
 
-        public IEnumerable<IDebugReport> RecentReports()
+        public IEnumerable<RequestLog> RecentReports()
         {
             return _reports.ToList();
         }

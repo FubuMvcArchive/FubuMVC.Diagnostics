@@ -6,6 +6,7 @@ using FubuMVC.Core.Behaviors;
 using FubuMVC.Core.Registration;
 using FubuMVC.Core.Urls;
 using FubuMVC.Diagnostics.Runtime;
+using FubuMVC.Diagnostics.Runtime.Tracing;
 using FubuTestingSupport;
 using NUnit.Framework;
 using Rhino.Mocks;
@@ -44,6 +45,12 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
 
             ServiceRegistry.ShouldBeSingleton(typeof (RequestHistoryCache))
                 .ShouldBeTrue();
+        }
+
+        [Test]
+        public void RequestTrace_is_registered()
+        {
+            graph.Services.DefaultServiceFor<IRequestTrace>().Type.ShouldEqual(typeof (RequestTrace));
         }
     }
 

@@ -1,7 +1,7 @@
 using FubuCore.Binding.InMemory;
+using FubuCore.Logging;
 using FubuMVC.Core;
 using FubuMVC.Core.Registration;
-using FubuMVC.Core.Security;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.Diagnostics.Runtime.Tracing;
 
@@ -28,11 +28,13 @@ namespace FubuMVC.Diagnostics
         {
             SetServiceIfNone<IBindingLogger, RecordingBindingLogger>();
             SetServiceIfNone<IDebugDetector, DebugDetector>();
-            ReplaceService<IDebugReport, DebugReport>();
             ReplaceService<IDebugDetector, DebugDetector>();
-            ReplaceService<IAuthorizationPolicyExecutor, RecordingAuthorizationPolicyExecutor>();
             ReplaceService<IBindingHistory, BindingHistory>();
             SetServiceIfNone<IRequestHistoryCache, RequestHistoryCache>();
+
+            AddService<ILogListener, RequestTraceListener>();
+
+            SetServiceIfNone<IRequestTrace, RequestTrace>();
         }
     }
 }

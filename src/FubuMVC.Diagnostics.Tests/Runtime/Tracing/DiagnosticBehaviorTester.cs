@@ -25,12 +25,11 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
         }
 
         [Test]
-        public void invoke_starts_the_history_report()
+        public void invoke_starts_the_request_session()
         {
             ClassUnderTest.Invoke();
 
-            var debugReport = MockFor<IDebugReport>();
-            MockFor<IRequestHistoryCache>().AssertWasCalled(x => x.AddReport(debugReport));
+            MockFor<IRequestTrace>().AssertWasCalled(x => x.Start());
         }
 
         [Test]
@@ -38,8 +37,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
         {
             ClassUnderTest.InvokePartial();
 
-            var debugReport = MockFor<IDebugReport>();
-            MockFor<IRequestHistoryCache>().AssertWasNotCalled(x => x.AddReport(debugReport));
+            MockFor<IRequestTrace>().AssertWasNotCalled(x => x.Start());
         }
 
         [Test]
@@ -64,17 +62,21 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
 
             ClassUnderTest.Invoke();
 
-            Assert.Fail("NWO");
+            MockFor<IOutputWriter>().AssertWasNotCalled(x => x.RedirectToUrl(null), x => x.IgnoreArguments());
         }
 
         [Test]
         public void when_invoking_in_debug_mode_call_the_debug_call_handler_to_render_the_debug_screen()
         {
             MockFor<IDebugDetector>().Stub(x => x.IsDebugCall()).Return(true);
-        
+
+            var theSessionUrl = "some url";
+            MockFor<IRequestTrace>().Stub(x => x.LogUrl).Return(theSessionUrl);
+
             ClassUnderTest.Invoke();
 
-            Assert.Fail("NWO");
+            MockFor<IOutputWriter>().AssertWasCalled(x => x.RedirectToUrl(theSessionUrl));
+            
         }
     }
 }

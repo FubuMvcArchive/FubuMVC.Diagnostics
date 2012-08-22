@@ -1,3 +1,4 @@
+using FubuCore.Logging;
 using FubuMVC.Core;
 using FubuMVC.Core.Registration;
 using FubuMVC.Core.Runtime;
@@ -5,6 +6,7 @@ using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.Diagnostics.Runtime.Tracing;
 using FubuTestingSupport;
 using NUnit.Framework;
+using System.Linq;
 
 namespace FubuMVC.Diagnostics.Tests.Runtime
 {
@@ -30,11 +32,10 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         }
 
         [Test]
-        public void debug_report_is_registered()
+        public void adds_RequestTraceListener()
         {
-            graph.Services.DefaultServiceFor<IDebugReport>().Type.ShouldEqual(typeof (DebugReport));
+            graph.Services.ServicesFor(typeof(ILogListener)).Any(x => x.Type == typeof(RequestTraceListener))
+                .ShouldBeTrue();
         }
-
-
     }
 }

@@ -18,23 +18,23 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
 
             var cache = new RequestHistoryCache(settings);
 
-            cache.AddReport(new DebugReport());
-            cache.AddReport(new DebugReport());
-            cache.AddReport(new DebugReport());
-            cache.AddReport(new DebugReport());
-            cache.AddReport(new DebugReport());
-            cache.AddReport(new DebugReport());
-            cache.AddReport(new DebugReport());
-            cache.AddReport(new DebugReport());
-            cache.AddReport(new DebugReport());
+            cache.Store(new RequestLog());
+            cache.Store(new RequestLog());
+            cache.Store(new RequestLog());
+            cache.Store(new RequestLog());
+            cache.Store(new RequestLog());
+            cache.Store(new RequestLog());
+            cache.Store(new RequestLog());
+            cache.Store(new RequestLog());
+            cache.Store(new RequestLog());
 
             cache.RecentReports().Count().ShouldEqual(9);
 
-            cache.AddReport(new DebugReport());
-            cache.AddReport(new DebugReport());
-            cache.AddReport(new DebugReport());
-            cache.AddReport(new DebugReport());
-            cache.AddReport(new DebugReport());
+            cache.Store(new RequestLog());
+            cache.Store(new RequestLog());
+            cache.Store(new RequestLog());
+            cache.Store(new RequestLog());
+            cache.Store(new RequestLog());
 
             cache.RecentReports().Count().ShouldEqual(settings.MaxRequests);
         }
