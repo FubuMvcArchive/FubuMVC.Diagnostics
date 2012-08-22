@@ -1,4 +1,5 @@
 using System;
+using System.Net;
 using FubuCore.Logging;
 using FubuMVC.Core.Runtime.Logging;
 using FubuMVC.Diagnostics.Runtime;
@@ -29,6 +30,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         public void failed_is_false_by_default()
         {
             // trivial code, but kind of important
+            new RequestLog().Failed.ShouldBeFalse();
         }
 
         [Test]
@@ -46,5 +48,51 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
             log1.Id.ShouldNotEqual(log3.Id);
             log2.Id.ShouldNotEqual(log3.Id);
         }
+
+        [Test]
+        public void status_is_assumed_to_be_200_if_not_failed_and_no_explicit_status_was_recorded()
+        {
+            var log = new RequestLog();
+            log.Failed.ShouldBeFalse();
+
+            log.HttpStatus.Status.ShouldEqual(HttpStatusCode.OK);
+            log.HttpStatus.Description.ShouldEqual("OK");
+        }
+
+
+        [Test]
+        public void status_is_assumed_to_be_500_if_failed_and_no_other_explicit_status_was_recorded()
+        {
+            var log = new RequestLog();
+
+            log.Failed = true;
+
+            log.HttpStatus.Status.ShouldEqual(HttpStatusCode.InternalServerError);
+            log.HttpStatus.Description.ShouldEqual("Internal Server Error");
+        }
+
+        [Test]
+        public void use_the_last_status_written()
+        {
+            var log = new RequestLog();
+            log.AddLog(12, new HttpStatusReport{Status = HttpStatusCode.Unauthorized});
+            log.AddLog(15, new HttpStatusReport{Status = HttpStatusCode.NotAcceptable});
+
+            log.HttpStatus.Status.ShouldEqual(HttpStatusCode.NotAcceptable);
+            log.HttpStatus.Description.ShouldEqual("Not Acceptable");
+        }
+
+        [Test]
+        public void use_the_last_status_written_with_custom_description()
+        {
+            var log = new RequestLog();
+            log.AddLog(12, new HttpStatusReport { Status = HttpStatusCode.Unauthorized });
+            log.AddLog(15, new HttpStatusReport { Status = HttpStatusCode.NotAcceptable, Description = "I didn't like this"});
+
+            log.HttpStatus.Status.ShouldEqual(HttpStatusCode.NotAcceptable);
+            log.HttpStatus.Description.ShouldEqual("I didn't like this");
+        }
+
+
     }
 }

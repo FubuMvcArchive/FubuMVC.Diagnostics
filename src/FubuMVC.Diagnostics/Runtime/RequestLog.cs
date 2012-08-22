@@ -1,5 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Net;
+using System.Linq;
+using FubuCore;
+using FubuMVC.Core.Runtime.Logging;
 
 namespace FubuMVC.Diagnostics.Runtime
 {
@@ -26,6 +30,33 @@ namespace FubuMVC.Diagnostics.Runtime
         public void AddLog(double requestTimeInMilliseconds, object log)
         {
             _steps.Add(new RequestStep(requestTimeInMilliseconds, log));
+        }
+
+        public HttpStatusReport HttpStatus
+        {
+            get
+            {
+                HttpStatusReport report = null;
+
+                var log = _steps.Where(x => x.Log is HttpStatusReport).LastOrDefault();
+                if (log != null)
+                {
+                    report = log.Log.As<HttpStatusReport>();
+                }
+                else
+                {
+                    report = new HttpStatusReport{
+                        Status = Failed ? HttpStatusCode.InternalServerError : HttpStatusCode.OK
+                    };
+                }
+
+                if (report.Description.IsEmpty())
+                {
+                    report.Description = report.Status.ToString().SplitPascalCase();
+                }
+
+                return report;
+            }
         }
 
 
