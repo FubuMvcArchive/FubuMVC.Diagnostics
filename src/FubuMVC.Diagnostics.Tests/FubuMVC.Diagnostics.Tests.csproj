@@ -109,7 +109,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Runtime\Tracing\RequestTraceTester.cs" />
     <Compile Include="Shared\Tags\DetailTableBuilderTester.cs" />
-    <Compile Include="TODOS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
