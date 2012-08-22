@@ -3,7 +3,6 @@ using FubuMVC.Core;
 
 namespace FubuMVC.Diagnostics.Runtime
 {
-    [MoveToDiagnostics]
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class)]
     public class FubuDiagnosticsAttribute : Attribute
     {

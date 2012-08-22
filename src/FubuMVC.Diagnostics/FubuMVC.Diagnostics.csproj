@@ -110,19 +110,13 @@
     <None Include=".package-manifest" />
     <None Include="Chrome\Chrome.spark" />
     <Content Include="Content\Styles\diagnostics\bootstrap.overrides.css" />
-    <None Include="Features\Html\Html.spark" />
-    <None Include="Features\Html\Preview\Preview.spark" />
     <None Include="Dashboard\Dashboard.spark">
       <SubType>Designer</SubType>
     </None>
     <None Include="Packaging\Packaging.spark" />
-    <None Include="Features\Requests\Requests.spark">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Routes\Routes.spark">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Features\Requests\View\View.spark" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
@@ -179,12 +173,12 @@
     </Compile>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Chains\ChainEndpoint.cs" />
+    <Compile Include="DiagnosticsChromeExtension.cs" />
     <Compile Include="Shared\TypeEndpoint.cs" />
     <Compile Include="Shared\Tags\DetailTableBuilder.cs" />
     <Compile Include="Chrome\DashboardChrome.cs" />
     <Compile Include="Core\CoreExtensions.cs" />
     <Compile Include="Core\Extensions\TagExtensions.cs" />
-    <Compile Include="Core\Infrastructure\DiagnosticsDebugCallHandler.cs" />
     <Compile Include="Navigation\DiagnosticKeys.cs" />
     <Compile Include="Navigation\DiagnosticsMenu.cs" />
     <Compile Include="NoDiagnosticsAttribute.cs" />
@@ -200,56 +194,28 @@
     <Compile Include="Runtime\BehaviorStart.cs" />
     <Compile Include="Runtime\BehaviorTracerNode.cs" />
     <Compile Include="Runtime\BindingHistory.cs" />
-    <Compile Include="Runtime\DebugCallHandler.cs" />
     <Compile Include="Runtime\DebugDetector.cs" />
     <Compile Include="Runtime\DebugReport.cs" />
     <Compile Include="Runtime\DiagnosticNode.cs" />
     <Compile Include="DiagnosticsRegistration.cs" />
     <Compile Include="Runtime\FubuDiagnosticsAttribute.cs" />
-    <Compile Include="Runtime\IDebugCallHandler.cs" />
     <Compile Include="Runtime\IDebugDetector.cs" />
     <Compile Include="Runtime\IDebugReport.cs" />
     <Compile Include="Runtime\IRequestHistoryCache.cs" />
     <Compile Include="Runtime\RequestHistoryCache.cs" />
-    <Compile Include="Runtime\TimedReport.cs" />
     <Compile Include="Runtime\Tracing\BehaviorCorrelation.cs" />
     <Compile Include="Runtime\Tracing\BehaviorTracer.cs" />
     <Compile Include="Runtime\Tracing\DiagnosticBehavior.cs" />
     <Compile Include="Runtime\Tracing\DiagnosticUrlPolicy.cs" />
     <Compile Include="Runtime\Tracing\RecordingAuthorizationPolicyExecutor.cs" />
     <Compile Include="Chains\ChainRequest.cs" />
-    <Compile Include="Features\Html\HtmlConventionsPreviewRequestModel.cs" />
-    <Compile Include="Features\Html\HtmlConventionsPreviewViewModel.cs" />
-    <Compile Include="Features\Html\HtmlConventionsRequestModel.cs" />
-    <Compile Include="Features\Html\HtmlConventionsViewModel.cs" />
-    <Compile Include="Features\Html\GetHandler.cs" />
-    <Compile Include="Features\Html\Preview\Decorators\DisplayPathBuilder.cs" />
-    <Compile Include="Features\Html\Preview\Decorators\IModelPopulator.cs" />
-    <Compile Include="Features\Html\Preview\Decorators\ITagGeneratorFactory.cs" />
-    <Compile Include="Features\Html\Preview\Decorators\ModelPopulator.cs" />
-    <Compile Include="Features\Html\Preview\Decorators\PropertyExamplesBuilder.cs" />
-    <Compile Include="Features\Html\Preview\Decorators\PropertyLinksBuilder.cs" />
-    <Compile Include="Features\Html\Preview\get_OutputModel_handler.cs" />
-    <Compile Include="Features\Html\Preview\HtmlConventionsPreviewContext.cs" />
-    <Compile Include="Features\Html\Preview\HtmlConventionsPreviewContextFactory.cs" />
-    <Compile Include="Features\Html\Preview\IHtmlConventionsPreviewContextFactory.cs" />
-    <Compile Include="Features\Html\Preview\IPreviewModelActivator.cs" />
-    <Compile Include="Features\Html\Preview\IPreviewModelDecorator.cs" />
-    <Compile Include="Features\Html\Preview\IPreviewModelTypeResolver.cs" />
-    <Compile Include="Features\Html\Preview\IPropertySourceGenerator.cs" />
-    <Compile Include="Features\Html\Preview\PreviewModelActivator.cs" />
-    <Compile Include="Features\Html\Preview\PreviewModelTypeResolver.cs" />
-    <Compile Include="Features\Html\Preview\PropertySourceGenerator.cs" />
     <Compile Include="Dashboard\DashboardModel.cs" />
     <Compile Include="Dashboard\DashboardRequestModel.cs" />
     <Compile Include="Dashboard\DashboardEndpoint.cs" />
-    <Compile Include="Features\DiagnosticsFeatures.cs" />
-    <Compile Include="Features\Html\Preview\PostHandler.cs" />
     <Compile Include="Packaging\PackageLogEndpoint.cs" />
     <Compile Include="Packaging\PackageDiagnosticsLogModel.cs" />
     <Compile Include="Packaging\PackageDiagnosticsModel.cs" />
     <Compile Include="Packaging\PackageDiagnosticsRequestModel.cs" />
-    <Compile Include="Features\Requests\RecordedRequestRequestModel.cs" />
     <Compile Include="DiagnosticsRegistry.cs" />
     <Compile Include="DiagnosticsException.cs" />
     <Compile Include="Routes\RouteExplorerEndpoint.cs" />

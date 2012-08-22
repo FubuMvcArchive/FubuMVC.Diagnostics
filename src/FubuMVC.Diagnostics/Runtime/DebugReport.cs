@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace FubuMVC.Diagnostics.Runtime
 {
     // TODO -- make DebugReport stupid
-    public class DebugReport : TimedReport, IDebugReport
+    public class DebugReport : IDebugReport
     {
         private readonly IList<object> _logs = new List<object>();
 
@@ -17,6 +17,16 @@ namespace FubuMVC.Diagnostics.Runtime
 
         public Guid Id { get; private set; }
         public Guid BehaviorId { get; set; }
+
+        public double ExecutionTime
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public void MarkFinished()
+        {
+            throw new NotImplementedException();
+        }
 
         public void AddLog(object log)
         {

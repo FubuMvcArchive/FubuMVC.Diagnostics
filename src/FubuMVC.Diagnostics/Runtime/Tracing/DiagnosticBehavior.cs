@@ -1,21 +1,18 @@
 using System;
 using FubuMVC.Core;
 using FubuMVC.Core.Behaviors;
-using FubuMVC.Core.Runtime;
 
 namespace FubuMVC.Diagnostics.Runtime.Tracing
 {
-    public class DiagnosticBehavior : IActionBehavior
+    public class DiagnosticBehavior : BasicBehavior
     {
         private readonly IDebugDetector _detector;
-        private readonly IDebugReport _report;
-        private readonly IDebugCallHandler _debugCallHandler;
         private readonly Action _initialize;
+        private readonly IDebugReport _report;
 
-        public DiagnosticBehavior(IDebugReport report, IDebugDetector detector, IRequestHistoryCache history, IDebugCallHandler debugCallHandler, IFubuRequest request)
+        public DiagnosticBehavior(IDebugReport report, IDebugDetector detector, IRequestHistoryCache history) : base(PartialBehavior.Ignored)
         {
             _report = report;
-            _debugCallHandler = debugCallHandler;
             _detector = detector;
 
             _initialize = () => history.AddReport(report);
@@ -23,18 +20,15 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
 
         public IActionBehavior Inner { get; set; }
 
-        public void Invoke()
+        protected override DoNext performInvoke()
         {
             _initialize();
-
-            Inner.Invoke();
-
-            write();
+            return DoNext.Continue;
         }
 
-        public void InvokePartial()
+        protected override void afterInsideBehavior()
         {
-            Inner.InvokePartial();
+            write();
         }
 
         private void write()
@@ -44,9 +38,6 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
             if (!_detector.IsDebugCall()) return;
 
             _detector.UnlatchWriting();
-
-            _debugCallHandler.Handle();
         }
     }
-
 }

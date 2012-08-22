@@ -11,7 +11,7 @@ using NUnit.Framework;
 using FubuTestingSupport;
 using System.Linq;
 
-namespace FubuMVC.Diagnostics.Tests.New.Routes
+namespace FubuMVC.Diagnostics.Tests.Routes
 {
     [TestFixture]
     public class RouteReportTester

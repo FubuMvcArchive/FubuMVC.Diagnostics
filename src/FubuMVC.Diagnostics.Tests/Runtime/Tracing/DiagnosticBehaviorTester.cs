@@ -72,7 +72,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
 
             ClassUnderTest.Invoke();
 
-            MockFor<IDebugCallHandler>().AssertWasNotCalled(x => x.Handle());
+            Assert.Fail("NWO");
         }
 
         [Test]
@@ -82,7 +82,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
         
             ClassUnderTest.Invoke();
 
-            MockFor<IDebugCallHandler>().AssertWasCalled(x => x.Handle());
+            Assert.Fail("NWO");
         }
     }
 }
