@@ -7,7 +7,6 @@ namespace FubuMVC.Diagnostics.Runtime
     {
         public static readonly string FLAG = "FubuDebug";
         private readonly Lazy<bool> _test;
-        private bool _latched = true;
 
         public DebugDetector(IRequestData request)
         {
@@ -18,16 +17,6 @@ namespace FubuMVC.Diagnostics.Runtime
 
                 return returnValue;
             });
-        }
-
-        public virtual bool IsOutputWritingLatched()
-        {
-            return IsDebugCall() && _latched;
-        }
-
-        public void UnlatchWriting()
-        {
-            _latched = false;
         }
 
         public bool IsDebugCall()

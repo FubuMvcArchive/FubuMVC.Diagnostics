@@ -21,7 +21,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
             MockFor<IFubuRequest>().Stub(x => x.Get<CurrentRequest>()).Return(theCurrentRequest);
 
             theInnerBehavior = MockFor<IActionBehavior>();
-            ClassUnderTest.Inner = theInnerBehavior;
+            ClassUnderTest.InsideBehavior = theInnerBehavior;
         }
 
         [Test]
@@ -50,14 +50,6 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
         }
 
         [Test]
-        public void unlatches_the_output_writing()
-        {
-            MockFor<IDebugDetector>().Stub(x => x.IsDebugCall()).Return(true);
-            ClassUnderTest.Invoke();
-            MockFor<IDebugDetector>().AssertWasCalled(x => x.UnlatchWriting());
-        }
-
-        [Test]
         public void invoke_partial_invokes_the_inner()
         {
             ClassUnderTest.InvokePartial();
@@ -68,7 +60,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
         [Test]
         public void when_invoking_and_not_in_debug_mode_do_not_write_the_debug_call()
         {
-            MockFor<IDebugDetector>().Stub(x => x.IsOutputWritingLatched()).Return(false);
+            MockFor<IDebugDetector>().Stub(x => x.IsDebugCall()).Return(false);
 
             ClassUnderTest.Invoke();
 

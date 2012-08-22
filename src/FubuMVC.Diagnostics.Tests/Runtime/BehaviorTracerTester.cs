@@ -104,7 +104,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
             exception = new NotImplementedException();
             inner = MockFor<IActionBehavior>();
             inner.Expect(x => x.Invoke()).Throw(exception);
-            MockFor<IDebugDetector>().Stub(x => x.IsOutputWritingLatched()).Return(true);
+            MockFor<IDebugDetector>().Stub(x => x.IsDebugCall()).Return(true);
 
             ClassUnderTest.Inner = inner;
             ClassUnderTest.Invoke();
@@ -154,7 +154,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
             exception = new NotImplementedException();
             inner = MockFor<IActionBehavior>();
             inner.Expect(x => x.Invoke()).Throw(exception);
-            MockFor<IDebugDetector>().Stub(x => x.IsOutputWritingLatched()).Return(false);
+            MockFor<IDebugDetector>().Stub(x => x.IsDebugCall()).Return(false);
 
             ClassUnderTest.Inner = inner;
         }
@@ -185,7 +185,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
             exception = new NotImplementedException();
             inner = MockFor<IActionBehavior>();
             inner.Expect(x => x.InvokePartial()).Throw(exception);
-            MockFor<IDebugDetector>().Stub(x => x.IsOutputWritingLatched()).Return(true);
+            MockFor<IDebugDetector>().Stub(x => x.IsDebugCall()).Return(true);
 
             ClassUnderTest.Inner = inner;
             ClassUnderTest.InvokePartial();
@@ -235,7 +235,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
             exception = new NotImplementedException();
             inner = MockFor<IActionBehavior>();
             inner.Expect(x => x.InvokePartial()).Throw(exception);
-            MockFor<IDebugDetector>().Stub(x => x.IsOutputWritingLatched()).Return(false);
+            MockFor<IDebugDetector>().Stub(x => x.IsDebugCall()).Return(false);
 
             ClassUnderTest.Inner = inner;
         }

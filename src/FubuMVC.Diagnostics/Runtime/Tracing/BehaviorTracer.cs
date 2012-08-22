@@ -29,7 +29,7 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
             {
                 _logger.Error("Behavior Failure", ex);
 
-                if (!_debugDetector.IsOutputWritingLatched())
+                if (!_debugDetector.IsDebugCall())
                 {
                     throw;
                 }

@@ -18,8 +18,6 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
             _initialize = () => history.AddReport(report);
         }
 
-        public IActionBehavior Inner { get; set; }
-
         protected override DoNext performInvoke()
         {
             _initialize();
@@ -36,8 +34,6 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
             _report.MarkFinished();
 
             if (!_detector.IsDebugCall()) return;
-
-            _detector.UnlatchWriting();
         }
     }
 }
