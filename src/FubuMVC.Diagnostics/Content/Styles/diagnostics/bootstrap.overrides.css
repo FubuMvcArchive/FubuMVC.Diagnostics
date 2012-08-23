@@ -53,3 +53,13 @@ span.http-status-code
 {
 	text-align: right;
 }
+
+span.node-trace-duration
+{
+	float:right;
+	text-align:right;
+}
+
+/*
+<div class="node-trace-container">OutputCachingNode<span class="node-trace-duration">2</span></div>
+*/

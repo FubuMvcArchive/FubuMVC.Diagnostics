@@ -1,6 +1,7 @@
 using System;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Diagnostics.Runtime;
+using HtmlTags;
 
 namespace FubuMVC.Diagnostics.Requests
 {
@@ -25,6 +26,14 @@ namespace FubuMVC.Diagnostics.Requests
         public RequestLog Log
         {
             get { return _log; }
+        }
+
+        public HtmlTag BehaviorSummary
+        {
+            get
+            {
+                return new BehaviorChainTraceTag(_chain, _log);
+            }
         }
 
         public bool Equals(HttpRequestVisualization other)

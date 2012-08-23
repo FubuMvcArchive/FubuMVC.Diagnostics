@@ -69,6 +69,12 @@ namespace FubuMVC.Diagnostics.Tests.Requests
         }
 
         [Test]
+        public void the_outermost_tag_is_an_li()
+        {
+            theResultingTag.TagName().ShouldEqual("li");
+        }
+
+        [Test]
         public void places_the_behavior_title()
         {
             var expectedTitle = Description.For(new FakeNode()).Title;
@@ -106,7 +112,7 @@ namespace FubuMVC.Diagnostics.Tests.Requests
         {
             logStartAndFinish(15, 22);
 
-            theResultingTag.ToString().ShouldContain("<span class=\"node-trace-duration\">7</span>");
+            theResultingTag.ToString().ShouldContain("<span class=\"node-trace-duration\">7 ms</span>");
         }
 
         [Test]

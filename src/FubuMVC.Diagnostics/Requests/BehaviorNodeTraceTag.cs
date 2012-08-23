@@ -33,7 +33,7 @@ namespace FubuMVC.Diagnostics.Requests
 
             var duration = finish.RequestTimeInMilliseconds - start.RequestTimeInMilliseconds;
 
-            container.Add("span").Text(duration.ToString()).AddClass("node-trace-duration");
+            container.Add("span").Text(duration.ToString() + " ms").AddClass("node-trace-duration");
         }
     }
 }
