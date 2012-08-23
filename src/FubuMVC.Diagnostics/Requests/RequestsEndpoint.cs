@@ -4,11 +4,11 @@ namespace FubuMVC.Diagnostics.Requests
 {
     public class RequestsEndpoint
     {
-        public HtmlTag get_requests(RequestsQuery request)
+        public RequestsViewModel get_requests()
         {
-            return new HtmlTag("H1").Text("Request Explorer (Forthcoming)");
+            return new RequestsViewModel();
         }
     }
 
-    public class RequestsQuery { }
+    public class RequestsViewModel{}
 }

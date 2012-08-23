@@ -30,3 +30,26 @@ table.details th span
 {
 	padding-right: 8px;
 }
+
+span.http-status-description
+{
+	margin-left: 8px;
+	font-style:italic;
+	font-weight: lighter;
+	font-size: smaller;
+}
+
+span.http-status-code
+{
+	font-weight: 700;
+}
+
+.duration-cell
+{
+	text-align: right;
+}
+
+.request-time
+{
+	text-align: right;
+}

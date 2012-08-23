@@ -14,7 +14,7 @@ namespace FubuMVC.Diagnostics.Navigation
             //Add += MenuNode.ForInput<HtmlConventionsRequestModel>(DiagnosticKeys.HtmlConventions);
             Add += MenuNode.ForInput<PackageDiagnosticsRequestModel>(DiagnosticKeys.ApplicationStartup);
 
-            Add += MenuNode.ForInput<RequestsQuery>(DiagnosticKeys.Requests);
+            Add += MenuNode.ForAction<RequestsEndpoint>(DiagnosticKeys.Requests, x => x.get_requests());
             Add += MenuNode.ForInput<RoutesRequest>(DiagnosticKeys.Routes);
         }
     }

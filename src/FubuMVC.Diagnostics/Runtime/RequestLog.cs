@@ -4,6 +4,7 @@ using System.Net;
 using System.Linq;
 using FubuCore;
 using FubuMVC.Core.Runtime.Logging;
+using FubuMVC.SlickGrid;
 
 namespace FubuMVC.Diagnostics.Runtime
 {
@@ -32,7 +33,7 @@ namespace FubuMVC.Diagnostics.Runtime
             _steps.Add(new RequestStep(requestTimeInMilliseconds, log));
         }
 
-        public HttpStatusReport HttpStatus
+        public HttpStatus HttpStatus
         {
             get
             {
@@ -43,22 +44,26 @@ namespace FubuMVC.Diagnostics.Runtime
                 {
                     report = log.Log.As<HttpStatusReport>();
                 }
-                else
-                {
-                    report = new HttpStatusReport{
-                        Status = Failed ? HttpStatusCode.InternalServerError : HttpStatusCode.OK
-                    };
-                }
-
-                if (report.Description.IsEmpty())
-                {
-                    report.Description = report.Status.ToString().SplitPascalCase();
-                }
-
-                return report;
+                
+                return new HttpStatus(report, Failed);
             }
         }
 
+        public string LocalTime
+        {
+            get
+            {
+                return Time.ToLocalTime().ToShortTimeString();
+            }
+        }
+
+        public string ContentType
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
 
         public bool Failed { get; set; }
 
@@ -90,6 +95,49 @@ namespace FubuMVC.Diagnostics.Runtime
         public override string ToString()
         {
             return string.Format("Id: {0}", Id);
+        }
+    }
+
+    public class HttpStatus : IMakeMyOwnJsonValue
+    {
+        private readonly HttpStatusCode _status;
+        private readonly string _description;
+
+        public HttpStatus(HttpStatusReport report, bool failed)
+        {
+            if(report != null)
+            {
+                _status = report.Status;
+                _description = report.Description;
+            }
+            else
+            {
+                _status = failed ? HttpStatusCode.InternalServerError : HttpStatusCode.OK;
+            }
+           
+            if (_description.IsEmpty())
+            {
+                _description = _status.ToString().SplitPascalCase();
+            }
+        }
+
+        public HttpStatusCode Status
+        {
+            get { return _status; }
+        }
+
+        public string Description
+        {
+            get { return _description; }
+        }
+
+        public object ToJsonValue()
+        {
+            var dict = new Dictionary<string, string>();
+            dict.Add("code", _status.As<int>().ToString());
+            dict.Add("description", _description);
+
+            return dict;
         }
     }
 

@@ -114,6 +114,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Packaging\Packaging.spark" />
+    <None Include="Requests\Requests.spark">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Routes\Routes.spark">
       <SubType>Designer</SubType>
     </None>
@@ -175,6 +178,7 @@
     <Compile Include="Chains\ChainEndpoint.cs" />
     <Compile Include="DiagnosticsChromeExtension.cs" />
     <Compile Include="Requests\HttpRequestVisualization.cs" />
+    <Compile Include="Requests\RequestGrid.cs" />
     <Compile Include="Requests\RequestVisualizationEndpoint.cs" />
     <Compile Include="Runtime\RequestTraceListener.cs" />
     <Compile Include="Runtime\Tracing\IRequestLogBuilder.cs" />
@@ -237,7 +241,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>48513</DevelopmentServerPort>
+          <DevelopmentServerPort>11210</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
