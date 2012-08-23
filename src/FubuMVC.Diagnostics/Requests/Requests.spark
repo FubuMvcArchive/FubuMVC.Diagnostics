@@ -27,7 +27,9 @@
           var cell = grid.getCellFromEvent(e);
           var item = grid.getDataItem(cell.row);
           
-          // TODO -- open the page to the request visualiation
+          var url = item.ReportUrl;
+          
+          window.location.href = url;
         });
       }
     }

@@ -1,9 +1,17 @@
 using System;
+using FubuMVC.Diagnostics.Runtime;
 
 namespace FubuMVC.Diagnostics.Requests
 {
     public class HttpRequestVisualization
     {
+        private readonly RequestLog _log;
+
+        public HttpRequestVisualization(RequestLog log)
+        {
+            _log = log;
+        }
+
         public Guid Id { get; set; }
 
         public bool Equals(HttpRequestVisualization other)

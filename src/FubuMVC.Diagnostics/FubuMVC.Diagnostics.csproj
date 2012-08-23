@@ -117,6 +117,7 @@
     <None Include="Requests\Requests.spark">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Requests\RequestVisualization.spark" />
     <None Include="Routes\Routes.spark">
       <SubType>Designer</SubType>
     </None>
