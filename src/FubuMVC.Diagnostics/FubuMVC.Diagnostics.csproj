@@ -108,7 +108,9 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include=".package-manifest" />
-    <None Include="Chrome\Chrome.spark" />
+    <None Include="Chrome\Chrome.spark">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Content\Styles\diagnostics\bootstrap.overrides.css" />
     <None Include="Dashboard\Dashboard.spark">
       <SubType>Designer</SubType>

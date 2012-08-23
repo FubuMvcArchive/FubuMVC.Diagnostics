@@ -13,9 +13,6 @@ namespace FubuMVC.Diagnostics
         {
             Services<DiagnosticServiceRegistry>();
 
-            // TODO -- make all of this unnecessary
-            Actions.IncludeClassesSuffixedWithEndpoint();
-
 
             Views
                 .TryToAttachWithDefaultConventions();

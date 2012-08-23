@@ -14,7 +14,7 @@ namespace FubuMVC.Diagnostics
                 x.ForKey(DiagnosticKeys.Main);
                 x.WrapWithChrome<DashboardChrome>();
 
-                x.Alter(chain => chain.Route.Prepend("_fubu"));
+                x.Alter(chain => chain.BehaviorChain.Route.Prepend("_fubu"));
             });
 
             registry.Navigation<DiagnosticsMenu>();
