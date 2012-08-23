@@ -22,7 +22,7 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
         public RequestLog BuildForCurrentRequest()
         {
             var log = new RequestLog{
-                BehaviorId    = _currentChain.OriginatingChain.UniqueId,
+                ChainId    = _currentChain.OriginatingChain.UniqueId,
                 HttpMethod = _request.HttpMethod(),
                 Url = _request.RelativeUrl(),
                 Time = _systemTime.UtcNow()

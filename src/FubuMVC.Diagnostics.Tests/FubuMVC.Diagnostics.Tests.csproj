@@ -92,6 +92,7 @@
   <ItemGroup>
     <Compile Include="DiagnosticsExtensionTester.cs" />
     <Compile Include="InteractionContextExtensions.cs" />
+    <Compile Include="Requests\BehaviorNodeTraceTagTester.cs" />
     <Compile Include="Routes\RouteReportTester.cs" />
     <Compile Include="Runtime\ApplyTracingIntegrationTesting.cs" />
     <Compile Include="Runtime\BehaviorTracerNodeTester.cs" />

@@ -18,13 +18,14 @@
 			<div class="hero-unit">
 				<h1>There'll be some stuff about the request here
 			</div>
+
+      <div>
+        <h2>this'll be where the behavior visualization will be</h2>
+        
+      </div>
 		</div>
 
-		<div class="row-fluid">
-			<div class="span12">
-				<h2>this'll be where the behavior visualization will be</h2>
-			</div>
-		</div>
+
 	</div>
 
 </div>

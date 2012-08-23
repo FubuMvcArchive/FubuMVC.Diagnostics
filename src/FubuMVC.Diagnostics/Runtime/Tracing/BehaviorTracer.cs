@@ -2,19 +2,18 @@ using System;
 using System.Runtime.Serialization;
 using FubuCore.Logging;
 using FubuMVC.Core.Behaviors;
+using FubuMVC.Core.Runtime.Logging;
 
 namespace FubuMVC.Diagnostics.Runtime.Tracing
 {
     public class BehaviorTracer : WrappingBehavior
     {
         private readonly BehaviorCorrelation _correlation;
-        private readonly IDebugDetector _debugDetector;
         private readonly ILogger _logger;
 
-        public BehaviorTracer(BehaviorCorrelation correlation, IDebugDetector debugDetector, ILogger logger)
+        public BehaviorTracer(BehaviorCorrelation correlation, ILogger logger)
         {
             _correlation = correlation;
-            _debugDetector = debugDetector;
             _logger = logger;
         }
 
@@ -32,17 +31,16 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
             }
             catch (Exception ex)
             {
-                _logger.Error("Behavior Failure", ex);
+                _logger.Error(_correlation.BehaviorId, "Behavior Failure", ex);
                 throw new UnhandledFubuException("Behavior failed", ex);
             }
             finally
             {
                 _logger.DebugMessage(() => new BehaviorFinish(_correlation));
             }
-
-            
         }
     }
+
 
     public class UnhandledFubuException : Exception
     {

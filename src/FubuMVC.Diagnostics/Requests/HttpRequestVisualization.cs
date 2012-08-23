@@ -1,4 +1,5 @@
 using System;
+using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Diagnostics.Runtime;
 
 namespace FubuMVC.Diagnostics.Requests
@@ -6,13 +7,25 @@ namespace FubuMVC.Diagnostics.Requests
     public class HttpRequestVisualization
     {
         private readonly RequestLog _log;
+        private readonly BehaviorChain _chain;
 
-        public HttpRequestVisualization(RequestLog log)
+        public HttpRequestVisualization(RequestLog log, BehaviorChain chain)
         {
             _log = log;
+            _chain = chain;
         }
 
         public Guid Id { get; set; }
+
+        public BehaviorChain Chain
+        {
+            get { return _chain; }
+        }
+
+        public RequestLog Log
+        {
+            get { return _log; }
+        }
 
         public bool Equals(HttpRequestVisualization other)
         {
