@@ -1,6 +1,8 @@
 using System;
 using System.Net;
 using FubuCore.Logging;
+using FubuMVC.Core.Http.Headers;
+using FubuMVC.Core.Runtime;
 using FubuMVC.Core.Runtime.Logging;
 using FubuMVC.Diagnostics.Runtime;
 using NUnit.Framework;
@@ -117,6 +119,31 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
             log.AddLog(15, new Fake { Name = "Shiner" });
 
             log.FindStep<Fake>(x => x.Name == "Josh").ShouldBeNull();
+        }
+
+        [Test]
+        public void content_type_with_out_any_headers()
+        {
+            var log = new RequestLog();
+            log.ContentType.ShouldEqual("Unknown");
+        }
+
+        [Test]
+        public void content_type_with_no_content_type_header()
+        {
+            var log = new RequestLog();
+            log.ResponseHeaders = new Header[0];
+
+            log.ContentType.ShouldEqual("Unknown");
+        }
+
+        [Test]
+        public void content_type_with_a_content_type_header()
+        {
+            var log = new RequestLog();
+            log.ResponseHeaders = new Header[]{new Header(HttpResponseHeader.ContentType, MimeType.Javascript.Value)};
+
+            log.ContentType.ShouldEqual(MimeType.Javascript.Value);
         }
     }
 

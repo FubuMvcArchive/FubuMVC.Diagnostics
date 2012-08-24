@@ -1,3 +1,5 @@
+using System;
+
 namespace FubuMVC.Diagnostics.Runtime
 {
     public class RequestStep
@@ -6,10 +8,12 @@ namespace FubuMVC.Diagnostics.Runtime
         {
             RequestTimeInMilliseconds = requestTimeInMilliseconds;
             Log = log;
+            Id = Guid.NewGuid();
         }
 
         public double RequestTimeInMilliseconds { get; private set; }
         public object Log { get; private set; }
+        public Guid Id { get; private set; }
 
         public TracedStep<T> ToTracedStep<T>()
         {

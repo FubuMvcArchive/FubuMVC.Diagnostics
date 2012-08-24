@@ -237,7 +237,10 @@
     <Compile Include="Routes\RouteExplorerEndpoint.cs" />
     <Compile Include="Shared\Tags\ControlGroupDivTag.cs" />
     <Compile Include="Shared\Tags\DetailsTableTag.cs" />
+    <Compile Include="Visualization\BehaviorNodeViewModel.cs" />
     <Compile Include="Visualization\IVisualizer.cs" />
+    <Compile Include="Visualization\NodeVisualizationPageExtensions.cs" />
+    <Compile Include="Visualization\Visualizer.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -16,7 +16,7 @@ namespace FubuMVC.Diagnostics.Requests
             Column(x => x.HttpMethod).Title("Method");
             Column(x => x.HttpStatus).Title("Status");
             
-            //Column(x => x.ContentType).Title("Content Type");
+            Column(x => x.ContentType).Title("Content Type");
             Column(x => x.ExecutionTime).Title("Duration (ms)");
 
             Data(x => x.ReportUrl);

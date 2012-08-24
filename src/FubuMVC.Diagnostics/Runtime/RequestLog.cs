@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using FubuCore;
+using FubuMVC.Core.Http;
+using FubuMVC.Core.Http.Headers;
+using FubuMVC.Core.Runtime;
 using FubuMVC.Core.Runtime.Logging;
 
 namespace FubuMVC.Diagnostics.Runtime
@@ -59,15 +62,31 @@ namespace FubuMVC.Diagnostics.Runtime
         {
             get
             {
-                throw new NotImplementedException();
+                if (ResponseHeaders == null)
+                {
+                    return "Unknown";
+                }
+
+                var header = ResponseHeaders
+                    .FirstOrDefault(x => x.Name.Equals(HttpResponseHeaders.ContentType, StringComparison.InvariantCultureIgnoreCase));
+
+                return header == null ? "Unknown" : header.Value;
+
             }
         }
 
         public bool Failed { get; set; }
 
+        public IEnumerable<Header> ResponseHeaders { get; set; }
+
         public IEnumerable<RequestStep> AllSteps()
         {
             return _steps;
+        }
+
+        public IEnumerable<T> AllLogsOfType<T>()
+        {
+            return _steps.Where(x => x.Log is T).Select(x => x.Log).OfType<T>();
         }
 
         public TracedStep<T> FindStep<T>(Func<T, bool> filter)

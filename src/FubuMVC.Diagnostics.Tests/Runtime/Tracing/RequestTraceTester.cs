@@ -1,5 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Threading;
+using FubuMVC.Core.Http;
+using FubuMVC.Core.Http.Headers;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.Diagnostics.Runtime.Tracing;
 using FubuTestingSupport;
@@ -84,14 +87,26 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
     [TestFixture]
     public class when_marking_the_current_log_as_finished : InteractionContext<RequestTrace>
     {
+        private IEnumerable<Header> theHeaders;
+
         protected override void beforeEach()
         {
             ClassUnderTest.Current = new RequestLog();
+
+            theHeaders = new Header[]
+                              {new Header("a", "1"), new Header("b", "2")};
+            MockFor<IResponse>().Stub(x => x.AllHeaders()).Return(theHeaders);
 
             ClassUnderTest.Stopwatch.Start();
             Thread.Sleep(10);
 
             ClassUnderTest.MarkFinished();
+        }
+
+        [Test]
+        public void places_all_the_response_headers_onto_the_request_log()
+        {
+            ClassUnderTest.Current.ResponseHeaders.ShouldHaveTheSameElementsAs(theHeaders);
         }
 
         [Test]
