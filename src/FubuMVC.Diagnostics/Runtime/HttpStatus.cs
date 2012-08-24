@@ -47,5 +47,12 @@ namespace FubuMVC.Diagnostics.Runtime
 
             return dict;
         }
+
+        public override string ToString()
+        {
+            return _description.IsEmpty()
+                       ? _status.As<int>().ToString()
+                       : "{0} {1}".ToFormat(_status.As<int>(), _description);
+        }
     }
 }

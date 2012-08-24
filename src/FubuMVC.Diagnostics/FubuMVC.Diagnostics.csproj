@@ -182,6 +182,7 @@
     <Compile Include="DiagnosticsChromeExtension.cs" />
     <Compile Include="Requests\BehaviorNodeTraceTag.cs" />
     <Compile Include="Requests\HttpRequestVisualization.cs" />
+    <Compile Include="Requests\RequestDataEndpoint.cs" />
     <Compile Include="Requests\RequestGrid.cs" />
     <Compile Include="Requests\RequestVisualizationEndpoint.cs" />
     <Compile Include="Runtime\HttpStatus.cs" />

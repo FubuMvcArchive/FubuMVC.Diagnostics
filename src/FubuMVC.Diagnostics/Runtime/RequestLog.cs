@@ -80,7 +80,7 @@ namespace FubuMVC.Diagnostics.Runtime
 
         public IEnumerable<Header> ResponseHeaders { get; set; }
 
-        public ValueReport Report { get; set; }
+        public ValueReport RequestData { get; set; }
 
         public IEnumerable<RequestStep> AllSteps()
         {

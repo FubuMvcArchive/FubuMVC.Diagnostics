@@ -33,7 +33,7 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
                 HttpMethod = _request.HttpMethod(),
                 Url = _request.RelativeUrl(),
                 Time = _systemTime.UtcNow(),
-                Report = report
+                RequestData = report
             };
 
             log.ReportUrl = _urls.UrlFor(log);

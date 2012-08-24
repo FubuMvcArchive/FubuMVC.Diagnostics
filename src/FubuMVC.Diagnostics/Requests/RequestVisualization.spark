@@ -14,11 +14,14 @@
 
 		<div class="span9">
 			<div class="hero-unit">
-				<h1>There'll be some stuff about the request here
+				<h2>!{Model.Log.Url} (!{Model.Log.HttpMethod})</h2>
+        <p>!{Model.Log.HttpStatus}</p>
+        <p>At !{Model.Log.Time} (!{Model.Log.ExecutionTime} ms)</p>
 			</div>
 
       <div>
-        <h2>this'll be where the behavior visualization will be</h2>
+        <h3>Request Data</h3>
+        !{this.PartialFor(Model.Log.RequestData)}
         
       </div>
 		</div>

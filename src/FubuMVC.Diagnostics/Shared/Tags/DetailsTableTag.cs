@@ -19,6 +19,14 @@ namespace FubuMVC.Diagnostics.Shared.Tags
             AddClass("table-striped");
         }
 
+        public void AddSection(string label)
+        {
+            AddBodyRow(x =>
+            {
+                x.Header().Attr("colspan", "2").Add("span").Text(label).AddClass("details-section");
+            });
+        }
+
         public void AddDetail(string label, string text, HtmlEncoding encoding = HtmlEncoding.UseEncoding)
         {
             AddBodyRow(x =>

@@ -45,7 +45,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
         [Test]
         public void writes_the_request_data_to_the_log()
         {
-            MockFor<IRequestData>().AssertWasCalled(x => x.WriteReport(theLog.Report));
+            MockFor<IRequestData>().AssertWasCalled(x => x.WriteReport(theLog.RequestData));
         }
 
         [Test]
