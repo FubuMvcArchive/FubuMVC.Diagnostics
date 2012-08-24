@@ -19,7 +19,7 @@ namespace FubuMVC.Diagnostics.Visualization
             });
         }
 
-        public BehaviorNodeViewModel Visualize(BehaviorNode node)
+        public BehaviorNodeViewModel ToVisualizationSubject(BehaviorNode node)
         {
             var description = Description.For(node);
 
@@ -29,6 +29,11 @@ namespace FubuMVC.Diagnostics.Visualization
                 Node = node,
                 InputToVisualize = _hasVisualizer[node.GetType()] ? node : (object) description
             };
+        }
+
+        public object ToVisualizationSubject(object target)
+        {
+            return _hasVisualizer[target.GetType()] ? target : new CollapsedDescription(target);
         }
     }
 }

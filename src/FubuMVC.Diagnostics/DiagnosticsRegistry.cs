@@ -4,6 +4,7 @@ using FubuMVC.Core;
 using FubuMVC.Core.Registration;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.Diagnostics.Runtime.Tracing;
+using FubuMVC.Diagnostics.Visualization;
 
 namespace FubuMVC.Diagnostics
 {
@@ -33,6 +34,8 @@ namespace FubuMVC.Diagnostics
 
             SetServiceIfNone<IRequestTrace, RequestTrace>();
             SetServiceIfNone<IRequestLogBuilder, RequestLogBuilder>();
+
+            SetServiceIfNone<IVisualizer, Visualizer>();
         }
     }
 }

@@ -4,6 +4,8 @@ namespace FubuMVC.Diagnostics.Visualization
 {
     public interface IVisualizer
     {
-        BehaviorNodeViewModel Visualize(BehaviorNode node);
+        BehaviorNodeViewModel ToVisualizationSubject(BehaviorNode node);
+
+        object ToVisualizationSubject(object target);
     }
 }
