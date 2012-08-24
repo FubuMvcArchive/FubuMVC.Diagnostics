@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using FubuCore;
+using FubuCore.Binding.Values;
 using FubuMVC.Core.Http;
 using FubuMVC.Core.Http.Headers;
 using FubuMVC.Core.Runtime;
@@ -78,6 +79,8 @@ namespace FubuMVC.Diagnostics.Runtime
         public bool Failed { get; set; }
 
         public IEnumerable<Header> ResponseHeaders { get; set; }
+
+        public ValueReport Report { get; set; }
 
         public IEnumerable<RequestStep> AllSteps()
         {

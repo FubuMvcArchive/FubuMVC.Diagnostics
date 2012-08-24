@@ -1,4 +1,5 @@
 using System;
+using FubuCore.Binding;
 using FubuMVC.Core.Http;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Core.Resources.Conneg;
@@ -39,6 +40,12 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
             theUrls = Services.StubUrls();
 
             theLog = ClassUnderTest.BuildForCurrentRequest();
+        }
+
+        [Test]
+        public void writes_the_request_data_to_the_log()
+        {
+            MockFor<IRequestData>().AssertWasCalled(x => x.WriteReport(theLog.Report));
         }
 
         [Test]
