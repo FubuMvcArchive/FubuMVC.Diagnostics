@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>FubuMVC.Diagnostics</id>
+    <version>0.0</version>
+    <authors>Jeremy Miller, et al.</authors>
+    <owners>Jeremy Miller, Joshua Arnold</owners>
+    <licenseUrl>https://github.com/DarthFubuMVC/fubumvc/raw/master/license.txt</licenseUrl>
+    <projectUrl>http://mvc.fubu-project.org/</projectUrl>
+    <iconUrl>https://github.com/DarthFubuMVC/fubu-collateral/raw/master/Icons/FubuMvc_256.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A complete look into what's going on inside your FubuMVC application</description>
+    <tags>fubumvc diagnostics</tags>
+    <dependencies>
+      <dependency id="FubuMVC.References" />
+	  <dependency id="FubuMVC.JQueryUI" />
+	  <dependency id="FubuMVC.SlickGrid" />
+	  <dependency id="FubuMVC.Spark" />
+	  <dependency id="FubuMVC.TwitterBootstrap" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\src\FubuMVC.Diagnostics\bin\FubuMVC.Diagnostics.*" target="lib\net40" />
+  </files>
+</package>
