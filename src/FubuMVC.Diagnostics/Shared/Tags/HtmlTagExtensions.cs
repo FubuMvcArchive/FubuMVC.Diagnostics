@@ -11,5 +11,16 @@ namespace FubuMVC.Diagnostics.Shared.Tags
 
             return a;
         }
+
+        public static HtmlTag PrependGlyph(this HtmlTag tag, string glyphName)
+        {
+            var glyph = new HtmlTag("i").AddClass(glyphName);
+            var literal = new LiteralTag(" ");
+
+            tag.InsertFirst(literal);
+            tag.InsertFirst(glyph);
+
+            return tag;
+        }
     }
 }
