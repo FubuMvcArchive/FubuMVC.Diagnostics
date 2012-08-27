@@ -19,14 +19,10 @@ namespace FubuMVC.Diagnostics.Runtime
 
         protected override ObjectDef buildObjectDef()
         {
-            var tracerDef = new ObjectDef(typeof(BehaviorTracer));
+            var tracerDef = new ObjectDef(typeof (BehaviorTracer));
 
             var chain = ParentChain();
-            tracerDef.DependencyByValue(new BehaviorCorrelation
-                                        {
-                                            ChainId = chain == null ? Guid.Empty : chain.UniqueId,
-                                            BehaviorId = Next.UniqueId
-                                        });
+            tracerDef.DependencyByValue(new BehaviorCorrelation(Next));
 
             return tracerDef;
         }

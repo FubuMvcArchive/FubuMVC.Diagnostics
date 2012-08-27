@@ -46,7 +46,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
             objectDef.Type.ShouldEqual(typeof (BehaviorTracer));
             var correlation = objectDef.FindDependencyValueFor<BehaviorCorrelation>();
 
-            correlation.BehaviorId.ShouldEqual(inner.UniqueId);
+            correlation.Node.ShouldEqual(inner);
             correlation.ChainId.ShouldEqual(chain.UniqueId);
         }
 

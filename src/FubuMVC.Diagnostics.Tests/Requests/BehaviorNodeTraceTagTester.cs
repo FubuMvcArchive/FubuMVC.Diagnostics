@@ -41,9 +41,7 @@ namespace FubuMVC.Diagnostics.Tests.Requests
 
         private void logStartAndFinish(double start, double finish)
         {
-            var correlation = new BehaviorCorrelation{
-                BehaviorId = theNode.UniqueId
-            };
+            var correlation = new BehaviorCorrelation(theNode);
 
             theLog.AddLog(start, new BehaviorStart(correlation));
             theLog.AddLog(finish, new BehaviorFinish(correlation));
@@ -51,10 +49,7 @@ namespace FubuMVC.Diagnostics.Tests.Requests
 
         private void hasAnExceptionAgainstTheNode()
         {
-            var correlation = new BehaviorCorrelation
-            {
-                BehaviorId = theNode.UniqueId
-            };
+            var correlation = new BehaviorCorrelation(theNode);
 
             
             

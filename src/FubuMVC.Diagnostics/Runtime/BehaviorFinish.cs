@@ -1,4 +1,6 @@
+using System;
 using FubuCore.Logging;
+using FubuMVC.Core.Runtime.Logging;
 using FubuMVC.Diagnostics.Runtime.Tracing;
 
 namespace FubuMVC.Diagnostics.Runtime
@@ -6,6 +8,8 @@ namespace FubuMVC.Diagnostics.Runtime
     public class BehaviorFinish : LogRecord
     {
         private readonly BehaviorCorrelation _correlation;
+        private bool _succeeded = true;
+        private ExceptionReport _exception;
 
         public BehaviorFinish(BehaviorCorrelation correlation)
         {
@@ -15,6 +19,29 @@ namespace FubuMVC.Diagnostics.Runtime
         public BehaviorCorrelation Correlation
         {
             get { return _correlation; }
+        }
+
+        public bool Succeeded
+        {
+            get {
+                return _succeeded;
+            }
+        }
+
+        public ExceptionReport Exception
+        {
+            get {
+                return _exception;
+            }
+        }
+
+        public void LogException(Exception ex)
+        {
+            _exception = new ExceptionReport(ex){
+                CorrelationId = _correlation.Node.UniqueId
+            };
+
+            _succeeded = false;
         }
 
         public bool Equals(BehaviorFinish other)

@@ -4,6 +4,7 @@ using FubuMVC.Core.Behaviors;
 using FubuMVC.Core.Runtime.Logging;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.Diagnostics.Runtime.Tracing;
+using FubuMVC.Diagnostics.Tests.Requests;
 using FubuTestingSupport;
 using NUnit.Framework;
 using Rhino.Mocks;
@@ -20,7 +21,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         protected override void beforeEach()
         {
             logs = Services.RecordLogging();
-            correlation = new BehaviorCorrelation();
+            correlation = new BehaviorCorrelation(new FakeNode());
             Services.Inject(correlation);
 
             inner = MockFor<IActionBehavior>();
@@ -58,7 +59,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         protected override void beforeEach()
         {
             logs = Services.RecordLogging();
-            correlation = new BehaviorCorrelation();
+            correlation = new BehaviorCorrelation(new FakeNode());
             Services.Inject(correlation);
 
             inner = MockFor<IActionBehavior>();
@@ -98,7 +99,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         protected override void beforeEach()
         {
             logs = Services.RecordLogging();
-            correlation = new BehaviorCorrelation();
+            correlation = new BehaviorCorrelation(new FakeNode());
             Services.Inject(correlation);
 
             exception = new NotImplementedException();
@@ -124,8 +125,8 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         [Test]
         public void should_mark_the_debug_report_with_the_exception()
         {
-            logs.ErrorMessages.OfType<ExceptionReport>().Single()
-                .ExceptionText.ShouldEqual(exception.ToString());
+            logs.DebugMessages.OfType<BehaviorFinish>().Single()
+                .Exception.ExceptionText.ShouldEqual(exception.ToString());
         }
 
         [Test]
@@ -153,7 +154,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         protected override void beforeEach()
         {
             logs = Services.RecordLogging();
-            correlation = new BehaviorCorrelation();
+            correlation = new BehaviorCorrelation(new FakeNode());
             Services.Inject(correlation);
 
             exception = new NotImplementedException();
@@ -185,7 +186,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         protected override void beforeEach()
         {
             logs = Services.RecordLogging();
-            correlation = new BehaviorCorrelation();
+            correlation = new BehaviorCorrelation(new FakeNode());
             Services.Inject(correlation);
 
             exception = new NotImplementedException();
@@ -210,8 +211,8 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         [Test]
         public void should_mark_the_debug_report_with_the_exception()
         {
-            logs.ErrorMessages.OfType<ExceptionReport>().Single()
-                .ExceptionText.ShouldEqual(exception.ToString());
+            logs.DebugMessages.OfType<BehaviorFinish>().Single()
+                .Exception.ExceptionText.ShouldEqual(exception.ToString());
         }
 
         [Test]
@@ -239,7 +240,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         protected override void beforeEach()
         {
             logs = Services.RecordLogging();
-            correlation = new BehaviorCorrelation();
+            correlation = new BehaviorCorrelation(new FakeNode());
             Services.Inject(correlation);
 
             exception = new NotImplementedException();

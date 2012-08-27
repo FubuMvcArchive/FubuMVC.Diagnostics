@@ -96,6 +96,7 @@
     <Compile Include="Requests\RequestStepTester.cs" />
     <Compile Include="Routes\RouteReportTester.cs" />
     <Compile Include="Runtime\ApplyTracingIntegrationTesting.cs" />
+    <Compile Include="Runtime\BehaviorFinishTester.cs" />
     <Compile Include="Runtime\BehaviorTracerNodeTester.cs" />
     <Compile Include="Runtime\BehaviorTracerTester.cs" />
     <Compile Include="Runtime\BehaviorTracer_and_DiagnosticBehavior_construction_testing.cs" />

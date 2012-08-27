@@ -16,8 +16,8 @@ namespace FubuMVC.Diagnostics.Requests
             var container = Add("div").AddClass("node-trace-container");
             container.Text(description.Title);
 
-            var start = log.FindStep<BehaviorStart>(x => x.Correlation.BehaviorId == node.UniqueId);
-            var finish = log.FindStep<BehaviorFinish>(x => x.Correlation.BehaviorId == node.UniqueId);
+            var start = log.FindStep<BehaviorStart>(x => x.Correlation.Node == node);
+            var finish = log.FindStep<BehaviorFinish>(x => x.Correlation.Node == node);
 
             if (start == null)
             {
