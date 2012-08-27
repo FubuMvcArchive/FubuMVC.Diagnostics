@@ -222,6 +222,7 @@
     <Compile Include="Visualization\IVisualizer.cs" />
     <Compile Include="Visualization\VisualizationPageExtensions.cs" />
     <Compile Include="Visualization\Visualizer.cs" />
+    <Compile Include="Visualization\Visualizers\StringMessageEndpoint.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

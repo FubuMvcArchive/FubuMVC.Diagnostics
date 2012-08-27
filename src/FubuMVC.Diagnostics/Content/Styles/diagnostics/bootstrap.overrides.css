@@ -60,6 +60,8 @@ span.node-trace-duration
 	text-align:right;
 }
 
-/*
-<div class="node-trace-container">OutputCachingNode<span class="node-trace-duration">2</span></div>
-*/
+#request-header
+{
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
