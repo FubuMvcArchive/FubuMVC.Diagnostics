@@ -8,6 +8,7 @@ using FubuMVC.TwitterBootstrap;
 using FubuMVC.Core.UI;
 using HtmlTags;
 using System.Linq;
+using FubuMVC.Diagnostics.Shared.Tags;
 
 namespace FubuMVC.Diagnostics.Visualization
 {
@@ -39,7 +40,7 @@ namespace FubuMVC.Diagnostics.Visualization
                 var input = visualizer.ToVisualizationSubject(step.Log);
                 var content = page.PartialFor(input);
 
-                return new RequestStepTag(step, content.ToString());
+                return new RequestStepTag(step, content.ToString()).PrependAnchor();
             });
 
             return new TagList(tags);
