@@ -230,6 +230,7 @@
     <Compile Include="Visualization\VisualizationPageExtensions.cs" />
     <Compile Include="Visualization\Visualizer.cs" />
     <Compile Include="Visualization\Visualizers\BehaviorStartEndpoint.cs" />
+    <Compile Include="Visualization\Visualizers\RedirectReportEndpoint.cs" />
     <Compile Include="Visualization\Visualizers\StringMessageEndpoint.cs" />
   </ItemGroup>
   <ItemGroup />
