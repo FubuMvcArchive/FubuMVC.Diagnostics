@@ -1,3 +1,4 @@
+using System;
 using FubuMVC.Core.Registration.Nodes;
 
 namespace FubuMVC.Diagnostics.Visualization
@@ -7,5 +8,7 @@ namespace FubuMVC.Diagnostics.Visualization
         BehaviorNodeViewModel ToVisualizationSubject(BehaviorNode node);
 
         object ToVisualizationSubject(object target);
+
+        bool HasVisualizer(Type type);
     }
 }

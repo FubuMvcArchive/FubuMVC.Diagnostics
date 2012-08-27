@@ -119,6 +119,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Runtime\Tracing\RequestTraceTester.cs" />
     <Compile Include="Shared\Tags\DetailTableBuilderTester.cs" />
+    <Compile Include="Visualization\Visualizers\SetValueEndpointTester.cs" />
     <Compile Include="Visualization\VisualizerTester.cs" />
   </ItemGroup>
   <ItemGroup>
