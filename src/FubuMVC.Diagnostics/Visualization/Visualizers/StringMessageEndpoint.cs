@@ -1,13 +1,19 @@
 using FubuCore.Logging;
 using HtmlTags;
+using FubuMVC.Diagnostics.Shared.Tags;
 
 namespace FubuMVC.Diagnostics.Visualization.Visualizers
 {
     public class StringMessageEndpoint
     {
-        public HtmlTag VisualizeStringMessagePartial(StringMessage message)
+        public HtmlTag VisualizePartial(StringMessage message)
         {
-            return new HtmlTag("div").AddClasses("alert", "alert-info").Text(message.Message);
+            return new HtmlTag("div", div =>
+            {
+                div.AddClass("comment");
+                div.PrependGlyph("icon-comment");
+                div.Add("span").Text(message.Message);
+            });
         }
     }
 }
