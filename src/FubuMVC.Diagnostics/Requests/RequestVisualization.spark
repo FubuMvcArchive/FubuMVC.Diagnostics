@@ -23,6 +23,7 @@
         <h3>Data</h3>
         !{this.PartialFor(Model.Log.RequestData)}
 
+        !{Model.ResponseHeaderTag}
         <br></br>
         <h3>Tracing</h3>
 

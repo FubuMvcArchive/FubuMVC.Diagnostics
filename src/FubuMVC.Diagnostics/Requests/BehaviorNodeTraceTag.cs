@@ -26,7 +26,7 @@ namespace FubuMVC.Diagnostics.Requests
             }
 
             var exception = log.FindStep<ExceptionReport>(x => node.UniqueId.Equals(x.CorrelationId));
-            if (exception != null)
+            if (exception != null || !finish.Log.Succeeded)
             {
                 AddClass("exception");
             }

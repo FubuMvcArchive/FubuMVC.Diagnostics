@@ -17,6 +17,7 @@ namespace FubuMVC.Diagnostics.Runtime
         public RequestLog()
         {
             Id = Guid.NewGuid();
+            ResponseHeaders = Enumerable.Empty<Header>();
         }
 
         public Guid Id { get; private set; }
