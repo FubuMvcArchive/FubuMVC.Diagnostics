@@ -1,9 +1,11 @@
+using System;
+using FubuCore.Descriptions;
 using FubuCore.Logging;
 using FubuMVC.Diagnostics.Runtime.Tracing;
 
 namespace FubuMVC.Diagnostics.Runtime
 {
-    public class BehaviorStart : LogRecord
+    public class BehaviorStart : LogRecord, DescribesItself
     {
         private readonly BehaviorCorrelation _correlation;
 
@@ -35,6 +37,13 @@ namespace FubuMVC.Diagnostics.Runtime
         public override int GetHashCode()
         {
             return (_correlation != null ? _correlation.GetHashCode() : 0);
+        }
+
+        public void Describe(Description description)
+        {
+            var inner = Description.For(Correlation.Node);
+
+            description.Title = "Starting " + inner.Title;
         }
     }
 }
