@@ -35,5 +35,10 @@ namespace FubuMVC.Diagnostics.Visualization
         {
             return _hasVisualizer[target.GetType()] ? target : new CollapsedDescription(target);
         }
+
+        public bool HasVisualizer(Type type)
+        {
+            return _hasVisualizer[type];
+        }
     }
 }
