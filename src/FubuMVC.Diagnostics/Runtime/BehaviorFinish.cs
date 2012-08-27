@@ -1,11 +1,12 @@
 using System;
+using FubuCore.Descriptions;
 using FubuCore.Logging;
 using FubuMVC.Core.Runtime.Logging;
 using FubuMVC.Diagnostics.Runtime.Tracing;
 
 namespace FubuMVC.Diagnostics.Runtime
 {
-    public class BehaviorFinish : LogRecord
+    public class BehaviorFinish : LogRecord, DescribesItself
     {
         private readonly BehaviorCorrelation _correlation;
         private bool _succeeded = true;
@@ -62,6 +63,13 @@ namespace FubuMVC.Diagnostics.Runtime
         public override int GetHashCode()
         {
             return (_correlation != null ? _correlation.GetHashCode() : 0);
+        }
+
+        public void Describe(Description description)
+        {
+            var inner = Description.For(Correlation.Node);
+
+            description.Title = "Finished " + inner.Title;
         }
     }
 }

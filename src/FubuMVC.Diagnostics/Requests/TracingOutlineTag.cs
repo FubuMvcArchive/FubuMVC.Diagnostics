@@ -1,6 +1,8 @@
 using FubuCore.Descriptions;
+using FubuCore.Logging;
 using FubuMVC.Diagnostics.Runtime;
 using System.Collections.Generic;
+using FubuCore;
 
 namespace FubuMVC.Diagnostics.Requests
 {
@@ -12,12 +14,27 @@ namespace FubuMVC.Diagnostics.Requests
 
             log.AllSteps().Each(x =>
             {
-                var description = Description.For(x.Log);
-
-                var node = AddNode(description.Title, x.Id.ToString());
+                var node = addNode(x);
 
                 node.Container.Add("span").AddClass("node-trace-duration").Text(x.RequestTimeInMilliseconds + " ms");
             });
+        }
+
+        private OutlineNodeTag addNode(RequestStep step)
+        {
+            string title = null;
+
+            if (step.Log is StringMessage)
+            {
+                title = step.Log.As<StringMessage>().Message;
+            }
+            else
+            {
+                var description = Description.For(step.Log);
+                title = description.Title;
+            }
+
+            return AddNode(title, step.Id.ToString());
         }
     }
 }
