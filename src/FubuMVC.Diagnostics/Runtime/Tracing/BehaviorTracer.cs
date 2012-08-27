@@ -24,6 +24,7 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
             try
             {
                 action();
+                _logger.DebugMessage(() => new BehaviorFinish(_correlation));
             }
             catch (UnhandledFubuException)
             {
@@ -31,12 +32,15 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
             }
             catch (Exception ex)
             {
-                _logger.Error(_correlation.BehaviorId, "Behavior Failure", ex);
+                _logger.DebugMessage(() =>
+                {
+                    var log = new BehaviorFinish(_correlation);
+                    log.LogException(ex);
+
+                    return log;
+                });
+
                 throw new UnhandledFubuException("Behavior failed", ex);
-            }
-            finally
-            {
-                _logger.DebugMessage(() => new BehaviorFinish(_correlation));
             }
         }
     }

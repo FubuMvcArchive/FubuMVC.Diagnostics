@@ -16,8 +16,6 @@ namespace FubuMVC.Diagnostics.Tests.Requests
             var tag = new RequestStepTag(step, "some content");
 
             tag.Id().ShouldEqual(step.Id.ToString());
-
-            tag.ToString().ShouldContain("<div class=\"span2 step-duration\">15</div>");
         }
     }
 }
