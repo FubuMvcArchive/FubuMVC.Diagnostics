@@ -157,10 +157,14 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Chains\ChainEndpoint.cs" />
     <Compile Include="DiagnosticsChromeExtension.cs" />
+    <Compile Include="Requests\BehaviorChainTraceTag.cs" />
     <Compile Include="Requests\BehaviorNodeTraceTag.cs" />
+    <Compile Include="Requests\DataOutlineTag.cs" />
     <Compile Include="Requests\HttpRequestVisualization.cs" />
+    <Compile Include="Requests\OutlineTag.cs" />
     <Compile Include="Requests\RequestDataEndpoint.cs" />
     <Compile Include="Requests\RequestGrid.cs" />
+    <Compile Include="Requests\RequestLogDataOutlineTag.cs" />
     <Compile Include="Requests\RequestStepTag.cs" />
     <Compile Include="Requests\RequestVisualizationEndpoint.cs" />
     <Compile Include="Requests\ResponseHeadersTag.cs" />
@@ -172,6 +176,7 @@
     <Compile Include="Runtime\Tracing\IRequestTrace.cs" />
     <Compile Include="Runtime\Tracing\RequestLogBuilder.cs" />
     <Compile Include="Runtime\Tracing\RequestTrace.cs" />
+    <Compile Include="Shared\Tags\HtmlTagExtensions.cs" />
     <Compile Include="Shared\TypeEndpoint.cs" />
     <Compile Include="Shared\Tags\DetailTableBuilder.cs" />
     <Compile Include="Chrome\DashboardChrome.cs" />

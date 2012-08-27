@@ -27,10 +27,25 @@ namespace FubuMVC.Diagnostics.Requests
             var table = new DetailsTableTag();
             report.Values.OrderBy(x => x.Key).Each(pair => table.AddDetail(pair.Key, pair.Value));
 
-            var tag = new CollapsibleTag("request-data-" + report.Name, report.Name.SplitPascalCase());
+            var tag = new CollapsibleTag(report.ElementId(), report.Header());
             tag.SetInnerContent(table.ToString());
 
-            return tag;
+            return tag.PrependAnchor();
+        }
+
+        
+    }
+
+    public static class ValueSourceReportExtensions
+    {
+        public static string Header(this ValueSourceReport report)
+        {
+            return report.Name.SplitPascalCase();
+        }
+
+        public static string ElementId(this ValueSourceReport report)
+        {
+            return "request-data-" + report.Name;
         }
     }
 }

@@ -1,11 +1,8 @@
 using FubuMVC.Core.Behaviors.Chrome;
 using FubuMVC.Core.Registration;
-using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Diagnostics.Chrome;
 using FubuMVC.Diagnostics.Runtime;
 using System.Linq;
-using HtmlTags;
-using System.Collections.Generic;
 
 namespace FubuMVC.Diagnostics.Requests
 {
@@ -29,24 +26,6 @@ namespace FubuMVC.Diagnostics.Requests
             var chain = _graph.Behaviors.FirstOrDefault(x => x.UniqueId == log.ChainId);
 
             return new HttpRequestVisualization(log, chain);
-        }
-    }
-
-    public class BehaviorChainTraceTag : HtmlTag
-    {
-        public BehaviorChainTraceTag(IEnumerable<BehaviorNode> chain, RequestLog log) : base("ul")
-        {
-            AddClasses("nav", "nav-list");
-            Add("li").AddClass("nav-header").Text("Behaviors");
-
-            chain.Where(NotDiagnosticNode).Each(node => Append(new BehaviorNodeTraceTag(node, log)));
-        }
-
-        public static bool NotDiagnosticNode(BehaviorNode node)
-        {
-            if (node is DiagnosticNode || node is BehaviorTracerNode) return false;
-
-            return true;
         }
     }
 }
