@@ -52,6 +52,14 @@ namespace FubuMVC.Diagnostics.Requests
             }
         }
 
+        public HtmlTag TracingOutlineTag
+        {
+            get
+            {
+                return new TracingOutlineTag(_log);
+            }
+        }
+
         public bool Equals(HttpRequestVisualization other)
         {
             if (ReferenceEquals(null, other)) return false;
