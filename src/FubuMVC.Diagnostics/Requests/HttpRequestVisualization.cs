@@ -36,6 +36,14 @@ namespace FubuMVC.Diagnostics.Requests
             }
         }
 
+        public HtmlTag ResponseHeaderTag
+        {
+            get
+            {
+                return new ResponseHeadersTag(_log);
+            }
+        }
+
         public bool Equals(HttpRequestVisualization other)
         {
             if (ReferenceEquals(null, other)) return false;

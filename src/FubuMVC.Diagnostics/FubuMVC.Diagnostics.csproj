@@ -163,6 +163,7 @@
     <Compile Include="Requests\RequestGrid.cs" />
     <Compile Include="Requests\RequestStepTag.cs" />
     <Compile Include="Requests\RequestVisualizationEndpoint.cs" />
+    <Compile Include="Requests\ResponseHeadersTag.cs" />
     <Compile Include="Runtime\HttpStatus.cs" />
     <Compile Include="Runtime\RequestStep.cs" />
     <Compile Include="Runtime\RequestTraceListener.cs" />

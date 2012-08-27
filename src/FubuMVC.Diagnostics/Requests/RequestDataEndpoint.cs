@@ -5,6 +5,7 @@ using FubuMVC.TwitterBootstrap.Collapsibles;
 using HtmlTags;
 using System.Collections.Generic;
 using System.Linq;
+using FubuCore;
 
 namespace FubuMVC.Diagnostics.Requests
 {
@@ -26,7 +27,7 @@ namespace FubuMVC.Diagnostics.Requests
             var table = new DetailsTableTag();
             report.Values.OrderBy(x => x.Key).Each(pair => table.AddDetail(pair.Key, pair.Value));
 
-            var tag = new CollapsibleTag("request-data-" + report.Name, report.Name);
+            var tag = new CollapsibleTag("request-data-" + report.Name, report.Name.SplitPascalCase());
             tag.SetInnerContent(table.ToString());
 
             return tag;
