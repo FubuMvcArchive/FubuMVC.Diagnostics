@@ -8,8 +8,10 @@ namespace FubuMVC.Diagnostics.Requests
 {
     public class ResponseHeadersTag : CollapsibleTag
     {
-        public ResponseHeadersTag(RequestLog log)
-            : base("response-headers", "Response Headers")
+        public static readonly string ElementId = "response-headers";
+        public static readonly string Heading = "Response Headers";
+
+        public ResponseHeadersTag(RequestLog log) : base(ElementId, Heading)
         {
             if (!log.ResponseHeaders.Any())
             {

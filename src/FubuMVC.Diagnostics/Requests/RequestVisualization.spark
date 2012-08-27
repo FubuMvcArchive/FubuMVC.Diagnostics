@@ -9,8 +9,9 @@
 	<div class="row-fluid">
 		<div class="span3">
 			<div class="well sidebar-nav">
-				!{Model.BehaviorSummary}
-			</div>
+        !{Model.BehaviorSummary}
+        !{Model.RequestLogDataOutlineTag}
+      </div>
 		</div>
 
 		<div class="span9">

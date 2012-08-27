@@ -44,6 +44,14 @@ namespace FubuMVC.Diagnostics.Requests
             }
         }
 
+        public HtmlTag RequestLogDataOutlineTag
+        {
+            get
+            {
+                return new RequestLogDataOutlineTag(_log);
+            }
+        }
+
         public bool Equals(HttpRequestVisualization other)
         {
             if (ReferenceEquals(null, other)) return false;
