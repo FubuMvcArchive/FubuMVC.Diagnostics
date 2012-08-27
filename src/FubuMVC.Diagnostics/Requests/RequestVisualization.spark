@@ -14,7 +14,7 @@
 		</div>
 
 		<div class="span9">
-			<div class="hero-unit">
+			<div id="request-header" class="hero-unit">
 				<h2>!{Model.Log.Url} (!{Model.Log.HttpMethod})</h2>
         <p>!{Model.Log.HttpStatus} at !{Model.Log.Time} (!{Model.Log.ExecutionTime} ms)</p>
 			</div>
@@ -24,16 +24,9 @@
         !{this.PartialFor(Model.Log.RequestData)}
 
         <br></br>
-        <h3>Trace Messages</h3>
+        <h3>Tracing</h3>
 
         <div class="row-fluid">
-          <div class="span2">
-            <h4>Request Time (ms)</h4>
-          </div>
-          <div class="span10">
-            <h4>Log Message</h4>
-          </div>
-
           !{this.Visualize(Model.Log.AllSteps())}
         </div>
       </div>

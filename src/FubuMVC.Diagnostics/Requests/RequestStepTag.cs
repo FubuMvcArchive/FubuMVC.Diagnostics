@@ -10,8 +10,7 @@ namespace FubuMVC.Diagnostics.Requests
             AddClass("row-fluid");
             Id(step.Id.ToString());
 
-            Add("div").AddClasses("span2", "step-duration").Text(step.RequestTimeInMilliseconds.ToString());
-            Add("div").AddClasses("span10", "step-body").Text(content).Encoded(false);
+            Text(content).Encoded(false);
         }
     }
 }
