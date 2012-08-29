@@ -159,9 +159,7 @@
     <Compile Include="DiagnosticsChromeExtension.cs" />
     <Compile Include="Requests\BehaviorChainTraceTag.cs" />
     <Compile Include="Requests\BehaviorNodeTraceTag.cs" />
-    <Compile Include="Requests\DataOutlineTag.cs" />
     <Compile Include="Requests\HttpRequestVisualization.cs" />
-    <Compile Include="Requests\OutlineTag.cs" />
     <Compile Include="Requests\RequestDataEndpoint.cs" />
     <Compile Include="Requests\RequestGrid.cs" />
     <Compile Include="Requests\RequestLogDataOutlineTag.cs" />
@@ -177,9 +175,7 @@
     <Compile Include="Runtime\Tracing\IRequestTrace.cs" />
     <Compile Include="Runtime\Tracing\RequestLogBuilder.cs" />
     <Compile Include="Runtime\Tracing\RequestTrace.cs" />
-    <Compile Include="Shared\Tags\HtmlTagExtensions.cs" />
     <Compile Include="Shared\TypeEndpoint.cs" />
-    <Compile Include="Shared\Tags\DetailTableBuilder.cs" />
     <Compile Include="Chrome\DashboardChrome.cs" />
     <Compile Include="Core\CoreExtensions.cs" />
     <Compile Include="Core\Extensions\TagExtensions.cs" />
@@ -222,16 +218,13 @@
     <Compile Include="DiagnosticsException.cs" />
     <Compile Include="Routes\RouteExplorerEndpoint.cs" />
     <Compile Include="Shared\Tags\ControlGroupDivTag.cs" />
-    <Compile Include="Shared\Tags\DetailsTableTag.cs" />
     <Compile Include="Visualization\BehaviorNodeViewModel.cs" />
     <Compile Include="Visualization\CollapsedDescription.cs" />
     <Compile Include="Visualization\CollapsedDescriptionEndpoint.cs" />
     <Compile Include="Visualization\IVisualizer.cs" />
     <Compile Include="Visualization\VisualizationPageExtensions.cs" />
     <Compile Include="Visualization\Visualizer.cs" />
-    <Compile Include="Visualization\Visualizers\BehaviorStartEndpoint.cs" />
-    <Compile Include="Visualization\Visualizers\RedirectReportEndpoint.cs" />
-    <Compile Include="Visualization\Visualizers\SetValueEndpoint.cs" />
+    <Compile Include="Visualization\Visualizers\BehaviorStartAndFinishEndpoints.cs" />
     <Compile Include="Visualization\Visualizers\StringMessageEndpoint.cs" />
   </ItemGroup>
   <ItemGroup />
