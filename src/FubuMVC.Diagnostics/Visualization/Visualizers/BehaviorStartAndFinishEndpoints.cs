@@ -5,7 +5,7 @@ using FubuMVC.Diagnostics.Shared.Tags;
 
 namespace FubuMVC.Diagnostics.Visualization.Visualizers
 {
-    public class BehaviorStartEndpoint
+    public class BehaviorStartAndFinishEndpoints
     {
         public HtmlTag VisualizePartial(BehaviorStart start)
         {
