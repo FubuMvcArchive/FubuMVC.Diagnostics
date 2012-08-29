@@ -1,11 +1,10 @@
-using System;
-using FubuCore.Binding.Values;
-using FubuMVC.Diagnostics.Shared.Tags;
-using FubuMVC.TwitterBootstrap.Collapsibles;
-using HtmlTags;
 using System.Collections.Generic;
 using System.Linq;
 using FubuCore;
+using FubuCore.Binding.Values;
+using FubuMVC.TwitterBootstrap.Collapsibles;
+using FubuMVC.TwitterBootstrap.Tags;
+using HtmlTags;
 
 namespace FubuMVC.Diagnostics.Requests
 {
@@ -28,12 +27,10 @@ namespace FubuMVC.Diagnostics.Requests
             report.Values.OrderBy(x => x.Key).Each(pair => table.AddDetail(pair.Key, pair.Value));
 
             var tag = new CollapsibleTag(report.ElementId(), report.Header());
-            tag.SetInnerContent(table.ToString());
+            tag.AppendContent(table);
 
             return tag.PrependAnchor();
         }
-
-        
     }
 
     public static class ValueSourceReportExtensions

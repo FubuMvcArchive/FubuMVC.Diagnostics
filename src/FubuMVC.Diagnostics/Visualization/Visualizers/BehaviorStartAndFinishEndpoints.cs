@@ -1,7 +1,7 @@
 using FubuCore.Descriptions;
 using FubuMVC.Diagnostics.Runtime;
+using FubuMVC.TwitterBootstrap.Tags;
 using HtmlTags;
-using FubuMVC.Diagnostics.Shared.Tags;
 
 namespace FubuMVC.Diagnostics.Visualization.Visualizers
 {
@@ -24,7 +24,7 @@ namespace FubuMVC.Diagnostics.Visualization.Visualizers
             var description = Description.For(finish.Correlation.Node);
 
             var tag = new HtmlTag("div").AddClass("behavior-finish");
-                
+
             tag.Add("span").Text("Finished ").Add("i").Text(description.Title);
             if (!finish.Succeeded)
             {

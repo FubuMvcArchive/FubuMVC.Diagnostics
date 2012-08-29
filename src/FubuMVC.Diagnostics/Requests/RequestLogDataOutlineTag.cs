@@ -1,7 +1,7 @@
-using FubuMVC.Diagnostics.Runtime;
-using System.Linq;
 using System.Collections.Generic;
-using FubuCore;
+using System.Linq;
+using FubuMVC.Diagnostics.Runtime;
+using FubuMVC.TwitterBootstrap.Tags;
 
 namespace FubuMVC.Diagnostics.Requests
 {
@@ -11,10 +11,11 @@ namespace FubuMVC.Diagnostics.Requests
         {
             AddHeader("Data");
 
-            log.RequestData.Reports.Where(x => x.Values.Any()).Each(report =>
-            {
-                AddNode(report.Header(), report.ElementId());
-            });
+            log.RequestData.Reports.Where(x => x.Values.Any()).Each(
+                report =>
+                {
+                    AddNode(report.Header(), report.ElementId());
+                });
 
 
             if (log.ResponseHeaders.Any())
