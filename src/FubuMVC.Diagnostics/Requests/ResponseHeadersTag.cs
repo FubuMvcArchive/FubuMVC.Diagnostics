@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using FubuMVC.Diagnostics.Runtime;
-using FubuMVC.Diagnostics.Shared.Tags;
 using FubuMVC.TwitterBootstrap.Collapsibles;
+using FubuMVC.TwitterBootstrap.Tags;
 
 namespace FubuMVC.Diagnostics.Requests
 {
@@ -22,7 +22,7 @@ namespace FubuMVC.Diagnostics.Requests
             var detailsTag = new DetailsTableTag();
             log.ResponseHeaders.OrderBy(x => x.Name).Each(header => detailsTag.AddDetail(header.Name, header.Value));
 
-            SetInnerContent(detailsTag.ToString());
+            AppendContent(detailsTag);
         }
     }
 }

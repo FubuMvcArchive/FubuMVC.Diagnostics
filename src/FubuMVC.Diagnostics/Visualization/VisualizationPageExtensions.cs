@@ -1,14 +1,14 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using FubuMVC.Core.Registration.Nodes;
+using FubuMVC.Core.UI;
 using FubuMVC.Core.View;
 using FubuMVC.Diagnostics.Requests;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.TwitterBootstrap;
-using FubuMVC.Core.UI;
+using FubuMVC.TwitterBootstrap.Tags;
 using HtmlTags;
-using System.Linq;
-using FubuMVC.Diagnostics.Shared.Tags;
 
 namespace FubuMVC.Diagnostics.Visualization
 {

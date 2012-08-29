@@ -3,6 +3,7 @@ using FubuCore.Logging;
 using FubuMVC.Diagnostics.Runtime;
 using System.Collections.Generic;
 using FubuCore;
+using FubuMVC.TwitterBootstrap.Tags;
 
 namespace FubuMVC.Diagnostics.Requests
 {

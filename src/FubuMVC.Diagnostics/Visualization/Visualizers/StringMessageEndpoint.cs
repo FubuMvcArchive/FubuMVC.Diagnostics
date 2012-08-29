@@ -1,6 +1,6 @@
 using FubuCore.Logging;
+using FubuMVC.TwitterBootstrap.Tags;
 using HtmlTags;
-using FubuMVC.Diagnostics.Shared.Tags;
 
 namespace FubuMVC.Diagnostics.Visualization.Visualizers
 {

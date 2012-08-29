@@ -8,6 +8,7 @@ using FubuMVC.Core.Urls;
 using FubuMVC.Diagnostics.Routes;
 using FubuMVC.Diagnostics.Shared.Tags;
 using FubuMVC.Diagnostics.Visualization;
+using FubuMVC.TwitterBootstrap.Tags;
 using HtmlTags;
 using System.Collections.Generic;
 
