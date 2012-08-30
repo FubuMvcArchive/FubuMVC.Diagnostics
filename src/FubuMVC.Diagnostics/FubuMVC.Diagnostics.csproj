@@ -148,7 +148,9 @@
       <DependentUpon>web.config</DependentUpon>
     </Content>
     <None Include="Visualization\BehaviorNode.spark" />
-    <None Include="Visualization\Description.spark" />
+    <None Include="Visualization\Description.spark">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\CommonAssemblyInfo.cs">
@@ -222,6 +224,7 @@
     <Compile Include="Visualization\CollapsedDescription.cs" />
     <Compile Include="Visualization\CollapsedDescriptionEndpoint.cs" />
     <Compile Include="Visualization\DetailsTableBuilderExtensions.cs" />
+    <Compile Include="Visualization\GlyphRegistry.cs" />
     <Compile Include="Visualization\IVisualizer.cs" />
     <Compile Include="Visualization\VisualizationPageExtensions.cs" />
     <Compile Include="Visualization\Visualizer.cs" />

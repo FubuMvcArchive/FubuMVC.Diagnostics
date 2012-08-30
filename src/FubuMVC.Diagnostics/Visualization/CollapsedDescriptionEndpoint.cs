@@ -1,5 +1,7 @@
 using FubuMVC.Core.UI;
 using FubuMVC.TwitterBootstrap;
+using HtmlTags;
+using FubuMVC.TwitterBootstrap.Tags;
 
 namespace FubuMVC.Diagnostics.Visualization
 {
@@ -14,7 +16,16 @@ namespace FubuMVC.Diagnostics.Visualization
 
         public string CollapsedDescriptionPartial(CollapsedDescription subject)
         {
-            return _document.CollapsiblePartialFor(subject.Description).Title(subject.Description.Title).ToString();
+            if (subject.Description.HasMoreThanTitle())
+            {
+                return _document.CollapsiblePartialFor(subject.Description).Title(subject.Description.Title).ToString();
+            }
+
+            return new HtmlTag("div", x =>
+            {
+                x.PrependGlyph(GlyphRegistry.GlyphFor(subject.Description.TargetType));
+                x.Add("span").Text(subject.Description.Title);
+            }).ToString();
         }
     }
 }
