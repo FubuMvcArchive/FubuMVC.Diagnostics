@@ -3,6 +3,7 @@ using FubuCore.Binding.Values;
 using FubuCore.Dates;
 using FubuMVC.Core.Http;
 using FubuMVC.Core.Urls;
+using FubuMVC.Diagnostics.Chains;
 
 namespace FubuMVC.Diagnostics.Runtime.Tracing
 {
@@ -28,12 +29,15 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
             var report = new ValueReport();
             _requestData.WriteReport(report);
 
+            var chainId = _currentChain.OriginatingChain.UniqueId;
             var log = new RequestLog{
-                ChainId    = _currentChain.OriginatingChain.UniqueId,
+                ChainId    = chainId,
                 HttpMethod = _request.HttpMethod(),
                 Url = _request.RelativeUrl(),
                 Time = _systemTime.UtcNow(),
-                RequestData = report
+                RequestData = report,
+                ChainUrl = _urls.UrlFor(new ChainRequest{Id = chainId}),
+                DetailsUrl = _urls.UrlFor(new ChainDetailsRequest{Id = chainId})
             };
 
             log.ReportUrl = _urls.UrlFor(log);

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace FubuMVC.Diagnostics.Runtime
@@ -6,5 +7,7 @@ namespace FubuMVC.Diagnostics.Runtime
     {
         void Store(RequestLog log);
         IEnumerable<RequestLog> RecentReports();
+
+        RequestLog Find(Guid id);
     }
 }

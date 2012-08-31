@@ -65,3 +65,13 @@ span.node-trace-duration
 	padding-bottom: 10px;
 	padding-top: 10px;
 }
+
+a.external {
+    background: url(/content/images/external.png) center right no-repeat;
+    padding-right: 13px;
+}
+
+.info-link
+{
+	font-size: small;
+}

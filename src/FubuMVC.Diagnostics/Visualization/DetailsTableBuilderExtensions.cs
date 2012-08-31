@@ -8,6 +8,8 @@ namespace FubuMVC.Diagnostics.Visualization
     {
         public static void AddDetail(this DetailTableBuilder builder, string label, Type type)
         {
+            if (type == null) return;
+
             builder.AddDetailByPartial(label, new TypeInput{Type = type});
         }
     }

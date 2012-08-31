@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using FubuMVC.Core;
@@ -26,6 +27,11 @@ namespace FubuMVC.Diagnostics.Runtime
         public IEnumerable<RequestLog> RecentReports()
         {
             return _reports.ToList();
+        }
+
+        public RequestLog Find(Guid id)
+        {
+            return _reports.FirstOrDefault(x => x.Id == id);
         }
     }
 }

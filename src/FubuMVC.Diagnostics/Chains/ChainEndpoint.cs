@@ -1,10 +1,12 @@
 using System;
 using System.Linq;
 using FubuCore.Descriptions;
+using FubuMVC.Core.Behaviors.Chrome;
 using FubuMVC.Core.Registration;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Core.UI;
 using FubuMVC.Core.Urls;
+using FubuMVC.Diagnostics.Chrome;
 using FubuMVC.Diagnostics.Routes;
 using FubuMVC.Diagnostics.Shared.Tags;
 using FubuMVC.Diagnostics.Visualization;
@@ -25,6 +27,12 @@ namespace FubuMVC.Diagnostics.Chains
             _urls = urls;
             _graph = graph;
             _document = document;
+        }
+
+        [Chrome(typeof(DashboardChrome), Title = "Chain Details")]
+        public HtmlTag get_chain_details_Id(ChainDetailsRequest request)
+        {
+            return new HtmlTag("div").Text("There will be so much more later....");
         }
 
         public HtmlTag get_chain_Id(ChainRequest request)

@@ -5,6 +5,8 @@
 <use namespace="System.Linq" />
 <use namespace="FubuMVC.TwitterBootstrap" />
 
+<Script src="diagnostics/requests.js"/>
+
 <h1>Request Explorer</h1>
   
 !{this.RenderGrid<RequestGrid>("requestGrid").Attr("style", "width:100%;height:500px;")}
@@ -35,4 +37,7 @@
       }
     }
   </script>
+
+
+
 

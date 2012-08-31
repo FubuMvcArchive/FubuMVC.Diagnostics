@@ -95,9 +95,9 @@
     <Content Include="Content\Images\filter_wrap_right.gif" />
     <Content Include="Content\Images\fubumvc.png" />
     <Content Include="Content\Images\pre_code_bg_blk.gif" />
+    <Content Include="Content\Scripts\diagnostics\requestVisualization.js" />
     <Content Include="Content\Scripts\diagnostics\jquery-1.7.min.js" />
     <Content Include="Content\Scripts\diagnostics\underscore-min.js" />
-    <Content Include="Content\Scripts\diagnostics\requests.js" />
     <Content Include="Content\Scripts\diagnostics\json2.js" />
     <Content Include="Content\Scripts\diagnostics\knockout-1.1.2.js" />
     <Content Include="Content\Styles\chains\view.css" />
@@ -119,7 +119,9 @@
     <None Include="Requests\Requests.spark">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Requests\RequestVisualization.spark" />
+    <None Include="Requests\RequestVisualization.spark">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Routes\Routes.spark">
       <SubType>Designer</SubType>
     </None>
@@ -157,6 +159,7 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Chains\ChainDetails.cs" />
     <Compile Include="Chains\ChainEndpoint.cs" />
     <Compile Include="DiagnosticsChromeExtension.cs" />
     <Compile Include="Requests\BehaviorChainTraceTag.cs" />
@@ -164,6 +167,7 @@
     <Compile Include="Requests\HttpRequestVisualization.cs" />
     <Compile Include="Requests\RequestDataEndpoint.cs" />
     <Compile Include="Requests\RequestGrid.cs" />
+    <Compile Include="Requests\RequestLinksTag.cs" />
     <Compile Include="Requests\RequestLogDataOutlineTag.cs" />
     <Compile Include="Requests\RequestStepTag.cs" />
     <Compile Include="Requests\RequestVisualizationEndpoint.cs" />

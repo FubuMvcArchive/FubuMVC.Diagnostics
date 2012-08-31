@@ -4,6 +4,7 @@ using FubuMVC.Core.Http;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Core.Resources.Conneg;
 using FubuMVC.Core.Urls;
+using FubuMVC.Diagnostics.Chains;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.Diagnostics.Runtime.Tracing;
 using FubuTestingSupport;
@@ -64,6 +65,23 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
         public void sets_the_report_url()
         {
             theLog.ReportUrl.ShouldEqual(theUrls.UrlFor(theLog));
+        }
+
+        [Test]
+        public void sets_the_chain_visualization_url()
+        {
+            theLog.ChainUrl.ShouldEqual(theUrls.UrlFor(new ChainRequest{
+                Id = theOriginatingChain.UniqueId
+            }));
+        }
+
+        [Test]
+        public void sets_the_chain_details_url()
+        {
+            theLog.ChainUrl.ShouldEqual(theUrls.UrlFor(new ChainDetailsRequest
+            {
+                Id = theOriginatingChain.UniqueId
+            }));
         }
 
         [Test]

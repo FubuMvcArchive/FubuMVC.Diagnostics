@@ -28,6 +28,7 @@ namespace FubuMVC.Diagnostics.Runtime
 
         public string Url { get; set; }
         public string ReportUrl { get; set; }
+        public string ChainUrl { get; set; }
         public string HttpMethod { get; set; }
         public DateTime Time { get; set; }
 
@@ -82,6 +83,8 @@ namespace FubuMVC.Diagnostics.Runtime
         public IEnumerable<Header> ResponseHeaders { get; set; }
 
         public ValueReport RequestData { get; set; }
+
+        public string DetailsUrl { get; set; }
 
         public IEnumerable<RequestStep> AllSteps()
         {
