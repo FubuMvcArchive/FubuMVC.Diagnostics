@@ -12,11 +12,11 @@
     <description>A complete look into what's going on inside your FubuMVC application</description>
     <tags>fubumvc diagnostics</tags>
     <dependencies>
-      <dependency id="FubuMVC.References" />
-	  <dependency id="FubuMVC.JQueryUI" />
-	  <dependency id="FubuMVC.SlickGrid" />
-	  <dependency id="FubuMVC.Spark" />
-	  <dependency id="FubuMVC.TwitterBootstrap" />
+      <dependency id="FubuMVC.References" version="0.9.8.1122" />
+      <dependency id="FubuMVC.JQueryUI" />
+      <dependency id="FubuMVC.SlickGrid" />
+      <dependency id="FubuMVC.Spark" />
+      <dependency id="FubuMVC.TwitterBootstrap" />
     </dependencies>
   </metadata>
   <files>
