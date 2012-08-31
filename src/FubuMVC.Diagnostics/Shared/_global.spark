@@ -1,7 +1,6 @@
 ﻿<use namespace="FubuCore" />
 ﻿<use namespace="FubuMVC.Core.UI" />
 <use namespace="FubuMVC.Diagnostics.Core.Extensions"/>
-<use namespace="FubuMVC.Diagnostics.Features"/>
 <use namespace="FubuMVC.Diagnostics.Dashboard"/>
 <use namespace="FubuMVC.Diagnostics.Requests"/>
 <use namespace="FubuMVC.Diagnostics.Routes"/>
