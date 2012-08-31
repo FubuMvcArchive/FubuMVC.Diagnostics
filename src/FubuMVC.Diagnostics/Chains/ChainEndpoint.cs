@@ -8,6 +8,7 @@ using FubuMVC.Core.UI;
 using FubuMVC.Core.Urls;
 using FubuMVC.Diagnostics.Chrome;
 using FubuMVC.Diagnostics.Routes;
+using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.Diagnostics.Shared.Tags;
 using FubuMVC.Diagnostics.Visualization;
 using FubuMVC.TwitterBootstrap.Tags;
@@ -64,7 +65,7 @@ namespace FubuMVC.Diagnostics.Chains
             var div = new HtmlTag("div").Id("chain-summary");
 
             int level = 0;
-            chain.Each(node =>
+            chain.NonDiagnosticNodes().Each(node =>
             {
                 var description = Description.For(node);
 
@@ -88,7 +89,7 @@ namespace FubuMVC.Diagnostics.Chains
 
         private void visualizeChain(BehaviorChain chain)
         {
-            var literal = new LiteralTag(_document.Visualize(chain));
+            var literal = new LiteralTag(_document.Visualize(chain.NonDiagnosticNodes()));
             _document.Add(literal);
         }
 

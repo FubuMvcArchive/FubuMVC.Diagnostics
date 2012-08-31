@@ -20,5 +20,7 @@ namespace FubuMVC.Diagnostics.Runtime
         {
             get { return BehaviorCategory.Instrumentation; }
         }
+
+
     }
 }
