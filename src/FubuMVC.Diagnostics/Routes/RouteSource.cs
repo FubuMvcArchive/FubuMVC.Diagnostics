@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FubuMVC.Core.Registration;
 using FubuMVC.Core.Urls;
+using FubuMVC.Diagnostics.Chains;
 using FubuMVC.SlickGrid;
 
 namespace FubuMVC.Diagnostics.Routes
@@ -19,7 +20,7 @@ namespace FubuMVC.Diagnostics.Routes
 
         public IEnumerable<RouteReport> GetData(RouteQuery query)
         {
-            return _graph.Behaviors.Select(x => new RouteReport(x, _urls));
+            return _graph.Behaviors.Select(x => RouteReport.ForChain(x, _urls));
         }
     }
 }

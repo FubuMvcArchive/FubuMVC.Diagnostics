@@ -15,14 +15,19 @@ namespace FubuMVC.Diagnostics.Routes
 {
     public class RouteReport
     {
+        public const string NoConstraints = "N/A";
         private readonly BehaviorChain _chain;
         private readonly string _url;
-        public const string NoConstraints = "N/A";
 
-        public RouteReport(BehaviorChain chain, IUrlRegistry urls)
+        public static RouteReport ForChain(BehaviorChain chain, IUrlRegistry urls)
+        {
+            return new RouteReport(chain, urls.UrlFor(new ChainRequest{Id = chain.UniqueId}));
+        }
+
+        public RouteReport(BehaviorChain chain, string url)
         {
             _chain = chain;
-            _url = urls.UrlFor(new ChainRequest { Id = chain.UniqueId });
+            _url = url;
         }
 
         public Type ResourceType
@@ -36,18 +41,12 @@ namespace FubuMVC.Diagnostics.Routes
 
         public Type InputModel
         {
-            get
-            {
-                return _chain.InputType();
-            }
+            get { return _chain.InputType(); }
         }
 
         public IEnumerable<string> Action
         {
-            get
-            {
-                return _chain.Calls.Select(x => x.Description);
-            }
+            get { return _chain.Calls.Select(x => x.Description); }
         }
 
         public string Constraints
@@ -75,7 +74,6 @@ namespace FubuMVC.Diagnostics.Routes
                 {
                     return "N/A";
                 }
-
 
 
                 var pattern = _chain.Route.Pattern;
@@ -129,7 +127,7 @@ namespace FubuMVC.Diagnostics.Routes
                 // TODO -- what about other types of nodes that can write?
                 // IHaveContentTypes ?????
                 var inputNode = _chain.OfType<InputNode>().FirstOrDefault();
-                if (inputNode == null) return new []{MimeType.HttpFormMimetype};
+                if (inputNode == null) return new[]{MimeType.HttpFormMimetype};
 
                 return inputNode.Readers.SelectMany(x => x.Mimetypes).Distinct();
             }
@@ -175,26 +173,17 @@ namespace FubuMVC.Diagnostics.Routes
 
         public string url
         {
-            get
-            {
-                return _url;
-            }
+            get { return _url; }
         }
 
         public string Origin
         {
-            get
-            {
-                return _chain.Origin;
-            }
+            get { return _chain.Origin; }
         }
 
         public string UrlCategory
         {
-            get
-            {
-                return _chain.UrlCategory.Category;
-            }
+            get { return _chain.UrlCategory.Category; }
         }
     }
 }

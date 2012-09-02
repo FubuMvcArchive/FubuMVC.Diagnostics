@@ -108,6 +108,9 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include=".package-manifest" />
+    <None Include="Chains\ChainVisualization.spark">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Chrome\Chrome.spark">
       <SubType>Designer</SubType>
     </None>
@@ -162,6 +165,7 @@
     <Compile Include="BehaviorChainExtensions.cs" />
     <Compile Include="Chains\ChainDetails.cs" />
     <Compile Include="Chains\ChainEndpoint.cs" />
+    <Compile Include="Chains\ChainVisualization.cs" />
     <Compile Include="DiagnosticsChromeExtension.cs" />
     <Compile Include="Requests\BehaviorChainTraceTag.cs" />
     <Compile Include="Requests\BehaviorNodeTraceTag.cs" />

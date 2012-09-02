@@ -14,12 +14,18 @@ namespace FubuMVC.Diagnostics.Visualization
 {
     public static class VisualizationPageExtensions
     {
-        public static string Visualize(this IFubuPage page, BehaviorNode node)
+        public static HtmlTag Visualize(this IFubuPage page, BehaviorNode node)
         {
             var visualizer = page.Get<Visualizer>(); // TODO -- change this
             var model = visualizer.ToVisualizationSubject(node);
 
-            return page.CollapsiblePartialFor(model).Title(model.Description.Title).ToString();
+            var html = page.CollapsiblePartialFor(model).Title(model.Description.Title).ToString();
+
+            return new HtmlTag("a", a =>
+            {
+                a.Attr("name", node.UniqueId.ToString());
+                a.Next = new LiteralTag(html);
+            });
         }
 
         public static string Visualize(this IFubuPage page, IEnumerable<BehaviorNode> nodes)

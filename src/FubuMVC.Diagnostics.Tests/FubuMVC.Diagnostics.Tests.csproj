@@ -93,6 +93,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chains\ChainVisualizationTester.cs" />
     <Compile Include="DiagnosticsExtensionTester.cs" />
     <Compile Include="InteractionContextExtensions.cs" />
     <Compile Include="Requests\BehaviorNodeTraceTagTester.cs" />

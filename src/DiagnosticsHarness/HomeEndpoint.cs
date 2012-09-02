@@ -27,7 +27,12 @@ namespace DiagnosticsHarness
 
         public FubuContinuation Index()
         {
-            return FubuContinuation.RedirectTo<RequestsEndpoint>(x => x.get_requests());
+            var chain = _graph.BehaviorFor<RouteExplorerEndpoint>(x => x.get_routes(null));
+            return FubuContinuation.RedirectTo(new ChainDetailsRequest{
+                Id = chain.UniqueId
+            });
+
+//            return FubuContinuation.RedirectTo<RequestsEndpoint>(x => x.get_requests());
 
             //var chain = _graph.BehaviorFor<RouteExplorerEndpoint>(x => x.get_routes(null));
 

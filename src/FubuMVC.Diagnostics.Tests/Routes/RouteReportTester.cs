@@ -25,7 +25,7 @@ namespace FubuMVC.Diagnostics.Tests.Routes
         {
             theChain = new BehaviorChain();
             theUrls = new StubUrlRegistry();
-            _report = new Lazy<RouteReport>(() => new RouteReport(theChain, theUrls));
+            _report = new Lazy<RouteReport>(() => RouteReport.ForChain(theChain, theUrls));
         }
 
         private RouteReport theReport

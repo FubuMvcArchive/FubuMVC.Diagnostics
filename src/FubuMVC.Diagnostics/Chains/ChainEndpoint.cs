@@ -1,19 +1,18 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using FubuCore.Descriptions;
 using FubuMVC.Core.Behaviors.Chrome;
+using FubuMVC.Core.Continuations;
 using FubuMVC.Core.Registration;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Core.UI;
 using FubuMVC.Core.Urls;
 using FubuMVC.Diagnostics.Chrome;
 using FubuMVC.Diagnostics.Routes;
-using FubuMVC.Diagnostics.Runtime;
-using FubuMVC.Diagnostics.Shared.Tags;
 using FubuMVC.Diagnostics.Visualization;
 using FubuMVC.TwitterBootstrap.Tags;
 using HtmlTags;
-using System.Collections.Generic;
 
 namespace FubuMVC.Diagnostics.Chains
 {
@@ -30,41 +29,81 @@ namespace FubuMVC.Diagnostics.Chains
             _document = document;
         }
 
-        [Chrome(typeof(DashboardChrome), Title = "Chain Details")]
-        public HtmlTag get_chain_details_Id(ChainDetailsRequest request)
+        [Chrome(typeof (DashboardChrome), Title = "Chain Details")]
+        public ChainVisualization get_chain_details_Id(ChainDetailsRequest request)
         {
-            return new HtmlTag("div").Text("There will be so much more later....");
+            writeAssets();
+
+            var chain = _graph.Behaviors.FirstOrDefault(x => x.UniqueId == request.Id);
+            if (chain == null)
+            {
+                return new ChainVisualization
+                {
+                    RedirectTo = FubuContinuation.RedirectTo<ChainEndpoint>(x => x.get_chain_missing())
+                };
+            }
+
+            var report = RouteReport.ForChain(chain, _urls);
+
+            return new ChainVisualization{
+                Chain = chain,
+                Details = buildDetails(report),
+                Report = report,
+                BehaviorVisualization = new LiteralTag(_document.Visualize(chain.NonDiagnosticNodes()))
+            };
         }
 
-        public HtmlTag get_chain_Id(ChainRequest request)
+        private HtmlTag buildDocument(Guid chainId, Action<DetailsTableTag, BehaviorChain, RouteReport> action)
         {
-            _document.Asset("twitterbootstrap");
-            _document.Asset("diagnostics/bootstrap.overrides.css");
-            _document.WriteAssetsToHead();
+            writeAssets();
+
+            var chain = _graph.Behaviors.FirstOrDefault(x => x.UniqueId == chainId);
+
+            if (chain == null)
+            {
+                return new HtmlTag("div").Text("This route cannot be found");
+            }
 
             var top = _document.Push("div");
 
-            var chain = _graph.Behaviors.FirstOrDefault(x => x.UniqueId == request.Id);
-            var report = new RouteReport(chain, _urls);
-
-            // TODO -- what if chain doesn't exist?
+            var report = RouteReport.ForChain(chain, _urls);
             var details = buildDetails(report);
-            var behaviorsTag = createBehaviorList(chain);
 
-            details.AddDetail("Behaviors", behaviorsTag);
-
-            //createBehaviorList(chain);
-
-            //visualizeChain(chain);
+            action(details, chain, report);
 
             return top;
+        }
+
+        public HtmlTag get_chain_missing()
+        {
+            return new HtmlTag("p", p =>
+            {
+                p.Add("span").Text("The requested BehaviorChain cannot be found.  ");
+                p.Add("a").Text("Return to the Request Explorer").Attr("href", _urls.UrlFor<RouteExplorerModel>());
+            });
+        }
+
+
+        public HtmlTag get_chain_Id(ChainRequest request)
+        {
+            return buildDocument(request.Id, (details, chain, report) =>
+            {
+                var behaviorsTag = createBehaviorList(chain);
+                details.AddDetail("Behaviors", behaviorsTag);
+            });
+        }
+
+        private void writeAssets()
+        {
+            _document.Asset("twitterbootstrap");
+            _document.Asset("diagnostics/bootstrap.overrides.css");
         }
 
         private HtmlTag createBehaviorList(BehaviorChain chain)
         {
             var div = new HtmlTag("div").Id("chain-summary");
 
-            int level = 0;
+            var level = 0;
             chain.NonDiagnosticNodes().Each(node =>
             {
                 var description = Description.For(node);
@@ -87,11 +126,6 @@ namespace FubuMVC.Diagnostics.Chains
             return div;
         }
 
-        private void visualizeChain(BehaviorChain chain)
-        {
-            var literal = new LiteralTag(_document.Visualize(chain.NonDiagnosticNodes()));
-            _document.Add(literal);
-        }
 
         private DetailsTableTag buildDetails(RouteReport report)
         {
@@ -110,6 +144,20 @@ namespace FubuMVC.Diagnostics.Chains
             builder.AddDetail("Content Type", report.ContentType);
 
             return builder.DetailTag;
+        }
+    }
+
+    public class BehaviorOutlineTag : OutlineTag
+    {
+        public BehaviorOutlineTag(BehaviorChain chain)
+        {
+            AddHeader("Behaviors");
+
+            chain.NonDiagnosticNodes().Each(x =>
+            {
+                var description = Description.For(x);
+                AddNode(description.Title, x.UniqueId.ToString());
+            });
         }
     }
 }
