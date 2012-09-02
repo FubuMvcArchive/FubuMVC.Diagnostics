@@ -128,7 +128,24 @@ namespace FubuMVC.Diagnostics.Visualization
 
         private void writeProperties(Description description)
         {
-            description.Properties.Each((key, value) => Append(new DescriptionPropertyTag(key, value)));
+            if (description.Properties.Any())
+            {
+                var table = new TableTag();
+                table.AddClass("desc-properties");
+
+                description.Properties.Each((key, value) =>
+                {
+                    table.AddBodyRow(row =>
+                    {
+                        row.Header(key);
+                        row.Cell(value);
+                    });
+                });
+
+                Append(table);
+            }
+
+            
         }
 
         private void addDescriptionText(Description description)

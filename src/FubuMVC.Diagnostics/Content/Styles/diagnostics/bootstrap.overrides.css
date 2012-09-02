@@ -75,3 +75,56 @@ a.external {
 {
 	font-size: small;
 }
+
+/* Description stuff */
+table.desc-properties th
+{
+	text-align: right;
+	padding-right: 8px;
+	width: auto;
+}
+
+table.desc-properties th, table.desc-properties td
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+
+.desc-child-title b
+{
+	padding-right: 5px;
+	color: Orange;
+}
+
+.desc-child-body
+{
+	padding-left:3px;
+	border-left: thin solid orange;
+	
+	margin-left: 20px;
+	margin-bottom: 15px;
+	
+}
+
+.desc-list-name
+{
+	font-weight: bold;
+	
+}
+
+.desc-bullet-item-title
+{
+	color: Blue;
+	margin-left:20px;
+	font-style: italic;
+}
+
+.desc-bullet-item-body
+{
+	padding-left:3px;
+	border-left: thin solid blue;
+	
+	margin-left: 40px;
+	margin-bottom:15px;
+}

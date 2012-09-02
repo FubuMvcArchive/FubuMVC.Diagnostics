@@ -99,6 +99,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DescriptionBag.cs" />
+    <Compile Include="DescriptionEndpoints.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
