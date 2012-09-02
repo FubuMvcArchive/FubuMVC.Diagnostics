@@ -2,12 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using FubuMVC.Core.Registration.Nodes;
-using FubuMVC.Core.UI;
 using FubuMVC.Core.View;
-using FubuMVC.Diagnostics.Requests;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.TwitterBootstrap;
-using FubuMVC.TwitterBootstrap.Tags;
 using HtmlTags;
 
 namespace FubuMVC.Diagnostics.Visualization
@@ -41,13 +38,7 @@ namespace FubuMVC.Diagnostics.Visualization
         {
             var visualizer = page.Get<IVisualizer>();
 
-            var tags = steps.Select(step =>
-            {
-                var input = visualizer.ToVisualizationSubject(step.Log);
-                var content = page.PartialFor(input);
-
-                return new RequestStepTag(step, content.ToString()).PrependAnchor();
-            });
+            var tags = steps.Select(visualizer.VisualizeStep);
 
             return new TagList(tags);
         }

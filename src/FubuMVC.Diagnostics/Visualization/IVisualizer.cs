@@ -1,5 +1,7 @@
 using System;
 using FubuMVC.Core.Registration.Nodes;
+using FubuMVC.Diagnostics.Requests;
+using FubuMVC.Diagnostics.Runtime;
 
 namespace FubuMVC.Diagnostics.Visualization
 {
@@ -7,8 +9,7 @@ namespace FubuMVC.Diagnostics.Visualization
     {
         BehaviorNodeViewModel ToVisualizationSubject(BehaviorNode node);
 
-        object ToVisualizationSubject(object target);
-
         bool HasVisualizer(Type type);
+        RequestStepTag VisualizeStep(RequestStep step);
     }
 }

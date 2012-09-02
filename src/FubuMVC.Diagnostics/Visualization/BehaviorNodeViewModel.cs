@@ -7,6 +7,6 @@ namespace FubuMVC.Diagnostics.Visualization
     {
         public BehaviorNode Node { get; set; }
         public Description Description { get; set; }
-        public object InputToVisualize { get; set; }
+        public string VisualizationHtml { get; set; }
     }
 }

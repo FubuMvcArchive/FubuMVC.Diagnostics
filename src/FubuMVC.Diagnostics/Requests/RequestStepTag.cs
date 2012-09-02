@@ -1,5 +1,6 @@
 using FubuMVC.Diagnostics.Runtime;
 using HtmlTags;
+using FubuMVC.TwitterBootstrap.Tags;
 
 namespace FubuMVC.Diagnostics.Requests
 {
@@ -11,6 +12,8 @@ namespace FubuMVC.Diagnostics.Requests
             Id(step.Id.ToString());
 
             Text(content).Encoded(false);
+
+            this.PrependAnchor();
         }
     }
 }
