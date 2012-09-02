@@ -161,7 +161,7 @@ namespace FubuMVC.Diagnostics.Tests.Routes
         {
             theChain.Route = new RouteDefinition("something");
 
-            theReport.url.ShouldEqual(theUrls.UrlFor(new ChainRequest{Id = theChain.UniqueId}));
+            theReport.SummaryUrl.ShouldEqual(theUrls.UrlFor(new ChainRequest{Id = theChain.UniqueId}));
         }
 
         [Test]

@@ -23,7 +23,7 @@ namespace FubuMVC.Diagnostics.Tests.Chains
             };
             var visualization = new ChainVisualization()
             {
-                Report = new RouteReport(chain, null),
+                Report = new RouteReport(chain, null, null),
                 Chain = chain
             };
 
@@ -38,7 +38,7 @@ namespace FubuMVC.Diagnostics.Tests.Chains
             chain.AddToEnd(ActionCall.For<SomeEndpoint>(x => x.Go()));
 
             new ChainVisualization{
-                Report = new RouteReport(chain, null),
+                Report = new RouteReport(chain, null, null),
                 Chain = chain
             }.Title.ShouldEqual("SomeEndpoint.Go() : String");
         }
@@ -50,7 +50,7 @@ namespace FubuMVC.Diagnostics.Tests.Chains
 
             new ChainVisualization
             {
-                Report = new RouteReport(chain, null),
+                Report = new RouteReport(chain, null, null),
                 Chain = chain
             }.Title.ShouldEqual("Fake Writer");
         }

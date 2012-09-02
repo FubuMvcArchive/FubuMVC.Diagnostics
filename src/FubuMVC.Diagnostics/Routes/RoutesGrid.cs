@@ -8,12 +8,12 @@ namespace FubuMVC.Diagnostics.Routes
         {
             SourceIs<RouteSource>();
 
-            
+            Column(x => x.DetailsUrl).Title("Details");
             Column(x => x.Route);
             Column(x => x.Constraints);
             Column(x => x.Action);
 
-            Data(x => x.url);
+            Data(x => x.SummaryUrl);
         }
     }
 }

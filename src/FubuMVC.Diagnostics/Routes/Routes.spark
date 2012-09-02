@@ -14,6 +14,9 @@
   <script id="routeGrid-custom">
     {
       columns: {
+        DetailsUrl: {formatter: function(row, cell, value, columnDef, dataContext){
+          return '<a href="'+value+'">View</a>';
+        }},
         Route: {width:300},
         Constraints: {width:150},
         Action: {width:400}
@@ -26,7 +29,7 @@
           var cell = grid.getCellFromEvent(e);
           var item = grid.getDataItem(cell.row);
           
-          $('#routeModalBody').load(item.url);
+          $('#routeModalBody').load(item.SummaryUrl);
           $('#routeModalBody .accordion').collapse();
           $('#routeModal').modal('show');
         });

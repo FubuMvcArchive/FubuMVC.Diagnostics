@@ -17,17 +17,19 @@ namespace FubuMVC.Diagnostics.Routes
     {
         public const string NoConstraints = "N/A";
         private readonly BehaviorChain _chain;
-        private readonly string _url;
+        private readonly string _summaryUrl;
+        private readonly string _detailsUrl;
 
         public static RouteReport ForChain(BehaviorChain chain, IUrlRegistry urls)
         {
-            return new RouteReport(chain, urls.UrlFor(new ChainRequest{Id = chain.UniqueId}));
+            return new RouteReport(chain, urls.UrlFor(new ChainRequest{Id = chain.UniqueId}), urls.UrlFor(new ChainDetailsRequest{Id = chain.UniqueId}));
         }
 
-        public RouteReport(BehaviorChain chain, string url)
+        public RouteReport(BehaviorChain chain, string summaryUrl, string detailsUrl)
         {
             _chain = chain;
-            _url = url;
+            _summaryUrl = summaryUrl;
+            _detailsUrl = detailsUrl;
         }
 
         public Type ResourceType
@@ -37,6 +39,11 @@ namespace FubuMVC.Diagnostics.Routes
                 // TODO -- FubuContinuation does not count!
                 return _chain.ResourceType();
             }
+        }
+
+        public string DetailsUrl
+        {
+            get { return _detailsUrl; }
         }
 
         public Type InputModel
@@ -171,9 +178,9 @@ namespace FubuMVC.Diagnostics.Routes
             }
         }
 
-        public string url
+        public string SummaryUrl
         {
-            get { return _url; }
+            get { return _summaryUrl; }
         }
 
         public string Origin
