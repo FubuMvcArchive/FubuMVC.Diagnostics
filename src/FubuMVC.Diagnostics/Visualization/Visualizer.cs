@@ -76,7 +76,7 @@ namespace FubuMVC.Diagnostics.Visualization
             return VisualizeDescription(description);
         }
 
-        public HtmlTag VisualizeDescription(Description description)
+        public HtmlTag VisualizeDescription(Description description, bool ellided = true)
         {
             if (!description.HasMoreThanTitle())
             {
@@ -87,8 +87,25 @@ namespace FubuMVC.Diagnostics.Visualization
                 });
             }
 
+            var bodyTag = new DescriptionBodyTag(description);
+
+            if (ellided)
+            {
+                return buildCollapsedDescriptionTag(description, bodyTag);
+            }
+
+            return new HtmlTag("div", div =>
+            {
+                div.Add("h4").AddClass("desc-title").Text(description.Title);
+                div.Append(bodyTag);
+            });
+        }
+
+        private HtmlTag buildCollapsedDescriptionTag(Description description, DescriptionBodyTag bodyTag)
+        {
             var collapsible = new CollapsibleTag(Guid.NewGuid().ToString(), description.Title);
-            collapsible.AppendContent(new DescriptionBodyTag(description));
+
+            collapsible.AppendContent(bodyTag);
 
             return collapsible;
         }

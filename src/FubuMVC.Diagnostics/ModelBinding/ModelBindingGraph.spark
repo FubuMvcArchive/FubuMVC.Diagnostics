@@ -1,0 +1,25 @@
+﻿<viewdata model="FubuMVC.Diagnostics.ModelBinding.ModelBindingExplorerViewModel" />
+<use master="" />
+
+
+<div class="container-fluid">
+	<div class="row-fluid">
+    
+		<div class="span3 well">
+      TODO:  Why don't you try explaining how model binding works and what these pieces mean?
+      
+      <ol>
+        <li>IModelBinder</li>
+        <li>IPropertyBinder</li>
+        <li>IConversionFamily</li>
+      </ol>
+		</div>
+
+		<div class="span9">
+      !{Model.ModelBindingGraphTag}
+		</div>
+
+
+	</div>
+
+</div>

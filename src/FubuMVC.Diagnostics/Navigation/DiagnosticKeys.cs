@@ -10,6 +10,7 @@ namespace FubuMVC.Diagnostics.Navigation
         public static readonly DiagnosticKeys ApplicationStartup = new DiagnosticKeys("Application Startup");
         public static readonly DiagnosticKeys Requests = new DiagnosticKeys("Requests");
         public static readonly DiagnosticKeys Routes = new DiagnosticKeys("Routes");
+        public static readonly DiagnosticKeys ModelBindingExplorer = new DiagnosticKeys("Model Binding Explorer");
 
         public DiagnosticKeys(string defaultValue) : base(null, defaultValue, namespaceByType: true)
         {

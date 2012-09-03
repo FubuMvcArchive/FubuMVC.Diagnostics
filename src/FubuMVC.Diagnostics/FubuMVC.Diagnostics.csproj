@@ -118,6 +118,9 @@
     <None Include="Dashboard\Dashboard.spark">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ModelBinding\ModelBindingGraph.spark">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Packaging\Packaging.spark" />
     <None Include="Requests\Requests.spark">
       <SubType>Designer</SubType>
@@ -164,6 +167,7 @@
     <Compile Include="Chains\ChainEndpoint.cs" />
     <Compile Include="Chains\ChainVisualization.cs" />
     <Compile Include="DiagnosticsChromeExtension.cs" />
+    <Compile Include="ModelBinding\ModelBindingEndpoints.cs" />
     <Compile Include="Requests\BehaviorChainTraceTag.cs" />
     <Compile Include="Requests\BehaviorNodeTraceTag.cs" />
     <Compile Include="Requests\HttpRequestVisualization.cs" />

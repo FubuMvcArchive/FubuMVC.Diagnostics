@@ -7,6 +7,7 @@ using FubuMVC.Core.Registration;
 using FubuMVC.Core.UI;
 using FubuMVC.Diagnostics.Chains;
 using FubuMVC.Diagnostics.Dashboard;
+using FubuMVC.Diagnostics.ModelBinding;
 using FubuMVC.Diagnostics.Requests;
 using FubuMVC.Diagnostics.Routes;
 using HtmlTags;
@@ -29,7 +30,10 @@ namespace DiagnosticsHarness
         {
             var chain = _graph.BehaviorFor<RouteExplorerEndpoint>(x => x.get_routes(null));
 
-            return FubuContinuation.RedirectTo<RouteExplorerEndpoint>(x => x.get_routes(null));
+            return FubuContinuation.RedirectTo<ModelBindingEndpoints>(x => x.get_binding_all());
+
+            //return FubuContinuation.RedirectTo<RouteExplorerEndpoint>(x => x.get_routes(null));
+
 
             //return FubuContinuation.RedirectTo<DescriptionEndpoints>(x => x.get_descriptions());
 

@@ -1,4 +1,5 @@
 using FubuMVC.Core.UI.Navigation;
+using FubuMVC.Diagnostics.ModelBinding;
 using FubuMVC.Diagnostics.Packaging;
 using FubuMVC.Diagnostics.Requests;
 using FubuMVC.Diagnostics.Routes;
@@ -10,12 +11,13 @@ namespace FubuMVC.Diagnostics.Navigation
         public DiagnosticsMenu()
         {
             ForMenu(DiagnosticKeys.Main);
-            //Add += MenuNode.ForInput<DashboardRequestModel>(DiagnosticKeys.Dashboard);
-            //Add += MenuNode.ForInput<HtmlConventionsRequestModel>(DiagnosticKeys.HtmlConventions);
+
             Add += MenuNode.ForInput<PackageDiagnosticsRequestModel>(DiagnosticKeys.ApplicationStartup);
 
             Add += MenuNode.ForAction<RequestsEndpoint>(DiagnosticKeys.Requests, x => x.get_requests());
             Add += MenuNode.ForInput<RoutesRequest>(DiagnosticKeys.Routes);
+
+            Add += MenuNode.ForAction<ModelBindingEndpoints>(DiagnosticKeys.ModelBindingExplorer, x => x.get_binding_all());
         }
     }
 
