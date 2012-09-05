@@ -25,7 +25,7 @@ namespace FubuMVC.Diagnostics.Runtime
         public static bool ShouldApply(BehaviorChain chain)
         {
             // TODO -- Get the BehaviorChainFilter thing going again?
-            if ( (chain.GetRoutePattern() ?? string.Empty).Contains(DiagnosticUrlPolicy.DIAGNOSTICS_URL_ROOT) )
+            if ( (chain.GetRoutePattern() ?? string.Empty).Contains(DiagnosticsRegistration.DIAGNOSTICS_URL_ROOT) )
             {
                 return false;
             }            

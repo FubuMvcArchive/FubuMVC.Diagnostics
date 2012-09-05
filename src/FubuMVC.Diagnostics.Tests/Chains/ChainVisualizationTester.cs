@@ -64,6 +64,11 @@ namespace FubuMVC.Diagnostics.Tests.Chains
             throw new NotImplementedException();
         }
 
+        protected override void createDescription(Description description)
+        {
+            
+        }
+
         public override Type ResourceType
         {
             get { return typeof(string); }
