@@ -128,7 +128,7 @@ namespace FubuMVC.Diagnostics.Visualization
 
         private void writeBulletList(BulletList list)
         {
-            Add("div").AddClass("desc-list-name").Text(list.Name);
+            Add("div").AddClass("desc-list-name").Text(list.Label ?? list.Name);
             list.Children.Each(writeBulletItem);
         }
 

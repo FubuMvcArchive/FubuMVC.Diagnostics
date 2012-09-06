@@ -11,11 +11,7 @@ namespace FubuMVC.Diagnostics.Shared
 
             var div = new HtmlTag("div");
             div.Text(type.Name);
-
-            // TODO --add more in a popover
-
-            //div.Add("p").Text(type.FullName);
-            //div.Add("p").Text("from " + type.Assembly.GetName().FullName);
+            div.Title(type.AssemblyQualifiedName);
 
             return div;
         }

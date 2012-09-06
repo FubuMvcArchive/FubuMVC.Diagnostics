@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using DiagnosticsHarness.ModelBinding;
 using FubuCore.Logging;
 using FubuMVC.Core;
 using FubuMVC.Core.Behaviors;
@@ -33,9 +34,12 @@ namespace DiagnosticsHarness
 
         public FubuContinuation Index()
         {
-            return FubuContinuation.RedirectTo(new DebugRequest{
-                FubuDebug = true
-            });
+
+            return FubuContinuation.RedirectTo<ModelBindingSampleEndpoint>(x => x.get_deep_data());
+
+            //return FubuContinuation.RedirectTo(new DebugRequest{
+            //    FubuDebug = true
+            //});
 
             //var chain = _graph.BehaviorFor<RouteExplorerEndpoint>(x => x.get_routes(null));
 

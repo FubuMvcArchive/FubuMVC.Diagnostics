@@ -1,0 +1,28 @@
+﻿<viewdata model="DiagnosticsHarness.ModelBinding.DeepClass1" />
+<use master="" />
+
+<html>
+<head></head>
+<body>
+
+!{this.FormFor(Model)}
+<input type="text" name="NestedTargets[0]TargetName" value="Jeremy" />
+<input type="text" name="NestedTargets[0]TargetAge" value="38" />
+<input type="text" name="NestedTargets[0]TargetEyeColor" value="Blue" />
+<input type="text" name="NestedTargets[1]TargetName" value="Lindsey" />
+<input type="text" name="NestedTargets[1]TargetAge" value="29" />
+<input type="text" name="NestedTargets[1]TargetEyeColor" value="Hazel" />
+
+<input type="submit" id="submit" />
+!{this.EndForm()}
+
+!{this.WriteAssetTags("jquery")}
+
+<script language="javascript">
+	$(document).ready(function(){
+		$('#submit').click();
+	});
+</script>
+
+</body>
+</html>
