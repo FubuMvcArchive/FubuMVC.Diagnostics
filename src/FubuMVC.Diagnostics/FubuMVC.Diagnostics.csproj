@@ -235,7 +235,9 @@
     <Compile Include="Visualization\VisualizationPageExtensions.cs" />
     <Compile Include="Visualization\Visualizer.cs" />
     <Compile Include="Visualization\Visualizers\BehaviorStartAndFinishEndpoints.cs" />
+    <Compile Include="Visualization\Visualizers\CommentTag.cs" />
     <Compile Include="Visualization\Visualizers\StringMessageEndpoint.cs" />
+    <Compile Include="Visualization\Visualizers\TracedEndpoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Visualization\Visualizers\ConfigurationActions\" />

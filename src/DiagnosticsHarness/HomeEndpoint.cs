@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using FubuCore.Logging;
 using FubuMVC.Core;
 using FubuMVC.Core.Continuations;
 using FubuMVC.Core.Registration;
@@ -20,11 +21,13 @@ namespace DiagnosticsHarness
     {
         private readonly BehaviorGraph _graph;
         private readonly FubuHtmlDocument _document;
+        private readonly ILogger _logger;
 
-        public HomeEndpoint(BehaviorGraph graph, FubuHtmlDocument document )
+        public HomeEndpoint(BehaviorGraph graph, FubuHtmlDocument document, ILogger logger )
         {
             _graph = graph;
             _document = document;
+            _logger = logger;
         }
 
         public FubuContinuation Index()
@@ -86,6 +89,8 @@ namespace DiagnosticsHarness
 
         public string get_hello(DebugRequest request)
         {
+            _logger.Debug("some trace message just to see it");
+
             return "Hello!";
         }
     }
