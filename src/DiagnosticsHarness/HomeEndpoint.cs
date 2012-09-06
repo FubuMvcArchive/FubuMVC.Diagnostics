@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using FubuCore.Logging;
 using FubuMVC.Core;
+using FubuMVC.Core.Behaviors;
 using FubuMVC.Core.Continuations;
 using FubuMVC.Core.Registration;
 using FubuMVC.Core.UI;
@@ -87,11 +88,26 @@ namespace DiagnosticsHarness
             //return _document;
         }
 
+        [WrapWith(typeof(BadBehavior))]
         public string get_hello(DebugRequest request)
         {
             _logger.Debug("some trace message just to see it");
 
             return "Hello!";
+        }
+    }
+
+
+
+    public class BadBehavior : BasicBehavior
+    {
+        public BadBehavior() : base(PartialBehavior.Executes)
+        {
+        }
+
+        protected override DoNext performInvoke()
+        {
+            throw new NotImplementedException();
         }
     }
 

@@ -10,6 +10,12 @@
     padding-left: 0;
 }
 
+footer
+{
+	margin-top: 20px;
+	padding-top: 8px;
+}
+
 #diagnostic-menu .nav > li > a
 {
 	padding-top: 18px !important;
@@ -127,4 +133,22 @@ table.desc-properties th, table.desc-properties td
 	
 	margin-left: 40px;
 	margin-bottom:15px;
+}
+
+span.exception
+{
+	color: Red;
+	font-weight: bold;
+	margin-left: 20px;
+}
+
+div.exception-report pre
+{
+	background-color: #FFFFAA !important;
+}
+
+li.exception div.node-trace-container
+{
+	color: Red;
+	font-weight: bold;
 }

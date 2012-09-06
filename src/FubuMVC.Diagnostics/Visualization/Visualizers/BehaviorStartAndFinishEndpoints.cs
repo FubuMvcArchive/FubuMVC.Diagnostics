@@ -1,4 +1,5 @@
 using FubuCore.Descriptions;
+using FubuMVC.Core.Runtime.Logging;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.TwitterBootstrap.Tags;
 using HtmlTags;
@@ -28,12 +29,24 @@ namespace FubuMVC.Diagnostics.Visualization.Visualizers
             tag.Add("span").Text("Finished ").Add("i").Text(description.Title);
             if (!finish.Succeeded)
             {
-                tag.AddClass("exception");
+                tag.Next = new ExceptionReportTag(finish.Exception);
+
+                tag.Add("span").Text(finish.Exception.ExceptionType).AddClass("exception");
             }
 
             tag.PrependGlyph("icon-chevron-up");
 
             return tag;
+        }
+    }
+
+    public class ExceptionReportTag : HtmlTag
+    {
+        public ExceptionReportTag(ExceptionReport report)
+            : base("div")
+        {
+            AddClass("exception-report");
+            Add("pre").Text(report.ExceptionText);
         }
     }
 }
