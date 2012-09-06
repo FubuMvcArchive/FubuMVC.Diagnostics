@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using FubuMVC.Core;
 using FubuMVC.Core.Continuations;
 using FubuMVC.Core.Registration;
 using FubuMVC.Core.UI;
@@ -28,7 +29,11 @@ namespace DiagnosticsHarness
 
         public FubuContinuation Index()
         {
-            var chain = _graph.BehaviorFor<RouteExplorerEndpoint>(x => x.get_routes(null));
+            return FubuContinuation.RedirectTo(new DebugRequest{
+                FubuDebug = true
+            });
+
+            //var chain = _graph.BehaviorFor<RouteExplorerEndpoint>(x => x.get_routes(null));
 
             //return FubuContinuation.RedirectTo<ModelBindingEndpoints>(x => x.get_binding_all());
 
@@ -37,10 +42,10 @@ namespace DiagnosticsHarness
 
             //return FubuContinuation.RedirectTo<DescriptionEndpoints>(x => x.get_descriptions());
 
-            return FubuContinuation.RedirectTo(new ChainDetailsRequest
-            {
-                Id = chain.UniqueId
-            });
+            //return FubuContinuation.RedirectTo(new ChainDetailsRequest
+            //{
+            //    Id = chain.UniqueId
+            //});
 
 //            return FubuContinuation.RedirectTo<RequestsEndpoint>(x => x.get_requests());
 
@@ -78,5 +83,16 @@ namespace DiagnosticsHarness
 
             //return _document;
         }
+
+        public string get_hello(DebugRequest request)
+        {
+            return "Hello!";
+        }
+    }
+
+    public class DebugRequest
+    {
+        [QueryString]
+        public bool FubuDebug { get; set; }
     }
 }

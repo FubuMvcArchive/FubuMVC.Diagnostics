@@ -16,7 +16,7 @@
   </li>
   <li>
     <strong>
-      <a href="${this.Urls.UrlFor<FubuMVC.Diagnostics.Requests.RequestsQuery>()}">Explore the request history</a>
+      <a href="${this.Urls.UrlFor<FubuMVC.Diagnostics.Requests.RequestsEndpoint>(x => x.get_requests())}">Explore the request history</a>
     </strong>
     <p>The requets explorer allows you to sort and filter through the requests that have been recorded within your application. You can drill into the details of each request to visualize the various steps that were taken to issue the response.</p>
   </li>
