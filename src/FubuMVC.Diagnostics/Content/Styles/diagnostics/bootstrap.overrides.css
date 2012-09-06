@@ -152,3 +152,10 @@ li.exception div.node-trace-container
 	color: Red;
 	font-weight: bold;
 }
+
+
+li.gray div.node-trace-container
+{
+	color: Gray;
+	text-decoration: line-through;
+}
