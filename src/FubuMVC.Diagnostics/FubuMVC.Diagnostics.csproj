@@ -134,6 +134,9 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Services\ServiceEndpoints.spark">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Shared\Application.spark">
       <SubType>Designer</SubType>
     </None>
@@ -187,6 +190,7 @@
     <Compile Include="Runtime\Tracing\IRequestTrace.cs" />
     <Compile Include="Runtime\Tracing\RequestLogBuilder.cs" />
     <Compile Include="Runtime\Tracing\RequestTrace.cs" />
+    <Compile Include="Services\ServiceEndpoints.cs" />
     <Compile Include="Shared\TypeEndpoint.cs" />
     <Compile Include="Chrome\DashboardChrome.cs" />
     <Compile Include="Core\CoreExtensions.cs" />

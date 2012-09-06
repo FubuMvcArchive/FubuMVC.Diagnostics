@@ -3,6 +3,7 @@ using FubuMVC.Diagnostics.ModelBinding;
 using FubuMVC.Diagnostics.Packaging;
 using FubuMVC.Diagnostics.Requests;
 using FubuMVC.Diagnostics.Routes;
+using FubuMVC.Diagnostics.Services;
 
 namespace FubuMVC.Diagnostics.Navigation
 {
@@ -18,6 +19,13 @@ namespace FubuMVC.Diagnostics.Navigation
             Add += MenuNode.ForInput<RoutesRequest>(DiagnosticKeys.Routes);
 
             Add += MenuNode.ForAction<ModelBindingEndpoints>(DiagnosticKeys.ModelBindingExplorer, x => x.get_binding_all());
+
+
+            Add += MenuNode.Node(DiagnosticKeys.Services);
+            ForMenu(DiagnosticKeys.Services);
+
+            Add += MenuNode.ForAction<ServiceEndpoints>(DiagnosticKeys.ServicesByName, x => x.get_services_byname());
+            Add += MenuNode.ForAction<ServiceEndpoints>(DiagnosticKeys.ServicesBySource, x => x.get_services_bysource());
         }
     }
 

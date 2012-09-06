@@ -12,6 +12,11 @@ namespace FubuMVC.Diagnostics.Navigation
         public static readonly DiagnosticKeys Routes = new DiagnosticKeys("Routes");
         public static readonly DiagnosticKeys ModelBindingExplorer = new DiagnosticKeys("Model Binding Explorer");
 
+        public static readonly DiagnosticKeys Services = new DiagnosticKeys("Services");
+        public static readonly DiagnosticKeys ServicesBySource = new DiagnosticKeys("Services by Source");
+        public static readonly DiagnosticKeys ServicesByName = new DiagnosticKeys("Services by Name");
+
+
         public DiagnosticKeys(string defaultValue) : base(null, defaultValue, namespaceByType: true)
         {
         }
