@@ -94,9 +94,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chains\ChainVisualizationTester.cs" />
+    <Compile Include="debugging.cs" />
     <Compile Include="DiagnosticsExtensionTester.cs" />
     <Compile Include="InteractionContextExtensions.cs" />
     <Compile Include="Requests\BehaviorNodeTraceTagTester.cs" />
+    <Compile Include="Requests\HttpRequestVisualizationTester.cs" />
     <Compile Include="Requests\RequestStepTester.cs" />
     <Compile Include="Requests\RequestVisualizationEndpointTester.cs" />
     <Compile Include="Requests\ResponseHeadersTagTester.cs" />

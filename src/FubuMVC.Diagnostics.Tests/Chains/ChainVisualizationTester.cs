@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using FubuCore;
 using FubuCore.Descriptions;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Core.Registration.ObjectGraph;
@@ -7,6 +8,8 @@ using FubuMVC.Core.Registration.Routes;
 using FubuMVC.Core.Resources.Conneg;
 using FubuMVC.Diagnostics.Chains;
 using FubuMVC.Diagnostics.Routes;
+using FubuMVC.Diagnostics.Visualization;
+using FubuMVC.TwitterBootstrap.Collapsibles;
 using NUnit.Framework;
 using FubuTestingSupport;
 
@@ -53,6 +56,38 @@ namespace FubuMVC.Diagnostics.Tests.Chains
                 Report = new RouteReport(chain, null, null),
                 Chain = chain
             }.Title.ShouldEqual("Fake Writer");
+        }
+
+        [Test]
+        public void show_nothing_for_the_route_if_there_is_nothing()
+        {
+            var chain = new BehaviorChain();
+
+            var visualization = new ChainVisualization{
+                Chain = chain
+            };
+
+            visualization.RouteTag.Render().ShouldBeFalse();
+        }
+
+        [Test]
+        public void show_route_description_in_collapsed_body_for_a_route()
+        {
+            var chain = new BehaviorChain
+            {
+                Route = new RouteDefinition("something")
+            };
+
+            var visualization = new ChainVisualization
+            {
+                Chain = chain
+            };
+
+            var tag = visualization.RouteTag.As<CollapsibleTag>();
+
+            tag.Render().ShouldBeTrue();
+            tag.ToString().ShouldContain(new DescriptionBodyTag(Description.For(chain.Route)).ToString());
+
         }
     }
 

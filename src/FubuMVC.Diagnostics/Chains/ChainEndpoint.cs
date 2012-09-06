@@ -153,6 +153,11 @@ namespace FubuMVC.Diagnostics.Chains
         {
             AddHeader("Behaviors");
 
+            if (chain.Route != null)
+            {
+                AddNode("Route", ChainVisualization.RouteDescId);
+            }
+
             chain.NonDiagnosticNodes().Each(x =>
             {
                 var description = Description.For(x);

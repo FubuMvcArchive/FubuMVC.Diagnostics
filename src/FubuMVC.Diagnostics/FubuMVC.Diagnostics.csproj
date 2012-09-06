@@ -237,7 +237,9 @@
     <Compile Include="Visualization\Visualizers\BehaviorStartAndFinishEndpoints.cs" />
     <Compile Include="Visualization\Visualizers\StringMessageEndpoint.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Visualization\Visualizers\ConfigurationActions\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>

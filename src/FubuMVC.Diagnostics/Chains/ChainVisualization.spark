@@ -19,9 +19,14 @@
 
       <div class="chain-details">
         !{Model.Details}
+        
+        
       </div>
+
       
+
       <div class="node-visualization">
+        !{Model.RouteTag}
         !{Model.BehaviorVisualization}
       </div>
 		</div>

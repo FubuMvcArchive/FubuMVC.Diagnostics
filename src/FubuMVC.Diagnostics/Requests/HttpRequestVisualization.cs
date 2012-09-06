@@ -11,6 +11,7 @@ namespace FubuMVC.Diagnostics.Requests
         private readonly BehaviorChain _chain;
         private readonly RequestLog _log;
 
+
         public HttpRequestVisualization(RequestLog log, BehaviorChain chain)
         {
             _log = log;
@@ -29,45 +30,33 @@ namespace FubuMVC.Diagnostics.Requests
             get { return _log; }
         }
 
+
         public HtmlTag LinksTag
         {
-            get
-            {
-                return new RequestLinksTag(_log);
-            }
+            get { return new RequestLinksTag(_log); }
         }
 
         public HtmlTag BehaviorSummary
         {
-            get
-            {
-                return new BehaviorChainTraceTag(_chain, _log);
-            }
+            get { return new BehaviorChainTraceTag(_chain, _log); }
         }
 
         public HtmlTag ResponseHeaderTag
         {
-            get
-            {
-                return new ResponseHeadersTag(_log);
-            }
+            get { return new ResponseHeadersTag(_log); }
         }
 
         public HtmlTag RequestLogDataOutlineTag
         {
-            get
-            {
-                return new RequestLogDataOutlineTag(_log);
-            }
+            get { return new RequestLogDataOutlineTag(_log, _chain); }
         }
 
         public HtmlTag TracingOutlineTag
         {
-            get
-            {
-                return new TracingOutlineTag(_log);
-            }
+            get { return new TracingOutlineTag(_log); }
         }
+
+        public FubuContinuation RedirectTo { get; set; }
 
         public bool Equals(HttpRequestVisualization other)
         {
@@ -88,7 +77,5 @@ namespace FubuMVC.Diagnostics.Requests
         {
             return Id.GetHashCode();
         }
-
-        public FubuContinuation RedirectTo { get; set; }
     }
 }
