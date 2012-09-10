@@ -13,14 +13,14 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
 {
     public class RequestTrace : IRequestTrace
     {
-        private readonly IRequestHistoryCache _cache;
+        private readonly IEnumerable<IRequestTraceObserver> _observers;
         private readonly IRequestLogBuilder _builder;
         private readonly IResponse _response;
         private readonly Stopwatch _stopwatch = new Stopwatch();
 
-        public RequestTrace(IRequestHistoryCache cache, IRequestLogBuilder builder, IResponse response)
+        public RequestTrace(IEnumerable<IRequestTraceObserver> observers, IRequestLogBuilder builder, IResponse response)
         {
-            _cache = cache;
+            _observers = observers;
             _builder = builder;
             _response = response;
         }
@@ -33,7 +33,7 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
         public void Start()
         {
             Current = _builder.BuildForCurrentRequest();
-            _cache.Store(Current);
+            _observers.Each(x => x.Started(Current));
 
             _stopwatch.Start();
         }
@@ -51,6 +51,10 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
                 // Whatever the stupid Cassinni thing is blows up on this
 
                 Current.ResponseHeaders = findHeadersFromLog().ToArray();
+            }
+            finally
+            {
+                _observers.Each(x => x.Completed(Current));
             }
         }
 

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Threading;
 using FubuMVC.Core.Http;
@@ -30,6 +29,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
     public class when_starting_a_new_request : InteractionContext<RequestTrace>
     {
         private RequestLog theLog;
+        private IRequestTraceObserver _requestObserver;
 
         protected override void beforeEach()
         {
@@ -37,6 +37,8 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
 
             MockFor<IRequestLogBuilder>().Stub(x => x.BuildForCurrentRequest())
                 .Return(theLog);
+
+            _requestObserver = MockFor<IRequestTraceObserver>();
 
             ClassUnderTest.Stopwatch.IsRunning.ShouldBeFalse();
 
@@ -50,9 +52,9 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
         }
 
         [Test]
-        public void stores_the_new_log_with_the_cache()
+        public void notifies_the_new_log_with_the_cache_on_start()
         {
-            MockFor<IRequestHistoryCache>().AssertWasCalled(x => x.Store(theLog));
+            _requestObserver.AssertWasCalled(x => x.Started(ClassUnderTest.Current));
         }
 
         [Test]
@@ -88,9 +90,12 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
     public class when_marking_the_current_log_as_finished : InteractionContext<RequestTrace>
     {
         private IEnumerable<Header> theHeaders;
+        private IRequestTraceObserver _requestObserver;
 
         protected override void beforeEach()
         {
+            _requestObserver = MockFor<IRequestTraceObserver>();
+
             ClassUnderTest.Current = new RequestLog();
 
             theHeaders = new Header[]
@@ -107,6 +112,12 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
         public void places_all_the_response_headers_onto_the_request_log()
         {
             ClassUnderTest.Current.ResponseHeaders.ShouldHaveTheSameElementsAs(theHeaders);
+        }
+
+        [Test]
+        public void notifies_the_new_log_with_the_cache_on_end()
+        {
+            _requestObserver.AssertWasCalled(x => x.Completed(ClassUnderTest.Current));
         }
 
         [Test]
