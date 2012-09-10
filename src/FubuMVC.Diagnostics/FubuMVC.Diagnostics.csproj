@@ -183,6 +183,8 @@
     <Compile Include="Requests\ResponseHeadersTag.cs" />
     <Compile Include="Requests\TracingOutlineTag.cs" />
     <Compile Include="Runtime\HttpStatus.cs" />
+    <Compile Include="Runtime\IRequestTraceObserver.cs" />
+    <Compile Include="Runtime\RequestHistoryObserver.cs" />
     <Compile Include="Runtime\RequestStep.cs" />
     <Compile Include="Runtime\RequestTraceListener.cs" />
     <Compile Include="Runtime\TracedStep.cs" />

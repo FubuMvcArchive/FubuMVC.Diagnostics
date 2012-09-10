@@ -30,6 +30,7 @@ namespace FubuMVC.Diagnostics
             ReplaceService<IBindingHistory, BindingHistory>();
             SetServiceIfNone<IRequestHistoryCache, RequestHistoryCache>();
 
+            AddService<IRequestTraceObserver, RequestHistoryObserver>();
             AddService<ILogListener, RequestTraceListener>();
 
             SetServiceIfNone<IRequestTrace, RequestTrace>();
