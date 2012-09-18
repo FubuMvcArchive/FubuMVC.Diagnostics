@@ -35,7 +35,7 @@ namespace DiagnosticsHarness
 
         public FubuContinuation Index()
         {
-            return FubuContinuation.RedirectTo<ServiceEndpoints>(x => x.get_services_byname());
+            //return FubuContinuation.RedirectTo<ServiceEndpoints>(x => x.get_services_byname());
 
             //return FubuContinuation.RedirectTo<ModelBindingSampleEndpoint>(x => x.get_deep_data());
 
@@ -45,7 +45,7 @@ namespace DiagnosticsHarness
 
             //var chain = _graph.BehaviorFor<RouteExplorerEndpoint>(x => x.get_routes(null));
 
-            //return FubuContinuation.RedirectTo<ModelBindingEndpoints>(x => x.get_binding_all());
+            return FubuContinuation.RedirectTo<ModelBindingEndpoints>(x => x.get_binding_all());
 
             //return FubuContinuation.RedirectTo<RouteExplorerEndpoint>(x => x.get_routes(null));
 

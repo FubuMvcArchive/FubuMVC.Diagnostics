@@ -11,13 +11,21 @@ namespace DiagnosticsHarness
     {
         protected void Application_Start(object sender, EventArgs e)
         {
+            new HarnessApplicationSource().BuildApplication().Bootstrap();
+        }
+    }
+
+    public class HarnessApplicationSource : IApplicationSource
+    {
+        public FubuApplication BuildApplication()
+        {
             FubuMode.Mode(FubuMode.Development);
             if (!FubuMode.InDevelopment())
             {
                 throw new InvalidOperationException("You can't be here without development mode!");
             }
 
-            FubuApplication.For<HarnessRegistry>().StructureMap(new Container()).Bootstrap();
+            return FubuApplication.For<HarnessRegistry>().StructureMap(new Container());
         }
     }
 
