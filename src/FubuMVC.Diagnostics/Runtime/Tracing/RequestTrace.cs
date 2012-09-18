@@ -23,6 +23,8 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
             _observers = observers;
             _builder = builder;
             _response = response;
+
+            Current = new RequestLog(); // place holder/nullo just to avoid blowing up 
         }
 
         public string LogUrl
