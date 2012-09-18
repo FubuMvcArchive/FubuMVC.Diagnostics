@@ -96,7 +96,7 @@
     <Content Include="Content\Images\fubumvc.png" />
     <Content Include="Content\Images\pre_code_bg_blk.gif" />
     <Content Include="Content\Scripts\diagnostics\requestVisualization.js" />
-    <Content Include="Content\Scripts\diagnostics\jquery-1.7.min.js" />
+    <Content Include="Content\Scripts\jquery-1.7.min.js" />
     <Content Include="Content\Scripts\diagnostics\underscore-min.js" />
     <Content Include="Content\Scripts\diagnostics\json2.js" />
     <Content Include="Content\Scripts\diagnostics\knockout-1.1.2.js" />

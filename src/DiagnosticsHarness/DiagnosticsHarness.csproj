@@ -86,7 +86,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="content\scripts\jquery-1.7.min.js" />
     <Content Include="content\scripts\json2.js" />
     <Content Include="content\scripts\underscore-min.js" />
     <Content Include="Global.asax" />
@@ -110,9 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="harness.asset.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FubuMVC.Diagnostics\FubuMVC.Diagnostics.csproj">
