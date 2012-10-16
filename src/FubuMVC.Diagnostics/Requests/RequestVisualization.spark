@@ -4,6 +4,7 @@
 <use namespace="System.Linq" />
 <use namespace="FubuMVC.TwitterBootstrap" />
 <use namespace="FubuMVC.Diagnostics.Visualization" />
+﻿<use namespace="FubuMVC.Core.Assets" />
 
 <Script src="diagnostics/requestVisualization.js" />
 

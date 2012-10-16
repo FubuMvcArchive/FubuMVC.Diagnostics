@@ -16,7 +16,7 @@ namespace FubuMVC.Diagnostics.Visualization
             var visualizer = page.Get<Visualizer>(); // TODO -- change this
             var model = visualizer.ToVisualizationSubject(node);
 
-            var html = page.CollapsiblePartialFor(model).Title(model.Description.Title).ToString();
+            var html = page.CollapsiblePartialFor<BehaviorNodeViewModel>(model).Title(model.Description.Title).ToString();
 
             return new HtmlTag("a", a =>
             {

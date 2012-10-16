@@ -25,9 +25,9 @@ namespace FubuMVC.Diagnostics.Runtime.Assets
     {
         private readonly IAssetCombinationCache _cache;
         private readonly IContentPlanCache _contentPlanCache;
-        private readonly IAssetPipeline _pipeline;
+        private readonly IAssetFileGraph _pipeline;
 
-        public BasicAssetDiagnostics(IAssetCombinationCache cache, IContentPlanCache contentPlanCache, IAssetPipeline pipeline)
+        public BasicAssetDiagnostics(IAssetCombinationCache cache, IContentPlanCache contentPlanCache, IAssetFileGraph pipeline)
         {
             _cache = cache;
             _contentPlanCache = contentPlanCache;

@@ -1,4 +1,6 @@
 <use master="" />
+
+﻿<use namespace="FubuMVC.Core.Assets" />
 <viewdata model="FubuMVC.Diagnostics.Dashboard.DashboardModel" />
 
 <h2>Welcome to FubuMVC!</h2>

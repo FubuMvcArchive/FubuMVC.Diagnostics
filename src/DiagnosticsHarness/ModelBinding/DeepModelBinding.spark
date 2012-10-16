@@ -1,5 +1,6 @@
 ﻿<viewdata model="DiagnosticsHarness.ModelBinding.DeepClass1" />
 <use master="" />
+<use namespace="FubuMVC.Core.Assets" />
 
 <html>
 <head></head>

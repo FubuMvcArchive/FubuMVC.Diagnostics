@@ -2,6 +2,7 @@
 <use namespace="FubuMVC.Diagnostics.Navigation" />
 <use namespace="FubuMVC.Diagnostics.Navigation" />
 <use namespace="FubuMVC.TwitterBootstrap" />
+﻿<use namespace="FubuMVC.Core.Assets" />
 
 <!DOCTYPE html>
 <html lang="en">

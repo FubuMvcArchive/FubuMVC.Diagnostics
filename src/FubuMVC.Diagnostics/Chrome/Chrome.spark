@@ -1,5 +1,7 @@
 ﻿<viewdata model="FubuMVC.Diagnostics.Chrome.DashboardChrome" />
 <use master="" />
+
+<use namespace="FubuMVC.Core.Assets" />
 <use namespace="FubuMVC.Diagnostics" />
 <use namespace="FubuMVC.Diagnostics.Dashboard" />
 <use namespace="FubuMVC.Diagnostics.Navigation" />

@@ -13,10 +13,6 @@ namespace FubuMVC.Diagnostics
         public DiagnosticsRegistry()
         {
             Services<DiagnosticServiceRegistry>();
-
-
-            Views
-                .TryToAttachWithDefaultConventions();
         }
     }
 

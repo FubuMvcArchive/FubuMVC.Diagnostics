@@ -13,14 +13,10 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
     [TestFixture]
     public class DiagnosticBehaviorTester : InteractionContext<DiagnosticBehavior>
     {
-        private CurrentRequest theCurrentRequest;
         private IActionBehavior theInnerBehavior;
 
         protected override void beforeEach()
         {
-            theCurrentRequest = new CurrentRequest();
-            MockFor<IFubuRequest>().Stub(x => x.Get<CurrentRequest>()).Return(theCurrentRequest);
-
             theInnerBehavior = MockFor<IActionBehavior>();
             ClassUnderTest.Inner = theInnerBehavior;
         }
