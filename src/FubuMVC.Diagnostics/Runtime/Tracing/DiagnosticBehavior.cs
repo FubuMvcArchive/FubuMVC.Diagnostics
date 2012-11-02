@@ -1,5 +1,6 @@
 using System;
 using FubuMVC.Core;
+using FubuMVC.Diagnostics.Core;
 using FubuMVC.Core.Behaviors;
 using FubuMVC.Core.Runtime;
 using FubuMVC.Core.Runtime.Logging;
@@ -27,10 +28,10 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
             {
                 action();
             }
-            catch (UnhandledFubuException ex)
+            catch (UnhandledFubuException)
             {
                 _trace.MarkAsFailedRequest();
-                throw ex.InnerException;
+                throw;
             }
             catch (Exception ex)
             {

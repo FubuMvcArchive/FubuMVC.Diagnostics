@@ -43,10 +43,12 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
 
             theInnerBehavior.Expect(x => x.Invoke()).Throw(exception);
 
-            Exception<NotImplementedException>.ShouldBeThrownBy(() =>
+            var unhandledException = Exception<UnhandledFubuException>.ShouldBeThrownBy(() =>
             {
                 ClassUnderTest.Invoke();
             });
+
+            unhandledException.InnerException.ShouldBeOfType<NotImplementedException>();
 
             MockFor<IRequestTrace>().AssertWasCalled(x => x.MarkAsFailedRequest());
         }
