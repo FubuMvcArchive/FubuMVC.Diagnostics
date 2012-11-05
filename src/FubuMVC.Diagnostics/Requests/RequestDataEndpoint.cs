@@ -24,7 +24,11 @@ namespace FubuMVC.Diagnostics.Requests
         private static HtmlTag toTag(ValueSourceReport report)
         {
             var table = new DetailsTableTag();
-            report.Values.OrderBy(x => x.Key).Each(pair => table.AddDetail(pair.Key, pair.Value));
+
+            report.Values
+                .GetAllKeys()
+                .OrderBy(x => x)
+                .Each(x => table.AddDetail(x, report.Values[x].Join(";")));
 
             var tag = new CollapsibleTag(report.ElementId(), report.Header());
             tag.AppendContent(table);
