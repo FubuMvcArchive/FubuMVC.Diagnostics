@@ -1,9 +1,9 @@
-using FubuMVC.Core.UI.Navigation;
 using FubuMVC.Diagnostics.ModelBinding;
 using FubuMVC.Diagnostics.Packaging;
 using FubuMVC.Diagnostics.Requests;
 using FubuMVC.Diagnostics.Routes;
 using FubuMVC.Diagnostics.Services;
+using FubuMVC.Navigation;
 
 namespace FubuMVC.Diagnostics.Navigation
 {

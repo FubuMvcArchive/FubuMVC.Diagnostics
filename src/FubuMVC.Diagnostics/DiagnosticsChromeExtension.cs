@@ -2,6 +2,7 @@ using FubuMVC.Core;
 using FubuMVC.Core.Registration.Conventions;
 using FubuMVC.Diagnostics.Chrome;
 using FubuMVC.Diagnostics.Navigation;
+using FubuMVC.Navigation;
 
 namespace FubuMVC.Diagnostics
 {
@@ -9,7 +10,7 @@ namespace FubuMVC.Diagnostics
     {
         public void Configure(FubuRegistry registry)
         {
-            registry.ApplyConvention<NavigationRootPolicy>(x =>
+            registry.Policies.Add<NavigationRootPolicy>(x =>
             {
                 x.ForKey(DiagnosticKeys.Main);
                 x.WrapWithChrome<DashboardChrome>();
@@ -17,7 +18,7 @@ namespace FubuMVC.Diagnostics
                 x.Alter(chain => chain.BehaviorChain.Route.Prepend("_fubu"));
             });
 
-            registry.Navigation<DiagnosticsMenu>();
+            registry.Policies.Add<DiagnosticsMenu>();
         }
     }
 }

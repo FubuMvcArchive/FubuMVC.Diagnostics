@@ -4,6 +4,7 @@ using System.Reflection;
 using FubuCore;
 using FubuMVC.Core;
 using FubuMVC.Core.Registration;
+using FubuMVC.Core.Registration.Diagnostics;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Core.Urls;
 using FubuMVC.Core.View;
@@ -41,10 +42,11 @@ namespace FubuMVC.Diagnostics.Routes
                 return !chain.Route.Pattern.Contains(DiagnosticsRegistration.DIAGNOSTICS_URL_ROOT);
             }
 
-            if (chain.As<ITracedModel>().AllEvents().OfType<ChainImported>().Any(x => x.Source.Action.As<RegistryImport>().Registry is DiagnosticsRegistry))
-            {
-                return false;
-            }
+            // TODO -- figure out how to do this again
+//            if (chain.As<ITracedModel>().AllEvents().OfType<ChainImported>().Any(x => x.Source.ProvenanceChain.OfType<ServiceRegistryProvenance>().Any(x => x.))
+//            {
+//                return false;
+//            }
 
 
             if (chain.Calls.Any(x => x.HandlerType.Assembly == Assembly.GetExecutingAssembly()))

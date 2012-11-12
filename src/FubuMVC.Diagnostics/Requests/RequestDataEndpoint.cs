@@ -1,3 +1,4 @@
+
 using System.Collections.Generic;
 using System.Linq;
 using FubuCore;
@@ -25,10 +26,10 @@ namespace FubuMVC.Diagnostics.Requests
         {
             var table = new DetailsTableTag();
 
-            report.Values
-                .GetAllKeys()
-                .OrderBy(x => x)
-                .Each(x => table.AddDetail(x, report.Values[x].Join(";")));
+            foreach (var key in report.Values.GetAllKeys().OrderBy(x => x))
+            {
+                table.AddDetail(key, string.Join("; ", report.Values[key]));
+            }
 
             var tag = new CollapsibleTag(report.ElementId(), report.Header());
             tag.AppendContent(table);

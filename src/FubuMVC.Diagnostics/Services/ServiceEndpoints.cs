@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using FubuCore.Descriptions;
 using FubuMVC.Core.Registration;
+using FubuMVC.Core.Registration.Diagnostics;
 using FubuMVC.Diagnostics.Visualization;
 using FubuMVC.TwitterBootstrap.Collapsibles;
 using HtmlTags;
@@ -12,15 +13,17 @@ namespace FubuMVC.Diagnostics.Services
     public class ServiceEndpoints
     {
         private readonly BehaviorGraph _graph;
+        private readonly ConfigLog _log;
 
-        public ServiceEndpoints(BehaviorGraph graph)
+        public ServiceEndpoints(BehaviorGraph graph, ConfigLog log)
         {
             _graph = graph;
+            _log = log;
         }
 
         private ServiceViewModel groupBy(Func<ServiceEvent, string> grouping, Action<ServiceEvent, Description> alteration, Func<ServiceEvent, string> ordering)
         {
-            var events = _graph.Log.EventsOfType<ServiceEvent>();
+            var events =_log.EventsOfType<ServiceEvent>();
             var tags = events.GroupBy(grouping).Select(group =>
             {
                 var descriptions = group.OrderBy(ordering).Select(@event =>
