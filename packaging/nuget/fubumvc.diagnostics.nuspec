@@ -19,7 +19,7 @@
       <dependency id="FubuMVC.SlickGrid" />
       <dependency id="FubuMVC.Spark" version="0.9.9.16" />
       <dependency id="FubuMVC.TwitterBootstrap" />
-      <dependency id="FubuMVC.Navigation" />
+      <dependency id="FubuMVC.Navigation" version="0.9.0.1" />
     </dependencies>
   </metadata>
   <files>
