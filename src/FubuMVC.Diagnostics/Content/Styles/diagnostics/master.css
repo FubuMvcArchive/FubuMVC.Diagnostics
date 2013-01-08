@@ -19,14 +19,8 @@ h2
 
 h3.subheader, h4.subheader
 {
-    margin-top: -10px;
     font-style: italic;
     padding-left: 10px;
-}
-
-h4.subheader
-{
-    margin-top: -15px;
 }
 
 .clear
