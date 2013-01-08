@@ -1,4 +1,8 @@
-﻿.container-fluid > .sidebar {
+﻿h2 {
+    line-height: inherit !important;
+}
+
+.container-fluid > .sidebar {
     width: 280px;
 }
 
