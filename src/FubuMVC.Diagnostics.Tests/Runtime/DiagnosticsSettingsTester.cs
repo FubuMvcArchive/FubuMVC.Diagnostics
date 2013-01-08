@@ -8,9 +8,9 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
     public class DiagnosticsSettingsTester
     {
         [Test]
-        public void the_default_max_requests_is_50()
+        public void the_default_max_requests_is_200()
         {
-            new DiagnosticsSettings().MaxRequests.ShouldEqual(50);
+            new DiagnosticsSettings().MaxRequests.ShouldEqual(200);
         }
     }
 }
