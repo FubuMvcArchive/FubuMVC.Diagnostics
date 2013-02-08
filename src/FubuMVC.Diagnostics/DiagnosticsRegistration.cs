@@ -1,5 +1,6 @@
 using FubuMVC.Core;
 using FubuMVC.Diagnostics.Runtime;
+using FubuMVC.Diagnostics.Visualization;
 
 namespace FubuMVC.Diagnostics
 {
@@ -10,6 +11,7 @@ namespace FubuMVC.Diagnostics
         public void Configure(FubuRegistry registry)
         {
             registry.Policies.Add<ApplyTracing>();
+			registry.Policies.Add<DescriptionVisualizationPolicy>();
             registry.Import<DiagnosticsRegistry>(DIAGNOSTICS_URL_ROOT);
         }
     }
