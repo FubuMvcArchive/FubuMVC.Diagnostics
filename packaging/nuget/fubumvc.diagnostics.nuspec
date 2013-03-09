@@ -9,7 +9,7 @@
     <projectUrl>http://mvc.fubu-project.org/</projectUrl>
     <iconUrl>https://github.com/DarthFubuMVC/fubu-collateral/raw/master/Icons/FubuMvc_256.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>A complete look into what's going on inside your FubuMVC application</description>
+    <description>A complete look into what's going on inside your FubuMVC application. Once active, diagnostics will be found under /_fubu</description>
     <tags>fubumvc diagnostics</tags>
     <dependencies>
       <dependency id="FubuMVC.Core" version="0.9.9.1274" />
