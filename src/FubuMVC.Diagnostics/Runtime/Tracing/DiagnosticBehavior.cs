@@ -1,6 +1,4 @@
 using System;
-using FubuMVC.Core;
-using FubuMVC.Diagnostics.Core;
 using FubuMVC.Core.Behaviors;
 using FubuMVC.Core.Runtime;
 using FubuMVC.Core.Runtime.Logging;
@@ -12,12 +10,15 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
         private readonly IDebugDetector _detector;
         private readonly IRequestTrace _trace;
         private readonly IOutputWriter _writer;
+        private readonly IExceptionHandlingObserver _exceptionObserver;
 
-        public DiagnosticBehavior(IRequestTrace trace, IDebugDetector detector, IOutputWriter writer)
+        public DiagnosticBehavior(IRequestTrace trace, IDebugDetector detector, IOutputWriter writer,
+            IExceptionHandlingObserver exceptionObserver)
         {
             _trace = trace;
             _detector = detector;
             _writer = writer;
+            _exceptionObserver = exceptionObserver;
         }
 
         protected override void invoke(Action action)
@@ -28,15 +29,16 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
             {
                 action();
             }
-            catch (UnhandledFubuException)
-            {
-                _trace.MarkAsFailedRequest();
-                throw;
-            }
             catch (Exception ex)
             {
                 _trace.MarkAsFailedRequest();
-                _trace.Log(new ExceptionReport("Request failed", ex));
+
+                if (!_exceptionObserver.WasObserved(ex))
+                {
+                    _trace.Log(new ExceptionReport("Request failed", ex));
+                    _exceptionObserver.RecordHandled(ex);
+                }
+
                 throw;
             }
             finally
@@ -50,6 +52,4 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
             }
         }
     }
-
-
 }

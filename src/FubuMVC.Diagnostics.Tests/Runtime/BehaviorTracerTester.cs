@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using FubuMVC.Core.Behaviors;
+using FubuMVC.Core.Runtime;
 using FubuMVC.Core.Runtime.Logging;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.Diagnostics.Runtime.Tracing;
@@ -101,6 +102,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
             logs = Services.RecordLogging();
             correlation = new BehaviorCorrelation(new FakeNode());
             Services.Inject(correlation);
+            Services.Inject<IExceptionHandlingObserver>(new ExceptionHandlingObserver());
 
             exception = new NotImplementedException();
             inner = MockFor<IActionBehavior>();
@@ -109,7 +111,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
 
             ClassUnderTest.Inner = inner;
 
-            Exception<UnhandledFubuException>.ShouldBeThrownBy(() =>
+            Exception<NotImplementedException>.ShouldBeThrownBy(() =>
             {
                 ClassUnderTest.Invoke();
             });
@@ -126,7 +128,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         public void should_mark_the_debug_report_with_the_exception()
         {
             logs.DebugMessages.OfType<BehaviorFinish>().Single()
-                .Exception.ExceptionText.ShouldEqual(exception.ToString());
+                .Exception.ExceptionType.ShouldEqual(exception.GetType().Name);
         }
 
         [Test]
@@ -156,6 +158,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
             logs = Services.RecordLogging();
             correlation = new BehaviorCorrelation(new FakeNode());
             Services.Inject(correlation);
+            Services.Inject<IExceptionHandlingObserver>(new ExceptionHandlingObserver());
 
             exception = new NotImplementedException();
             inner = MockFor<IActionBehavior>();
@@ -168,11 +171,10 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         [Test]
         public void should_allow_the_exception_to_bubble_up_wrapped_in_unhandled_exception()
         {
-            Exception<UnhandledFubuException>.ShouldBeThrownBy(() => ClassUnderTest.Invoke())
-                .InnerException.ShouldBeTheSameAs(exception);
+            Exception<NotImplementedException>.ShouldBeThrownBy(() => ClassUnderTest.Invoke())
+                .ShouldBeTheSameAs(exception);
         }
     }
-
 
     [TestFixture]
     public class when_tracing_through_a_behavior_in_partial_invoke_that_throws_an_exception_during_a_debug_request :
@@ -188,6 +190,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
             logs = Services.RecordLogging();
             correlation = new BehaviorCorrelation(new FakeNode());
             Services.Inject(correlation);
+            Services.Inject<IExceptionHandlingObserver>(new ExceptionHandlingObserver());
 
             exception = new NotImplementedException();
             inner = MockFor<IActionBehavior>();
@@ -196,7 +199,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
 
             ClassUnderTest.Inner = inner;
 
-            Exception<UnhandledFubuException>.ShouldBeThrownBy(() =>
+            Exception<NotImplementedException>.ShouldBeThrownBy(() =>
             {
                 ClassUnderTest.InvokePartial();
             });
@@ -212,7 +215,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         public void should_mark_the_debug_report_with_the_exception()
         {
             logs.DebugMessages.OfType<BehaviorFinish>().Single()
-                .Exception.ExceptionText.ShouldEqual(exception.ToString());
+                .Exception.ExceptionType.ShouldEqual(exception.GetType().Name);
         }
 
         [Test]
@@ -242,6 +245,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
             logs = Services.RecordLogging();
             correlation = new BehaviorCorrelation(new FakeNode());
             Services.Inject(correlation);
+            Services.Inject<IExceptionHandlingObserver>(new ExceptionHandlingObserver());
 
             exception = new NotImplementedException();
             inner = MockFor<IActionBehavior>();
@@ -254,8 +258,8 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         [Test]
         public void should_allow_the_exception_to_bubble_up_wrapped_in_unhandled_exception()
         {
-            Exception<UnhandledFubuException>.ShouldBeThrownBy(() => ClassUnderTest.InvokePartial())
-                .InnerException.ShouldBeTheSameAs(exception);
+            Exception<NotImplementedException>.ShouldBeThrownBy(() => ClassUnderTest.InvokePartial())
+                .ShouldBeTheSameAs(exception);
         }
     }
 
