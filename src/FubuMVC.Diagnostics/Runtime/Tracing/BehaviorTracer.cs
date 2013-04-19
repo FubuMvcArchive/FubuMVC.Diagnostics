@@ -1,20 +1,21 @@
 using System;
-using System.Runtime.Serialization;
 using FubuCore.Logging;
 using FubuMVC.Core.Behaviors;
-using FubuMVC.Core.Runtime.Logging;
+using FubuMVC.Core.Runtime;
 
 namespace FubuMVC.Diagnostics.Runtime.Tracing
 {
     public class BehaviorTracer : WrappingBehavior
     {
-        private readonly BehaviorCorrelation _correlation;
-        private readonly ILogger _logger;
+        readonly BehaviorCorrelation _correlation;
+        readonly ILogger _logger;
+        readonly IExceptionHandlingObserver _exceptionObserver;
 
-        public BehaviorTracer(BehaviorCorrelation correlation, ILogger logger)
+        public BehaviorTracer(BehaviorCorrelation correlation, ILogger logger, IExceptionHandlingObserver exceptionObserver)
         {
             _correlation = correlation;
             _logger = logger;
+            _exceptionObserver = exceptionObserver;
         }
 
         protected override void invoke(Action action)
@@ -26,42 +27,23 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
                 action();
                 _logger.DebugMessage(() => new BehaviorFinish(_correlation));
             }
-            catch (UnhandledFubuException)
-            {
-                throw;
-            }
             catch (Exception ex)
             {
-                _logger.DebugMessage(() =>
+                if (!_exceptionObserver.WasObserved(ex))
                 {
-                    var log = new BehaviorFinish(_correlation);
-                    log.LogException(ex);
+                    _logger.DebugMessage(() =>
+                    {
+                        var log = new BehaviorFinish(_correlation);
+                        log.LogException(ex);
 
-                    return log;
-                });
+                        return log;
+                    });
 
-                throw new UnhandledFubuException("Behavior failed", ex);
+                    _exceptionObserver.RecordHandled(ex);
+                }
+
+                throw;
             }
-        }
-    }
-
-
-    public class UnhandledFubuException : Exception
-    {
-        public UnhandledFubuException()
-        {
-        }
-
-        public UnhandledFubuException(string message) : base(message)
-        {
-        }
-
-        public UnhandledFubuException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
-
-        protected UnhandledFubuException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
         }
     }
 }

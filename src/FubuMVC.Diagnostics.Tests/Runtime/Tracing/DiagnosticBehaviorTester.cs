@@ -1,7 +1,7 @@
 using System;
-using FubuMVC.Core;
 using FubuMVC.Core.Behaviors;
 using FubuMVC.Core.Runtime;
+using FubuMVC.Core.Runtime.Logging;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.Diagnostics.Runtime.Tracing;
 using FubuTestingSupport;
@@ -17,6 +17,8 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
 
         protected override void beforeEach()
         {
+            Services.Inject<IExceptionHandlingObserver>(new ExceptionHandlingObserver());
+
             theInnerBehavior = MockFor<IActionBehavior>();
             ClassUnderTest.Inner = theInnerBehavior;
         }
@@ -33,24 +35,10 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
                 ClassUnderTest.Invoke();
             }).ShouldBeTheSameAs(exception);
 
-            MockFor<IRequestTrace>().AssertWasCalled(x => x.MarkAsFailedRequest());
-        }
-
-        [Test]
-        public void if_the_inner_behavior_fails_with_an_unknown_exception_mark_the_request_as_a_failure()
-        {
-            var exception = new UnhandledFubuException("something", new NotImplementedException());
-
-            theInnerBehavior.Expect(x => x.Invoke()).Throw(exception);
-
-            var unhandledException = Exception<UnhandledFubuException>.ShouldBeThrownBy(() =>
-            {
-                ClassUnderTest.Invoke();
-            });
-
-            unhandledException.InnerException.ShouldBeOfType<NotImplementedException>();
-
-            MockFor<IRequestTrace>().AssertWasCalled(x => x.MarkAsFailedRequest());
+            var traceMock = MockFor<IRequestTrace>();
+            traceMock.AssertWasCalled(x => x.MarkAsFailedRequest());
+            traceMock.AssertWasCalled(x => x.Log(Arg<ExceptionReport>.Matches(
+                y => y.ExceptionType == exception.GetType().Name)));
         }
 
         [Test]
