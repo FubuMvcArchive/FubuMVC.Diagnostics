@@ -1,0 +1,158 @@
+4/24/2013 10:56:43 AM: [Info] Classic Mode Detected
+4/24/2013 10:56:43 AM: [Debug] Deleting c:\code\FubuMVC.Diagnostics\src\packages
+4/24/2013 10:56:44 AM: [Info] Restoring dependencies for solution diagnostics to c:\code\FubuMVC.Diagnostics\src\packages
+4/24/2013 10:56:44 AM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics
+====================================================================================================
+     ** Ripple Steps
+          1.) ValidateRepository          Validate diagnostics                                      
+          2.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          3.) ExplodeDownloadedNugets     Explode nugets at c:\code\FubuMVC.Diagnostics\src\packages
+          4.) ProcessDirectives           Process directives from nugets                            
+          5.) FixReferences               Fix References                                            
+
+4/24/2013 10:56:47 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\FubuCore.1.1.0.243.nupkg
+4/24/2013 10:56:47 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\FubuLocalization.0.9.5.143.nupkg
+4/24/2013 10:56:47 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\FubuMVC.Core.1.0.1.1457.nupkg
+4/24/2013 10:56:47 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\Bottles.1.0.0.475.nupkg
+4/24/2013 10:56:47 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\FubuMVC.Core.Assets.0.9.9.425.nupkg
+4/24/2013 10:56:47 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\FubuMVC.Core.UI.1.0.1.450.nupkg
+4/24/2013 10:56:47 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\FubuMVC.Core.View.1.0.0.432.nupkg
+4/24/2013 10:56:47 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\FubuMVC.JQueryUI.0.5.0.250.nupkg
+4/24/2013 10:56:47 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\FubuMVC.Media.0.9.5.342.nupkg
+4/24/2013 10:56:47 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\FubuMVC.Navigation.0.9.0.94.nupkg
+4/24/2013 10:56:47 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\FubuMVC.SlickGrid.0.0.0.537.nupkg
+4/24/2013 10:56:47 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\FubuMVC.Spark.1.0.0.432.nupkg
+4/24/2013 10:56:47 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\FubuMVC.StructureMap.1.0.1.1457.nupkg
+4/24/2013 10:56:47 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\FubuMVC.TwitterBootstrap.0.0.0.533.nupkg
+4/24/2013 10:56:47 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\FubuTestingSupport.1.1.0.243.nupkg
+4/24/2013 10:56:47 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\HtmlTags.1.2.0.159.nupkg
+4/24/2013 10:56:48 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\DotNetZip.1.9.1.8.nupkg
+4/24/2013 10:56:48 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\RhinoMocks.3.6.1.0.nupkg
+4/24/2013 10:56:49 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\Spark.1.7.5.0.nupkg
+4/24/2013 10:56:49 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\NUnit.2.5.10.11092.nupkg
+4/24/2013 10:56:50 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\structuremap.2.6.3.0.nupkg
+4/24/2013 10:56:51 AM: [Debug] Downloading From Cache: C:\Users\josarn\AppData\Roaming\ripple\structuremap.automocking.2.6.3.0.nupkg
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: FubuCore, Version: 1.1.0.243, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\FubuCore
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: FubuLocalization, Version: 0.9.5.143, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\FubuLocalization
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: FubuMVC.Core, Version: 1.0.1.1457, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: Bottles, Version: 1.0.0.475, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\Bottles
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: FubuMVC.Core.Assets, Version: 0.9.9.425, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.Assets
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: FubuMVC.Core.UI, Version: 1.0.1.450, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.UI
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: FubuMVC.Core.View, Version: 1.0.0.432, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.View
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: FubuMVC.JQueryUI, Version: 0.5.0.250, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.JQueryUI
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: FubuMVC.Media, Version: 0.9.5.342, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Media
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: FubuMVC.Navigation, Version: 0.9.0.94, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Navigation
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: FubuMVC.SlickGrid, Version: 0.0.0.537, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.SlickGrid
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: FubuMVC.Spark, Version: 1.0.0.432, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Spark
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: FubuMVC.StructureMap, Version: 1.0.1.1457, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.StructureMap
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: FubuMVC.TwitterBootstrap, Version: 0.0.0.533, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.TwitterBootstrap
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: FubuTestingSupport, Version: 1.1.0.243, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\FubuTestingSupport
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: HtmlTags, Version: 1.2.0.159, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\HtmlTags
+4/24/2013 10:56:51 AM: [Debug] Exploding Name: DotNetZip, Version: 1.9.1.8, IsPreRelease: False
+4/24/2013 10:56:51 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\DotNetZip
+4/24/2013 10:56:52 AM: [Debug] Exploding Name: RhinoMocks, Version: 3.6.1.0, IsPreRelease: False
+4/24/2013 10:56:52 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\RhinoMocks
+4/24/2013 10:56:52 AM: [Debug] Exploding Name: Spark, Version: 1.7.5.0, IsPreRelease: False
+4/24/2013 10:56:52 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\Spark
+4/24/2013 10:56:52 AM: [Debug] Exploding Name: NUnit, Version: 2.5.10.11092, IsPreRelease: False
+4/24/2013 10:56:52 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\NUnit
+4/24/2013 10:56:52 AM: [Debug] Exploding Name: structuremap, Version: 2.6.3.0, IsPreRelease: False
+4/24/2013 10:56:52 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\structuremap
+4/24/2013 10:56:52 AM: [Debug] Exploding Name: structuremap.automocking, Version: 2.6.3.0, IsPreRelease: False
+4/24/2013 10:56:52 AM: [Info] Exploding to c:\code\FubuMVC.Diagnostics\src\packages\structuremap.automocking
+4/24/2013 10:56:52 AM: [Info] HintPath changed: ..\packages\Bottles.1.0.0.452\lib\Bottles.dll to ..\packages\Bottles\lib\Bottles.dll
+4/24/2013 10:56:52 AM: [Info] HintPath changed: ..\packages\FubuCore.1.0.2.232\lib\FubuCore.dll to ..\packages\FubuCore\lib\FubuCore.dll
+4/24/2013 10:56:52 AM: [Info] HintPath changed: ..\packages\FubuLocalization.0.9.5.130\lib\FubuLocalization.dll to ..\packages\FubuLocalization\lib\FubuLocalization.dll
+4/24/2013 10:56:52 AM: [Info] HintPath changed: ..\packages\FubuMVC.Core.1.0.1.1425\lib\net40\FubuMVC.Core.dll to ..\packages\FubuMVC.Core\lib\net40\FubuMVC.Core.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Core.Assets.0.9.9.425\lib\net40\FubuMVC.Core.Assets.dll to ..\packages\FubuMVC.Core.Assets\lib\net40\FubuMVC.Core.Assets.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Core.UI.1.0.1.450\lib\net40\FubuMVC.Core.UI.dll to ..\packages\FubuMVC.Core.UI\lib\net40\FubuMVC.Core.UI.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Core.View.1.0.0.427\lib\net40\FubuMVC.Core.View.dll to ..\packages\FubuMVC.Core.View\lib\net40\FubuMVC.Core.View.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.JQueryUI.0.5.0.232\lib\net40\FubuMVC.JQueryUI.dll to ..\packages\FubuMVC.JQueryUI\lib\net40\FubuMVC.JQueryUI.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Media.0.9.5.323\lib\net40\FubuMVC.Media.dll to ..\packages\FubuMVC.Media\lib\net40\FubuMVC.Media.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Navigation.0.9.0.94\lib\net40\FubuMVC.Navigation.dll to ..\packages\FubuMVC.Navigation\lib\net40\FubuMVC.Navigation.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.SlickGrid.0.0.0.533\lib\net40\FubuMVC.SlickGrid.dll to ..\packages\FubuMVC.SlickGrid\lib\net40\FubuMVC.SlickGrid.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Spark.1.0.0.427\lib\net40\FubuMVC.Spark.dll to ..\packages\FubuMVC.Spark\lib\net40\FubuMVC.Spark.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.StructureMap.1.0.1.1425\lib\net40\FubuMVC.StructureMap.dll to ..\packages\FubuMVC.StructureMap\lib\net40\FubuMVC.StructureMap.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.TwitterBootstrap.0.0.0.533\lib\net40\FubuMVC.TwitterBootstrap.dll to ..\packages\FubuMVC.TwitterBootstrap\lib\net40\FubuMVC.TwitterBootstrap.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\HtmlTags.1.2.0.150\lib\4.0\HtmlTags.dll to ..\packages\HtmlTags\lib\4.0\HtmlTags.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\Spark.1.7.5.0\lib\NET40\Spark.dll to ..\packages\Spark\lib\NET40\Spark.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\structuremap.2.6.3\lib\StructureMap.dll to ..\packages\structuremap\lib\StructureMap.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\Bottles.1.0.0.452\lib\Bottles.dll to ..\packages\Bottles\lib\Bottles.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuCore.1.0.2.232\lib\FubuCore.dll to ..\packages\FubuCore\lib\FubuCore.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuLocalization.0.9.5.130\lib\FubuLocalization.dll to ..\packages\FubuLocalization\lib\FubuLocalization.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Core.1.0.1.1425\lib\net40\FubuMVC.Core.dll to ..\packages\FubuMVC.Core\lib\net40\FubuMVC.Core.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Core.Assets.0.9.9.425\lib\net40\FubuMVC.Core.Assets.dll to ..\packages\FubuMVC.Core.Assets\lib\net40\FubuMVC.Core.Assets.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Core.UI.1.0.1.450\lib\net40\FubuMVC.Core.UI.dll to ..\packages\FubuMVC.Core.UI\lib\net40\FubuMVC.Core.UI.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Core.View.1.0.0.427\lib\net40\FubuMVC.Core.View.dll to ..\packages\FubuMVC.Core.View\lib\net40\FubuMVC.Core.View.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.JQueryUI.0.5.0.232\lib\net40\FubuMVC.JQueryUI.dll to ..\packages\FubuMVC.JQueryUI\lib\net40\FubuMVC.JQueryUI.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Media.0.9.5.323\lib\net40\FubuMVC.Media.dll to ..\packages\FubuMVC.Media\lib\net40\FubuMVC.Media.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Navigation.0.9.0.94\lib\net40\FubuMVC.Navigation.dll to ..\packages\FubuMVC.Navigation\lib\net40\FubuMVC.Navigation.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.SlickGrid.0.0.0.533\lib\net40\FubuMVC.SlickGrid.dll to ..\packages\FubuMVC.SlickGrid\lib\net40\FubuMVC.SlickGrid.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Spark.1.0.0.427\lib\net40\FubuMVC.Spark.dll to ..\packages\FubuMVC.Spark\lib\net40\FubuMVC.Spark.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.TwitterBootstrap.0.0.0.533\lib\net40\FubuMVC.TwitterBootstrap.dll to ..\packages\FubuMVC.TwitterBootstrap\lib\net40\FubuMVC.TwitterBootstrap.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\HtmlTags.1.2.0.150\lib\4.0\HtmlTags.dll to ..\packages\HtmlTags\lib\4.0\HtmlTags.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\Spark.1.7.5.0\lib\NET40\Spark.dll to ..\packages\Spark\lib\NET40\Spark.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\structuremap.2.6.3\lib\StructureMap.dll to ..\packages\structuremap\lib\StructureMap.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\Bottles.1.0.0.452\lib\Bottles.dll to ..\packages\Bottles\lib\Bottles.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\DotNetZip.1.9.1.8\lib\net20\Ionic.Zip.dll to ..\packages\DotNetZip\lib\net20\Ionic.Zip.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuCore.1.0.2.232\lib\FubuCore.dll to ..\packages\FubuCore\lib\FubuCore.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuLocalization.0.9.5.130\lib\FubuLocalization.dll to ..\packages\FubuLocalization\lib\FubuLocalization.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Core.1.0.1.1425\lib\net40\FubuMVC.Core.dll to ..\packages\FubuMVC.Core\lib\net40\FubuMVC.Core.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Core.Assets.0.9.9.425\lib\net40\FubuMVC.Core.Assets.dll to ..\packages\FubuMVC.Core.Assets\lib\net40\FubuMVC.Core.Assets.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Core.UI.1.0.1.450\lib\net40\FubuMVC.Core.UI.dll to ..\packages\FubuMVC.Core.UI\lib\net40\FubuMVC.Core.UI.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Core.View.1.0.0.427\lib\net40\FubuMVC.Core.View.dll to ..\packages\FubuMVC.Core.View\lib\net40\FubuMVC.Core.View.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.JQueryUI.0.5.0.232\lib\net40\FubuMVC.JQueryUI.dll to ..\packages\FubuMVC.JQueryUI\lib\net40\FubuMVC.JQueryUI.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Media.0.9.5.323\lib\net40\FubuMVC.Media.dll to ..\packages\FubuMVC.Media\lib\net40\FubuMVC.Media.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.Navigation.0.9.0.94\lib\net40\FubuMVC.Navigation.dll to ..\packages\FubuMVC.Navigation\lib\net40\FubuMVC.Navigation.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.SlickGrid.0.0.0.533\lib\net40\FubuMVC.SlickGrid.dll to ..\packages\FubuMVC.SlickGrid\lib\net40\FubuMVC.SlickGrid.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuMVC.TwitterBootstrap.0.0.0.533\lib\net40\FubuMVC.TwitterBootstrap.dll to ..\packages\FubuMVC.TwitterBootstrap\lib\net40\FubuMVC.TwitterBootstrap.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\FubuTestingSupport.1.0.2.232\lib\FubuTestingSupport.dll to ..\packages\FubuTestingSupport\lib\FubuTestingSupport.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed: ..\packages\HtmlTags.1.2.0.150\lib\4.0\HtmlTags.dll to ..\packages\HtmlTags\lib\4.0\HtmlTags.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed:  to ..\packages\NUnit\lib\nunit.framework.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed:  to ..\packages\NUnit\lib\nunit.mocks.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed:  to ..\packages\NUnit\lib\pnunit.framework.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed:  to ..\packages\RhinoMocks\lib\net\Rhino.Mocks.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed:  to ..\packages\structuremap\lib\StructureMap.dll
+4/24/2013 10:56:53 AM: [Info] HintPath changed:  to ..\packages\structuremap.automocking\lib\StructureMap.AutoMocking.dll
+4/24/2013 10:59:07 AM: [Info] Restoring dependencies for solution diagnostics to c:\code\FubuMVC.Diagnostics\src\packages
+4/24/2013 10:59:07 AM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics
+====================================================================================================
+     ** Ripple Steps
+          1.) ValidateRepository          Validate diagnostics                                      
+          2.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          3.) ExplodeDownloadedNugets     Explode nugets at c:\code\FubuMVC.Diagnostics\src\packages
+          4.) ProcessDirectives           Process directives from nugets                            
+          5.) FixReferences               Fix References                                            
+
+4/24/2013 11:01:02 AM: [Info] Restoring dependencies for solution diagnostics to c:\code\FubuMVC.Diagnostics\src\packages
+4/24/2013 11:01:02 AM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics
+====================================================================================================
+     ** Ripple Steps
+          1.) ValidateRepository          Validate diagnostics                                      
+          2.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          3.) ExplodeDownloadedNugets     Explode nugets at c:\code\FubuMVC.Diagnostics\src\packages
+          4.) ProcessDirectives           Process directives from nugets                            
+          5.) FixReferences               Fix References                                            
+
