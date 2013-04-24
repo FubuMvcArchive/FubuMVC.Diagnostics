@@ -25,6 +25,12 @@ namespace FubuMVC.Diagnostics.Requests
                 return;
             }
 
+            // TODO -- What *should* happen here?
+            if (finish == null)
+            {
+                return;
+            }
+
             var exception = log.FindStep<ExceptionReport>(x => node.UniqueId.Equals(x.CorrelationId));
             if (exception != null || !finish.Log.Succeeded)
             {

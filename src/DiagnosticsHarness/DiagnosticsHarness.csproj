@@ -128,6 +128,7 @@
   <ItemGroup>
     <Compile Include="DescriptionBag.cs" />
     <Compile Include="DescriptionEndpoints.cs" />
+    <Compile Include="ExceptionsEndpoint.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
