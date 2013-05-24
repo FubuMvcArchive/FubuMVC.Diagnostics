@@ -156,3 +156,161 @@ RippleOperation: diagnostics
           4.) ProcessDirectives           Process directives from nugets                            
           5.) FixReferences               Fix References                                            
 
+5/24/2013 10:09:24 AM: [Info] Cleaning contents of directory C:\code\FubuMVC.Diagnostics\src\packages
+5/24/2013 10:09:24 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+5/24/2013 10:09:24 AM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics (master)
+====================================================================================================
+     ** Ripple Steps
+          1.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          2.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
+          3.) ProcessDirectives           Process directives from nugets                            
+          4.) FixReferences               Fix References                                            
+
+5/24/2013 10:09:27 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Bottles.1.1.0.503.nupkg
+5/24/2013 10:09:27 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuCore.1.1.0.246.nupkg
+5/24/2013 10:09:27 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.UI.1.0.1.450.nupkg
+5/24/2013 10:09:27 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuLocalization.0.9.5.146.nupkg
+5/24/2013 10:09:27 AM: [Debug] Downloading Download and cache FubuMVC.Core.1.0.1.1484.nupkg
+5/24/2013 10:09:27 AM: [Debug] Downloading Download and cache FubuMVC.Media.0.9.5.355.nupkg
+5/24/2013 10:09:27 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.View.1.0.0.434.nupkg
+5/24/2013 10:09:27 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.SlickGrid.0.0.0.538.nupkg
+5/24/2013 10:09:27 AM: [Debug] Downloading Download and cache FubuMVC.JQueryUI.0.5.0.263.nupkg
+5/24/2013 10:09:27 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.Assets.0.9.9.425.nupkg
+5/24/2013 10:09:27 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuTestingSupport.1.1.0.246.nupkg
+5/24/2013 10:09:27 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Navigation.0.9.0.94.nupkg
+5/24/2013 10:09:27 AM: [Debug] Downloading Download and cache FubuMVC.Spark.1.0.0.434.nupkg
+5/24/2013 10:09:27 AM: [Debug] Downloading Download and cache FubuMVC.StructureMap.1.0.1.1484.nupkg
+5/24/2013 10:09:27 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.TwitterBootstrap.0.0.0.533.nupkg
+5/24/2013 10:09:29 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\NUnit.2.5.10.11092.nupkg
+5/24/2013 10:09:29 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\HtmlTags.1.3.0.165.nupkg
+5/24/2013 10:09:31 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\RhinoMocks.3.6.1.0.nupkg
+5/24/2013 10:09:32 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Spark.1.7.5.0.nupkg
+5/24/2013 10:09:34 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\structuremap.2.6.3.0.nupkg
+5/24/2013 10:09:36 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\structuremap.automocking.2.6.3.0.nupkg
+5/24/2013 10:09:36 AM: [Debug] Exploding Name: FubuCore, Version: 1.1.0.246, IsPreRelease: False
+5/24/2013 10:09:36 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuCore
+5/24/2013 10:09:36 AM: [Debug] Exploding Name: Bottles, Version: 1.1.0.503, IsPreRelease: False
+5/24/2013 10:09:36 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Bottles
+5/24/2013 10:09:36 AM: [Debug] Exploding Name: FubuMVC.Core.UI, Version: 1.0.1.450, IsPreRelease: False
+5/24/2013 10:09:36 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.UI
+5/24/2013 10:09:36 AM: [Debug] Exploding Name: FubuLocalization, Version: 0.9.5.146, IsPreRelease: False
+5/24/2013 10:09:36 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuLocalization
+5/24/2013 10:09:36 AM: [Debug] Exploding Name: FubuMVC.Core.View, Version: 1.0.0.434, IsPreRelease: False
+5/24/2013 10:09:36 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.View
+5/24/2013 10:09:36 AM: [Debug] Exploding Name: FubuMVC.SlickGrid, Version: 0.0.0.538, IsPreRelease: False
+5/24/2013 10:09:36 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.SlickGrid
+5/24/2013 10:09:36 AM: [Debug] Exploding Name: FubuTestingSupport, Version: 1.1.0.246, IsPreRelease: False
+5/24/2013 10:09:36 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuTestingSupport
+5/24/2013 10:09:36 AM: [Debug] Exploding Name: FubuMVC.Navigation, Version: 0.9.0.94, IsPreRelease: False
+5/24/2013 10:09:36 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Navigation
+5/24/2013 10:09:36 AM: [Debug] Exploding Name: FubuMVC.Core.Assets, Version: 0.9.9.425, IsPreRelease: False
+5/24/2013 10:09:36 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.Assets
+5/24/2013 10:09:36 AM: [Debug] Exploding Name: FubuMVC.TwitterBootstrap, Version: 0.0.0.533, IsPreRelease: False
+5/24/2013 10:09:36 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.TwitterBootstrap
+5/24/2013 10:09:36 AM: [Debug] Exploding Name: FubuMVC.StructureMap, Version: 1.0.1.1484, IsPreRelease: False
+5/24/2013 10:09:36 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.StructureMap
+5/24/2013 10:09:36 AM: [Debug] Exploding Name: FubuMVC.Media, Version: 0.9.5.355, IsPreRelease: False
+5/24/2013 10:09:36 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Media
+5/24/2013 10:09:36 AM: [Debug] Exploding Name: FubuMVC.Spark, Version: 1.0.0.434, IsPreRelease: False
+5/24/2013 10:09:36 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Spark
+5/24/2013 10:09:36 AM: [Debug] Exploding Name: FubuMVC.JQueryUI, Version: 0.5.0.263, IsPreRelease: False
+5/24/2013 10:09:36 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.JQueryUI
+5/24/2013 10:09:36 AM: [Debug] Exploding Name: NUnit, Version: 2.5.10.11092, IsPreRelease: False
+5/24/2013 10:09:36 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\NUnit
+5/24/2013 10:09:37 AM: [Debug] Exploding Name: HtmlTags, Version: 1.3.0.165, IsPreRelease: False
+5/24/2013 10:09:37 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\HtmlTags
+5/24/2013 10:09:37 AM: [Debug] Exploding Name: FubuMVC.Core, Version: 1.0.1.1484, IsPreRelease: False
+5/24/2013 10:09:37 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core
+5/24/2013 10:09:37 AM: [Debug] Exploding Name: RhinoMocks, Version: 3.6.1.0, IsPreRelease: False
+5/24/2013 10:09:37 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\RhinoMocks
+5/24/2013 10:09:37 AM: [Debug] Exploding Name: Spark, Version: 1.7.5.0, IsPreRelease: False
+5/24/2013 10:09:37 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Spark
+5/24/2013 10:09:37 AM: [Debug] Exploding Name: structuremap, Version: 2.6.3.0, IsPreRelease: False
+5/24/2013 10:09:37 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\structuremap
+5/24/2013 10:09:37 AM: [Debug] Exploding Name: structuremap.automocking, Version: 2.6.3.0, IsPreRelease: False
+5/24/2013 10:09:37 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\structuremap.automocking
+5/24/2013 10:13:08 AM: [Debug] Solution diagnostics
+5/24/2013 10:13:08 AM: [Info] Cleaning Solution diagnostics at C:\code\FubuMVC.Diagnostics
+5/24/2013 10:13:08 AM: [Info] Cleaning contents of directory C:\code\FubuMVC.Diagnostics\src\packages
+5/24/2013 10:13:09 AM: [Info] Cleaning contents of directory C:\code\FubuMVC.Diagnostics\src\DiagnosticsHarness\bin
+5/24/2013 10:13:09 AM: [Info] Cleaning contents of directory C:\code\FubuMVC.Diagnostics\src\DiagnosticsHarness\obj
+5/24/2013 10:13:09 AM: [Info] Cleaning contents of directory C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics\bin
+5/24/2013 10:13:09 AM: [Info] Cleaning contents of directory C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics\obj
+5/24/2013 10:13:09 AM: [Info] Cleaning contents of directory C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics.Tests\bin
+5/24/2013 10:13:09 AM: [Info] Cleaning contents of directory C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics.Tests\obj
+5/24/2013 10:13:10 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+5/24/2013 10:13:10 AM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics (master)
+====================================================================================================
+     ** Ripple Steps
+          1.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          2.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
+          3.) ProcessDirectives           Process directives from nugets                            
+          4.) FixReferences               Fix References                                            
+
+5/24/2013 10:13:14 AM: [Debug] Downloading Download and cache Bottles.1.1.0.504.nupkg
+5/24/2013 10:13:14 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.View.1.0.0.434.nupkg
+5/24/2013 10:13:14 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.Assets.0.9.9.425.nupkg
+5/24/2013 10:13:14 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuLocalization.0.9.5.146.nupkg
+5/24/2013 10:13:14 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.UI.1.0.1.450.nupkg
+5/24/2013 10:13:14 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.JQueryUI.0.5.0.263.nupkg
+5/24/2013 10:13:15 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Spark.1.0.0.434.nupkg
+5/24/2013 10:13:14 AM: [Debug] Downloading Download and cache FubuMVC.Core.1.1.0.1486.nupkg
+5/24/2013 10:13:14 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Media.0.9.5.355.nupkg
+5/24/2013 10:13:15 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Navigation.0.9.0.94.nupkg
+5/24/2013 10:13:15 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.SlickGrid.0.0.0.538.nupkg
+5/24/2013 10:13:14 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuCore.1.1.0.246.nupkg
+5/24/2013 10:13:15 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuTestingSupport.1.1.0.246.nupkg
+5/24/2013 10:13:15 AM: [Debug] Downloading Download and cache FubuMVC.StructureMap.1.1.0.1486.nupkg
+5/24/2013 10:13:15 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.TwitterBootstrap.0.0.0.533.nupkg
+5/24/2013 10:13:17 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\RhinoMocks.3.6.1.0.nupkg
+5/24/2013 10:13:17 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\HtmlTags.1.3.0.165.nupkg
+5/24/2013 10:13:18 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\NUnit.2.5.10.11092.nupkg
+5/24/2013 10:13:19 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Spark.1.7.5.0.nupkg
+5/24/2013 10:13:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\structuremap.automocking.2.6.3.0.nupkg
+5/24/2013 10:13:22 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\structuremap.2.6.3.0.nupkg
+5/24/2013 10:13:22 AM: [Debug] Exploding Name: FubuMVC.Core.View, Version: 1.0.0.434, IsPreRelease: False
+5/24/2013 10:13:22 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.View
+5/24/2013 10:13:22 AM: [Debug] Exploding Name: FubuMVC.Core.Assets, Version: 0.9.9.425, IsPreRelease: False
+5/24/2013 10:13:22 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.Assets
+5/24/2013 10:13:22 AM: [Debug] Exploding Name: FubuLocalization, Version: 0.9.5.146, IsPreRelease: False
+5/24/2013 10:13:22 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuLocalization
+5/24/2013 10:13:22 AM: [Debug] Exploding Name: FubuMVC.Core.UI, Version: 1.0.1.450, IsPreRelease: False
+5/24/2013 10:13:22 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.UI
+5/24/2013 10:13:22 AM: [Debug] Exploding Name: FubuMVC.JQueryUI, Version: 0.5.0.263, IsPreRelease: False
+5/24/2013 10:13:22 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.JQueryUI
+5/24/2013 10:13:23 AM: [Debug] Exploding Name: FubuMVC.Spark, Version: 1.0.0.434, IsPreRelease: False
+5/24/2013 10:13:23 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Spark
+5/24/2013 10:13:23 AM: [Debug] Exploding Name: FubuMVC.Media, Version: 0.9.5.355, IsPreRelease: False
+5/24/2013 10:13:23 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Media
+5/24/2013 10:13:23 AM: [Debug] Exploding Name: FubuMVC.Navigation, Version: 0.9.0.94, IsPreRelease: False
+5/24/2013 10:13:23 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Navigation
+5/24/2013 10:13:23 AM: [Debug] Exploding Name: FubuMVC.SlickGrid, Version: 0.0.0.538, IsPreRelease: False
+5/24/2013 10:13:23 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.SlickGrid
+5/24/2013 10:13:23 AM: [Debug] Exploding Name: FubuCore, Version: 1.1.0.246, IsPreRelease: False
+5/24/2013 10:13:23 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuCore
+5/24/2013 10:13:23 AM: [Debug] Exploding Name: FubuTestingSupport, Version: 1.1.0.246, IsPreRelease: False
+5/24/2013 10:13:23 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuTestingSupport
+5/24/2013 10:13:23 AM: [Debug] Exploding Name: FubuMVC.TwitterBootstrap, Version: 0.0.0.533, IsPreRelease: False
+5/24/2013 10:13:23 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.TwitterBootstrap
+5/24/2013 10:13:23 AM: [Debug] Exploding Name: FubuMVC.StructureMap, Version: 1.1.0.1486, IsPreRelease: False
+5/24/2013 10:13:23 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.StructureMap
+5/24/2013 10:13:23 AM: [Debug] Exploding Name: RhinoMocks, Version: 3.6.1.0, IsPreRelease: False
+5/24/2013 10:13:23 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\RhinoMocks
+5/24/2013 10:13:23 AM: [Debug] Exploding Name: HtmlTags, Version: 1.3.0.165, IsPreRelease: False
+5/24/2013 10:13:23 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\HtmlTags
+5/24/2013 10:13:23 AM: [Debug] Exploding Name: NUnit, Version: 2.5.10.11092, IsPreRelease: False
+5/24/2013 10:13:23 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\NUnit
+5/24/2013 10:13:23 AM: [Debug] Exploding Name: FubuMVC.Core, Version: 1.1.0.1486, IsPreRelease: False
+5/24/2013 10:13:23 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core
+5/24/2013 10:13:23 AM: [Debug] Exploding Name: Spark, Version: 1.7.5.0, IsPreRelease: False
+5/24/2013 10:13:23 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Spark
+5/24/2013 10:13:23 AM: [Debug] Exploding Name: Bottles, Version: 1.1.0.504, IsPreRelease: False
+5/24/2013 10:13:23 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Bottles
+5/24/2013 10:13:24 AM: [Debug] Exploding Name: structuremap.automocking, Version: 2.6.3.0, IsPreRelease: False
+5/24/2013 10:13:24 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\structuremap.automocking
+5/24/2013 10:13:24 AM: [Debug] Exploding Name: structuremap, Version: 2.6.3.0, IsPreRelease: False
+5/24/2013 10:13:24 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\structuremap
