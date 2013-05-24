@@ -314,3 +314,14 @@ RippleOperation: diagnostics (master)
 5/24/2013 10:13:24 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\structuremap.automocking
 5/24/2013 10:13:24 AM: [Debug] Exploding Name: structuremap, Version: 2.6.3.0, IsPreRelease: False
 5/24/2013 10:13:24 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\structuremap
+5/24/2013 10:20:10 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+5/24/2013 10:20:10 AM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics (master)
+====================================================================================================
+     ** Ripple Steps
+          1.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          2.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
+          3.) ProcessDirectives           Process directives from nugets                            
+          4.) FixReferences               Fix References                                            
+
