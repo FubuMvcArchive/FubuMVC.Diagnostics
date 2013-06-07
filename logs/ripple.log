@@ -1009,3 +1009,14 @@ RippleOperation: diagnostics (fix)
 6/7/2013 1:51:43 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\structuremap.2.6.3.0.nupkg
 6/7/2013 1:51:43 PM: [Debug] Exploding Name: structuremap, Version: 2.6.3.0, IsPreRelease: False
 6/7/2013 1:51:43 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\structuremap
+6/7/2013 2:22:55 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+6/7/2013 2:22:55 PM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics (master)
+====================================================================================================
+     ** Ripple Steps
+          1.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          2.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
+          3.) ProcessDirectives           Process directives from nugets                            
+          4.) FixReferences               Fix References                                            
+
