@@ -1,3 +1,4 @@
+using System;
 using FubuCore.Binding;
 using FubuCore.Binding.Values;
 using FubuCore.Dates;
@@ -29,7 +30,8 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
             var report = new ValueReport();
             _requestData.WriteReport(report);
 
-            var chainId = _currentChain.OriginatingChain.UniqueId;
+            var chainId = _currentChain.OriginatingChain == null ? Guid.Empty :
+                _currentChain.OriginatingChain.UniqueId;
             var log = new RequestLog{
                 ChainId    = chainId,
                 HttpMethod = _request.HttpMethod(),

@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Web;
 using FubuCore;
 using FubuCore.Descriptions;
 using FubuCore.Util;
@@ -43,6 +44,20 @@ namespace FubuMVC.Diagnostics.Visualization
                     ? _document.PartialFor(node).ToString() 
                     : new DescriptionBodyTag(description).ToString()
             };
+        }
+
+        public IHtmlString Visualize(object @object)
+        {
+            if (@object == null) throw new ArgumentNullException("object");
+
+
+            if (HasVisualizer(@object.GetType()))
+            {
+                return _document.PartialFor(@object);
+            }
+
+            var description = Description.For(@object);
+            return VisualizeDescription(description);
         }
 
         public RequestStepTag VisualizeStep(RequestStep step)

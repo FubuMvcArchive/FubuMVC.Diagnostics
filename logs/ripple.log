@@ -336,3 +336,676 @@ RippleOperation: diagnostics (fix)
           3.) ProcessDirectives           Process directives from nugets                            
           4.) FixReferences               Fix References                                            
 
+6/7/2013 10:42:49 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+6/7/2013 10:42:49 AM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics (fix)
+====================================================================================================
+     ** Ripple Steps
+          1.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          2.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
+          3.) ProcessDirectives           Process directives from nugets                            
+          4.) FixReferences               Fix References                                            
+
+6/7/2013 10:42:51 AM: [Info] HintPath changed:  to ..\packages\FubuMVC.StructureMap\lib\net40\FubuMVC.StructureMap.dll
+6/7/2013 11:15:05 AM: [Error] Project FubuMVC.Diagnostics.Testing does not exist
+6/7/2013 11:15:05 AM: [Error] ripple.RippleFatalError: Project FubuMVC.Diagnostics.Testing does not exist
+6/7/2013 11:15:18 AM: [Info] Install FubuMVC.Katana to Solution diagnostics
+6/7/2013 11:15:18 AM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics (fix)
+====================================================================================================
+     ** Ripple Steps
+          1.) NugetOperation              ripple.Steps.NugetOperation                               
+          2.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          3.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
+          4.) FixReferences               Fix References                                            
+
+6/7/2013 11:15:18 AM: [Info] * Analyzing FubuMVC.Katana
+6/7/2013 11:15:30 AM: [Debug] Searching for HtmlTags,1.1.0.114 from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc
+6/7/2013 11:15:35 AM: [Debug] Searching for Owin,1.0 from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc
+6/7/2013 11:15:43 AM: [Debug] Searching for Owin,1.0 from http://nuget.org/api/v2
+6/7/2013 11:15:45 AM: [Debug] Searching for Owin.Extensions,0.6.4 from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc
+6/7/2013 11:15:47 AM: [Debug] Searching for Owin.Extensions,0.6.4 from http://nuget.org/api/v2
+6/7/2013 11:15:47 AM: [Debug] Searching for Owin.Types,0.8.5 from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc
+6/7/2013 11:15:51 AM: [Debug] Searching for Owin.Types,0.8.5 from http://nuget.org/api/v2
+6/7/2013 11:15:51 AM: [Info] * Analyzing Bottles,1.0.0.412
+6/7/2013 11:15:51 AM: [Info] * Analyzing FubuCore,1.0.0.210
+6/7/2013 11:15:51 AM: [Info] * Analyzing FubuLocalization,0.9.5.48
+6/7/2013 11:15:51 AM: [Info] * Analyzing FubuMVC.Core
+6/7/2013 11:15:51 AM: [Info] * Analyzing HtmlTags,1.1.0.114
+6/7/2013 11:15:51 AM: [Info] * Analyzing FubuMVC.OwinHost
+6/7/2013 11:15:54 AM: [Info] * Analyzing Owin,1.0
+6/7/2013 11:15:54 AM: [Info] * Analyzing Owin.Extensions,0.6.4
+6/7/2013 11:15:54 AM: [Info] * Analyzing Owin.Types,0.8.5
+6/7/2013 11:15:54 AM: [Info] 
+=============================================================================================
+NugetPlan: 
+=============================================================================================
+     ** Steps
+        * InstallSolutionDependency     Install FubuMVC.Katana,1.1.0.1504 to solution        
+        * InstallProjectDependency      Install FubuMVC.Katana to FubuMVC.Diagnostics.Tests  
+        * UpdateDependency              Update FubuMVC.Core,1.1.0.1504                       
+        * InstallSolutionDependency     Install FubuMVC.OwinHost,1.1.0.1504 to solution      
+        * InstallProjectDependency      Install FubuMVC.OwinHost to FubuMVC.Diagnostics.Tests
+        * InstallSolutionDependency     Install Owin,1.0 to solution                         
+        * InstallProjectDependency      Install Owin to FubuMVC.Diagnostics.Tests            
+        * InstallSolutionDependency     Install Owin.Extensions,0.6.4 to solution            
+        * InstallProjectDependency      Install Owin.Extensions to FubuMVC.Diagnostics.Tests 
+        * InstallSolutionDependency     Install Owin.Types,0.8.5 to solution                 
+        * InstallProjectDependency      Install Owin.Types to FubuMVC.Diagnostics.Tests      
+
+6/7/2013 11:15:54 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.1.1.0.1504.nupkg
+6/7/2013 11:15:54 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Owin.1.0.0.0.nupkg
+6/7/2013 11:15:54 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Owin.Types.0.8.5.0.nupkg
+6/7/2013 11:15:54 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Owin.Extensions.0.8.5.0.nupkg
+6/7/2013 11:15:54 AM: [Debug] Downloading Download and cache FubuMVC.OwinHost.1.1.0.1504.nupkg
+6/7/2013 11:15:54 AM: [Debug] Downloading Download and cache FubuMVC.Katana.1.1.0.1504.nupkg
+6/7/2013 11:15:55 AM: [Debug] Exploding Name: Owin, Version: 1.0.0.0, IsPreRelease: False
+6/7/2013 11:15:55 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Owin
+6/7/2013 11:15:55 AM: [Debug] Exploding Name: FubuMVC.Core, Version: 1.1.0.1504, IsPreRelease: False
+6/7/2013 11:15:55 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core
+6/7/2013 11:15:55 AM: [Debug] Exploding Name: Owin.Types, Version: 0.8.5.0, IsPreRelease: False
+6/7/2013 11:15:55 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Owin.Types
+6/7/2013 11:15:55 AM: [Debug] Exploding Name: Owin.Extensions, Version: 0.8.5.0, IsPreRelease: False
+6/7/2013 11:15:55 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Owin.Extensions
+6/7/2013 11:15:55 AM: [Debug] Exploding Name: FubuMVC.OwinHost, Version: 1.1.0.1504, IsPreRelease: False
+6/7/2013 11:15:55 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.OwinHost
+6/7/2013 11:15:55 AM: [Debug] Exploding Name: FubuMVC.Katana, Version: 1.1.0.1504, IsPreRelease: False
+6/7/2013 11:15:55 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Katana
+6/7/2013 11:15:56 AM: [Info] HintPath changed:  to ..\packages\FubuMVC.Katana\lib\net40\FubuMVC.Katana.dll
+6/7/2013 11:15:56 AM: [Info] HintPath changed:  to ..\packages\FubuMVC.Katana\lib\net40\Microsoft.Owin.Host.HttpListener.dll
+6/7/2013 11:15:56 AM: [Info] HintPath changed:  to ..\packages\FubuMVC.Katana\lib\net40\Microsoft.Owin.Hosting.dll
+6/7/2013 11:15:56 AM: [Info] HintPath changed:  to ..\packages\FubuMVC.OwinHost\lib\net40\FubuMVC.OwinHost.dll
+6/7/2013 11:15:57 AM: [Info] HintPath changed:  to ..\packages\Owin\lib\net40\Owin.dll
+6/7/2013 11:15:57 AM: [Info] HintPath changed:  to ..\packages\Owin.Extensions\lib\net40\Owin.Extensions.dll
+6/7/2013 11:15:57 AM: [Info] HintPath changed:  to ..\packages\Owin.Types\lib\net40\Owin.Types.dll
+6/7/2013 11:21:02 AM: [Debug] Solution diagnostics
+6/7/2013 11:21:02 AM: [Info] Cleaning Solution diagnostics at C:\code\FubuMVC.Diagnostics
+6/7/2013 11:21:02 AM: [Info] Cleaning contents of directory C:\code\FubuMVC.Diagnostics\src\packages
+6/7/2013 11:21:04 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+6/7/2013 11:21:04 AM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics (fix)
+====================================================================================================
+     ** Ripple Steps
+          1.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          2.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
+          3.) ProcessDirectives           Process directives from nugets                            
+          4.) FixReferences               Fix References                                            
+
+6/7/2013 11:21:09 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Bottles.1.1.0.512.nupkg
+6/7/2013 11:21:09 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.UI.1.0.1.533.nupkg
+6/7/2013 11:21:09 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.1.1.0.1504.nupkg
+6/7/2013 11:21:09 AM: [Debug] Downloading Download and cache FubuMVC.Core.Assets.0.9.9.505.nupkg
+6/7/2013 11:21:09 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuLocalization.0.9.5.146.nupkg
+6/7/2013 11:21:09 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.View.1.0.0.509.nupkg
+6/7/2013 11:21:09 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.JQueryUI.0.5.0.277.nupkg
+6/7/2013 11:21:09 AM: [Debug] Downloading Download and cache FubuMVC.Media.0.9.5.369.nupkg
+6/7/2013 11:21:09 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuCore.1.1.0.249.nupkg
+6/7/2013 11:21:09 AM: [Debug] Downloading Download and cache FubuMVC.Navigation.0.9.0.141.nupkg
+6/7/2013 11:21:09 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Katana.1.1.0.1504.nupkg
+6/7/2013 11:21:09 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.SlickGrid.0.0.0.617.nupkg
+6/7/2013 11:21:09 AM: [Debug] Downloading Download and cache FubuMVC.Spark.1.0.0.509.nupkg
+6/7/2013 11:21:09 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.TwitterBootstrap.0.0.0.611.nupkg
+6/7/2013 11:21:09 AM: [Debug] Searching for HtmlTags from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc
+6/7/2013 11:21:09 AM: [Debug] Downloading Download and cache FubuMVC.StructureMap.1.1.0.1504.nupkg
+6/7/2013 11:21:09 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.OwinHost.1.1.0.1504.nupkg
+6/7/2013 11:21:09 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuTestingSupport.1.1.0.249.nupkg
+6/7/2013 11:21:11 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\HtmlTags.2.0.0.168.nupkg
+6/7/2013 11:21:14 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\NUnit.2.5.10.11092.nupkg
+6/7/2013 11:21:15 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Owin.1.0.0.0.nupkg
+6/7/2013 11:21:17 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Owin.Extensions.0.6.4.0.nupkg
+6/7/2013 11:21:18 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Owin.Types.0.8.5.0.nupkg
+6/7/2013 11:21:20 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Spark.1.7.5.0.nupkg
+6/7/2013 11:21:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\RhinoMocks.3.6.1.0.nupkg
+6/7/2013 11:21:24 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\structuremap.2.6.3.0.nupkg
+6/7/2013 11:21:24 AM: [Debug] Exploding Name: FubuMVC.Core, Version: 1.1.0.1504, IsPreRelease: False
+6/7/2013 11:21:24 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core
+6/7/2013 11:21:24 AM: [Debug] Exploding Name: FubuMVC.Core.UI, Version: 1.0.1.533, IsPreRelease: False
+6/7/2013 11:21:24 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.UI
+6/7/2013 11:21:24 AM: [Debug] Exploding Name: FubuMVC.Core.View, Version: 1.0.0.509, IsPreRelease: False
+6/7/2013 11:21:24 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.View
+6/7/2013 11:21:24 AM: [Debug] Exploding Name: FubuLocalization, Version: 0.9.5.146, IsPreRelease: False
+6/7/2013 11:21:24 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuLocalization
+6/7/2013 11:21:24 AM: [Debug] Exploding Name: Bottles, Version: 1.1.0.512, IsPreRelease: False
+6/7/2013 11:21:24 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Bottles
+6/7/2013 11:21:25 AM: [Debug] Exploding Name: FubuMVC.JQueryUI, Version: 0.5.0.277, IsPreRelease: False
+6/7/2013 11:21:25 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.JQueryUI
+6/7/2013 11:21:25 AM: [Debug] Exploding Name: FubuMVC.Katana, Version: 1.1.0.1504, IsPreRelease: False
+6/7/2013 11:21:25 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Katana
+6/7/2013 11:21:25 AM: [Debug] Exploding Name: FubuMVC.TwitterBootstrap, Version: 0.0.0.611, IsPreRelease: False
+6/7/2013 11:21:25 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.TwitterBootstrap
+6/7/2013 11:21:25 AM: [Debug] Exploding Name: FubuCore, Version: 1.1.0.249, IsPreRelease: False
+6/7/2013 11:21:25 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuCore
+6/7/2013 11:21:25 AM: [Debug] Exploding Name: FubuMVC.SlickGrid, Version: 0.0.0.617, IsPreRelease: False
+6/7/2013 11:21:25 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.SlickGrid
+6/7/2013 11:21:25 AM: [Debug] Exploding Name: FubuMVC.OwinHost, Version: 1.1.0.1504, IsPreRelease: False
+6/7/2013 11:21:25 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.OwinHost
+6/7/2013 11:21:25 AM: [Debug] Exploding Name: FubuTestingSupport, Version: 1.1.0.249, IsPreRelease: False
+6/7/2013 11:21:25 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuTestingSupport
+6/7/2013 11:21:25 AM: [Debug] Exploding Name: FubuMVC.StructureMap, Version: 1.1.0.1504, IsPreRelease: False
+6/7/2013 11:21:25 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.StructureMap
+6/7/2013 11:21:25 AM: [Debug] Exploding Name: FubuMVC.Navigation, Version: 0.9.0.141, IsPreRelease: False
+6/7/2013 11:21:25 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Navigation
+6/7/2013 11:21:25 AM: [Debug] Exploding Name: FubuMVC.Media, Version: 0.9.5.369, IsPreRelease: False
+6/7/2013 11:21:25 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Media
+6/7/2013 11:21:25 AM: [Debug] Exploding Name: FubuMVC.Spark, Version: 1.0.0.509, IsPreRelease: False
+6/7/2013 11:21:25 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Spark
+6/7/2013 11:21:25 AM: [Debug] Exploding Name: FubuMVC.Core.Assets, Version: 0.9.9.505, IsPreRelease: False
+6/7/2013 11:21:25 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.Assets
+6/7/2013 11:21:25 AM: [Debug] Exploding Name: HtmlTags, Version: 2.0.0.168, IsPreRelease: False
+6/7/2013 11:21:25 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\HtmlTags
+6/7/2013 11:21:25 AM: [Debug] Exploding Name: NUnit, Version: 2.5.10.11092, IsPreRelease: False
+6/7/2013 11:21:25 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\NUnit
+6/7/2013 11:21:26 AM: [Debug] Exploding Name: Owin, Version: 1.0.0.0, IsPreRelease: False
+6/7/2013 11:21:26 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Owin
+6/7/2013 11:21:26 AM: [Debug] Exploding Name: Owin.Extensions, Version: 0.6.4.0, IsPreRelease: False
+6/7/2013 11:21:26 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Owin.Extensions
+6/7/2013 11:21:26 AM: [Debug] Exploding Name: Owin.Types, Version: 0.8.5.0, IsPreRelease: False
+6/7/2013 11:21:26 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Owin.Types
+6/7/2013 11:21:26 AM: [Debug] Exploding Name: Spark, Version: 1.7.5.0, IsPreRelease: False
+6/7/2013 11:21:26 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Spark
+6/7/2013 11:21:26 AM: [Debug] Exploding Name: RhinoMocks, Version: 3.6.1.0, IsPreRelease: False
+6/7/2013 11:21:26 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\RhinoMocks
+6/7/2013 11:21:26 AM: [Debug] Exploding Name: structuremap, Version: 2.6.3.0, IsPreRelease: False
+6/7/2013 11:21:26 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\structuremap
+6/7/2013 11:21:26 AM: [Error] Error executing ExplodeDownloadedNugets
+6/7/2013 11:21:26 AM: [Error] System.UnauthorizedAccessException: Access to the path 'C:\code\FubuMVC.Diagnostics\src\packages\structuremap\lib\StructureMap.XML' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.SetAttributes(String path, FileAttributes fileAttributes)
+   at ripple.FileSystemExtensions.cleanDirectory(String directory, Boolean remove) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\FileSystemExtensions.cs:line 33
+   at ripple.FileSystemExtensions.cleanDirectory(String directory, Boolean remove) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\FileSystemExtensions.cs:line 41
+   at ripple.FileSystemExtensions.ForceClean(IFileSystem system, String path) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\FileSystemExtensions.cs:line 22
+   at ripple.Nuget.NugetFile.ExplodeTo(String directory) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\Nuget\NugetFile.cs:line 83
+   at ripple.Steps.ExplodeDownloadedNugets.<Execute>b__0(INugetFile nuget) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\Steps\ExplodeDownloadedNugets.cs:line 26
+   at System.Collections.Generic.GenericEnumerableExtensions.Each[T](IEnumerable`1 values, Action`1 eachAction) in c:\BuildAgent\work\4dafc5966c0aefb4\src\FubuCore\EnumerableExtensions.cs:line 78
+   at ripple.Steps.ExplodeDownloadedNugets.Execute(SolutionInput input, IRippleStepRunner runner) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\Steps\ExplodeDownloadedNugets.cs:line 22
+   at ripple.RippleOperation.Execute(Boolean throwOnFailure) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\RippleOperation.cs:line 79
+6/7/2013 11:21:26 AM: [Debug] 
+============================================================================================================================================
+Solution "diagnostics": C:\code\FubuMVC.Diagnostics\ripple.config
+============================================================================================================================================
+     ** Solution-Level
+        * FubuMVC.Core                 Float       
+        * FubuMVC.Katana               Float       
+        * FubuMVC.OwinHost             Float       
+        * NUnit                        2.5.10.11092
+        * Owin                         1.0         
+        * Owin.Extensions              0.6.4       
+        * Owin.Types                   0.8.5       
+        * RhinoMocks                   3.6.1       
+        * Spark                        1.7.5.0     
+        * structuremap                 2.6.3       
+        * structuremap.automocking     2.6.3       
+     ** NuGet Feeds
+        * Feed     http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc (Float)
+        * Feed     http://nuget.org/api/v2 (Fixed)                                             
+        * Feed     http://packages.nuget.org/v1/FeedService.svc (Fixed)                        
+     ** Projects
+        * Project "DiagnosticsHarness"            C:\code\FubuMVC.Diagnostics\src\DiagnosticsHarness\DiagnosticsHarness.csproj              
+             ** Dependencies
+                * Bottles                      Float
+                * FubuCore                     Float
+                * FubuLocalization             Float
+                * FubuMVC.Core                 Float
+                * FubuMVC.Core.Assets          Float
+                * FubuMVC.Core.UI              Float
+                * FubuMVC.Core.View            Float
+                * FubuMVC.JQueryUI             Float
+                * FubuMVC.Media                Float
+                * FubuMVC.Navigation           Float
+                * FubuMVC.SlickGrid            Float
+                * FubuMVC.Spark                Float
+                * FubuMVC.StructureMap         Float
+                * FubuMVC.TwitterBootstrap     Float
+                * HtmlTags                     Float
+                * Spark                        Float
+                * structuremap                 Float
+        * Project "FubuMVC.Diagnostics"           C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics\FubuMVC.Diagnostics.csproj            
+             ** Dependencies
+                * Bottles                      Float
+                * FubuCore                     Float
+                * FubuLocalization             Float
+                * FubuMVC.Core                 Float
+                * FubuMVC.Core.Assets          Float
+                * FubuMVC.Core.UI              Float
+                * FubuMVC.Core.View            Float
+                * FubuMVC.JQueryUI             Float
+                * FubuMVC.Media                Float
+                * FubuMVC.Navigation           Float
+                * FubuMVC.SlickGrid            Float
+                * FubuMVC.Spark                Float
+                * FubuMVC.TwitterBootstrap     Float
+                * HtmlTags                     Float
+                * Spark                        Float
+                * structuremap                 Float
+        * Project "FubuMVC.Diagnostics.Docs"      C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics.Docs\FubuMVC.Diagnostics.Docs.csproj  
+             ** Dependencies
+        * Project "FubuMVC.Diagnostics.Tests"     C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics.Tests\FubuMVC.Diagnostics.Tests.csproj
+             ** Dependencies
+                * Bottles                      Float
+                * FubuCore                     Float
+                * FubuLocalization             Float
+                * FubuMVC.Core                 Float
+                * FubuMVC.Core.Assets          Float
+                * FubuMVC.Core.UI              Float
+                * FubuMVC.Core.View            Float
+                * FubuMVC.JQueryUI             Float
+                * FubuMVC.Katana               Float
+                * FubuMVC.Media                Float
+                * FubuMVC.Navigation           Float
+                * FubuMVC.OwinHost             Float
+                * FubuMVC.SlickGrid            Float
+                * FubuMVC.StructureMap         Float
+                * FubuMVC.TwitterBootstrap     Float
+                * FubuTestingSupport           Float
+                * HtmlTags                     Float
+                * NUnit                        Float
+                * Owin                         Float
+                * Owin.Extensions              Float
+                * Owin.Types                   Float
+                * RhinoMocks                   Float
+                * structuremap                 Float
+                * structuremap.automocking     Float
+     ** Local
+        * Bottles                      Version: 1.1.0.512, IsPreRelease: False   
+        * FubuCore                     Version: 1.1.0.249, IsPreRelease: False   
+        * FubuLocalization             Version: 0.9.5.146, IsPreRelease: False   
+        * FubuMVC.Core                 Version: 1.1.0.1504, IsPreRelease: False  
+        * FubuMVC.Core.Assets          Version: 0.9.9.505, IsPreRelease: False   
+        * FubuMVC.Core.UI              Version: 1.0.1.533, IsPreRelease: False   
+        * FubuMVC.Core.View            Version: 1.0.0.509, IsPreRelease: False   
+        * FubuMVC.JQueryUI             Version: 0.5.0.277, IsPreRelease: False   
+        * FubuMVC.Katana               Version: 1.1.0.1504, IsPreRelease: False  
+        * FubuMVC.Media                Version: 0.9.5.369, IsPreRelease: False   
+        * FubuMVC.Navigation           Version: 0.9.0.141, IsPreRelease: False   
+        * FubuMVC.OwinHost             Version: 1.1.0.1504, IsPreRelease: False  
+        * FubuMVC.SlickGrid            Version: 0.0.0.617, IsPreRelease: False   
+        * FubuMVC.Spark                Version: 1.0.0.509, IsPreRelease: False   
+        * FubuMVC.StructureMap         Version: 1.1.0.1504, IsPreRelease: False  
+        * FubuMVC.TwitterBootstrap     Version: 0.0.0.611, IsPreRelease: False   
+        * FubuTestingSupport           Version: 1.1.0.249, IsPreRelease: False   
+        * HtmlTags                     Version: 2.0.0.168, IsPreRelease: False   
+        * NUnit                        Version: 2.5.10.11092, IsPreRelease: False
+        * Owin                         Version: 1.0.0.0, IsPreRelease: False     
+        * Owin.Extensions              Version: 0.6.4.0, IsPreRelease: False     
+        * Owin.Types                   Version: 0.8.5.0, IsPreRelease: False     
+        * RhinoMocks                   Version: 3.6.1.0, IsPreRelease: False     
+        * Spark                        Version: 1.7.5.0, IsPreRelease: False     
+        * structuremap.automocking     Version: 2.6.3.0, IsPreRelease: False     
+     ** Missing
+        * structuremap     2.6.3
+
+6/7/2013 11:22:13 AM: [Debug] Solution diagnostics
+6/7/2013 11:22:13 AM: [Info] Cleaning Solution diagnostics at C:\code\FubuMVC.Diagnostics
+6/7/2013 11:22:13 AM: [Info] Cleaning contents of directory C:\code\FubuMVC.Diagnostics\src\packages
+6/7/2013 11:22:15 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+6/7/2013 11:22:15 AM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics (fix)
+====================================================================================================
+     ** Ripple Steps
+          1.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          2.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
+          3.) ProcessDirectives           Process directives from nugets                            
+          4.) FixReferences               Fix References                                            
+
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Bottles.1.1.0.512.nupkg
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.1.1.0.1504.nupkg
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.UI.1.0.1.533.nupkg
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuCore.1.1.0.249.nupkg
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.JQueryUI.0.5.0.277.nupkg
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.Assets.0.9.9.505.nupkg
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Katana.1.1.0.1504.nupkg
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Media.0.9.5.369.nupkg
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.OwinHost.1.1.0.1504.nupkg
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.View.1.0.0.509.nupkg
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Spark.1.0.0.509.nupkg
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.StructureMap.1.1.0.1504.nupkg
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuLocalization.0.9.5.146.nupkg
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.SlickGrid.0.0.0.617.nupkg
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.TwitterBootstrap.0.0.0.611.nupkg
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuTestingSupport.1.1.0.249.nupkg
+6/7/2013 11:22:21 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Navigation.0.9.0.141.nupkg
+6/7/2013 11:22:21 AM: [Debug] Searching for HtmlTags from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc
+6/7/2013 11:22:26 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\HtmlTags.2.0.0.168.nupkg
+6/7/2013 11:22:27 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\NUnit.2.5.10.11092.nupkg
+6/7/2013 11:22:31 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Owin.1.0.0.0.nupkg
+6/7/2013 11:22:32 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Owin.Extensions.0.6.4.0.nupkg
+6/7/2013 11:22:34 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Owin.Types.0.8.5.0.nupkg
+6/7/2013 11:22:35 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Spark.1.7.5.0.nupkg
+6/7/2013 11:22:37 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\RhinoMocks.3.6.1.0.nupkg
+6/7/2013 11:22:39 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\structuremap.2.6.3.0.nupkg
+6/7/2013 11:22:39 AM: [Debug] Exploding Name: Bottles, Version: 1.1.0.512, IsPreRelease: False
+6/7/2013 11:22:39 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Bottles
+6/7/2013 11:22:39 AM: [Debug] Exploding Name: FubuMVC.Core, Version: 1.1.0.1504, IsPreRelease: False
+6/7/2013 11:22:39 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core
+6/7/2013 11:22:39 AM: [Debug] Exploding Name: FubuMVC.Core.UI, Version: 1.0.1.533, IsPreRelease: False
+6/7/2013 11:22:39 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.UI
+6/7/2013 11:22:39 AM: [Debug] Exploding Name: FubuCore, Version: 1.1.0.249, IsPreRelease: False
+6/7/2013 11:22:39 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuCore
+6/7/2013 11:22:39 AM: [Debug] Exploding Name: FubuMVC.OwinHost, Version: 1.1.0.1504, IsPreRelease: False
+6/7/2013 11:22:39 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.OwinHost
+6/7/2013 11:22:39 AM: [Debug] Exploding Name: FubuMVC.Core.View, Version: 1.0.0.509, IsPreRelease: False
+6/7/2013 11:22:39 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.View
+6/7/2013 11:22:39 AM: [Debug] Exploding Name: FubuMVC.Media, Version: 0.9.5.369, IsPreRelease: False
+6/7/2013 11:22:39 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Media
+6/7/2013 11:22:39 AM: [Debug] Exploding Name: FubuMVC.Core.Assets, Version: 0.9.9.505, IsPreRelease: False
+6/7/2013 11:22:39 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.Assets
+6/7/2013 11:22:39 AM: [Debug] Exploding Name: FubuMVC.Katana, Version: 1.1.0.1504, IsPreRelease: False
+6/7/2013 11:22:39 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Katana
+6/7/2013 11:22:39 AM: [Debug] Exploding Name: FubuMVC.Spark, Version: 1.0.0.509, IsPreRelease: False
+6/7/2013 11:22:39 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Spark
+6/7/2013 11:22:40 AM: [Debug] Exploding Name: FubuMVC.StructureMap, Version: 1.1.0.1504, IsPreRelease: False
+6/7/2013 11:22:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.StructureMap
+6/7/2013 11:22:40 AM: [Debug] Exploding Name: FubuMVC.JQueryUI, Version: 0.5.0.277, IsPreRelease: False
+6/7/2013 11:22:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.JQueryUI
+6/7/2013 11:22:40 AM: [Debug] Exploding Name: FubuLocalization, Version: 0.9.5.146, IsPreRelease: False
+6/7/2013 11:22:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuLocalization
+6/7/2013 11:22:40 AM: [Debug] Exploding Name: FubuMVC.SlickGrid, Version: 0.0.0.617, IsPreRelease: False
+6/7/2013 11:22:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.SlickGrid
+6/7/2013 11:22:40 AM: [Debug] Exploding Name: FubuMVC.TwitterBootstrap, Version: 0.0.0.611, IsPreRelease: False
+6/7/2013 11:22:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.TwitterBootstrap
+6/7/2013 11:22:40 AM: [Debug] Exploding Name: FubuTestingSupport, Version: 1.1.0.249, IsPreRelease: False
+6/7/2013 11:22:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuTestingSupport
+6/7/2013 11:22:40 AM: [Debug] Exploding Name: FubuMVC.Navigation, Version: 0.9.0.141, IsPreRelease: False
+6/7/2013 11:22:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Navigation
+6/7/2013 11:22:40 AM: [Debug] Exploding Name: HtmlTags, Version: 2.0.0.168, IsPreRelease: False
+6/7/2013 11:22:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\HtmlTags
+6/7/2013 11:22:40 AM: [Debug] Exploding Name: NUnit, Version: 2.5.10.11092, IsPreRelease: False
+6/7/2013 11:22:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\NUnit
+6/7/2013 11:22:40 AM: [Debug] Exploding Name: Owin, Version: 1.0.0.0, IsPreRelease: False
+6/7/2013 11:22:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Owin
+6/7/2013 11:22:40 AM: [Debug] Exploding Name: Owin.Extensions, Version: 0.6.4.0, IsPreRelease: False
+6/7/2013 11:22:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Owin.Extensions
+6/7/2013 11:22:40 AM: [Debug] Exploding Name: Owin.Types, Version: 0.8.5.0, IsPreRelease: False
+6/7/2013 11:22:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Owin.Types
+6/7/2013 11:22:40 AM: [Debug] Exploding Name: Spark, Version: 1.7.5.0, IsPreRelease: False
+6/7/2013 11:22:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Spark
+6/7/2013 11:22:40 AM: [Debug] Exploding Name: RhinoMocks, Version: 3.6.1.0, IsPreRelease: False
+6/7/2013 11:22:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\RhinoMocks
+6/7/2013 11:22:40 AM: [Debug] Exploding Name: structuremap, Version: 2.6.3.0, IsPreRelease: False
+6/7/2013 11:22:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\structuremap
+6/7/2013 11:22:40 AM: [Error] Error executing ExplodeDownloadedNugets
+6/7/2013 11:22:40 AM: [Error] System.UnauthorizedAccessException: Access to the path 'C:\code\FubuMVC.Diagnostics\src\packages\structuremap\lib\StructureMap.XML' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.SetAttributes(String path, FileAttributes fileAttributes)
+   at ripple.FileSystemExtensions.cleanDirectory(String directory, Boolean remove) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\FileSystemExtensions.cs:line 33
+   at ripple.FileSystemExtensions.cleanDirectory(String directory, Boolean remove) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\FileSystemExtensions.cs:line 41
+   at ripple.FileSystemExtensions.ForceClean(IFileSystem system, String path) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\FileSystemExtensions.cs:line 22
+   at ripple.Nuget.NugetFile.ExplodeTo(String directory) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\Nuget\NugetFile.cs:line 83
+   at ripple.Steps.ExplodeDownloadedNugets.<Execute>b__0(INugetFile nuget) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\Steps\ExplodeDownloadedNugets.cs:line 26
+   at System.Collections.Generic.GenericEnumerableExtensions.Each[T](IEnumerable`1 values, Action`1 eachAction) in c:\BuildAgent\work\4dafc5966c0aefb4\src\FubuCore\EnumerableExtensions.cs:line 78
+   at ripple.Steps.ExplodeDownloadedNugets.Execute(SolutionInput input, IRippleStepRunner runner) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\Steps\ExplodeDownloadedNugets.cs:line 22
+   at ripple.RippleOperation.Execute(Boolean throwOnFailure) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\RippleOperation.cs:line 79
+6/7/2013 11:22:40 AM: [Debug] 
+============================================================================================================================================
+Solution "diagnostics": C:\code\FubuMVC.Diagnostics\ripple.config
+============================================================================================================================================
+     ** Solution-Level
+        * FubuMVC.Core                 Float       
+        * FubuMVC.Katana               Float       
+        * FubuMVC.OwinHost             Float       
+        * NUnit                        2.5.10.11092
+        * Owin                         1.0         
+        * Owin.Extensions              0.6.4       
+        * Owin.Types                   0.8.5       
+        * RhinoMocks                   3.6.1       
+        * Spark                        1.7.5.0     
+        * structuremap                 2.6.3       
+        * structuremap.automocking     2.6.3       
+     ** NuGet Feeds
+        * Feed     http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc (Float)
+        * Feed     http://nuget.org/api/v2 (Fixed)                                             
+        * Feed     http://packages.nuget.org/v1/FeedService.svc (Fixed)                        
+     ** Projects
+        * Project "DiagnosticsHarness"            C:\code\FubuMVC.Diagnostics\src\DiagnosticsHarness\DiagnosticsHarness.csproj              
+             ** Dependencies
+                * Bottles                      Float
+                * FubuCore                     Float
+                * FubuLocalization             Float
+                * FubuMVC.Core                 Float
+                * FubuMVC.Core.Assets          Float
+                * FubuMVC.Core.UI              Float
+                * FubuMVC.Core.View            Float
+                * FubuMVC.JQueryUI             Float
+                * FubuMVC.Media                Float
+                * FubuMVC.Navigation           Float
+                * FubuMVC.SlickGrid            Float
+                * FubuMVC.Spark                Float
+                * FubuMVC.StructureMap         Float
+                * FubuMVC.TwitterBootstrap     Float
+                * HtmlTags                     Float
+                * Spark                        Float
+                * structuremap                 Float
+        * Project "FubuMVC.Diagnostics"           C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics\FubuMVC.Diagnostics.csproj            
+             ** Dependencies
+                * Bottles                      Float
+                * FubuCore                     Float
+                * FubuLocalization             Float
+                * FubuMVC.Core                 Float
+                * FubuMVC.Core.Assets          Float
+                * FubuMVC.Core.UI              Float
+                * FubuMVC.Core.View            Float
+                * FubuMVC.JQueryUI             Float
+                * FubuMVC.Media                Float
+                * FubuMVC.Navigation           Float
+                * FubuMVC.SlickGrid            Float
+                * FubuMVC.Spark                Float
+                * FubuMVC.TwitterBootstrap     Float
+                * HtmlTags                     Float
+                * Spark                        Float
+                * structuremap                 Float
+        * Project "FubuMVC.Diagnostics.Docs"      C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics.Docs\FubuMVC.Diagnostics.Docs.csproj  
+             ** Dependencies
+        * Project "FubuMVC.Diagnostics.Tests"     C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics.Tests\FubuMVC.Diagnostics.Tests.csproj
+             ** Dependencies
+                * Bottles                      Float
+                * FubuCore                     Float
+                * FubuLocalization             Float
+                * FubuMVC.Core                 Float
+                * FubuMVC.Core.Assets          Float
+                * FubuMVC.Core.UI              Float
+                * FubuMVC.Core.View            Float
+                * FubuMVC.JQueryUI             Float
+                * FubuMVC.Katana               Float
+                * FubuMVC.Media                Float
+                * FubuMVC.Navigation           Float
+                * FubuMVC.OwinHost             Float
+                * FubuMVC.SlickGrid            Float
+                * FubuMVC.StructureMap         Float
+                * FubuMVC.TwitterBootstrap     Float
+                * FubuTestingSupport           Float
+                * HtmlTags                     Float
+                * NUnit                        Float
+                * Owin                         Float
+                * Owin.Extensions              Float
+                * Owin.Types                   Float
+                * RhinoMocks                   Float
+                * structuremap                 Float
+                * structuremap.automocking     Float
+     ** Local
+        * Bottles                      Version: 1.1.0.512, IsPreRelease: False   
+        * FubuCore                     Version: 1.1.0.249, IsPreRelease: False   
+        * FubuLocalization             Version: 0.9.5.146, IsPreRelease: False   
+        * FubuMVC.Core                 Version: 1.1.0.1504, IsPreRelease: False  
+        * FubuMVC.Core.Assets          Version: 0.9.9.505, IsPreRelease: False   
+        * FubuMVC.Core.UI              Version: 1.0.1.533, IsPreRelease: False   
+        * FubuMVC.Core.View            Version: 1.0.0.509, IsPreRelease: False   
+        * FubuMVC.JQueryUI             Version: 0.5.0.277, IsPreRelease: False   
+        * FubuMVC.Katana               Version: 1.1.0.1504, IsPreRelease: False  
+        * FubuMVC.Media                Version: 0.9.5.369, IsPreRelease: False   
+        * FubuMVC.Navigation           Version: 0.9.0.141, IsPreRelease: False   
+        * FubuMVC.OwinHost             Version: 1.1.0.1504, IsPreRelease: False  
+        * FubuMVC.SlickGrid            Version: 0.0.0.617, IsPreRelease: False   
+        * FubuMVC.Spark                Version: 1.0.0.509, IsPreRelease: False   
+        * FubuMVC.StructureMap         Version: 1.1.0.1504, IsPreRelease: False  
+        * FubuMVC.TwitterBootstrap     Version: 0.0.0.611, IsPreRelease: False   
+        * FubuTestingSupport           Version: 1.1.0.249, IsPreRelease: False   
+        * HtmlTags                     Version: 2.0.0.168, IsPreRelease: False   
+        * NUnit                        Version: 2.5.10.11092, IsPreRelease: False
+        * Owin                         Version: 1.0.0.0, IsPreRelease: False     
+        * Owin.Extensions              Version: 0.6.4.0, IsPreRelease: False     
+        * Owin.Types                   Version: 0.8.5.0, IsPreRelease: False     
+        * RhinoMocks                   Version: 3.6.1.0, IsPreRelease: False     
+        * Spark                        Version: 1.7.5.0, IsPreRelease: False     
+        * structuremap.automocking     Version: 2.6.3.0, IsPreRelease: False     
+     ** Missing
+        * structuremap     2.6.3
+
+6/7/2013 11:25:57 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+6/7/2013 11:25:57 AM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics (fix)
+====================================================================================================
+     ** Ripple Steps
+          1.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          2.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
+          3.) ProcessDirectives           Process directives from nugets                            
+          4.) FixReferences               Fix References                                            
+
+6/7/2013 11:26:24 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\structuremap.2.6.3.0.nupkg
+6/7/2013 11:26:24 AM: [Debug] Exploding Name: structuremap, Version: 2.6.3.0, IsPreRelease: False
+6/7/2013 11:26:24 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\structuremap
+6/7/2013 11:26:24 AM: [Error] Error executing ExplodeDownloadedNugets
+6/7/2013 11:26:24 AM: [Error] System.UnauthorizedAccessException: Access to the path 'C:\code\FubuMVC.Diagnostics\src\packages\structuremap\lib\StructureMap.XML' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.SetAttributes(String path, FileAttributes fileAttributes)
+   at ripple.FileSystemExtensions.cleanDirectory(String directory, Boolean remove) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\FileSystemExtensions.cs:line 33
+   at ripple.FileSystemExtensions.cleanDirectory(String directory, Boolean remove) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\FileSystemExtensions.cs:line 41
+   at ripple.FileSystemExtensions.ForceClean(IFileSystem system, String path) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\FileSystemExtensions.cs:line 22
+   at ripple.Nuget.NugetFile.ExplodeTo(String directory) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\Nuget\NugetFile.cs:line 83
+   at ripple.Steps.ExplodeDownloadedNugets.<Execute>b__0(INugetFile nuget) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\Steps\ExplodeDownloadedNugets.cs:line 26
+   at System.Collections.Generic.GenericEnumerableExtensions.Each[T](IEnumerable`1 values, Action`1 eachAction) in c:\BuildAgent\work\4dafc5966c0aefb4\src\FubuCore\EnumerableExtensions.cs:line 78
+   at ripple.Steps.ExplodeDownloadedNugets.Execute(SolutionInput input, IRippleStepRunner runner) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\Steps\ExplodeDownloadedNugets.cs:line 22
+   at ripple.RippleOperation.Execute(Boolean throwOnFailure) in c:\BuildAgent\work\9299e62f32ca4a35\src\ripple\RippleOperation.cs:line 79
+6/7/2013 11:26:24 AM: [Debug] 
+============================================================================================================================================
+Solution "diagnostics": C:\code\FubuMVC.Diagnostics\ripple.config
+============================================================================================================================================
+     ** Solution-Level
+        * FubuMVC.Core                 Float       
+        * FubuMVC.Katana               Float       
+        * FubuMVC.OwinHost             Float       
+        * NUnit                        2.5.10.11092
+        * Owin                         1.0         
+        * Owin.Extensions              0.6.4       
+        * Owin.Types                   0.8.5       
+        * RhinoMocks                   3.6.1       
+        * Spark                        1.7.5.0     
+        * structuremap                 2.6.3       
+        * structuremap.automocking     2.6.3       
+     ** NuGet Feeds
+        * Feed     http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc (Float)
+        * Feed     http://nuget.org/api/v2 (Fixed)                                             
+        * Feed     http://packages.nuget.org/v1/FeedService.svc (Fixed)                        
+     ** Projects
+        * Project "DiagnosticsHarness"            C:\code\FubuMVC.Diagnostics\src\DiagnosticsHarness\DiagnosticsHarness.csproj              
+             ** Dependencies
+                * Bottles                      Float
+                * FubuCore                     Float
+                * FubuLocalization             Float
+                * FubuMVC.Core                 Float
+                * FubuMVC.Core.Assets          Float
+                * FubuMVC.Core.UI              Float
+                * FubuMVC.Core.View            Float
+                * FubuMVC.JQueryUI             Float
+                * FubuMVC.Media                Float
+                * FubuMVC.Navigation           Float
+                * FubuMVC.SlickGrid            Float
+                * FubuMVC.Spark                Float
+                * FubuMVC.StructureMap         Float
+                * FubuMVC.TwitterBootstrap     Float
+                * HtmlTags                     Float
+                * Spark                        Float
+                * structuremap                 Float
+        * Project "FubuMVC.Diagnostics"           C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics\FubuMVC.Diagnostics.csproj            
+             ** Dependencies
+                * Bottles                      Float
+                * FubuCore                     Float
+                * FubuLocalization             Float
+                * FubuMVC.Core                 Float
+                * FubuMVC.Core.Assets          Float
+                * FubuMVC.Core.UI              Float
+                * FubuMVC.Core.View            Float
+                * FubuMVC.JQueryUI             Float
+                * FubuMVC.Media                Float
+                * FubuMVC.Navigation           Float
+                * FubuMVC.SlickGrid            Float
+                * FubuMVC.Spark                Float
+                * FubuMVC.TwitterBootstrap     Float
+                * HtmlTags                     Float
+                * Spark                        Float
+                * structuremap                 Float
+        * Project "FubuMVC.Diagnostics.Docs"      C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics.Docs\FubuMVC.Diagnostics.Docs.csproj  
+             ** Dependencies
+        * Project "FubuMVC.Diagnostics.Tests"     C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics.Tests\FubuMVC.Diagnostics.Tests.csproj
+             ** Dependencies
+                * Bottles                      Float
+                * FubuCore                     Float
+                * FubuLocalization             Float
+                * FubuMVC.Core                 Float
+                * FubuMVC.Core.Assets          Float
+                * FubuMVC.Core.UI              Float
+                * FubuMVC.Core.View            Float
+                * FubuMVC.JQueryUI             Float
+                * FubuMVC.Katana               Float
+                * FubuMVC.Media                Float
+                * FubuMVC.Navigation           Float
+                * FubuMVC.OwinHost             Float
+                * FubuMVC.SlickGrid            Float
+                * FubuMVC.StructureMap         Float
+                * FubuMVC.TwitterBootstrap     Float
+                * FubuTestingSupport           Float
+                * HtmlTags                     Float
+                * NUnit                        Float
+                * Owin                         Float
+                * Owin.Extensions              Float
+                * Owin.Types                   Float
+                * RhinoMocks                   Float
+                * structuremap                 Float
+                * structuremap.automocking     Float
+     ** Local
+        * Bottles                      Version: 1.1.0.512, IsPreRelease: False   
+        * FubuCore                     Version: 1.1.0.249, IsPreRelease: False   
+        * FubuLocalization             Version: 0.9.5.146, IsPreRelease: False   
+        * FubuMVC.Core                 Version: 1.1.0.1504, IsPreRelease: False  
+        * FubuMVC.Core.Assets          Version: 0.9.9.505, IsPreRelease: False   
+        * FubuMVC.Core.UI              Version: 1.0.1.533, IsPreRelease: False   
+        * FubuMVC.Core.View            Version: 1.0.0.509, IsPreRelease: False   
+        * FubuMVC.JQueryUI             Version: 0.5.0.277, IsPreRelease: False   
+        * FubuMVC.Katana               Version: 1.1.0.1504, IsPreRelease: False  
+        * FubuMVC.Media                Version: 0.9.5.369, IsPreRelease: False   
+        * FubuMVC.Navigation           Version: 0.9.0.141, IsPreRelease: False   
+        * FubuMVC.OwinHost             Version: 1.1.0.1504, IsPreRelease: False  
+        * FubuMVC.SlickGrid            Version: 0.0.0.617, IsPreRelease: False   
+        * FubuMVC.Spark                Version: 1.0.0.509, IsPreRelease: False   
+        * FubuMVC.StructureMap         Version: 1.1.0.1504, IsPreRelease: False  
+        * FubuMVC.TwitterBootstrap     Version: 0.0.0.611, IsPreRelease: False   
+        * FubuTestingSupport           Version: 1.1.0.249, IsPreRelease: False   
+        * HtmlTags                     Version: 2.0.0.168, IsPreRelease: False   
+        * NUnit                        Version: 2.5.10.11092, IsPreRelease: False
+        * Owin                         Version: 1.0.0.0, IsPreRelease: False     
+        * Owin.Extensions              Version: 0.6.4.0, IsPreRelease: False     
+        * Owin.Types                   Version: 0.8.5.0, IsPreRelease: False     
+        * RhinoMocks                   Version: 3.6.1.0, IsPreRelease: False     
+        * Spark                        Version: 1.7.5.0, IsPreRelease: False     
+        * structuremap.automocking     Version: 2.6.3.0, IsPreRelease: False     
+     ** Missing
+        * structuremap     2.6.3
+
+6/7/2013 1:51:33 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+6/7/2013 1:51:33 PM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics (fix)
+====================================================================================================
+     ** Ripple Steps
+          1.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          2.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
+          3.) ProcessDirectives           Process directives from nugets                            
+          4.) FixReferences               Fix References                                            
+
+6/7/2013 1:51:43 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\structuremap.2.6.3.0.nupkg
+6/7/2013 1:51:43 PM: [Debug] Exploding Name: structuremap, Version: 2.6.3.0, IsPreRelease: False
+6/7/2013 1:51:43 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\structuremap
