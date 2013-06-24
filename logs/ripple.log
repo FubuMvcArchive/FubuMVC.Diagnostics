@@ -1082,3 +1082,13 @@ RippleOperation: diagnostics (quickfix)
           2.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
           3.) ProcessDirectives           Process directives from nugets                            
 
+6/24/2013 11:11:31 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+6/24/2013 11:11:31 AM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics (quickfix)
+====================================================================================================
+     ** Ripple Steps
+          1.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          2.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
+          3.) ProcessDirectives           Process directives from nugets                            
+
