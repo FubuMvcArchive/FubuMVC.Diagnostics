@@ -163,3 +163,7 @@ li.gray div.node-trace-container
 	color: Gray;
 	text-decoration: line-through;
 }
+
+td.number {
+    text-align: right !important;
+}

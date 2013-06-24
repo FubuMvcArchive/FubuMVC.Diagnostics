@@ -16,7 +16,6 @@
       <dependency id="FubuMVC.Core.UI" version="0.9.9.49" />
       <dependency id="FubuMVC.Core.Assets" version="0.9.9.43" />
       <dependency id="FubuMVC.JQueryUI" />
-      <dependency id="FubuMVC.SlickGrid" />
       <dependency id="FubuMVC.Spark" version="0.9.9.16" />
       <dependency id="FubuMVC.TwitterBootstrap" />
       <dependency id="FubuMVC.Navigation" version="0.9.0.1" />

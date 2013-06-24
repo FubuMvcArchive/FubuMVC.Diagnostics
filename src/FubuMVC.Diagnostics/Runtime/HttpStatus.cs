@@ -2,11 +2,10 @@ using System.Collections.Generic;
 using System.Net;
 using FubuCore;
 using FubuMVC.Core.Runtime.Logging;
-using FubuMVC.SlickGrid;
 
 namespace FubuMVC.Diagnostics.Runtime
 {
-    public class HttpStatus : IMakeMyOwnJsonValue
+    public class HttpStatus
     {
         private readonly HttpStatusCode _status;
         private readonly string _description;
@@ -37,15 +36,6 @@ namespace FubuMVC.Diagnostics.Runtime
         public string Description
         {
             get { return _description; }
-        }
-
-        public object ToJsonValue()
-        {
-            var dict = new Dictionary<string, string>();
-            dict.Add("code", _status.As<int>().ToString());
-            dict.Add("description", _description);
-
-            return dict;
         }
 
         public override string ToString()

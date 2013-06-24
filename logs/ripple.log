@@ -1020,3 +1020,65 @@ RippleOperation: diagnostics (master)
           3.) ProcessDirectives           Process directives from nugets                            
           4.) FixReferences               Fix References                                            
 
+6/24/2013 10:00:42 AM: [Info] Trying to remove FubuMVC.SlickGrid
+6/24/2013 10:00:42 AM: [Debug] 
+======================================================
+RippleOperation: diagnostics (quickfix)
+======================================================
+     ** Ripple Steps
+          1.) RemoveNuget     ripple.Steps.RemoveNuget
+
+6/24/2013 10:01:01 AM: [Info] Trying to remove FubuMVC.Media
+6/24/2013 10:01:02 AM: [Debug] 
+======================================================
+RippleOperation: diagnostics (quickfix)
+======================================================
+     ** Ripple Steps
+          1.) RemoveNuget     ripple.Steps.RemoveNuget
+
+6/24/2013 11:02:39 AM: [Info] Updating dependencies for solution diagnostics
+6/24/2013 11:02:39 AM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics (quickfix)
+====================================================================================================
+     ** Ripple Steps
+          1.) NugetOperation              ripple.Steps.NugetOperation                               
+          2.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          3.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
+          4.) ProcessDirectives           Process directives from nugets                            
+          5.) FixReferences               Fix References                                            
+
+6/24/2013 11:02:39 AM: [Info] * Analyzing Bottles
+6/24/2013 11:02:44 AM: [Info] * Analyzing FubuCore,1.0.0.210
+6/24/2013 11:02:44 AM: [Info] * Analyzing FubuLocalization
+6/24/2013 11:02:44 AM: [Info] * Analyzing FubuMVC.Core
+6/24/2013 11:02:55 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+6/24/2013 11:02:55 AM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics (quickfix)
+====================================================================================================
+     ** Ripple Steps
+          1.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          2.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
+          3.) ProcessDirectives           Process directives from nugets                            
+
+6/24/2013 11:08:09 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+6/24/2013 11:08:09 AM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics (quickfix)
+====================================================================================================
+     ** Ripple Steps
+          1.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          2.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
+          3.) ProcessDirectives           Process directives from nugets                            
+
+6/24/2013 11:10:35 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+6/24/2013 11:10:35 AM: [Debug] 
+====================================================================================================
+RippleOperation: diagnostics (quickfix)
+====================================================================================================
+     ** Ripple Steps
+          1.) DownloadMissingNugets       Download missing nugets for diagnostics                   
+          2.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
+          3.) ProcessDirectives           Process directives from nugets                            
+

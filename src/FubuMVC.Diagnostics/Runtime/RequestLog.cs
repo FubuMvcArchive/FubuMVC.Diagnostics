@@ -57,7 +57,7 @@ namespace FubuMVC.Diagnostics.Runtime
         {
             get
             {
-                return Time.ToLocalTime().ToShortTimeString();
+                return Time.ToLocalTime().ToLongTimeString();
             }
         }
 
