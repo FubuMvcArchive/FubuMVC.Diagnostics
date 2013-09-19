@@ -10,7 +10,7 @@ using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Core.UI;
 using FubuMVC.Core.Urls;
 using FubuMVC.Diagnostics.Chrome;
-using FubuMVC.Diagnostics.Routes;
+using FubuMVC.Diagnostics.Endpoints;
 using FubuMVC.Diagnostics.Visualization;
 using FubuMVC.TwitterBootstrap.Tags;
 using HtmlTags;
@@ -80,7 +80,7 @@ namespace FubuMVC.Diagnostics.Chains
             return new HtmlTag("p", p =>
             {
                 p.Add("span").Text("The requested BehaviorChain cannot be found.  ");
-                p.Add("a").Text("Return to the Request Explorer").Attr("href", _urls.UrlFor<RouteExplorerModel>());
+                p.Add("a").Text("Return to the Request Explorer").Attr("href", _urls.UrlFor<EndpointExplorerModel>());
             });
         }
 

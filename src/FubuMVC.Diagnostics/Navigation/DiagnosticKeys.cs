@@ -9,7 +9,7 @@ namespace FubuMVC.Diagnostics.Navigation
         public static readonly DiagnosticKeys HtmlConventions = new DiagnosticKeys("Html Conventions");
         public static readonly DiagnosticKeys ApplicationStartup = new DiagnosticKeys("Application Startup");
         public static readonly DiagnosticKeys Requests = new DiagnosticKeys("Requests");
-        public static readonly DiagnosticKeys Routes = new DiagnosticKeys("Routes");
+        public static readonly DiagnosticKeys Endpoints = new DiagnosticKeys("Endpoints");
         public static readonly DiagnosticKeys ModelBindingExplorer = new DiagnosticKeys("Model Binding Explorer");
 
         public static readonly DiagnosticKeys Services = new DiagnosticKeys("Services");

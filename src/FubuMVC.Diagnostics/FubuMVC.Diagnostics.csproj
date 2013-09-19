@@ -90,7 +90,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
@@ -145,7 +144,7 @@
     <None Include="Requests\RequestVisualization.spark">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Routes\Routes.spark">
+    <None Include="Endpoints\Endpoints.spark">
       <SubType>Designer</SubType>
     </None>
     <Content Include="ripple.dependencies.config">
@@ -200,7 +199,7 @@
     <Compile Include="Requests\RequestVisualizationEndpoint.cs" />
     <Compile Include="Requests\ResponseHeadersTag.cs" />
     <Compile Include="Requests\TracingOutlineTag.cs" />
-    <Compile Include="Routes\RoutesTable.cs" />
+    <Compile Include="Endpoints\EndpointsTable.cs" />
     <Compile Include="Runtime\HttpStatus.cs" />
     <Compile Include="Runtime\IRequestTraceObserver.cs" />
     <Compile Include="Runtime\RequestHistoryObserver.cs" />
@@ -220,9 +219,9 @@
     <Compile Include="Navigation\DiagnosticsMenu.cs" />
     <Compile Include="NoDiagnosticsAttribute.cs" />
     <Compile Include="Requests\RequestsEndpoint.cs" />
-    <Compile Include="Routes\RouteExplorerModel.cs" />
-    <Compile Include="Routes\RouteQuery.cs" />
-    <Compile Include="Routes\RouteReport.cs" />
+    <Compile Include="Endpoints\EndpointExplorerModel.cs" />
+    <Compile Include="Endpoints\RouteQuery.cs" />
+    <Compile Include="Endpoints\RouteReport.cs" />
     <Compile Include="Runtime\ApplyTracing.cs" />
     <Compile Include="Runtime\Assets\BasicAssetDiagnostics.cs" />
     <Compile Include="Runtime\BehaviorFinish.cs" />
@@ -250,7 +249,7 @@
     <Compile Include="Packaging\PackageDiagnosticsRequestModel.cs" />
     <Compile Include="DiagnosticsRegistry.cs" />
     <Compile Include="DiagnosticsException.cs" />
-    <Compile Include="Routes\RouteExplorerEndpoint.cs" />
+    <Compile Include="Endpoints\EndpointExplorerEndpoint.cs" />
     <Compile Include="Shared\Tags\ControlGroupDivTag.cs" />
     <Compile Include="Visualization\BehaviorNodeViewModel.cs" />
     <Compile Include="Visualization\DescriptionVisualizationPolicy.cs" />
@@ -303,4 +302,5 @@
     <EmbeddedResource Include="pak-Data.zip" />
     <EmbeddedResource Include="pak-WebContent.zip" />
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
 </Project>

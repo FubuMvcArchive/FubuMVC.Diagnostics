@@ -6,18 +6,18 @@ using FubuMVC.Core.Urls;
 using FubuMVC.Core.View;
 using FubuMVC.Diagnostics.Runtime;
 
-namespace FubuMVC.Diagnostics.Routes
+namespace FubuMVC.Diagnostics.Endpoints
 {
     public class RoutesRequest{}
 
-    public class RouteExplorerEndpoint
+    public class EndpointExplorerEndpoint
     {
         private static readonly string Namespace = Assembly.GetExecutingAssembly().GetName().Name;
 
         private readonly BehaviorGraph _graph;
         private readonly IUrlRegistry _urls;
 
-        public RouteExplorerEndpoint(BehaviorGraph graph, IUrlRegistry urls)
+        public EndpointExplorerEndpoint(BehaviorGraph graph, IUrlRegistry urls)
         {
             _graph = graph;
             _urls = urls;
@@ -26,13 +26,13 @@ namespace FubuMVC.Diagnostics.Routes
 
 
 
-        public RouteExplorerModel get_routes(RoutesRequest request)
+        public EndpointExplorerModel get_endpoints(RoutesRequest request)
         {
-            var reports = _graph.Behaviors.Where(IsNotDiagnosticRoute).Select(x => RouteReport.ForChain(x, _urls));
+            var reports = _graph.Behaviors.Where(IsNotDiagnosticRoute).Select(x => RouteReport.ForChain(x, _urls)).OrderBy(x => x.Route);
 
-            return new RouteExplorerModel
+            return new EndpointExplorerModel
             {
-                RoutesTable = new RoutesTable(reports)
+                EndpointsTable = new EndpointsTable(reports)
             };
         }
 

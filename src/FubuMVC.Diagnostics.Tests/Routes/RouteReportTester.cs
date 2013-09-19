@@ -6,7 +6,7 @@ using FubuMVC.Core.Resources.Conneg;
 using FubuMVC.Core.Runtime;
 using FubuMVC.Core.Urls;
 using FubuMVC.Diagnostics.Chains;
-using FubuMVC.Diagnostics.Routes;
+using FubuMVC.Diagnostics.Endpoints;
 using NUnit.Framework;
 using FubuTestingSupport;
 using System.Linq;
@@ -109,43 +109,6 @@ namespace FubuMVC.Diagnostics.Tests.Routes
             theChain.Route.AddHttpMethodConstraint("GET");
 
             theReport.Constraints.ShouldEqual("GET, POST");
-        }
-
-        [Test]
-        public void route_when_the_chain_has_no_route()
-        {
-            // dunno how it gets in this state, but still
-            theChain.Route = null;
-            theChain.IsPartialOnly = false;
-
-            theReport.Route.ShouldEqual("N/A");
-        }
-
-        [Test]
-        public void route_when_the_pattern_is_null()
-        {
-            // dunno how it gets in this state, but still
-            theChain.Route = new RouteDefinition(null);
-            theChain.IsPartialOnly = false;
-
-            theReport.Route.ShouldEqual("N/A"); 
-        }
-
-        [Test]
-        public void route_for_a_partial_chain()
-        {
-            theChain.Route = null;
-            theChain.IsPartialOnly = true;
-
-            theReport.Route.ShouldEqual("(partial)");
-        }
-
-        [Test]
-        public void route_for_the_default_chain()
-        {
-            theChain.Route = new RouteDefinition(string.Empty);
-
-            theReport.Route.ShouldEqual("(default)");
         }
 
         [Test]

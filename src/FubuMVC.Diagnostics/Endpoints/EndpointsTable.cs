@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 using HtmlTags;
 
-namespace FubuMVC.Diagnostics.Routes
+namespace FubuMVC.Diagnostics.Endpoints
 {
-    public class RoutesTable : TableTag
+    public class EndpointsTable : TableTag
     {
-        public RoutesTable(IEnumerable<RouteReport> reports)
+        public EndpointsTable(IEnumerable<RouteReport> reports)
         {
             AddClass("table");
 
             AddHeaderRow(row => {
                 row.Header("Details");
-                row.Header("Route");
+                row.Header("Description");
                 row.Header("Contraints");
                 row.Header("Action(s)");
             });

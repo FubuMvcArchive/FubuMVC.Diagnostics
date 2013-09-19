@@ -1,7 +1,7 @@
 using FubuMVC.Core;
 using FubuMVC.Core.Registration;
 using FubuMVC.Core.Registration.Nodes;
-using FubuMVC.Diagnostics.Routes;
+using FubuMVC.Diagnostics.Endpoints;
 using FubuMVC.Diagnostics.Runtime;
 using NUnit.Framework;
 using System.Linq;
@@ -21,7 +21,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
             {
                 x.Actions.IncludeType<SomeEndpoints>();
                 x.Actions.IncludeType<OtherEndpoints>();
-                //x.Actions.IncludeType<RouteExplorerEndpoint>();
+                //x.Actions.IncludeType<EndpointExplorerEndpoint>();
                 x.Import<DiagnosticsRegistration>();
             });
         }
@@ -42,10 +42,10 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
         public void should_not_be_attached_to_endpoints_from_diagnostics_itself()
         {
             var chains =
-                theGraph.Behaviors.Where(x => x.Calls.Any(call => call.HandlerType == typeof (RouteExplorerEndpoint)))
+                theGraph.Behaviors.Where(x => x.Calls.Any(call => call.HandlerType == typeof (EndpointExplorerEndpoint)))
                         .ToList();
 
-            theGraph.BehaviorFor<RouteExplorerEndpoint>(x => x.get_routes(null)).First().ShouldNotBeOfType<DiagnosticNode>();
+            theGraph.BehaviorFor<EndpointExplorerEndpoint>(x => x.get_endpoints(null)).First().ShouldNotBeOfType<DiagnosticNode>();
         }
 
         [Test]

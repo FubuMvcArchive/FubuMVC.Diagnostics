@@ -11,7 +11,7 @@ using FubuMVC.Core.Security;
 using FubuMVC.Core.Urls;
 using FubuMVC.Diagnostics.Chains;
 
-namespace FubuMVC.Diagnostics.Routes
+namespace FubuMVC.Diagnostics.Endpoints
 {
     public class RouteReport
     {
@@ -72,24 +72,7 @@ namespace FubuMVC.Diagnostics.Routes
         {
             get
             {
-                if (_chain.IsPartialOnly)
-                {
-                    return "(partial)";
-                }
-
-                if (_chain.Route == null || _chain.Route.Pattern == null)
-                {
-                    return "N/A";
-                }
-
-
-                var pattern = _chain.Route.Pattern;
-                if (pattern == string.Empty)
-                {
-                    pattern = "(default)";
-                }
-
-                return pattern;
+                return ChainVisualization.TitleForChain(_chain);
             }
         }
 

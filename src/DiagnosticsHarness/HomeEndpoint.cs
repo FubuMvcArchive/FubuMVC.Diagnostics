@@ -13,7 +13,6 @@ using FubuMVC.Diagnostics.Chains;
 using FubuMVC.Diagnostics.Dashboard;
 using FubuMVC.Diagnostics.ModelBinding;
 using FubuMVC.Diagnostics.Requests;
-using FubuMVC.Diagnostics.Routes;
 using FubuMVC.Diagnostics.Services;
 using HtmlTags;
 using FubuMVC.Diagnostics.Visualization;
@@ -43,11 +42,11 @@ namespace DiagnosticsHarness
             //    FubuDebug = true
             //});
 
-            //var chain = _graph.BehaviorFor<RouteExplorerEndpoint>(x => x.get_routes(null));
+            //var chain = _graph.BehaviorFor<EndpointExplorerEndpoint>(x => x.get_endpoints(null));
 
             return FubuContinuation.RedirectTo<ModelBindingEndpoints>(x => x.get_binding_all());
 
-            //return FubuContinuation.RedirectTo<RouteExplorerEndpoint>(x => x.get_routes(null));
+            //return FubuContinuation.RedirectTo<EndpointExplorerEndpoint>(x => x.get_endpoints(null));
 
 
             //return FubuContinuation.RedirectTo<DescriptionEndpoints>(x => x.get_descriptions());
@@ -59,7 +58,7 @@ namespace DiagnosticsHarness
 
 //            return FubuContinuation.RedirectTo<RequestsEndpoint>(x => x.get_requests());
 
-            //var chain = _graph.BehaviorFor<RouteExplorerEndpoint>(x => x.get_routes(null));
+            //var chain = _graph.BehaviorFor<EndpointExplorerEndpoint>(x => x.get_endpoints(null));
 
 
             //return FubuContinuation.RedirectTo(new ChainRequest

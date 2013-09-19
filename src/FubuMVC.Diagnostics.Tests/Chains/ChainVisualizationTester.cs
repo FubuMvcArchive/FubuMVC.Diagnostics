@@ -7,7 +7,7 @@ using FubuMVC.Core.Registration.ObjectGraph;
 using FubuMVC.Core.Registration.Routes;
 using FubuMVC.Core.Resources.Conneg;
 using FubuMVC.Diagnostics.Chains;
-using FubuMVC.Diagnostics.Routes;
+using FubuMVC.Diagnostics.Endpoints;
 using FubuMVC.Diagnostics.Visualization;
 using FubuMVC.TwitterBootstrap.Collapsibles;
 using NUnit.Framework;

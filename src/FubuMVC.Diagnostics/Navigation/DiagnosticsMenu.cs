@@ -1,7 +1,7 @@
+using FubuMVC.Diagnostics.Endpoints;
 using FubuMVC.Diagnostics.ModelBinding;
 using FubuMVC.Diagnostics.Packaging;
 using FubuMVC.Diagnostics.Requests;
-using FubuMVC.Diagnostics.Routes;
 using FubuMVC.Diagnostics.Services;
 using FubuMVC.Navigation;
 
@@ -16,7 +16,7 @@ namespace FubuMVC.Diagnostics.Navigation
             Add += MenuNode.ForInput<PackageDiagnosticsRequestModel>(DiagnosticKeys.ApplicationStartup);
 
             Add += MenuNode.ForAction<RequestsEndpoint>(DiagnosticKeys.Requests, x => x.get_requests());
-            Add += MenuNode.ForInput<RoutesRequest>(DiagnosticKeys.Routes);
+            Add += MenuNode.ForInput<RoutesRequest>(DiagnosticKeys.Endpoints);
 
             Add += MenuNode.ForAction<ModelBindingEndpoints>(DiagnosticKeys.ModelBindingExplorer, x => x.get_binding_all());
 

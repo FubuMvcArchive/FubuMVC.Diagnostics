@@ -4,7 +4,7 @@ using FubuCore;
 using FubuCore.Descriptions;
 using FubuMVC.Core.Continuations;
 using FubuMVC.Core.Registration.Nodes;
-using FubuMVC.Diagnostics.Routes;
+using FubuMVC.Diagnostics.Endpoints;
 using FubuMVC.Diagnostics.Visualization;
 using FubuMVC.TwitterBootstrap.Collapsibles;
 using FubuMVC.TwitterBootstrap.Tags;
@@ -24,25 +24,39 @@ namespace FubuMVC.Diagnostics.Chains
 
         public string Title
         {
-            get
-            {
-                if (Chain.GetRoutePattern().IsNotEmpty())
-                {
-                    return Chain.GetRoutePattern();
-                }
-
-                if (Chain.Calls.Any())
-                {
-                    return Report.Action.Join(", ");
-                }
-
-                if (Chain.Output != null && Chain.Output.Writers.Any())
-                {
-                    return Chain.Output.Writers.Select(x => Description.For(x).Title).Join(", ");
-                }
-
-                return "BehaviorChain " + Chain.UniqueId;
+            get {
+                return TitleForChain(Chain);
             }
+        }
+
+        public static string TitleForChain(BehaviorChain chain)
+        {
+            if (chain.GetRoutePattern().IsNotEmpty())
+            {
+                return chain.GetRoutePattern();
+            }
+
+            if (chain.GetRoutePattern() == string.Empty)
+            {
+                return "(home)";
+            }
+
+            if (chain.Calls.Any())
+            {
+                return chain.Calls.Select(x => x.Description).Join(", ");
+            }
+
+            if (chain.HasOutput() && chain.Output.Writers.Any())
+            {
+                return chain.Output.Writers.Select(x => Description.For(x).Title).Join(", ");
+            }
+
+            if (chain.InputType() != null)
+            {
+                return "Handler for " + chain.InputType().FullName;
+            }
+
+            return "BehaviorChain " + chain.UniqueId;
         }
 
         public DetailsTableTag Details { get; set; }

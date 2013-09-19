@@ -1,4 +1,4 @@
-namespace FubuMVC.Diagnostics.Routes
+namespace FubuMVC.Diagnostics.Endpoints
 {
     public class RouteQuery
     {
