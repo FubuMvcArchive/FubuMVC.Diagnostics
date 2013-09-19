@@ -3,6 +3,7 @@ using FubuCore.Descriptions;
 using FubuCore.Logging;
 using FubuMVC.Core.Runtime.Logging;
 using FubuMVC.Diagnostics.Runtime.Tracing;
+using ExceptionReport = FubuCore.Logging.ExceptionReport;
 
 namespace FubuMVC.Diagnostics.Runtime
 {

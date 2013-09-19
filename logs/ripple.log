@@ -1092,3 +1092,565 @@ RippleOperation: diagnostics (quickfix)
           2.) ExplodeDownloadedNugets     Explode nugets at C:\code\FubuMVC.Diagnostics\src\packages
           3.) ProcessDirectives           Process directives from nugets                            
 
+9/19/2013 2:07:43 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+9/19/2013 2:07:55 PM: [Info] Updating dependencies for solution diagnostics
+9/19/2013 2:07:55 PM: [Info] * Analyzing Bottles
+9/19/2013 2:07:56 PM: [Debug] Retrieving latest from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc/Packages()?$filter=IsAbsoluteLatestVersion&$orderby=DownloadCount%20desc,Id&$skip=0&$take=100
+9/19/2013 2:07:59 PM: [Debug] Retrieving latest from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc/Packages()?$filter=IsAbsoluteLatestVersion&$orderby=DownloadCount%20desc,Id&$skip=100&$take=100
+9/19/2013 2:08:00 PM: [Debug] Looking for Bottles in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: Bottles, Version: 2.0.0.549
+9/19/2013 2:08:00 PM: [Debug] Looking for Bottles in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: Bottles, Version: 2.0.0.549
+9/19/2013 2:08:00 PM: [Debug] Bottles already installed
+9/19/2013 2:08:00 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:00 PM: [Debug] Looking for FubuCore in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuCore, Version: 1.2.0.260
+9/19/2013 2:08:00 PM: [Info] * Analyzing FubuCore
+9/19/2013 2:08:00 PM: [Debug] Looking for FubuCore in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuCore, Version: 1.2.0.260
+9/19/2013 2:08:00 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:00 PM: [Info] * Analyzing FubuLocalization
+9/19/2013 2:08:01 PM: [Debug] Looking for FubuLocalization in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuLocalization, Version: 0.9.5.146
+9/19/2013 2:08:01 PM: [Debug] Looking for FubuLocalization in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuLocalization, Version: 0.9.5.146
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Info] * Analyzing FubuMVC.Core
+9/19/2013 2:08:01 PM: [Debug] Looking for FubuMVC.Core in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core, Version: 1.2.0.1601
+9/19/2013 2:08:01 PM: [Debug] Looking for FubuMVC.Core in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core, Version: 1.2.0.1601
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:01 PM: [Debug] Bottles already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] Looking for HtmlTags in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: HtmlTags, Version: 2.0.0.180
+9/19/2013 2:08:01 PM: [Info] * Analyzing HtmlTags
+9/19/2013 2:08:01 PM: [Debug] Looking for HtmlTags in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: HtmlTags, Version: 2.0.0.180
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Info] * Analyzing FubuMVC.Core.Assets
+9/19/2013 2:08:01 PM: [Debug] Looking for FubuMVC.Core.Assets in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core.Assets, Version: 0.9.9.527
+9/19/2013 2:08:01 PM: [Debug] Looking for FubuMVC.Core.Assets in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core.Assets, Version: 0.9.9.527
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core.Assets already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:01 PM: [Debug] Bottles already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core.View already installed
+9/19/2013 2:08:01 PM: [Debug] Looking for FubuMVC.Core.View in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core.View, Version: 1.0.0.545
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core.UI already installed
+9/19/2013 2:08:01 PM: [Debug] Looking for FubuMVC.Core.UI in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core.UI, Version: 1.0.1.560
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] Bottles already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core.View already installed
+9/19/2013 2:08:01 PM: [Debug] Bottles already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] Bottles already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Info] * Analyzing FubuMVC.Core.UI
+9/19/2013 2:08:01 PM: [Debug] Looking for FubuMVC.Core.UI in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core.UI, Version: 1.0.1.560
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core.UI already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core.View already installed
+9/19/2013 2:08:01 PM: [Debug] Bottles already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] Bottles already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Info] * Analyzing FubuMVC.Core.View
+9/19/2013 2:08:01 PM: [Debug] Looking for FubuMVC.Core.View in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core.View, Version: 1.0.0.545
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core.View already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:01 PM: [Debug] Bottles already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Info] * Analyzing FubuMVC.JQueryUI
+9/19/2013 2:08:01 PM: [Debug] Looking for FubuMVC.JQueryUI in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.JQueryUI, Version: 0.5.0.311
+9/19/2013 2:08:01 PM: [Debug] Looking for FubuMVC.JQueryUI in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.JQueryUI, Version: 0.5.0.311
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.JQueryUI already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core.Assets already installed
+9/19/2013 2:08:01 PM: [Debug] Bottles already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core.View already installed
+9/19/2013 2:08:01 PM: [Debug] Bottles already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core.UI already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] Bottles already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core.View already installed
+9/19/2013 2:08:01 PM: [Debug] Bottles already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] Bottles already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Info] * Analyzing FubuMVC.Katana
+9/19/2013 2:08:01 PM: [Debug] Looking for FubuMVC.Katana in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Katana, Version: 1.2.0.1601
+9/19/2013 2:08:01 PM: [Debug] Looking for FubuMVC.Katana in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Katana, Version: 1.2.0.1601
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Katana already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:01 PM: [Debug] Bottles already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.OwinHost already installed
+9/19/2013 2:08:01 PM: [Debug] Looking for FubuMVC.OwinHost in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.OwinHost, Version: 1.2.0.1601
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] Bottles already installed
+9/19/2013 2:08:01 PM: [Debug] Owin already installed
+9/19/2013 2:08:01 PM: [Debug] Looking for Owin in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found 
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] Owin.Extensions already installed
+9/19/2013 2:08:01 PM: [Debug] Looking for Owin.Extensions in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found 
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:01 PM: [Debug] Owin already installed
+9/19/2013 2:08:01 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:01 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:01 PM: [Info] * Analyzing FubuMVC.OwinHost
+9/19/2013 2:08:01 PM: [Debug] Looking for FubuMVC.OwinHost in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.OwinHost, Version: 1.2.0.1601
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.OwinHost already installed
+9/19/2013 2:08:01 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:01 PM: [Debug] Owin already installed
+9/19/2013 2:08:01 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] Owin.Extensions already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] Owin already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Info] * Analyzing Owin,1.0.0.0,Fixed
+9/19/2013 2:08:02 PM: [Debug] Owin already installed
+9/19/2013 2:08:02 PM: [Info] * Analyzing Owin.Extensions,0.6.4.0,Fixed
+9/19/2013 2:08:02 PM: [Debug] Owin.Extensions already installed
+9/19/2013 2:08:02 PM: [Debug] Owin already installed
+9/19/2013 2:08:02 PM: [Info] * Analyzing FubuMVC.Navigation
+9/19/2013 2:08:02 PM: [Debug] Looking for FubuMVC.Navigation in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Navigation, Version: 0.9.1.178
+9/19/2013 2:08:02 PM: [Debug] Looking for FubuMVC.Navigation in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Navigation, Version: 0.9.1.178
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Navigation already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core.Assets already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core.View already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core.UI already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core.View already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Info] * Analyzing FubuMVC.Spark
+9/19/2013 2:08:02 PM: [Debug] Looking for FubuMVC.Spark in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Spark, Version: 1.0.0.545
+9/19/2013 2:08:02 PM: [Debug] Looking for FubuMVC.Spark in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Spark, Version: 1.0.0.545
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Spark already installed
+9/19/2013 2:08:02 PM: [Debug] Spark already installed
+9/19/2013 2:08:02 PM: [Debug] Looking for Spark in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found 
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core.View already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Info] * Analyzing Spark,1.7.5.0,Fixed
+9/19/2013 2:08:02 PM: [Debug] Spark already installed
+9/19/2013 2:08:02 PM: [Info] * Analyzing FubuMVC.StructureMap
+9/19/2013 2:08:02 PM: [Debug] Looking for FubuMVC.StructureMap in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.StructureMap, Version: 1.2.0.1601
+9/19/2013 2:08:02 PM: [Debug] Looking for FubuMVC.StructureMap in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.StructureMap, Version: 1.2.0.1601
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.StructureMap already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] StructureMap already installed
+9/19/2013 2:08:02 PM: [Debug] Looking for StructureMap in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: structuremap, Version: 2.6.4.79
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Info] * Analyzing StructureMap
+9/19/2013 2:08:02 PM: [Debug] Looking for StructureMap in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: structuremap, Version: 2.6.4.79
+9/19/2013 2:08:02 PM: [Info] Warning: This operation requires StructureMap to be updated to 2.6.4.79 but it is marked as fixed. Use the force option to correct this.
+9/19/2013 2:08:02 PM: [Debug] StructureMap already installed
+9/19/2013 2:08:02 PM: [Info] * Analyzing FubuMVC.TwitterBootstrap
+9/19/2013 2:08:02 PM: [Debug] Looking for FubuMVC.TwitterBootstrap in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.TwitterBootstrap, Version: 0.0.0.635
+9/19/2013 2:08:02 PM: [Debug] Looking for FubuMVC.TwitterBootstrap in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.TwitterBootstrap, Version: 0.0.0.635
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.TwitterBootstrap already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core.UI already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core.Assets already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Navigation already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core.View already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core.View already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core.Assets already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core.UI already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core.View already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core.View already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core.UI already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core.View already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuMVC.Core already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] Bottles already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuLocalization already installed
+9/19/2013 2:08:02 PM: [Debug] HtmlTags already installed
+9/19/2013 2:08:02 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:02 PM: [Info] * Analyzing FubuTestingSupport
+9/19/2013 2:08:02 PM: [Debug] Looking for FubuTestingSupport in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuTestingSupport, Version: 1.2.0.260
+9/19/2013 2:08:02 PM: [Debug] Looking for FubuTestingSupport in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuTestingSupport, Version: 1.2.0.260
+9/19/2013 2:08:03 PM: [Debug] FubuTestingSupport already installed
+9/19/2013 2:08:03 PM: [Debug] FubuCore already installed
+9/19/2013 2:08:03 PM: [Debug] NUnit already installed
+9/19/2013 2:08:03 PM: [Debug] Looking for NUnit,2.5.10.11092,Fixed in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found 
+9/19/2013 2:08:03 PM: [Debug] RhinoMocks already installed
+9/19/2013 2:08:03 PM: [Debug] Looking for RhinoMocks in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found 
+9/19/2013 2:08:03 PM: [Debug] structuremap already installed
+9/19/2013 2:08:03 PM: [Debug] Looking for structuremap in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: structuremap, Version: 2.6.4.79
+9/19/2013 2:08:03 PM: [Debug] structuremap.automocking already installed
+9/19/2013 2:08:03 PM: [Debug] Looking for structuremap.automocking in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: structuremap.automocking, Version: 2.6.4.79
+9/19/2013 2:08:03 PM: [Debug] StructureMap already installed
+9/19/2013 2:08:03 PM: [Info] * Analyzing NUnit,2.5.10.11092,Fixed
+9/19/2013 2:08:03 PM: [Debug] NUnit already installed
+9/19/2013 2:08:03 PM: [Info] * Analyzing RhinoMocks,3.6.1.0,Fixed
+9/19/2013 2:08:03 PM: [Debug] RhinoMocks already installed
+9/19/2013 2:08:03 PM: [Info] * Analyzing structuremap
+9/19/2013 2:08:03 PM: [Debug] Looking for structuremap in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: structuremap, Version: 2.6.4.79
+9/19/2013 2:08:03 PM: [Info] Warning: This operation requires structuremap to be updated to 2.6.4.79 but it is marked as fixed. Use the force option to correct this.
+9/19/2013 2:08:03 PM: [Debug] structuremap already installed
+9/19/2013 2:08:03 PM: [Info] * Analyzing structuremap.automocking
+9/19/2013 2:08:03 PM: [Debug] Looking for structuremap.automocking in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: structuremap.automocking, Version: 2.6.4.79
+9/19/2013 2:08:03 PM: [Info] Warning: This operation requires structuremap.automocking to be updated to 2.6.4.79 but it is marked as fixed. Use the force option to correct this.
+9/19/2013 2:08:03 PM: [Debug] structuremap.automocking already installed
+9/19/2013 2:08:03 PM: [Debug] StructureMap already installed
+9/19/2013 2:08:03 PM: [Info] * Analyzing NUnit,Fixed
+9/19/2013 2:08:03 PM: [Debug] Looking for NUnit in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found 
+9/19/2013 2:08:04 PM: [Info] Warning: This operation requires NUnit to be updated to 2.6.2 but it is marked as fixed. Use the force option to correct this.
+9/19/2013 2:08:04 PM: [Debug] NUnit already installed
+9/19/2013 2:08:04 PM: [Info] * Analyzing Owin,Fixed
+9/19/2013 2:08:04 PM: [Debug] Looking for Owin in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found 
+9/19/2013 2:08:04 PM: [Info] * Analyzing Owin.Extensions,Fixed
+9/19/2013 2:08:04 PM: [Debug] Looking for Owin.Extensions in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found 
+9/19/2013 2:08:04 PM: [Info] Warning: This operation requires Owin.Extensions to be updated to 0.8.5 but it is marked as fixed. Use the force option to correct this.
+9/19/2013 2:08:04 PM: [Debug] Owin.Extensions already installed
+9/19/2013 2:08:04 PM: [Debug] Owin already installed
+9/19/2013 2:08:04 PM: [Info] * Analyzing Owin.Types,Fixed
+9/19/2013 2:08:04 PM: [Debug] Looking for Owin.Types in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found 
+9/19/2013 2:08:05 PM: [Debug] Owin.Types already installed
+9/19/2013 2:08:05 PM: [Info] * Analyzing RhinoMocks,Fixed
+9/19/2013 2:08:05 PM: [Debug] Looking for RhinoMocks in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found 
+9/19/2013 2:08:05 PM: [Info] * Analyzing Spark,Fixed
+9/19/2013 2:08:05 PM: [Debug] Looking for Spark in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found 
+9/19/2013 2:08:05 PM: [Info] Warning: This operation requires Spark to be updated to 1.7.5.1 but it is marked as fixed. Use the force option to correct this.
+9/19/2013 2:08:05 PM: [Debug] Spark already installed
+9/19/2013 2:08:05 PM: [Info] 
+========================================================================
+NugetPlan: 
+========================================================================
+     ** Steps
+        * UpdateDependency     Update Bottles,2.0.0.549                 
+        * UpdateDependency     Update FubuCore,1.2.0.260                
+        * UpdateDependency     Update FubuMVC.Core,1.2.0.1601           
+        * UpdateDependency     Update HtmlTags,2.0.0.180                
+        * UpdateDependency     Update FubuMVC.Core.Assets,0.9.9.527     
+        * UpdateDependency     Update FubuMVC.Core.UI,1.0.1.560         
+        * UpdateDependency     Update FubuMVC.Core.View,1.0.0.545       
+        * UpdateDependency     Update FubuMVC.JQueryUI,0.5.0.311        
+        * UpdateDependency     Update FubuMVC.Katana,1.2.0.1601         
+        * UpdateDependency     Update FubuMVC.OwinHost,1.2.0.1601       
+        * UpdateDependency     Update FubuMVC.Navigation,0.9.1.178      
+        * UpdateDependency     Update FubuMVC.Spark,1.0.0.545           
+        * UpdateDependency     Update FubuMVC.StructureMap,1.2.0.1601   
+        * UpdateDependency     Update FubuMVC.TwitterBootstrap,0.0.0.635
+        * UpdateDependency     Update FubuTestingSupport,1.2.0.260      
+
+9/19/2013 2:08:05 PM: [Debug] Restoring Bottles,2.0.0.549
+9/19/2013 2:08:05 PM: [Debug] Restoring FubuCore,1.2.0.260
+9/19/2013 2:08:05 PM: [Debug] Restoring FubuMVC.Core,1.2.0.1601
+9/19/2013 2:08:05 PM: [Debug] Restoring FubuMVC.Core.Assets,0.9.9.527
+9/19/2013 2:08:05 PM: [Debug] Restoring FubuMVC.Core.UI,1.0.1.560
+9/19/2013 2:08:05 PM: [Debug] Restoring FubuMVC.Core.View,1.0.0.545
+9/19/2013 2:08:05 PM: [Debug] Restoring FubuMVC.JQueryUI,0.5.0.311
+9/19/2013 2:08:05 PM: [Debug] Restoring FubuMVC.Katana,1.2.0.1601
+9/19/2013 2:08:05 PM: [Debug] Restoring FubuMVC.Navigation,0.9.1.178
+9/19/2013 2:08:05 PM: [Debug] Restoring FubuMVC.OwinHost,1.2.0.1601
+9/19/2013 2:08:05 PM: [Debug] Searching for FubuMVC.JQueryUI,0.5.0.311 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:08:05 PM: [Debug] Restoring FubuMVC.Spark,1.0.0.545
+9/19/2013 2:08:05 PM: [Debug] Searching for FubuMVC.OwinHost,1.2.0.1601 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:08:05 PM: [Debug] Searching for FubuMVC.Core.View,1.0.0.545 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:08:05 PM: [Debug] Searching for FubuMVC.Spark,1.0.0.545 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:08:05 PM: [Debug] Searching for FubuMVC.Navigation,0.9.1.178 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:08:05 PM: [Debug] Searching for FubuMVC.Core.Assets,0.9.9.527 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:08:05 PM: [Debug] Searching for FubuMVC.Core,1.2.0.1601 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:08:05 PM: [Debug] Searching for FubuMVC.Core.UI,1.0.1.560 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:08:05 PM: [Debug] Searching for FubuCore,1.2.0.260 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:08:05 PM: [Debug] Looking for FubuMVC.Core in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core, Version: 1.2.0.1601
+9/19/2013 2:08:05 PM: [Debug] Searching for FubuMVC.Katana,1.2.0.1601 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:08:05 PM: [Debug] Looking for FubuMVC.Core.UI in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core.UI, Version: 1.0.1.560
+9/19/2013 2:08:05 PM: [Debug] Looking for FubuMVC.Katana in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Katana, Version: 1.2.0.1601
+9/19/2013 2:08:05 PM: [Debug] Looking for FubuMVC.Core.View in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core.View, Version: 1.0.0.545
+9/19/2013 2:08:05 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.UI.1.0.1.560.nupkg
+9/19/2013 2:08:05 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Katana.1.2.0.1601.nupkg
+9/19/2013 2:08:05 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.1.2.0.1601.nupkg
+9/19/2013 2:08:05 PM: [Debug] Looking for FubuMVC.Core.Assets in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core.Assets, Version: 0.9.9.527
+9/19/2013 2:08:05 PM: [Debug] Restoring FubuMVC.StructureMap,1.2.0.1601
+9/19/2013 2:08:05 PM: [Debug] Looking for FubuMVC.Spark in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Spark, Version: 1.0.0.545
+9/19/2013 2:08:05 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Spark.1.0.0.545.nupkg
+9/19/2013 2:08:05 PM: [Debug] Searching for FubuMVC.StructureMap,1.2.0.1601 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:08:05 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.View.1.0.0.545.nupkg
+9/19/2013 2:08:05 PM: [Debug] Looking for FubuCore in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuCore, Version: 1.2.0.260
+9/19/2013 2:08:05 PM: [Debug] Searching for Bottles,2.0.0.549 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:08:05 PM: [Debug] Looking for FubuMVC.StructureMap in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.StructureMap, Version: 1.2.0.1601
+9/19/2013 2:08:05 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.Assets.0.9.9.527.nupkg
+9/19/2013 2:08:05 PM: [Debug] Looking for Bottles in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: Bottles, Version: 2.0.0.549
+9/19/2013 2:08:05 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuCore.1.2.0.260.nupkg
+9/19/2013 2:08:05 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.StructureMap.1.2.0.1601.nupkg
+9/19/2013 2:08:05 PM: [Debug] Restoring FubuMVC.TwitterBootstrap,0.0.0.635
+9/19/2013 2:08:05 PM: [Debug] Looking for FubuMVC.JQueryUI in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.JQueryUI, Version: 0.5.0.311
+9/19/2013 2:08:05 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.JQueryUI.0.5.0.311.nupkg
+9/19/2013 2:08:05 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Bottles.2.0.0.549.nupkg
+9/19/2013 2:08:05 PM: [Debug] Restoring FubuTestingSupport,1.2.0.260
+9/19/2013 2:08:05 PM: [Debug] Looking for FubuMVC.OwinHost in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.OwinHost, Version: 1.2.0.1601
+9/19/2013 2:08:05 PM: [Debug] Restoring HtmlTags,2.0.0.180
+9/19/2013 2:08:05 PM: [Debug] Searching for FubuMVC.TwitterBootstrap,0.0.0.635 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:08:05 PM: [Debug] Searching for HtmlTags,2.0.0.180 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:08:05 PM: [Debug] Searching for FubuTestingSupport,1.2.0.260 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:08:05 PM: [Debug] Looking for FubuMVC.Navigation in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Navigation, Version: 0.9.1.178
+9/19/2013 2:08:05 PM: [Debug] Looking for FubuMVC.TwitterBootstrap in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.TwitterBootstrap, Version: 0.0.0.635
+9/19/2013 2:08:05 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.TwitterBootstrap.0.0.0.635.nupkg
+9/19/2013 2:08:05 PM: [Debug] Looking for FubuTestingSupport in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuTestingSupport, Version: 1.2.0.260
+9/19/2013 2:08:05 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Navigation.0.9.1.178.nupkg
+9/19/2013 2:08:05 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuTestingSupport.1.2.0.260.nupkg
+9/19/2013 2:08:05 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.OwinHost.1.2.0.1601.nupkg
+9/19/2013 2:08:05 PM: [Debug] Looking for HtmlTags in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: HtmlTags, Version: 2.0.0.180
+9/19/2013 2:08:05 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\HtmlTags.2.0.0.180.nupkg
+9/19/2013 2:08:05 PM: [Debug] Exploding Name: FubuMVC.Core.Assets, Version: 0.9.9.527, IsPreRelease: False
+9/19/2013 2:08:05 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.Assets
+9/19/2013 2:08:05 PM: [Debug] Exploding Name: FubuMVC.Core.View, Version: 1.0.0.545, IsPreRelease: False
+9/19/2013 2:08:05 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.View
+9/19/2013 2:08:05 PM: [Debug] Exploding Name: Bottles, Version: 2.0.0.549, IsPreRelease: False
+9/19/2013 2:08:05 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Bottles
+9/19/2013 2:08:05 PM: [Debug] Exploding Name: FubuMVC.JQueryUI, Version: 0.5.0.311, IsPreRelease: False
+9/19/2013 2:08:05 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.JQueryUI
+9/19/2013 2:08:05 PM: [Debug] Exploding Name: FubuMVC.Core.UI, Version: 1.0.1.560, IsPreRelease: False
+9/19/2013 2:08:05 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core.UI
+9/19/2013 2:08:06 PM: [Debug] Exploding Name: FubuMVC.StructureMap, Version: 1.2.0.1601, IsPreRelease: False
+9/19/2013 2:08:06 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.StructureMap
+9/19/2013 2:08:06 PM: [Debug] Exploding Name: FubuMVC.Katana, Version: 1.2.0.1601, IsPreRelease: False
+9/19/2013 2:08:06 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Katana
+9/19/2013 2:08:06 PM: [Debug] Exploding Name: FubuCore, Version: 1.2.0.260, IsPreRelease: False
+9/19/2013 2:08:06 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuCore
+9/19/2013 2:08:06 PM: [Debug] Exploding Name: FubuMVC.Core, Version: 1.2.0.1601, IsPreRelease: False
+9/19/2013 2:08:06 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core
+9/19/2013 2:08:06 PM: [Debug] Exploding Name: FubuMVC.Spark, Version: 1.0.0.545, IsPreRelease: False
+9/19/2013 2:08:06 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Spark
+9/19/2013 2:08:06 PM: [Debug] Exploding Name: HtmlTags, Version: 2.0.0.180, IsPreRelease: False
+9/19/2013 2:08:06 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\HtmlTags
+9/19/2013 2:08:06 PM: [Debug] Exploding Name: FubuMVC.Navigation, Version: 0.9.1.178, IsPreRelease: False
+9/19/2013 2:08:06 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Navigation
+9/19/2013 2:08:06 PM: [Debug] Exploding Name: FubuTestingSupport, Version: 1.2.0.260, IsPreRelease: False
+9/19/2013 2:08:06 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuTestingSupport
+9/19/2013 2:08:06 PM: [Debug] Exploding Name: FubuMVC.OwinHost, Version: 1.2.0.1601, IsPreRelease: False
+9/19/2013 2:08:06 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.OwinHost
+9/19/2013 2:08:06 PM: [Debug] Exploding Name: FubuMVC.TwitterBootstrap, Version: 0.0.0.635, IsPreRelease: False
+9/19/2013 2:08:06 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.TwitterBootstrap
+9/19/2013 2:08:07 PM: [Info] HintPath changed:  to ..\packages\FubuMVC.Katana\lib\net40\Microsoft.Owin.dll
+9/19/2013 2:08:07 PM: [Info] Updated reference for C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics.Tests\FubuMVC.Diagnostics.Tests.csproj to ..\packages\FubuMVC.Katana\lib\net40\Microsoft.Owin.dll
+9/19/2013 2:08:07 PM: [Info] Writing changes to C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics.Tests\FubuMVC.Diagnostics.Tests.csproj
+9/19/2013 2:08:23 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+9/19/2013 2:11:07 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages

@@ -1,5 +1,5 @@
 using FubuCore.Descriptions;
-using FubuMVC.Core.Runtime.Logging;
+using FubuCore.Logging;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.TwitterBootstrap.Tags;
 using HtmlTags;

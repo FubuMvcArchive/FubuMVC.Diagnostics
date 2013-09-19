@@ -68,7 +68,7 @@ namespace FubuMVC.Diagnostics.Routes
                 return false;
             }
 
-            if (chain.Output != null)
+            if (chain.HasOutput())
             {
                 if (chain.Output.Writers.OfType<ViewNode>().Any(x => x.View.Namespace.Contains("Visualization.Visualizers")))
                 {
