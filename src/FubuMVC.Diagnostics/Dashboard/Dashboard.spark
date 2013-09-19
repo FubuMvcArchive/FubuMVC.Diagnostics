@@ -12,7 +12,7 @@
 <ol>
   <li>
     <strong>
-      <a href="${this.Urls.UrlFor<FubuMVC.Diagnostics.Routes.RoutesRequest>()}">Explore your routes</a>
+      <a href="${this.Urls.UrlFor<FubuMVC.Diagnostics.Endpoints.RoutesRequest>()}">Explore your routes</a>
     </strong>
     <p>The route explorer allows you to sort and filter through the routes within your application. You can also drill into the details of any route and visualize the behavior chain.</p>
   </li>
