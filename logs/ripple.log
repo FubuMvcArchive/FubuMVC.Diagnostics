@@ -1655,3 +1655,30 @@ NugetPlan:
 9/19/2013 2:08:23 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
 9/19/2013 2:11:07 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
 9/19/2013 2:13:50 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+9/19/2013 2:18:28 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+9/19/2013 2:18:28 PM: [Debug] Restoring Bottles,2.0.0.549
+9/19/2013 2:18:28 PM: [Debug] Restoring FubuCore,1.2.0.260
+9/19/2013 2:18:28 PM: [Debug] Restoring FubuLocalization
+9/19/2013 2:18:28 PM: [Debug] Restoring FubuMVC.Core,1.2.0.1601
+9/19/2013 2:18:28 PM: [Debug] Searching for FubuMVC.Core,1.2.0.1601 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:18:28 PM: [Debug] Searching for FubuCore,1.2.0.260 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:18:28 PM: [Debug] Searching for Bottles,2.0.0.549 in C:\Users\jeremill\AppData\Roaming\ripple
+9/19/2013 2:18:28 PM: [Debug] Retrieving latest from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc/Packages()?$filter=IsAbsoluteLatestVersion&$orderby=DownloadCount%20desc,Id&$skip=0&$take=100
+9/19/2013 2:18:31 PM: [Debug] Retrieving latest from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc/Packages()?$filter=IsAbsoluteLatestVersion&$orderby=DownloadCount%20desc,Id&$skip=100&$take=100
+9/19/2013 2:18:32 PM: [Debug] Looking for Bottles in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: Bottles, Version: 2.0.0.549
+9/19/2013 2:18:32 PM: [Debug] Looking for FubuCore in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuCore, Version: 1.2.0.260
+9/19/2013 2:18:32 PM: [Debug] Looking for FubuMVC.Core in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core, Version: 1.2.0.1601
+9/19/2013 2:18:32 PM: [Debug] Looking for FubuLocalization in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuLocalization, Version: 0.9.5.146
+9/19/2013 2:18:32 PM: [Debug] Looking for FubuLocalization in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuLocalization, Version: 0.9.5.146
+9/19/2013 2:18:32 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Bottles.2.0.0.549.nupkg
+9/19/2013 2:18:32 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.Core.1.2.0.1601.nupkg
+9/19/2013 2:18:32 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuCore.1.2.0.260.nupkg
+9/19/2013 2:18:32 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuLocalization.0.9.5.146.nupkg
+9/19/2013 2:18:32 PM: [Debug] Exploding Name: FubuCore, Version: 1.2.0.260, IsPreRelease: False
+9/19/2013 2:18:32 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuCore
+9/19/2013 2:18:33 PM: [Debug] Exploding Name: FubuMVC.Core, Version: 1.2.0.1601, IsPreRelease: False
+9/19/2013 2:18:33 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core
+9/19/2013 2:18:33 PM: [Debug] Exploding Name: Bottles, Version: 2.0.0.549, IsPreRelease: False
+9/19/2013 2:18:33 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Bottles
+9/19/2013 2:18:33 PM: [Debug] Exploding Name: FubuLocalization, Version: 0.9.5.146, IsPreRelease: False
+9/19/2013 2:18:33 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuLocalization
