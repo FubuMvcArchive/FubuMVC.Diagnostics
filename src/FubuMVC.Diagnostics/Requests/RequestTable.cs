@@ -13,7 +13,7 @@ namespace FubuMVC.Diagnostics.Requests
 
             AddHeaderRow(row => {
                 row.Header("Time (Local)");
-                row.Header("Url");
+                row.Header("Endpoint");
                 row.Header("Method");
                 row.Header("Status");
                 row.Header("Content Type");
@@ -27,7 +27,7 @@ namespace FubuMVC.Diagnostics.Requests
         {
             AddBodyRow(row => {
                 row.Cell().Add("a").Text(log.LocalTime).Attr("href", log.ReportUrl);
-                row.Cell(log.Url);
+                row.Cell(log.Endpoint);
                 row.Cell(log.HttpMethod);
                 var statusCell = row.Cell();
                 statusCell.Add("span").AddClass("http-status-code").Text(log.HttpStatus.Status.ToString());

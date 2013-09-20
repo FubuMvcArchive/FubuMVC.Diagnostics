@@ -26,7 +26,7 @@ namespace FubuMVC.Diagnostics.Runtime
         public double ExecutionTime { get; set; }
 
 
-        public string Url { get; set; }
+        public string Endpoint { get; set; }
         public string ReportUrl { get; set; }
         public string ChainUrl { get; set; }
         public string HttpMethod { get; set; }

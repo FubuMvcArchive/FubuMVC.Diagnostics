@@ -5,6 +5,7 @@ using FubuCore.Dates;
 using FubuMVC.Core.Http;
 using FubuMVC.Core.Urls;
 using FubuMVC.Diagnostics.Chains;
+using FubuMVC.Diagnostics.Endpoints;
 
 namespace FubuMVC.Diagnostics.Runtime.Tracing
 {
@@ -34,13 +35,27 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
                 _currentChain.OriginatingChain.UniqueId;
             var log = new RequestLog{
                 ChainId    = chainId,
-                HttpMethod = _request.HttpMethod(),
-                Url = _request.RelativeUrl(),
                 Time = _systemTime.UtcNow(),
                 RequestData = report,
                 ChainUrl = _urls.UrlFor(new ChainRequest{Id = chainId}),
                 DetailsUrl = _urls.UrlFor(new ChainDetailsRequest{Id = chainId})
             };
+
+            if (_currentChain.OriginatingChain.Route != null)
+            {
+                log.HttpMethod = _request.HttpMethod();
+                log.Endpoint = _request.RelativeUrl();
+            }
+            else if (_currentChain.OriginatingChain.InputType() != null)
+            {
+                log.Endpoint = _currentChain.OriginatingChain.InputType().FullName;
+                log.HttpMethod = "n/a";
+            }
+            else
+            {
+                log.Endpoint = ChainVisualization.TitleForChain(_currentChain.OriginatingChain);
+                log.HttpMethod = "n/a";
+            }
 
             log.ReportUrl = _urls.UrlFor(log);
 

@@ -2,6 +2,7 @@ using System;
 using FubuCore.Binding;
 using FubuMVC.Core.Http;
 using FubuMVC.Core.Registration.Nodes;
+using FubuMVC.Core.Registration.Routes;
 using FubuMVC.Core.Resources.Conneg;
 using FubuMVC.Core.Urls;
 using FubuMVC.Diagnostics.Chains;
@@ -34,6 +35,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
             theOriginatingChain = new BehaviorChain();
             theOriginatingChain.AddToEnd(new OutputNode(GetType()));
             theOriginatingChain.UniqueId.ShouldNotEqual(Guid.Empty);
+            theOriginatingChain.Route = new RouteDefinition("some/url");
 
             MockFor<ICurrentChain>().Stub(x => x.OriginatingChain).Return(theOriginatingChain);
 
@@ -87,7 +89,7 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
         [Test]
         public void sets_the_request_url()
         {
-            theLog.Url.ShouldEqual("the relative url");
+            theLog.Endpoint.ShouldEqual("the relative url");
         }
 
         [Test]
