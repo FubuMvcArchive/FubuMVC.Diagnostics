@@ -15,12 +15,10 @@ end
 	}
 
 	sln.assembly_info = {
-		:product_name => "FubuLocalization",
+		:product_name => "FubuMVC.Diagnostics",
 		:copyright => 'Copyright 2008-2013 Jeremy D. Miller, Josh Arnold, et al. All rights reserved.'
 	}
 
 	sln.ripple_enabled = true
 	sln.fubudocs_enabled = true
-	
-	sln.assembly_bottle 'FubuMVC.Diagnostics'
 end
