@@ -15,21 +15,29 @@ namespace FubuMVC.Diagnostics.Model
     public class DiagnosticChain : BehaviorChain
     {
         public const string DiagnosticsUrl = "_fubu";
-
+        private readonly bool _isIndex;
+        
         public static DiagnosticChain For<T>(DiagnosticGroup group, Expression<Action<T>> method)
         {
             var call = ActionCall.For(method);
             return new DiagnosticChain(group, call);
         }
 
+        public bool IsIndex
+        {
+            get { return _isIndex; }
+        }
 
         public DiagnosticChain(DiagnosticGroup group, ActionCall call)
         {
+            Group = group;
+
             if (call.Method.Name == "Index")
             {
                 Route = new RouteDefinition("{0}/{1}".ToFormat(DiagnosticsUrl, group.Url));
                 Title = group.Title;
                 Description = group.Description;
+                _isIndex = true;
             }
             else
             {

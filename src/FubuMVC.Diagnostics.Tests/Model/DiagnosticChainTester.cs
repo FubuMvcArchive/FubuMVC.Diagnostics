@@ -16,6 +16,20 @@ namespace FubuMVC.Diagnostics.Tests.Model
         private DiagnosticGroup theGroup = new DiagnosticGroup(Assembly.GetExecutingAssembly(), new ActionCall[0]);
 
         [Test]
+        public void is_index_positive()
+        {
+            var chain = DiagnosticChain.For<FakeFubuDiagnostics>(theGroup, x => x.Index());
+            chain.IsIndex.ShouldBeTrue();
+        }
+
+        [Test]
+        public void is_index_negative()
+        {
+            DiagnosticChain.For<FakeFubuDiagnostics>(theGroup, x => x.get_link())
+                .IsIndex.ShouldBeFalse();
+        }
+
+        [Test]
         public void is_link_on_get_with_no_inputs()
         {
             DiagnosticChain.For<FakeFubuDiagnostics>(theGroup, x => x.get_link()).IsLink().ShouldBeTrue();
@@ -103,41 +117,6 @@ namespace FubuMVC.Diagnostics.Tests.Model
             chain.Description.ShouldEqual("A really good display of some important data");
         }
 
-    }
-
-    public class FakeFubuDiagnostics
-    {
-        public string Index()
-        {
-            return null;
-        }
-
-        [System.ComponentModel.Description("A Title:A really good display of some important data")]
-        public string get_link()
-        {
-            return "is a link";
-        }
-
-        [System.ComponentModel.Description("Simple Title")]
-        public string get_simple()
-        {
-            return null;
-        }
-
-        public string get_else()
-        {
-            return null;
-        }
-
-        public string get_query_Name(FakeQuery query)
-        {
-            return null;
-        }
-
-        public string post_ask()
-        {
-            return null;
-        }
     }
 
     public class FakeQuery

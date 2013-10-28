@@ -8,21 +8,18 @@ using FubuCore;
 using FubuCore.Util;
 using FubuMVC.Core.Registration;
 using FubuMVC.Core.Registration.Nodes;
+using FubuMVC.Core.Urls;
 
 namespace FubuMVC.Diagnostics.Model
 {
     public class DiagnosticGraph
     {
-        public static readonly string DiagnosticsSuffix = "FubuDiagnostics";
+        
         private readonly Cache<string, DiagnosticGroup> _groups = new Cache<string, DiagnosticGroup>();
 
         public void Add(Assembly assembly)
         {
-            var source = new ActionSource();
-            source.Applies.ToAssembly(assembly);
-            source.IncludeTypesNamed(x => x.EndsWith(DiagnosticsSuffix));
-
-            var calls = source.As<IActionSource>().FindActions(null);
+            var calls = DiagnosticGroup.FindCalls(assembly);
             if (calls.Any())
             {
                 var group = new DiagnosticGroup(assembly, calls);
@@ -31,6 +28,8 @@ namespace FubuMVC.Diagnostics.Model
 
             // might do nothing
         }
+
+
 
         public DiagnosticGroup FindGroup(string name)
         {
@@ -45,13 +44,27 @@ namespace FubuMVC.Diagnostics.Model
 
     public class DiagnosticGroup
     {
-        private readonly IList<DiagnosticChain> _chains = new List<DiagnosticChain>(); 
+        public static IEnumerable<ActionCall> FindCalls(Assembly assembly)
+        {
+            var source = new ActionSource();
+            source.Applies.ToAssembly(assembly);
+            source.IncludeTypesNamed(x => x.EndsWith(DiagnosticsSuffix));
+
+            var calls = source.As<IActionSource>().FindActions(null);
+            return calls;
+        }
+
+        public static readonly string DiagnosticsSuffix = "FubuDiagnostics";
+        private readonly IList<DiagnosticChain> _chains = new List<DiagnosticChain>();
+
+        public DiagnosticGroup(Assembly assembly) : this(assembly, FindCalls(assembly))
+        {
+        }
 
         public DiagnosticGroup(Assembly assembly, IEnumerable<ActionCall> calls)
         {
             Title = assembly.GetName().Name;
             Url = Title.ToLower();
-
 
             try
             {
@@ -72,6 +85,8 @@ namespace FubuMVC.Diagnostics.Model
             {
                 // just ignore it.  Too many problems happen w/ the type scanning
             }
+
+            _chains.AddRange(calls.Select(x => new DiagnosticChain(this, x)));
         }
 
         private string tryGet(object configuration, string fieldName)
@@ -85,17 +100,32 @@ namespace FubuMVC.Diagnostics.Model
             return null;
         }
 
-        // Look for "Index" first
-        public DiagnosticChain Default()
+        public string GetDefaultUrl()
         {
-            throw new NotImplementedException();
+            var index = Links().FirstOrDefault(x => x.IsIndex);
+            if (index != null)
+            {
+                return index.GetRoutePattern();
+            }
+
+            if (Links().Count() == 1)
+            {
+                return Links().Single().GetRoutePattern();
+            }
+
+            return "_fubu/" + Url;
         }
 
         // Only GET's w/ no arguments
         public IEnumerable<DiagnosticChain> Links()
         {
             return _chains.Where(x => x.IsLink()).OrderBy(x => x.Title);
-        } 
+        }
+
+        public IEnumerable<DiagnosticChain> Chains
+        {
+            get { return _chains; }
+        }
 
         public string Url { get; set; }
 
