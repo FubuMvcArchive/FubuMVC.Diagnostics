@@ -2,18 +2,16 @@ using FubuCore.Binding.InMemory;
 using FubuCore.Logging;
 using FubuMVC.Core;
 using FubuMVC.Core.Registration;
+using FubuMVC.Diagnostics.Model;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.Diagnostics.Runtime.Tracing;
 using FubuMVC.Diagnostics.Visualization;
 
 namespace FubuMVC.Diagnostics
 {
-    public class DiagnosticsRegistry : FubuRegistry
+    public class DiagnosticsRegistry : FubuPackageRegistry
     {
-        public DiagnosticsRegistry()
-        {
-            Services<DiagnosticServiceRegistry>();
-        }
+        // default policies are good enough
     }
 
     public class DiagnosticServiceRegistry : ServiceRegistry
@@ -33,6 +31,7 @@ namespace FubuMVC.Diagnostics
             SetServiceIfNone<IRequestLogBuilder, RequestLogBuilder>();
 
             SetServiceIfNone<IVisualizer, Visualizer>();
+            SetServiceIfNone<IDiagnosticContext, DiagnosticContext>();
         }
     }
 }

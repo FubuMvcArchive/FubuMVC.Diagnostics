@@ -13,8 +13,8 @@ namespace FubuMVC.Diagnostics
         {
             registry.Policies.Add<ApplyTracing>();
 			registry.Policies.Add<DescriptionVisualizationPolicy>();
-            registry.Import<DiagnosticsRegistry>(DIAGNOSTICS_URL_ROOT);
             registry.Policies.Add<DiagnosticChainsPolicy>();
+            registry.Services<DiagnosticServiceRegistry>();
         }
     }
 }

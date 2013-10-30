@@ -186,10 +186,12 @@
     <Compile Include="DiagnosticsSettings.cs" />
     <Compile Include="ModelBinding\ModelBindingFubuDiagnostics.cs" />
     <Compile Include="Model\DiagnosticChain.cs" />
+    <Compile Include="Model\DiagnosticGraph.cs" />
     <Compile Include="Model\DiagnosticGroup.cs" />
     <Compile Include="Model\FubuDiagnosticsConfiguration.cs" />
     <Compile Include="Model\GroupEndpoint.cs" />
-    <Compile Include="Model\ModelClasses.cs" />
+    <Compile Include="Model\DiagnosticChainsPolicy.cs" />
+    <Compile Include="Model\IDiagnosticContext.cs" />
     <Compile Include="Requests\BehaviorChainTraceTag.cs" />
     <Compile Include="Requests\BehaviorNodeTraceTag.cs" />
     <Compile Include="Requests\HttpRequestVisualization.cs" />

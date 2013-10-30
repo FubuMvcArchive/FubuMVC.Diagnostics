@@ -130,6 +130,7 @@
     <Compile Include="DiagnosticsExtensionTester.cs" />
     <Compile Include="InteractionContextExtensions.cs" />
     <Compile Include="Model\DiagnosticChainTester.cs" />
+    <Compile Include="Model\DiagnosticContextTester.cs" />
     <Compile Include="Model\DiagnosticGroupTester.cs" />
     <Compile Include="Model\Diagnostic_Chain_Scanning_Integrated_Tester.cs" />
     <Compile Include="Model\FakeFubuDiagnostics.cs" />
