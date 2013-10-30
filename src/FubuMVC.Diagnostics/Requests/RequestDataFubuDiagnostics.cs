@@ -9,7 +9,7 @@ using HtmlTags;
 
 namespace FubuMVC.Diagnostics.Requests
 {
-    public class RequestDataEndpoint
+    public class RequestDataFubuDiagnostics
     {
         public HtmlTag RequestDataPartial(ValueReport report)
         {

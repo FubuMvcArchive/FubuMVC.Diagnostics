@@ -10,21 +10,18 @@ namespace FubuMVC.Diagnostics.Endpoints
 {
     public class RoutesRequest{}
 
-    public class EndpointExplorerEndpoint
+    public class EndpointExplorerFubuDiagnostics
     {
         private static readonly string Namespace = Assembly.GetExecutingAssembly().GetName().Name;
 
         private readonly BehaviorGraph _graph;
         private readonly IUrlRegistry _urls;
 
-        public EndpointExplorerEndpoint(BehaviorGraph graph, IUrlRegistry urls)
+        public EndpointExplorerFubuDiagnostics(BehaviorGraph graph, IUrlRegistry urls)
         {
             _graph = graph;
             _urls = urls;
         }
-
-
-
 
         public EndpointExplorerModel get_endpoints(RoutesRequest request)
         {

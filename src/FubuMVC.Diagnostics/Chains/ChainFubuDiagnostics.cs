@@ -2,14 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using FubuCore.Descriptions;
+using FubuMVC.Core;
 using FubuMVC.Core.Assets;
-using FubuMVC.Core.Behaviors.Chrome;
 using FubuMVC.Core.Continuations;
 using FubuMVC.Core.Registration;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Core.UI;
 using FubuMVC.Core.Urls;
-using FubuMVC.Diagnostics.Chrome;
 using FubuMVC.Diagnostics.Endpoints;
 using FubuMVC.Diagnostics.Visualization;
 using FubuMVC.TwitterBootstrap.Tags;
@@ -17,20 +16,20 @@ using HtmlTags;
 
 namespace FubuMVC.Diagnostics.Chains
 {
-    public class ChainEndpoint
+    public class ChainFubuDiagnostics
     {
         private readonly FubuHtmlDocument _document;
         private readonly BehaviorGraph _graph;
         private readonly IUrlRegistry _urls;
 
-        public ChainEndpoint(IUrlRegistry urls, BehaviorGraph graph, FubuHtmlDocument document)
+        public ChainFubuDiagnostics(IUrlRegistry urls, BehaviorGraph graph, FubuHtmlDocument document)
         {
             _urls = urls;
             _graph = graph;
             _document = document;
         }
 
-        [Chrome(typeof (DashboardChrome), Title = "Chain Details")]
+        [System.ComponentModel.Description("Chain Details")]
         public ChainVisualization get_chain_details_Id(ChainDetailsRequest request)
         {
             writeAssets();
@@ -40,7 +39,7 @@ namespace FubuMVC.Diagnostics.Chains
             {
                 return new ChainVisualization
                 {
-                    RedirectTo = FubuContinuation.RedirectTo<ChainEndpoint>(x => x.get_chain_missing())
+                    RedirectTo = FubuContinuation.RedirectTo<ChainFubuDiagnostics>(x => x.get_chain_missing())
                 };
             }
 
@@ -75,6 +74,7 @@ namespace FubuMVC.Diagnostics.Chains
             return top;
         }
 
+        [FubuPartial]
         public HtmlTag get_chain_missing()
         {
             return new HtmlTag("p", p =>

@@ -3,11 +3,11 @@ using HtmlTags;
 
 namespace FubuMVC.Diagnostics.Requests
 {
-    public class RequestsEndpoint
+    public class RequestsFubuDiagnostics
     {
         private readonly IRequestHistoryCache _cache;
 
-        public RequestsEndpoint(IRequestHistoryCache cache)
+        public RequestsFubuDiagnostics(IRequestHistoryCache cache)
         {
             _cache = cache;
         }

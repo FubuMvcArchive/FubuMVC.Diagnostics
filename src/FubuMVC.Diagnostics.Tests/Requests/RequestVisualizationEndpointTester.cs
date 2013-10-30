@@ -10,7 +10,7 @@ using Rhino.Mocks;
 namespace FubuMVC.Diagnostics.Tests.Requests
 {
     [TestFixture]
-    public class RequestVisualizationEndpointTester : InteractionContext<RequestVisualizationEndpoint>
+    public class RequestVisualizationEndpointTester : InteractionContext<RequestVisualizationFubuDiagnostics>
     {
         [Test]
         public void when_the_request_log_cannot_be_found_it_should_redirect()
@@ -19,7 +19,7 @@ namespace FubuMVC.Diagnostics.Tests.Requests
             MockFor<IRequestHistoryCache>().Stub(x => x.Find(request.Id)).Return(null);
 
             ClassUnderTest.get_requests_Id(request)
-                .RedirectTo.AssertWasRedirectedTo<RequestVisualizationEndpoint>(x => x.get_requests_missing());
+                .RedirectTo.AssertWasRedirectedTo<RequestVisualizationFubuDiagnostics>(x => x.get_requests_missing());
         }
 
         [Test]

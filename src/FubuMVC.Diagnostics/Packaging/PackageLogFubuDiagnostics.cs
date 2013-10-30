@@ -4,7 +4,7 @@ using Bottles.Diagnostics;
 
 namespace FubuMVC.Diagnostics.Packaging
 {
-    public class PackageLogEndpoint
+    public class PackageLogFubuDiagnostics
     {
         public PackageDiagnosticsModel get_package_logs(PackageDiagnosticsRequestModel request)
         {

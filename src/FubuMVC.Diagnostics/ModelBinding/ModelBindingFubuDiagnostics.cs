@@ -1,21 +1,21 @@
 using FubuCore.Binding;
 using FubuCore.Descriptions;
+using FubuMVC.Core;
 using FubuMVC.Diagnostics.Visualization;
 using HtmlTags;
 
 namespace FubuMVC.Diagnostics.ModelBinding
 {
-    public class ModelBindingEndpoints
+    public class ModelBindingFubuDiagnostics
     {
         private readonly BindingRegistry _bindingRegistry;
-        private readonly IVisualizer _visualizer;
 
-        public ModelBindingEndpoints(BindingRegistry bindingRegistry, IVisualizer visualizer)
+        public ModelBindingFubuDiagnostics(BindingRegistry bindingRegistry)
         {
             _bindingRegistry = bindingRegistry;
-            _visualizer = visualizer;
         }
 
+        [UrlPattern("binding/all")]
         public ModelBindingExplorerViewModel get_binding_all()
         {
             var description = Description.For(_bindingRegistry);

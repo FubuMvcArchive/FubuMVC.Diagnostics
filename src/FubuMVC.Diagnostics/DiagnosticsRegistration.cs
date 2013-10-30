@@ -1,4 +1,5 @@
 using FubuMVC.Core;
+using FubuMVC.Diagnostics.Model;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.Diagnostics.Visualization;
 
@@ -13,6 +14,7 @@ namespace FubuMVC.Diagnostics
             registry.Policies.Add<ApplyTracing>();
 			registry.Policies.Add<DescriptionVisualizationPolicy>();
             registry.Import<DiagnosticsRegistry>(DIAGNOSTICS_URL_ROOT);
+            registry.Policies.Add<DiagnosticChainsPolicy>();
         }
     }
 }

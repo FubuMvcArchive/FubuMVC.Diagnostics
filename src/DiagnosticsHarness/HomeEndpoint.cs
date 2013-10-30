@@ -1,31 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using DiagnosticsHarness.ModelBinding;
 using FubuCore.Logging;
 using FubuMVC.Core;
 using FubuMVC.Core.Behaviors;
 using FubuMVC.Core.Continuations;
 using FubuMVC.Core.Registration;
 using FubuMVC.Core.UI;
-using FubuMVC.Diagnostics.Chains;
-using FubuMVC.Diagnostics.Dashboard;
 using FubuMVC.Diagnostics.ModelBinding;
-using FubuMVC.Diagnostics.Requests;
-using FubuMVC.Diagnostics.Services;
-using HtmlTags;
-using FubuMVC.Diagnostics.Visualization;
 
 namespace DiagnosticsHarness
 {
     public class HomeEndpoint
     {
-        private readonly BehaviorGraph _graph;
         private readonly FubuHtmlDocument _document;
+        private readonly BehaviorGraph _graph;
         private readonly ILogger _logger;
 
-        public HomeEndpoint(BehaviorGraph graph, FubuHtmlDocument document, ILogger logger )
+        public HomeEndpoint(BehaviorGraph graph, FubuHtmlDocument document, ILogger logger)
         {
             _graph = graph;
             _document = document;
@@ -42,11 +32,11 @@ namespace DiagnosticsHarness
             //    FubuDebug = true
             //});
 
-            //var chain = _graph.BehaviorFor<EndpointExplorerEndpoint>(x => x.get_endpoints(null));
+            //var chain = _graph.BehaviorFor<EndpointExplorerFubuDiagnostics>(x => x.get_endpoints(null));
 
-            return FubuContinuation.RedirectTo<ModelBindingEndpoints>(x => x.get_binding_all());
+            return FubuContinuation.RedirectTo<ModelBindingFubuDiagnostics>(x => x.get_binding_all());
 
-            //return FubuContinuation.RedirectTo<EndpointExplorerEndpoint>(x => x.get_endpoints(null));
+            //return FubuContinuation.RedirectTo<EndpointExplorerFubuDiagnostics>(x => x.get_endpoints(null));
 
 
             //return FubuContinuation.RedirectTo<DescriptionEndpoints>(x => x.get_descriptions());
@@ -56,9 +46,9 @@ namespace DiagnosticsHarness
             //    Id = chain.UniqueId
             //});
 
-//            return FubuContinuation.RedirectTo<RequestsEndpoint>(x => x.get_requests());
+//            return FubuContinuation.RedirectTo<RequestsFubuDiagnostics>(x => x.get_requests());
 
-            //var chain = _graph.BehaviorFor<EndpointExplorerEndpoint>(x => x.get_endpoints(null));
+            //var chain = _graph.BehaviorFor<EndpointExplorerFubuDiagnostics>(x => x.get_endpoints(null));
 
 
             //return FubuContinuation.RedirectTo(new ChainRequest
@@ -81,7 +71,7 @@ namespace DiagnosticsHarness
             //});
 
 
-            //var dashboardChain = _graph.BehaviorFor<RequestsEndpoint>(x => x.get_requests(null));
+            //var dashboardChain = _graph.BehaviorFor<RequestsFubuDiagnostics>(x => x.get_requests(null));
             //var literal = new LiteralTag(_document.Visualize(dashboardChain));
 
             //_document.Add("hr");
@@ -93,7 +83,7 @@ namespace DiagnosticsHarness
             //return _document;
         }
 
-        [WrapWith(typeof(BadBehavior))]
+        [WrapWith(typeof (BadBehavior))]
         public string get_hello(DebugRequest request)
         {
             _logger.Debug("some trace message just to see it");
@@ -101,7 +91,6 @@ namespace DiagnosticsHarness
             return "Hello!";
         }
     }
-
 
 
     public class BadBehavior : BasicBehavior

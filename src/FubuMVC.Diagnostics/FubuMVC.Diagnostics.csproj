@@ -150,9 +150,6 @@
     <Content Include="ripple.dependencies.config">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Services\ServiceEndpoints.spark">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Shared\Application.spark">
       <SubType>Designer</SubType>
     </None>
@@ -183,23 +180,25 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="BehaviorChainExtensions.cs" />
     <Compile Include="Chains\ChainDetails.cs" />
-    <Compile Include="Chains\ChainEndpoint.cs" />
+    <Compile Include="Chains\ChainFubuDiagnostics.cs" />
     <Compile Include="Chains\ChainVisualization.cs" />
     <Compile Include="DiagnosticsChromeExtension.cs" />
     <Compile Include="DiagnosticsSettings.cs" />
-    <Compile Include="ModelBinding\ModelBindingEndpoints.cs" />
+    <Compile Include="ModelBinding\ModelBindingFubuDiagnostics.cs" />
     <Compile Include="Model\DiagnosticChain.cs" />
+    <Compile Include="Model\DiagnosticGroup.cs" />
+    <Compile Include="Model\FubuDiagnosticsConfiguration.cs" />
     <Compile Include="Model\GroupEndpoint.cs" />
     <Compile Include="Model\ModelClasses.cs" />
     <Compile Include="Requests\BehaviorChainTraceTag.cs" />
     <Compile Include="Requests\BehaviorNodeTraceTag.cs" />
     <Compile Include="Requests\HttpRequestVisualization.cs" />
-    <Compile Include="Requests\RequestDataEndpoint.cs" />
+    <Compile Include="Requests\RequestDataFubuDiagnostics.cs" />
     <Compile Include="Requests\RequestLinksTag.cs" />
     <Compile Include="Requests\RequestLogDataOutlineTag.cs" />
     <Compile Include="Requests\RequestStepTag.cs" />
     <Compile Include="Requests\RequestTable.cs" />
-    <Compile Include="Requests\RequestVisualizationEndpoint.cs" />
+    <Compile Include="Requests\RequestVisualizationFubuDiagnostics.cs" />
     <Compile Include="Requests\ResponseHeadersTag.cs" />
     <Compile Include="Requests\TracingOutlineTag.cs" />
     <Compile Include="Endpoints\EndpointsTable.cs" />
@@ -213,7 +212,6 @@
     <Compile Include="Runtime\Tracing\IRequestTrace.cs" />
     <Compile Include="Runtime\Tracing\RequestLogBuilder.cs" />
     <Compile Include="Runtime\Tracing\RequestTrace.cs" />
-    <Compile Include="Services\ServiceEndpoints.cs" />
     <Compile Include="Shared\TypeEndpoint.cs" />
     <Compile Include="Chrome\DashboardChrome.cs" />
     <Compile Include="Core\CoreExtensions.cs" />
@@ -221,7 +219,7 @@
     <Compile Include="Navigation\DiagnosticKeys.cs" />
     <Compile Include="Navigation\DiagnosticsMenu.cs" />
     <Compile Include="NoDiagnosticsAttribute.cs" />
-    <Compile Include="Requests\RequestsEndpoint.cs" />
+    <Compile Include="Requests\RequestsFubuDiagnostics.cs" />
     <Compile Include="Endpoints\EndpointExplorerModel.cs" />
     <Compile Include="Endpoints\RouteQuery.cs" />
     <Compile Include="Endpoints\RouteReport.cs" />
@@ -245,14 +243,14 @@
     <Compile Include="Chains\ChainRequest.cs" />
     <Compile Include="Dashboard\DashboardModel.cs" />
     <Compile Include="Dashboard\DashboardRequestModel.cs" />
-    <Compile Include="Dashboard\DashboardEndpoint.cs" />
-    <Compile Include="Packaging\PackageLogEndpoint.cs" />
+    <Compile Include="Dashboard\DashboardFubuDiagnostics.cs" />
+    <Compile Include="Packaging\PackageLogFubuDiagnostics.cs" />
     <Compile Include="Packaging\PackageDiagnosticsLogModel.cs" />
     <Compile Include="Packaging\PackageDiagnosticsModel.cs" />
     <Compile Include="Packaging\PackageDiagnosticsRequestModel.cs" />
     <Compile Include="DiagnosticsRegistry.cs" />
     <Compile Include="DiagnosticsException.cs" />
-    <Compile Include="Endpoints\EndpointExplorerEndpoint.cs" />
+    <Compile Include="Endpoints\EndpointExplorerFubuDiagnostics.cs" />
     <Compile Include="Shared\Tags\ControlGroupDivTag.cs" />
     <Compile Include="Visualization\BehaviorNodeViewModel.cs" />
     <Compile Include="Visualization\DescriptionVisualizationPolicy.cs" />
