@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubuMVC.Diagnostics.Docs", "FubuMVC.Diagnostics.Docs\FubuMVC.Diagnostics.Docs.csproj", "{1083473D-3DEC-4AA1-BD31-DC429906CA8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeBottle", "FakeBottle\FakeBottle.csproj", "{1403B489-5AD5-4664-BC24-DBDD48719EE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{1083473D-3DEC-4AA1-BD31-DC429906CA8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1083473D-3DEC-4AA1-BD31-DC429906CA8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1083473D-3DEC-4AA1-BD31-DC429906CA8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1403B489-5AD5-4664-BC24-DBDD48719EE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1403B489-5AD5-4664-BC24-DBDD48719EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1403B489-5AD5-4664-BC24-DBDD48719EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1403B489-5AD5-4664-BC24-DBDD48719EE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1729,3 +1729,55 @@ NugetPlan:
 11/1/2013 8:57:47 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
 11/1/2013 11:13:35 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
 11/1/2013 11:18:41 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+11/1/2013 11:21:51 AM: [Info] Install FubuMVC.Core to Solution diagnostics
+11/1/2013 11:21:51 AM: [Info] * Analyzing FubuMVC.Core
+11/1/2013 11:21:51 AM: [Debug] FubuMVC.Core already installed
+11/1/2013 11:21:51 AM: [Debug] Bottles already installed
+11/1/2013 11:21:51 AM: [Debug] FubuCore already installed
+11/1/2013 11:21:52 AM: [Debug] FubuLocalization already installed
+11/1/2013 11:21:52 AM: [Debug] HtmlTags already installed
+11/1/2013 11:21:52 AM: [Debug] Retrieving latest from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc/Packages()?$filter=IsLatestVersion&$orderby=DownloadCount%20desc,Id&$skip=0&$take=100
+11/1/2013 11:21:54 AM: [Debug] Retrieving latest from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc/Packages()?$filter=IsLatestVersion&$orderby=DownloadCount%20desc,Id&$skip=100&$take=100
+11/1/2013 11:21:56 AM: [Debug] Looking for Bottles in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: Bottles, Version: 2.0.0.561
+11/1/2013 11:21:56 AM: [Debug] Looking for HtmlTags in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: HtmlTags, Version: 2.0.0.180
+11/1/2013 11:21:56 AM: [Debug] Looking for FubuCore in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuCore, Version: 1.2.0.260
+11/1/2013 11:21:56 AM: [Debug] Looking for FubuLocalization in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuLocalization, Version: 1.0.0.172
+11/1/2013 11:21:56 AM: [Debug] FubuCore already installed
+11/1/2013 11:21:56 AM: [Debug] FubuCore already installed
+11/1/2013 11:21:56 AM: [Info] * Analyzing Bottles
+11/1/2013 11:21:56 AM: [Debug] Bottles already installed
+11/1/2013 11:21:56 AM: [Debug] FubuCore already installed
+11/1/2013 11:21:56 AM: [Info] * Analyzing FubuCore
+11/1/2013 11:21:56 AM: [Debug] FubuCore already installed
+11/1/2013 11:21:56 AM: [Info] * Analyzing FubuLocalization
+11/1/2013 11:21:56 AM: [Debug] FubuLocalization already installed
+11/1/2013 11:21:56 AM: [Debug] FubuCore already installed
+11/1/2013 11:21:56 AM: [Info] * Analyzing HtmlTags
+11/1/2013 11:21:56 AM: [Debug] HtmlTags already installed
+11/1/2013 11:21:56 AM: [Info] 
+=============================================================================
+NugetPlan: 
+=============================================================================
+     ** Steps
+        * InstallProjectDependency     Install FubuMVC.Core to FakeBottle    
+        * InstallProjectDependency     Install Bottles to FakeBottle         
+        * InstallProjectDependency     Install FubuCore to FakeBottle        
+        * InstallProjectDependency     Install FubuLocalization to FakeBottle
+        * InstallProjectDependency     Install HtmlTags to FakeBottle        
+
+11/1/2013 11:21:57 AM: [Info] HintPath changed:  to ..\packages\Bottles\lib\Bottles.dll
+11/1/2013 11:21:57 AM: [Info] Updated reference for C:\code\FubuMVC.Diagnostics\src\FakeBottle\FakeBottle.csproj to ..\packages\Bottles\lib\Bottles.dll
+11/1/2013 11:21:57 AM: [Info] Writing changes to C:\code\FubuMVC.Diagnostics\src\FakeBottle\FakeBottle.csproj
+11/1/2013 11:21:57 AM: [Info] HintPath changed:  to ..\packages\FubuCore\lib\FubuCore.dll
+11/1/2013 11:21:57 AM: [Info] Updated reference for C:\code\FubuMVC.Diagnostics\src\FakeBottle\FakeBottle.csproj to ..\packages\FubuCore\lib\FubuCore.dll
+11/1/2013 11:21:57 AM: [Info] Writing changes to C:\code\FubuMVC.Diagnostics\src\FakeBottle\FakeBottle.csproj
+11/1/2013 11:21:57 AM: [Info] HintPath changed:  to ..\packages\FubuLocalization\lib\FubuLocalization.dll
+11/1/2013 11:21:57 AM: [Info] Updated reference for C:\code\FubuMVC.Diagnostics\src\FakeBottle\FakeBottle.csproj to ..\packages\FubuLocalization\lib\FubuLocalization.dll
+11/1/2013 11:21:57 AM: [Info] Writing changes to C:\code\FubuMVC.Diagnostics\src\FakeBottle\FakeBottle.csproj
+11/1/2013 11:21:57 AM: [Info] HintPath changed:  to ..\packages\FubuMVC.Core\lib\net40\FubuMVC.Core.dll
+11/1/2013 11:21:57 AM: [Info] Updated reference for C:\code\FubuMVC.Diagnostics\src\FakeBottle\FakeBottle.csproj to ..\packages\FubuMVC.Core\lib\net40\FubuMVC.Core.dll
+11/1/2013 11:21:57 AM: [Info] Writing changes to C:\code\FubuMVC.Diagnostics\src\FakeBottle\FakeBottle.csproj
+11/1/2013 11:21:57 AM: [Info] HintPath changed:  to ..\packages\HtmlTags\lib\4.0\HtmlTags.dll
+11/1/2013 11:21:57 AM: [Info] Updated reference for C:\code\FubuMVC.Diagnostics\src\FakeBottle\FakeBottle.csproj to ..\packages\HtmlTags\lib\4.0\HtmlTags.dll
+11/1/2013 11:21:57 AM: [Info] Writing changes to C:\code\FubuMVC.Diagnostics\src\FakeBottle\FakeBottle.csproj
+11/1/2013 11:50:04 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages

@@ -131,6 +131,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FakeBottle\FakeBottle.csproj">
+      <Project>{1403B489-5AD5-4664-BC24-DBDD48719EE3}</Project>
+      <Name>FakeBottle</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FubuMVC.Diagnostics\FubuMVC.Diagnostics.csproj">
       <Project>{A1DEB080-5A9A-44B4-A10B-84DA9BD07AF5}</Project>
       <Name>FubuMVC.Diagnostics</Name>
