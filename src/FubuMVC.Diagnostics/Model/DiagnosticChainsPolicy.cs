@@ -6,7 +6,7 @@ using FubuMVC.Core.Registration;
 
 namespace FubuMVC.Diagnostics.Model
 {
-    [ConfigurationType(ConfigurationType.Policy)]
+    [ConfigurationType(ConfigurationType.Discovery)]
     public class DiagnosticChainsPolicy : IConfigurationAction
     {
         public void Configure(BehaviorGraph graph)

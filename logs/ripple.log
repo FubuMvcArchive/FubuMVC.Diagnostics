@@ -1968,3 +1968,4 @@ NugetPlan:
 11/1/2013 1:08:54 PM: [Info] Updated reference for C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics\FubuMVC.Diagnostics.csproj to ..\packages\FubuMVC.Navigation\lib\net40\FubuMVC.Navigation.dll
 11/1/2013 1:08:54 PM: [Info] Writing changes to C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics\FubuMVC.Diagnostics.csproj
 11/1/2013 1:25:27 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+11/1/2013 2:35:00 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
