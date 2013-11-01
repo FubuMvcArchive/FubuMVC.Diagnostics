@@ -1,30 +1,30 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using FubuCore.Util;
+using FubuCore;
 using FubuMVC.Core.Registration;
 using FubuMVC.Core.Registration.Nodes;
 
 namespace FubuMVC.Diagnostics.Model
 {
-    [ApplicationLevel]
     public class DiagnosticGraph
     {
-        private readonly Cache<string, DiagnosticGroup> _groups = new Cache<string, DiagnosticGroup>();
+        private readonly IList<DiagnosticGroup> _groups = new List<DiagnosticGroup>();
 
         public void Add(Assembly assembly)
         {
-            IEnumerable<ActionCall> calls = DiagnosticGroup.FindCalls(assembly);
+            var calls = DiagnosticGroup.FindCalls(assembly);
             if (calls.Any())
             {
                 var group = new DiagnosticGroup(assembly, calls);
-                _groups[group.Name] = group;
+                _groups.Add(group);
             }
         }
 
         public DiagnosticGroup FindGroup(string name)
         {
-            return _groups[name];
+            return _groups.FirstOrDefault(x => x.Name.EqualsIgnoreCase(name)) ??
+                   _groups.FirstOrDefault(x => x.Url.EqualsIgnoreCase(name));
         }
 
         public IEnumerable<DiagnosticGroup> Groups()

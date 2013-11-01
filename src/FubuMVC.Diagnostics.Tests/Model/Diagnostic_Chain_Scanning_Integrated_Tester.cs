@@ -14,14 +14,27 @@ namespace FubuMVC.Diagnostics.Tests.Model
     [TestFixture]
     public class Diagnostic_Chain_Scanning_Integrated_Tester
     {
+        [SetUp]
+        public void SetUp()
+        {
+            theRuntime = FubuApplication.DefaultPolicies().StructureMap().Bootstrap();
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            theRuntime.Dispose();
+        }
+
         private readonly BehaviorGraph theGraph = FubuApplication.DefaultPolicies()
             .StructureMap().Bootstrap().Factory.Get<BehaviorGraph>();
+
+        private FubuRuntime theRuntime;
 
         [Test]
         public void has_the_diagnostic_chains_from_the_application_assembly()
         {
-            var group = theGraph.Settings
-                .Get<DiagnosticGraph>()
+            var group = theRuntime.Factory.Get<DiagnosticGraph>()
                 .FindGroup(Assembly.GetExecutingAssembly().GetName().Name);
 
             group.Links().Select(x => x.GetRoutePattern())
@@ -32,8 +45,7 @@ namespace FubuMVC.Diagnostics.Tests.Model
         [Test]
         public void has_the_diagnostic_group_for_FubuMVC_Diagnostics_itself()
         {
-            var group = theGraph.Settings
-                .Get<DiagnosticGraph>()
+            var group = theRuntime.Factory.Get<DiagnosticGraph>()
                 .FindGroup(typeof(DiagnosticGraph).Assembly.GetName().Name);
 
             group.Links().Select(x => x.GetRoutePattern())

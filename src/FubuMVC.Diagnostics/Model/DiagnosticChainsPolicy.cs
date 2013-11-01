@@ -11,12 +11,14 @@ namespace FubuMVC.Diagnostics.Model
     {
         public void Configure(BehaviorGraph graph)
         {
-            var diagnosticGraph = graph.Settings.Get<DiagnosticGraph>();
+            var diagnosticGraph = new DiagnosticGraph();
             diagnosticGraph.Add(graph.ApplicationAssembly);
 
             PackageRegistry.PackageAssemblies.Each(diagnosticGraph.Add);
 
             diagnosticGraph.Groups().SelectMany(x => x.Chains).Each(graph.AddChain);
+
+            graph.Services.AddService(diagnosticGraph);
         }
     }
 }

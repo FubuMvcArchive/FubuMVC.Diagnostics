@@ -34,7 +34,9 @@ namespace DiagnosticsHarness
 
             //var chain = _graph.BehaviorFor<EndpointExplorerFubuDiagnostics>(x => x.get_endpoints(null));
 
-            return FubuContinuation.RedirectTo<ModelBindingFubuDiagnostics>(x => x.get_binding_all());
+            //return FubuContinuation.RedirectTo<ModelBindingFubuDiagnostics>(x => x.get_binding_all());
+
+            return FubuContinuation.RedirectTo("/_fubu/harness");
 
             //return FubuContinuation.RedirectTo<EndpointExplorerFubuDiagnostics>(x => x.get_endpoints(null));
 
