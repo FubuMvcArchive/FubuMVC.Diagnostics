@@ -15,6 +15,7 @@ namespace FubuMVC.Diagnostics.ModelBinding
             _bindingRegistry = bindingRegistry;
         }
 
+        [System.ComponentModel.Description("Model Binding Explorer:Visualization of all the model binding strategies in order or precedence")]
         [UrlPattern("binding/all")]
         public ModelBindingExplorerViewModel get_binding_all()
         {

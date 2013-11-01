@@ -66,9 +66,6 @@
     <Reference Include="FubuMVC.JQueryUI">
       <HintPath>..\packages\FubuMVC.JQueryUI\lib\net40\FubuMVC.JQueryUI.dll</HintPath>
     </Reference>
-    <Reference Include="FubuMVC.Navigation">
-      <HintPath>..\packages\FubuMVC.Navigation\lib\net40\FubuMVC.Navigation.dll</HintPath>
-    </Reference>
     <Reference Include="FubuMVC.Spark">
       <HintPath>..\packages\FubuMVC.Spark\lib\net40\FubuMVC.Spark.dll</HintPath>
     </Reference>
@@ -182,8 +179,8 @@
     <Compile Include="Chains\ChainDetails.cs" />
     <Compile Include="Chains\ChainFubuDiagnostics.cs" />
     <Compile Include="Chains\ChainVisualization.cs" />
-    <Compile Include="DiagnosticsChromeExtension.cs" />
     <Compile Include="DiagnosticsSettings.cs" />
+    <Compile Include="FubuPageExtensions.cs" />
     <Compile Include="ModelBinding\ModelBindingFubuDiagnostics.cs" />
     <Compile Include="Model\DiagnosticChain.cs" />
     <Compile Include="Model\DiagnosticGraph.cs" />
@@ -218,8 +215,6 @@
     <Compile Include="Chrome\DashboardChrome.cs" />
     <Compile Include="Core\CoreExtensions.cs" />
     <Compile Include="Core\Extensions\TagExtensions.cs" />
-    <Compile Include="Navigation\DiagnosticKeys.cs" />
-    <Compile Include="Navigation\DiagnosticsMenu.cs" />
     <Compile Include="NoDiagnosticsAttribute.cs" />
     <Compile Include="Requests\RequestsFubuDiagnostics.cs" />
     <Compile Include="Endpoints\EndpointExplorerModel.cs" />

@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using FubuMVC.Core.Http;
 using FubuMVC.Core.Registration.Nodes;
+using FubuMVC.Core.Runtime;
 using FubuMVC.Diagnostics.Model;
 using FubuTestingSupport;
 using NUnit.Framework;
@@ -17,10 +18,16 @@ namespace FubuMVC.Diagnostics.Tests.Model
             var currentChain = MockRepository.GenerateMock<ICurrentChain>();
             currentChain.Stub(x => x.OriginatingChain).Return(new BehaviorChain());
 
-            var context = new DiagnosticContext(currentChain);
+            var graph = new DiagnosticGraph();
+            graph.Add(typeof(DiagnosticChain).Assembly);
+
+            var request = new InMemoryFubuRequest();
+            request.Set(new GroupRequest{Name = "FubuMVC.Diagnostics"});
+
+            var context = new DiagnosticContext(currentChain, request, graph);
 
             context.CurrentChain().ShouldBeNull();
-            context.CurrentGroup().ShouldBeNull();
+            context.CurrentGroup().Name.ShouldEqual("FubuMVC.Diagnostics");
         }
 
         [Test]
@@ -33,7 +40,7 @@ namespace FubuMVC.Diagnostics.Tests.Model
             var currentChain = MockRepository.GenerateMock<ICurrentChain>();
             currentChain.Stub(x => x.OriginatingChain).Return(chain);
 
-            var context = new DiagnosticContext(currentChain);
+            var context = new DiagnosticContext(currentChain, null, null);
             context.CurrentChain().ShouldBeTheSameAs(chain);
             context.CurrentGroup().ShouldBeTheSameAs(group);
         }

@@ -86,7 +86,12 @@ namespace FubuMVC.Diagnostics.Model
         // Only GET's w/ no arguments
         public IEnumerable<DiagnosticChain> Links()
         {
-            return _chains.Where(x => x.IsLink()).OrderBy(x => x.Title);
+            return _chains.Where(x => x.IsLink() && !x.IsIndex).OrderBy(x => x.Title);
+        }
+
+        public DiagnosticChain Index()
+        {
+            return _chains.FirstOrDefault(x => x.IsLink() && x.IsIndex);
         }
 
         public IEnumerable<DiagnosticChain> Chains

@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using System.Reflection;
 using FubuMVC.Core;
 using FubuMVC.Core.Registration;
@@ -23,7 +25,7 @@ namespace FubuMVC.Diagnostics.Tests.Model
                 .FindGroup(Assembly.GetExecutingAssembly().GetName().Name);
 
             group.Links().Select(x => x.GetRoutePattern())
-                .ShouldHaveTheSameElementsAs("_fubu/fake/link", "_fubu/fake/else", "_fubu/fake", "_fubu/fake/simple");
+                .ShouldHaveTheSameElementsAs("_fubu/fake/link", "_fubu/fake/else", "_fubu/fake/simple");
             
         }
 
@@ -35,7 +37,8 @@ namespace FubuMVC.Diagnostics.Tests.Model
                 .FindGroup(typeof(DiagnosticGraph).Assembly.GetName().Name);
 
             group.Links().Select(x => x.GetRoutePattern())
-                .ShouldHaveTheSameElementsAs("_fubu/binding/all", "_fubu/endpoints", "_fubu", "_fubu/package/logs", "_fubu/requests");
+                .Each(x => Debug.WriteLine(x))
+                .ShouldHaveTheSameElementsAs("_fubu/package/logs", "_fubu/endpoints", "_fubu/binding/all", "_fubu/requests");
         }
     }
 }

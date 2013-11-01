@@ -6,6 +6,7 @@ namespace FubuMVC.Diagnostics.Packaging
 {
     public class PackageLogFubuDiagnostics
     {
+        [System.ComponentModel.Description("Application Startup")]
         public PackageDiagnosticsModel get_package_logs(PackageDiagnosticsRequestModel request)
         {
             // Might want to do some querying via json so let's flatten the logs - maybe map them?

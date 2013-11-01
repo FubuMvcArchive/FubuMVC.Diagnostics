@@ -31,7 +31,7 @@ namespace FubuMVC.Diagnostics.Model
                 readTitleAndDescription(call);
             }
 
-            if (Route.RespondsToMethod("GET"))
+            if (IsLink())
             {
                 AddToEnd(new ChromeNode(typeof (DashboardChrome)));
             }

@@ -23,6 +23,7 @@ namespace FubuMVC.Diagnostics.Endpoints
             _urls = urls;
         }
 
+        [System.ComponentModel.Description("Endpoints:Table of all the configured routes, partials, and handlers in a FubuMVC application")]
         public EndpointExplorerModel get_endpoints(RoutesRequest request)
         {
             var reports = _graph.Behaviors.Where(IsNotDiagnosticRoute).Select(x => RouteReport.ForChain(x, _urls)).OrderBy(x => x.Route);

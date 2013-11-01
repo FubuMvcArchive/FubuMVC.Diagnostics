@@ -66,7 +66,7 @@ namespace FubuMVC.Diagnostics.Tests.Model
         {
             var group = new DiagnosticGroup(GetType().Assembly);
             group.Links().Select(x => x.GetRoutePattern())
-                .ShouldHaveTheSameElementsAs("_fubu/fake/link", "_fubu/fake/else", "_fubu/fake", "_fubu/fake/simple");
+                .ShouldHaveTheSameElementsAs("_fubu/fake/link", "_fubu/fake/else", "_fubu/fake/simple");
         }
 
         [Test]

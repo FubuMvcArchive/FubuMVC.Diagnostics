@@ -1,3 +1,4 @@
+using FubuCore.Descriptions;
 using FubuMVC.Diagnostics.Runtime;
 using HtmlTags;
 
@@ -12,6 +13,7 @@ namespace FubuMVC.Diagnostics.Requests
             _cache = cache;
         }
 
+        [System.ComponentModel.Description("Requests:Request visualization for the most recent requests")]
         public RequestsViewModel get_requests()
         {
             return new RequestsViewModel
