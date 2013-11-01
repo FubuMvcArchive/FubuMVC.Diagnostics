@@ -20,6 +20,30 @@ namespace FubuMVC.Diagnostics
         {
             return page.Get<IDiagnosticContext>().Title();
         }
+
+        public static HtmlTag OtherGroupMenus(this IFubuPage page)
+        {
+            return page.Get<DiagnosticGroupsMenuTag>();
+        }
+    }
+
+    public class DiagnosticGroupsMenuTag : HtmlTag
+    {
+        public DiagnosticGroupsMenuTag(DiagnosticGraph groups, ICurrentHttpRequest httpRequest) : base("ul")
+        {
+            AddClass("dropdown-menu");
+            Attr("role", "menu");
+            Attr("aria-labelledby", "groups");
+
+            groups.Groups().OrderBy(x => x.Title).Each(group => {
+                var li = Add("li").Attr("role", "presentation");
+                li.Add("a")
+                    .Attr("role", "menuitem")
+                    .Attr("tabindex", "-1")
+                    .Attr("href", httpRequest.ToFullUrl(group.GetDefaultUrl()))
+                    .Text(group.Title).Attr("title", group.Description);
+            });
+        }
     }
 
     public class DiagnosticMenuTag : HtmlTag

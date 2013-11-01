@@ -6,6 +6,8 @@
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="span3 well">
+      The FubuMVC diagnostics are organized into separate groups or subsystems.  You can select a different category of diagnostics from the links below or the dropdown menu at the top right of each page.
+      <br></br>
       !{Model.Links}
     </div>
     <div class="span9">
@@ -28,7 +30,7 @@
           <strong>
             <a href="${this.Urls.UrlFor<FubuMVC.Diagnostics.Requests.RequestsFubuDiagnostics>(x => x.get_requests())}">Explore the request history</a>
           </strong>
-          <p>The requsets explorer allows you to sort and filter through the requests that have been recorded within your application. You can drill into the details of each request to visualize the various steps that were taken to issue the response.</p>
+          <p>The requests explorer allows you to see the most recent requests that have been recorded within your application. You can drill into the details of each request to visualize the various steps that were taken to issue the response.</p>
         </li>
         <li>
           <strong>
