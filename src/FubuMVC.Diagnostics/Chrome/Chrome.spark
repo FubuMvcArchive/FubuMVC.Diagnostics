@@ -4,7 +4,6 @@
 <use namespace="FubuMVC.Core.Assets" />
 <use namespace="FubuMVC.Diagnostics" />
 <use namespace="FubuMVC.Diagnostics.Dashboard" />
-<use namespace="FubuMVC.Diagnostics.Navigation" />
 <use namespace="FubuMVC.TwitterBootstrap" />
 <use namespace="FubuMVC.Diagnostics.Core.Extensions" />
 

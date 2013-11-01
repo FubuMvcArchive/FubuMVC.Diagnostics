@@ -33,7 +33,10 @@ namespace FubuMVC.Diagnostics.Model
 
             if (IsLink())
             {
-                AddToEnd(new ChromeNode(typeof (DashboardChrome)));
+                AddToEnd(new ChromeNode(typeof (DashboardChrome))
+                {
+                    Title = () => Title
+                });
             }
 
             AddToEnd(call);
