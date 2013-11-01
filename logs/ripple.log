@@ -1781,3 +1781,190 @@ NugetPlan:
 11/1/2013 11:21:57 AM: [Info] Updated reference for C:\code\FubuMVC.Diagnostics\src\FakeBottle\FakeBottle.csproj to ..\packages\HtmlTags\lib\4.0\HtmlTags.dll
 11/1/2013 11:21:57 AM: [Info] Writing changes to C:\code\FubuMVC.Diagnostics\src\FakeBottle\FakeBottle.csproj
 11/1/2013 11:50:04 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+11/1/2013 1:08:43 PM: [Info] * Analyzing FubuMVC.Navigation
+11/1/2013 1:08:44 PM: [Debug] Retrieving latest from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc/Packages()?$filter=IsLatestVersion&$orderby=DownloadCount%20desc,Id&$skip=0&$take=100
+11/1/2013 1:08:46 PM: [Debug] Retrieving latest from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc/Packages()?$filter=IsLatestVersion&$orderby=DownloadCount%20desc,Id&$skip=100&$take=100
+11/1/2013 1:08:48 PM: [Debug] Looking for FubuMVC.Navigation in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Navigation, Version: 0.9.1.191
+11/1/2013 1:08:48 PM: [Debug] Looking for FubuMVC.Navigation in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Navigation, Version: 0.9.1.191
+11/1/2013 1:08:49 PM: [Debug] Searching for FubuMVC.Navigation,0.9.1.191 in C:\Users\jeremill\AppData\Roaming\ripple
+11/1/2013 1:08:49 PM: [Debug] Looking for FubuMVC.Navigation in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Navigation, Version: 0.9.1.191
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core.Assets already installed
+11/1/2013 1:08:52 PM: [Debug] Looking for FubuMVC.Core.Assets in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core.Assets, Version: 0.9.9.527
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core already installed
+11/1/2013 1:08:52 PM: [Debug] Looking for FubuMVC.Core in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core, Version: 1.2.0.1646
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core.View already installed
+11/1/2013 1:08:52 PM: [Debug] Looking for FubuMVC.Core.View in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core.View, Version: 1.0.0.562
+11/1/2013 1:08:52 PM: [Debug] Bottles already installed
+11/1/2013 1:08:52 PM: [Debug] Looking for Bottles in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: Bottles, Version: 2.0.0.561
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] Looking for FubuCore in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuCore, Version: 1.2.0.260
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core.UI already installed
+11/1/2013 1:08:52 PM: [Debug] Looking for FubuMVC.Core.UI in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core.UI, Version: 1.0.1.584
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core already installed
+11/1/2013 1:08:52 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:52 PM: [Debug] Looking for FubuLocalization in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuLocalization, Version: 1.0.0.172
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core already installed
+11/1/2013 1:08:52 PM: [Debug] Bottles already installed
+11/1/2013 1:08:52 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:52 PM: [Debug] Looking for HtmlTags in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: HtmlTags, Version: 2.0.0.180
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core.View already installed
+11/1/2013 1:08:52 PM: [Debug] Bottles already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core already installed
+11/1/2013 1:08:52 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:52 PM: [Debug] Bottles already installed
+11/1/2013 1:08:52 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:52 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:52 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Info] * Analyzing Bottles
+11/1/2013 1:08:52 PM: [Debug] Bottles already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Info] * Analyzing FubuCore
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Info] * Analyzing FubuLocalization
+11/1/2013 1:08:52 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Info] * Analyzing FubuMVC.Core
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core already installed
+11/1/2013 1:08:52 PM: [Debug] Bottles already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:52 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Info] * Analyzing HtmlTags
+11/1/2013 1:08:52 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:52 PM: [Info] * Analyzing FubuMVC.Core.Assets
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core.Assets already installed
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core already installed
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core.View already installed
+11/1/2013 1:08:52 PM: [Debug] Bottles already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core.UI already installed
+11/1/2013 1:08:52 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] Bottles already installed
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core already installed
+11/1/2013 1:08:52 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core.View already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] Bottles already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core already installed
+11/1/2013 1:08:52 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:52 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:52 PM: [Debug] Bottles already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:52 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:52 PM: [Info] * Analyzing FubuMVC.Core.UI
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core.UI already installed
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core already installed
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core.View already installed
+11/1/2013 1:08:52 PM: [Debug] Bottles already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuMVC.Core already installed
+11/1/2013 1:08:52 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:52 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:52 PM: [Debug] Bottles already installed
+11/1/2013 1:08:52 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:52 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:53 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:53 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:53 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:53 PM: [Info] * Analyzing FubuMVC.Core.View
+11/1/2013 1:08:53 PM: [Debug] FubuMVC.Core.View already installed
+11/1/2013 1:08:53 PM: [Debug] FubuMVC.Core already installed
+11/1/2013 1:08:53 PM: [Debug] Bottles already installed
+11/1/2013 1:08:53 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:53 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:53 PM: [Debug] FubuLocalization already installed
+11/1/2013 1:08:53 PM: [Debug] HtmlTags already installed
+11/1/2013 1:08:53 PM: [Debug] FubuCore already installed
+11/1/2013 1:08:53 PM: [Info] * Analyzing FubuMVC.Navigation,0.9.1.191
+11/1/2013 1:08:53 PM: [Info] * Analyzing Bottles,2.0.0.561
+11/1/2013 1:08:53 PM: [Info] * Analyzing FubuCore,1.2.0.260
+11/1/2013 1:08:53 PM: [Info] * Analyzing FubuLocalization,1.0.0.172
+11/1/2013 1:08:53 PM: [Info] * Analyzing FubuMVC.Core,1.2.0.1646
+11/1/2013 1:08:53 PM: [Info] * Analyzing HtmlTags,2.0.0.180
+11/1/2013 1:08:53 PM: [Info] * Analyzing FubuMVC.Core.Assets,0.9.9.527
+11/1/2013 1:08:53 PM: [Info] * Analyzing FubuMVC.Core.UI,1.0.1.584
+11/1/2013 1:08:53 PM: [Info] * Analyzing FubuMVC.Core.View,1.0.0.562
+11/1/2013 1:08:53 PM: [Info] * Analyzing FubuMVC.Navigation,0.9.1.191
+11/1/2013 1:08:53 PM: [Info] * Analyzing Bottles,2.0.0.561
+11/1/2013 1:08:53 PM: [Info] * Analyzing FubuCore,1.2.0.260
+11/1/2013 1:08:53 PM: [Info] * Analyzing FubuLocalization,1.0.0.172
+11/1/2013 1:08:53 PM: [Info] * Analyzing FubuMVC.Core,1.2.0.1646
+11/1/2013 1:08:53 PM: [Info] * Analyzing HtmlTags,2.0.0.180
+11/1/2013 1:08:53 PM: [Info] * Analyzing FubuMVC.Core.Assets,0.9.9.527
+11/1/2013 1:08:53 PM: [Info] * Analyzing FubuMVC.Core.UI,1.0.1.584
+11/1/2013 1:08:53 PM: [Info] * Analyzing FubuMVC.Core.View,1.0.0.562
+11/1/2013 1:08:53 PM: [Info] 
+===============================================================================================
+NugetPlan: 
+===============================================================================================
+     ** Steps
+        * InstallSolutionDependency     Install FubuMVC.Navigation,0.9.1.191 to solution       
+        * InstallProjectDependency      Install FubuMVC.Navigation to FubuMVC.Diagnostics      
+        * InstallProjectDependency      Install FubuMVC.Navigation to FubuMVC.Diagnostics.Tests
+        * InstallProjectDependency      Install FubuMVC.Navigation to DiagnosticsHarness       
+
+11/1/2013 1:08:53 PM: [Debug] Restoring FubuMVC.Navigation,0.9.1.191
+11/1/2013 1:08:53 PM: [Debug] Restoring FubuMVC.TwitterBootstrap,0.0.0.635
+11/1/2013 1:08:53 PM: [Debug] Looking for FubuMVC.Navigation in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Navigation, Version: 0.9.1.191
+11/1/2013 1:08:53 PM: [Debug] Searching for FubuMVC.TwitterBootstrap,0.0.0.635 in C:\Users\jeremill\AppData\Roaming\ripple
+11/1/2013 1:08:53 PM: [Debug] Downloading Download and cache FubuMVC.Navigation.0.9.1.191.nupkg
+11/1/2013 1:08:53 PM: [Debug] Looking for FubuMVC.TwitterBootstrap in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.TwitterBootstrap, Version: 0.0.0.635
+11/1/2013 1:08:53 PM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuMVC.TwitterBootstrap.0.0.0.635.nupkg
+11/1/2013 1:08:53 PM: [Debug] Exploding Name: FubuMVC.TwitterBootstrap, Version: 0.0.0.635, IsPreRelease: False
+11/1/2013 1:08:53 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.TwitterBootstrap
+11/1/2013 1:08:53 PM: [Debug] Exploding Name: FubuMVC.Navigation, Version: 0.9.1.191, IsPreRelease: False
+11/1/2013 1:08:53 PM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Navigation
+11/1/2013 1:08:54 PM: [Info] HintPath changed:  to ..\packages\FubuMVC.Navigation\lib\net40\FubuMVC.Navigation.dll
+11/1/2013 1:08:54 PM: [Info] Updated reference for C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics\FubuMVC.Diagnostics.csproj to ..\packages\FubuMVC.Navigation\lib\net40\FubuMVC.Navigation.dll
+11/1/2013 1:08:54 PM: [Info] Writing changes to C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics\FubuMVC.Diagnostics.csproj
+11/1/2013 1:25:27 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
