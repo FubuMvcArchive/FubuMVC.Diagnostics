@@ -13,6 +13,7 @@ namespace FubuMVC.Diagnostics.Model
         {
             var diagnosticGraph = new DiagnosticGraph();
             diagnosticGraph.Add(graph.ApplicationAssembly);
+            diagnosticGraph.Add(typeof(IPackageFacility).Assembly);
 
             PackageRegistry.PackageAssemblies.Each(diagnosticGraph.Add);
 

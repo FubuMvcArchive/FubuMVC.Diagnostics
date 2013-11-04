@@ -1,10 +1,12 @@
 using System.ComponentModel;
 using System.Linq;
 using FubuMVC.Core;
+using FubuMVC.Core.Behaviors.Chrome;
 using FubuMVC.Core.Continuations;
 using FubuMVC.Core.Registration;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Core.Urls;
+using FubuMVC.Diagnostics.Chrome;
 using FubuMVC.Diagnostics.Runtime;
 using HtmlTags;
 
@@ -24,7 +26,7 @@ namespace FubuMVC.Diagnostics.Requests
             _urls = urls;
         }
 
-        public HttpRequestVisualization get_requests_Id(RequestLog request)
+        public HttpRequestVisualization get_request_details_Id(RequestLog request)
         {
             RequestLog log = _cache.Find(request.Id);
 

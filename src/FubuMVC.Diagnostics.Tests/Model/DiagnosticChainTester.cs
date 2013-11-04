@@ -5,6 +5,7 @@ using FubuMVC.Core.Behaviors.Chrome;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Diagnostics.Chrome;
 using FubuMVC.Diagnostics.Model;
+using FubuMVC.Diagnostics.Requests;
 using FubuTestingSupport;
 using NUnit.Framework;
 
@@ -35,6 +36,12 @@ namespace FubuMVC.Diagnostics.Tests.Model
             DiagnosticChain.For<FakeFubuDiagnostics>(theGroup, x => x.get_link()).IsLink().ShouldBeTrue();
             DiagnosticChain.For<FakeFubuDiagnostics>(theGroup, x => x.get_simple()).IsLink().ShouldBeTrue();
             DiagnosticChain.For<FakeFubuDiagnostics>(theGroup, x => x.get_else()).IsLink().ShouldBeTrue();
+        }
+
+        [Test]
+        public void is_detail_positive()
+        {
+            DiagnosticChain.For<RequestVisualizationFubuDiagnostics>(theGroup, x => x.get_request_details_Id(null)).IsDetailsPage().ShouldBeTrue();
         }
 
         [Test]

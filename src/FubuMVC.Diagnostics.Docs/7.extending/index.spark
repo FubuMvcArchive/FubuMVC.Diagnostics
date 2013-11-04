@@ -1,6 +1,41 @@
 <!--Title: Extending Diagnostics-->
 
 <markdown>
-TODO(Write content!)
+
+As of the v0.9.7 release, you can embed diagnostics in any FubuMVC or FubuTransportation Bottle that can be read and displayed by FubuMVC.Diagnostics with some simple naming conventions.
+
+<Info>Your assemblies can expose diagnostic views without any references to <code>FubuMVC.Diagnostics</code> or even <code>FubuMVC.Core</code> itself.</Info>
+
+
+FubuMVC.Diagnostics will look in your main application assembly and any assembly loaded by a Bottle (<code>PackageRegistry.PackageAssemblies</code>) for classes that match a naming convention explained in the section below.
+The diagnostic views are grouped by .Net assembly -- i.e., all the diagnostic pages in the <code>FubuTransportation</code> assembly would be grouped together under _FubuTransportation_ in the navigation.
+
+Your diagnostic views and actions are just regular FubuMVC views and actions with the exception that you should ensure that all views are exempted from your application's layout because FubuMVC.Diagnostics will try to wrap your view's content with the standard diagnostic screen _Chrome_ and navigation elements.
+
+Disabling the application's master layout with Spark:
+<Snippet name="no-master" /> 
+
+From the FubuMVC.Diagnostics _Chrome_ html, you can assume the presence in your views of:
+
+1. The Asset Pipeline functionality
+1. Twitter Bootstrap styles
+1. jquery
+
+
+
+
+The diagnostic extensions are found by looking for concrete classes that are suffixed by _FubuDiagnostics_ like the sample below:
+
+<Snippet name="SampleFubuDiagnostics" />
+
+Diagnostic endpoints that respond to an Http <code>GET</code> without any route inputs are considered first class views that will be wrapped in the diagnostic _Chrome_ and show up in the navigation menu bars.  You can set a title and description for the navigation elements by using the <code>System.ComponentModel.DescriptionAttribute</code> with the text format _[title]:[description]_.
+
+Diagnostic endpoints that respond to an Http <code>GET</code> with route inputs that contain the text _details_ in the Url will be wrapped in the diagnostic _Chrome_.
+
+
+The title, description, and url names of a diagnostics group can be controlled by placing a concrete class with a default constructor named <code>FubuDiagnosticsConfiguration</code> into your assembly like this one:
+<Snippet name="FubuDiagnosticsConfiguration" />
+
+
 </markdown>
 

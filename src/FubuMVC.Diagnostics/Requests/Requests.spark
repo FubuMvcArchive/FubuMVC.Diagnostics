@@ -1,5 +1,7 @@
 ﻿<viewdata model="FubuMVC.Diagnostics.Requests.RequestsViewModel" />
+<!-- SAMPLE: no-master -->
 <use master="" />
+<!-- ENDSAMPLE -->
 <use namespace="FubuMVC.Diagnostics.Requests" />
 <use namespace="System.Linq" />
 <use namespace="FubuMVC.TwitterBootstrap" />

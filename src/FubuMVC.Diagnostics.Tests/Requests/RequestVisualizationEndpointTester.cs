@@ -18,7 +18,7 @@ namespace FubuMVC.Diagnostics.Tests.Requests
             var request = new RequestLog();
             MockFor<IRequestHistoryCache>().Stub(x => x.Find(request.Id)).Return(null);
 
-            ClassUnderTest.get_requests_Id(request)
+            ClassUnderTest.get_request_details_Id(request)
                 .RedirectTo.AssertWasRedirectedTo<RequestVisualizationFubuDiagnostics>(x => x.get_requests_missing());
         }
 
@@ -37,7 +37,7 @@ namespace FubuMVC.Diagnostics.Tests.Requests
 
             MockFor<IRequestHistoryCache>().Stub(x => x.Find(request.Id)).Return(actualLog);
 
-            var visualization = ClassUnderTest.get_requests_Id(request);
+            var visualization = ClassUnderTest.get_request_details_Id(request);
 
             visualization.RedirectTo.ShouldBeNull();
 

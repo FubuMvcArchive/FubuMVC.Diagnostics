@@ -31,15 +31,22 @@ namespace FubuMVC.Diagnostics.Model
                 readTitleAndDescription(call);
             }
 
-            if (IsLink())
+            if (IsLink() || IsDetailsPage())
             {
-                AddToEnd(new ChromeNode(typeof (DashboardChrome))
+                InsertFirst(new ChromeNode(typeof (DashboardChrome))
                 {
                     Title = () => Title
                 });
             }
 
             AddToEnd(call);
+        }
+
+        public bool IsDetailsPage()
+        {
+            return Route.RespondsToMethod("GET") && (Route.Input == null || Route.Input.RouteParameters.Any()) &&
+                   !IsPartialOnly && GetRoutePattern().ToLower().Contains("/details/");
+
         }
 
         public bool IsIndex
