@@ -24,7 +24,7 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
             _builder = builder;
             _response = response;
 
-            Current = new RequestLog(); // place holder/nullo just to avoid blowing up 
+            Current = new NulloRequestLog(); // place holder/nullo just to avoid blowing up 
         }
 
         public string LogUrl
@@ -104,6 +104,14 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
         public Stopwatch Stopwatch
         {
             get { return _stopwatch; }
+        }
+    }
+
+    public class NulloRequestLog : RequestLog
+    {
+        public override void AddLog(double requestTimeInMilliseconds, object log)
+        {
+            // Do nothing.  Nothing at all.
         }
     }
 }

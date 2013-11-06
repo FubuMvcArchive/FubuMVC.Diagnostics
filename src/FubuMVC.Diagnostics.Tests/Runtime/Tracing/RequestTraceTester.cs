@@ -12,6 +12,35 @@ using System.Linq;
 namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
 {
     [TestFixture]
+    public class RequestTrace_has_a_nullo_request_log_by_default
+    {
+        [Test]
+        public void it_is_a_nullo()
+        {
+            new RequestTrace(new IRequestTraceObserver[0], null, null)
+                .Current.ShouldBeOfType<NulloRequestLog>();
+        }
+
+        [Test]
+        public void nullo_does_not_record_steps_no_matter_what()
+        {
+            var trace = new RequestTrace(new IRequestTraceObserver[0], null, null);
+            trace.Log("a");
+            trace.Log("a");
+            trace.Log("a");
+            trace.Log("a");
+            trace.Log("a");
+            trace.Log("a");
+            trace.Log("a");
+            trace.Log("a");
+            trace.Log("a");
+
+            trace.Current.AllSteps().Any().ShouldBeFalse();
+        }
+    }
+
+
+    [TestFixture]
     public class when_marking_as_a_Failed_request : InteractionContext<RequestTrace>
     {
         [Test]

@@ -32,7 +32,7 @@ namespace FubuMVC.Diagnostics.Runtime
         public string HttpMethod { get; set; }
         public DateTime Time { get; set; }
 
-        public void AddLog(double requestTimeInMilliseconds, object log)
+        public virtual void AddLog(double requestTimeInMilliseconds, object log)
         {
             _steps.Add(new RequestStep(requestTimeInMilliseconds, log));
         }
