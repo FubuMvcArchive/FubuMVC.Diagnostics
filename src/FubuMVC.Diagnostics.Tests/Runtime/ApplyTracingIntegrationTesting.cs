@@ -4,6 +4,7 @@ using FubuMVC.Core.Registration;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Core.Registration.Routes;
 using FubuMVC.Diagnostics.Runtime;
+using FubuMVC.Diagnostics.Runtime.Tracing;
 using NUnit.Framework;
 using System.Linq;
 using FubuTestingSupport;
@@ -40,6 +41,34 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
             registry.Policies.Add<ApplyTracing>();
 
             BehaviorGraph.BuildFrom(registry);
+        }
+
+        [Test]
+        public void do_nothing_if_tracing_is_off()
+        {
+            var registry = new FubuRegistry();
+            registry.AlterSettings<DiagnosticsSettings>(x => x.TraceLevel = TraceLevel.None);
+            registry.Configure(graph =>
+            {
+                chain1 = new BehaviorChain();
+                chain1.AddToEnd(Wrapper.For<SimpleBehavior>());
+                chain1.AddToEnd(Wrapper.For<DifferentBehavior>());
+                chain1.Route = new RouteDefinition("something");
+                graph.AddChain(chain1);
+
+                chain2 = new BehaviorChain();
+                chain2.IsPartialOnly = true;
+                chain2.AddToEnd(Wrapper.For<SimpleBehavior>());
+                chain2.AddToEnd(Wrapper.For<DifferentBehavior>());
+                graph.AddChain(chain2);
+            });
+
+
+            registry.Policies.Add<ApplyTracing>();
+
+            var notTracedGraph = BehaviorGraph.BuildFrom(registry);
+            notTracedGraph.Behaviors.SelectMany(x => x).Any(x => x is DiagnosticBehavior).ShouldBeFalse();
+            notTracedGraph.Behaviors.SelectMany(x => x).Any(x => x is BehaviorTracer).ShouldBeFalse();
         }
 
         [Test]

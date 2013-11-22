@@ -16,6 +16,9 @@ namespace FubuMVC.Diagnostics.Runtime
 
         public void Configure(BehaviorGraph graph)
         {
+            // Do nothing
+            if (graph.Settings.Get<DiagnosticsSettings>().TraceLevel == TraceLevel.None) return;
+
             foreach (BehaviorChain chain in graph.Behaviors.Where(ShouldApply))
             {
                 ApplyToChain(chain);
