@@ -127,6 +127,7 @@
   <ItemGroup>
     <Compile Include="Chains\ChainVisualizationTester.cs" />
     <Compile Include="debugging.cs" />
+    <Compile Include="DiagnosticSettings_TraceLevel_Registration_Tester.cs" />
     <Compile Include="DiagnosticsExtensionTester.cs" />
     <Compile Include="InteractionContextExtensions.cs" />
     <Compile Include="Model\DiagnosticChainTester.cs" />

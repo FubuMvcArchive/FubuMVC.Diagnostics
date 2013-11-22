@@ -18,10 +18,10 @@ namespace FubuMVC.Diagnostics
     {
         public DiagnosticServiceRegistry()
         {
-            SetServiceIfNone<IBindingLogger, RecordingBindingLogger>();
             SetServiceIfNone<IDebugDetector, DebugDetector>();
             ReplaceService<IDebugDetector, DebugDetector>();
             
+            // does no harm
             ReplaceService<IBindingHistory, BindingHistory>();
             SetServiceIfNone<IRequestHistoryCache, RequestHistoryCache>();
 
@@ -33,6 +33,13 @@ namespace FubuMVC.Diagnostics
 
             SetServiceIfNone<IVisualizer, Visualizer>();
             SetServiceIfNone<IDiagnosticContext, DiagnosticContext>();
+        }
+    }
+
+    public class VerboseServiceRegistry : ServiceRegistry
+    {
+        public VerboseServiceRegistry()
+        {
         }
     }
 }
