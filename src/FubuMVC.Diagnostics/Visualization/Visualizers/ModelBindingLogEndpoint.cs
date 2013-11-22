@@ -5,6 +5,7 @@ using FubuCore;
 using FubuCore.Binding;
 using FubuCore.Binding.Logging;
 using FubuCore.Descriptions;
+using FubuMVC.Core.Diagnostics;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.TwitterBootstrap.Collapsibles;
 using HtmlTags;

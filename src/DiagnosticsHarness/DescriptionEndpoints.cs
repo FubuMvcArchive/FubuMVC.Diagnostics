@@ -1,4 +1,5 @@
 using FubuMVC.Core.Behaviors.Chrome;
+using FubuMVC.Core.Diagnostics;
 using FubuMVC.Core.Urls;
 using FubuMVC.Diagnostics.Chrome;
 using FubuMVC.Diagnostics.Visualization;

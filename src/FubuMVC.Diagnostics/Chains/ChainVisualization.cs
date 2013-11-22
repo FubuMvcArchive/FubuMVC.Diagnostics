@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using FubuCore;
 using FubuCore.Descriptions;
 using FubuMVC.Core.Continuations;
+using FubuMVC.Core.Diagnostics;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Diagnostics.Endpoints;
 using FubuMVC.Diagnostics.Visualization;

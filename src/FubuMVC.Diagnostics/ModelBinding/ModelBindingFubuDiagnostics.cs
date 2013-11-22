@@ -1,6 +1,7 @@
 using FubuCore.Binding;
 using FubuCore.Descriptions;
 using FubuMVC.Core;
+using FubuMVC.Core.Diagnostics;
 using FubuMVC.Diagnostics.Visualization;
 using HtmlTags;
 

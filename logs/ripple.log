@@ -1970,3 +1970,62 @@ NugetPlan:
 11/1/2013 1:25:27 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
 11/1/2013 2:35:00 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
 11/5/2013 7:51:52 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+11/22/2013 11:25:29 AM: [Info] Updating dependencies for solution diagnostics
+11/22/2013 11:25:29 AM: [Info] * Analyzing FubuMVC.Core
+11/22/2013 11:25:30 AM: [Debug] Retrieving latest from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc/Packages()?$filter=IsLatestVersion&$orderby=DownloadCount%20desc,Id&$skip=0&$take=100
+11/22/2013 11:25:34 AM: [Debug] Retrieving latest from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc/Packages()?$filter=IsLatestVersion&$orderby=DownloadCount%20desc,Id&$skip=100&$take=100
+11/22/2013 11:25:36 AM: [Debug] Looking for FubuMVC.Core in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core, Version: 1.2.0.1656
+11/22/2013 11:25:36 AM: [Debug] Looking for FubuMVC.Core in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core, Version: 1.2.0.1656
+11/22/2013 11:25:36 AM: [Debug] FubuMVC.Core already installed
+11/22/2013 11:25:36 AM: [Debug] Bottles already installed
+11/22/2013 11:25:36 AM: [Debug] Looking for Bottles in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: Bottles, Version: 2.0.0.568
+11/22/2013 11:25:36 AM: [Debug] FubuCore already installed
+11/22/2013 11:25:36 AM: [Debug] Looking for FubuCore in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuCore, Version: 1.2.0.263
+11/22/2013 11:25:36 AM: [Debug] FubuCore already installed
+11/22/2013 11:25:36 AM: [Debug] FubuLocalization already installed
+11/22/2013 11:25:36 AM: [Debug] Looking for FubuLocalization in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuLocalization, Version: 1.0.0.172
+11/22/2013 11:25:36 AM: [Debug] FubuCore already installed
+11/22/2013 11:25:36 AM: [Debug] HtmlTags already installed
+11/22/2013 11:25:36 AM: [Debug] Looking for HtmlTags in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: HtmlTags, Version: 2.0.0.180
+11/22/2013 11:25:36 AM: [Info] * Analyzing Bottles
+11/22/2013 11:25:37 AM: [Debug] Looking for Bottles in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: Bottles, Version: 2.0.0.568
+11/22/2013 11:25:37 AM: [Debug] Bottles already installed
+11/22/2013 11:25:37 AM: [Debug] FubuCore already installed
+11/22/2013 11:25:37 AM: [Info] * Analyzing FubuCore
+11/22/2013 11:25:37 AM: [Debug] Looking for FubuCore in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuCore, Version: 1.2.0.263
+11/22/2013 11:25:37 AM: [Debug] FubuCore already installed
+11/22/2013 11:25:37 AM: [Info] * Analyzing FubuLocalization
+11/22/2013 11:25:37 AM: [Debug] Looking for FubuLocalization in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuLocalization, Version: 1.0.0.172
+11/22/2013 11:25:37 AM: [Debug] FubuLocalization already installed
+11/22/2013 11:25:37 AM: [Debug] FubuCore already installed
+11/22/2013 11:25:37 AM: [Info] * Analyzing HtmlTags
+11/22/2013 11:25:37 AM: [Debug] Looking for HtmlTags in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: HtmlTags, Version: 2.0.0.180
+11/22/2013 11:25:37 AM: [Debug] HtmlTags already installed
+11/22/2013 11:25:37 AM: [Info] 
+=============================================================
+NugetPlan: 
+=============================================================
+     ** Steps
+        * UpdateDependency     Update FubuMVC.Core,1.2.0.1656
+        * UpdateDependency     Update Bottles,2.0.0.568      
+        * UpdateDependency     Update FubuCore,1.2.0.263     
+
+11/22/2013 11:25:37 AM: [Debug] Restoring Bottles,2.0.0.568
+11/22/2013 11:25:37 AM: [Debug] Restoring FubuCore,1.2.0.263
+11/22/2013 11:25:37 AM: [Debug] Restoring FubuMVC.Core,1.2.0.1656
+11/22/2013 11:25:37 AM: [Debug] Searching for FubuCore,1.2.0.263 in C:\Users\jeremill\AppData\Roaming\ripple
+11/22/2013 11:25:37 AM: [Debug] Searching for Bottles,2.0.0.568 in C:\Users\jeremill\AppData\Roaming\ripple
+11/22/2013 11:25:37 AM: [Debug] Searching for FubuMVC.Core,1.2.0.1656 in C:\Users\jeremill\AppData\Roaming\ripple
+11/22/2013 11:25:37 AM: [Debug] Looking for Bottles in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: Bottles, Version: 2.0.0.568
+11/22/2013 11:25:37 AM: [Debug] Looking for FubuCore in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuCore, Version: 1.2.0.263
+11/22/2013 11:25:37 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\Bottles.2.0.0.568.nupkg
+11/22/2013 11:25:37 AM: [Debug] Downloading From filesystem: C:\Users\jeremill\AppData\Roaming\ripple\FubuCore.1.2.0.263.nupkg
+11/22/2013 11:25:37 AM: [Debug] Looking for FubuMVC.Core in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core, Version: 1.2.0.1656
+11/22/2013 11:25:37 AM: [Debug] Downloading Download and cache FubuMVC.Core.1.2.0.1656.nupkg
+11/22/2013 11:25:40 AM: [Debug] Exploding Name: Bottles, Version: 2.0.0.568, IsPreRelease: False
+11/22/2013 11:25:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\Bottles
+11/22/2013 11:25:40 AM: [Debug] Exploding Name: FubuCore, Version: 1.2.0.263, IsPreRelease: False
+11/22/2013 11:25:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuCore
+11/22/2013 11:25:40 AM: [Debug] Exploding Name: FubuMVC.Core, Version: 1.2.0.1656, IsPreRelease: False
+11/22/2013 11:25:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core
+11/22/2013 11:27:25 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages

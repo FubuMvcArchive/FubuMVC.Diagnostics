@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using FubuCore;
 using FubuCore.Descriptions;
+using FubuMVC.Core.Diagnostics;
 using FubuMVC.Core.Registration.Nodes;
 using FubuMVC.Core.Registration.ObjectGraph;
 using FubuMVC.Core.Registration.Routes;
