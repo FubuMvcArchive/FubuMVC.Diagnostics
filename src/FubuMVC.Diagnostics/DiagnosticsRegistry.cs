@@ -21,6 +21,7 @@ namespace FubuMVC.Diagnostics
             SetServiceIfNone<IBindingLogger, RecordingBindingLogger>();
             SetServiceIfNone<IDebugDetector, DebugDetector>();
             ReplaceService<IDebugDetector, DebugDetector>();
+            
             ReplaceService<IBindingHistory, BindingHistory>();
             SetServiceIfNone<IRequestHistoryCache, RequestHistoryCache>();
 

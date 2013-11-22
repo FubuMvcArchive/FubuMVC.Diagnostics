@@ -2029,3 +2029,5 @@ NugetPlan:
 11/22/2013 11:25:40 AM: [Debug] Exploding Name: FubuMVC.Core, Version: 1.2.0.1656, IsPreRelease: False
 11/22/2013 11:25:40 AM: [Info] Exploding to C:\code\FubuMVC.Diagnostics\src\packages\FubuMVC.Core
 11/22/2013 11:27:25 AM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+11/22/2013 12:05:30 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+11/22/2013 12:14:17 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages

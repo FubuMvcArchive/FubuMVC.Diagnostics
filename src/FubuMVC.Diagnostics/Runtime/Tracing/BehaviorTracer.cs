@@ -8,38 +8,33 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
     public class BehaviorTracer : WrappingBehavior
     {
         readonly BehaviorCorrelation _correlation;
-        readonly ILogger _logger;
+        private readonly IRequestTrace _trace;
         readonly IExceptionHandlingObserver _exceptionObserver;
 
-        public BehaviorTracer(BehaviorCorrelation correlation, ILogger logger, IExceptionHandlingObserver exceptionObserver)
+        public BehaviorTracer(BehaviorCorrelation correlation, IRequestTrace trace, IExceptionHandlingObserver exceptionObserver)
         {
             _correlation = correlation;
-            _logger = logger;
+            _trace = trace;
             _exceptionObserver = exceptionObserver;
         }
 
         protected override void invoke(Action action)
         {
-            _logger.DebugMessage(() => new BehaviorStart(_correlation));
+            _trace.Log(new BehaviorStart(_correlation));
 
             try
             {
                 action();
-                _logger.DebugMessage(() => new BehaviorFinish(_correlation));
+
+                _trace.Log(new BehaviorFinish(_correlation));
             }
             catch (Exception ex)
             {
                 if (!_exceptionObserver.WasObserved(ex))
                 {
-                    _logger.DebugMessage(() =>
-                    {
-                        var log = new BehaviorFinish(_correlation);
-                        log.LogException(ex);
-
-                        return log;
-                    });
-
-                    _exceptionObserver.RecordHandled(ex);
+                    var log = new BehaviorFinish(_correlation);
+                    log.LogException(ex);
+                    _trace.Log(log);
                 }
 
                 throw;
