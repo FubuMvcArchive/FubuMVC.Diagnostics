@@ -2034,3 +2034,75 @@ NugetPlan:
 11/22/2013 12:34:13 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
 11/22/2013 12:45:09 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
 11/22/2013 12:49:40 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages
+11/22/2013 12:58:37 PM: [Info] Install FubuMVC.Spark to Solution diagnostics
+11/22/2013 12:58:37 PM: [Info] * Analyzing FubuMVC.Spark
+11/22/2013 12:58:38 PM: [Debug] FubuMVC.Spark already installed
+11/22/2013 12:58:38 PM: [Debug] Spark already installed
+11/22/2013 12:58:38 PM: [Debug] FubuMVC.Core already installed
+11/22/2013 12:58:38 PM: [Debug] FubuMVC.Core.View already installed
+11/22/2013 12:58:38 PM: [Debug] Retrieving latest from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc/Packages()?$filter=IsLatestVersion&$orderby=DownloadCount%20desc,Id&$skip=0&$take=100
+11/22/2013 12:58:41 PM: [Debug] Retrieving latest from http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc/Packages()?$filter=IsLatestVersion&$orderby=DownloadCount%20desc,Id&$skip=100&$take=100
+11/22/2013 12:58:43 PM: [Debug] Looking for Spark in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found 
+11/22/2013 12:58:43 PM: [Debug] Looking for FubuMVC.Core in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core, Version: 1.2.0.1658
+11/22/2013 12:58:43 PM: [Debug] Looking for FubuMVC.Core.View in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuMVC.Core.View, Version: 1.0.0.567
+11/22/2013 12:58:43 PM: [Debug] Bottles already installed
+11/22/2013 12:58:43 PM: [Debug] Looking for Bottles in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: Bottles, Version: 2.0.0.568
+11/22/2013 12:58:43 PM: [Debug] FubuMVC.Core already installed
+11/22/2013 12:58:43 PM: [Debug] FubuCore already installed
+11/22/2013 12:58:43 PM: [Debug] Looking for FubuCore in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuCore, Version: 1.2.0.263
+11/22/2013 12:58:43 PM: [Debug] FubuCore already installed
+11/22/2013 12:58:43 PM: [Debug] Bottles already installed
+11/22/2013 12:58:43 PM: [Debug] FubuLocalization already installed
+11/22/2013 12:58:43 PM: [Debug] Looking for FubuLocalization in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: FubuLocalization, Version: 1.0.0.172
+11/22/2013 12:58:43 PM: [Debug] FubuCore already installed
+11/22/2013 12:58:43 PM: [Debug] FubuCore already installed
+11/22/2013 12:58:43 PM: [Debug] HtmlTags already installed
+11/22/2013 12:58:43 PM: [Debug] Looking for HtmlTags in http://build.fubu-project.org/guestAuth/app/nuget/v1/FeedService.svc; Found Name: HtmlTags, Version: 2.0.0.180
+11/22/2013 12:58:43 PM: [Debug] FubuLocalization already installed
+11/22/2013 12:58:43 PM: [Debug] FubuCore already installed
+11/22/2013 12:58:43 PM: [Debug] HtmlTags already installed
+11/22/2013 12:58:43 PM: [Debug] FubuCore already installed
+11/22/2013 12:58:43 PM: [Info] * Analyzing Bottles
+11/22/2013 12:58:43 PM: [Debug] Bottles already installed
+11/22/2013 12:58:43 PM: [Debug] FubuCore already installed
+11/22/2013 12:58:43 PM: [Info] * Analyzing FubuCore
+11/22/2013 12:58:43 PM: [Debug] FubuCore already installed
+11/22/2013 12:58:43 PM: [Info] * Analyzing FubuLocalization
+11/22/2013 12:58:43 PM: [Debug] FubuLocalization already installed
+11/22/2013 12:58:43 PM: [Debug] FubuCore already installed
+11/22/2013 12:58:43 PM: [Info] * Analyzing FubuMVC.Core
+11/22/2013 12:58:43 PM: [Debug] FubuMVC.Core already installed
+11/22/2013 12:58:43 PM: [Debug] Bottles already installed
+11/22/2013 12:58:43 PM: [Debug] FubuCore already installed
+11/22/2013 12:58:43 PM: [Debug] FubuCore already installed
+11/22/2013 12:58:43 PM: [Debug] FubuLocalization already installed
+11/22/2013 12:58:43 PM: [Debug] HtmlTags already installed
+11/22/2013 12:58:43 PM: [Debug] FubuCore already installed
+11/22/2013 12:58:43 PM: [Info] * Analyzing HtmlTags
+11/22/2013 12:58:43 PM: [Debug] HtmlTags already installed
+11/22/2013 12:58:43 PM: [Info] * Analyzing FubuMVC.Core.View
+11/22/2013 12:58:43 PM: [Debug] FubuMVC.Core.View already installed
+11/22/2013 12:58:43 PM: [Debug] FubuMVC.Core already installed
+11/22/2013 12:58:44 PM: [Debug] Bottles already installed
+11/22/2013 12:58:44 PM: [Debug] FubuCore already installed
+11/22/2013 12:58:44 PM: [Debug] FubuCore already installed
+11/22/2013 12:58:44 PM: [Debug] FubuLocalization already installed
+11/22/2013 12:58:44 PM: [Debug] HtmlTags already installed
+11/22/2013 12:58:44 PM: [Debug] FubuCore already installed
+11/22/2013 12:58:44 PM: [Info] * Analyzing Spark,1.7.5.0,Fixed
+11/22/2013 12:58:44 PM: [Debug] Spark already installed
+11/22/2013 12:58:44 PM: [Info] 
+=========================================================================================
+NugetPlan: 
+=========================================================================================
+     ** Steps
+        * InstallProjectDependency     Install FubuMVC.Spark to FubuMVC.Diagnostics.Tests
+        * InstallProjectDependency     Install Spark to FubuMVC.Diagnostics.Tests        
+
+11/22/2013 12:58:44 PM: [Info] HintPath changed:  to ..\packages\FubuMVC.Spark\lib\net40\FubuMVC.Spark.dll
+11/22/2013 12:58:44 PM: [Info] Updated reference for C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics.Tests\FubuMVC.Diagnostics.Tests.csproj to ..\packages\FubuMVC.Spark\lib\net40\FubuMVC.Spark.dll
+11/22/2013 12:58:44 PM: [Info] Writing changes to C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics.Tests\FubuMVC.Diagnostics.Tests.csproj
+11/22/2013 12:58:44 PM: [Info] HintPath changed:  to ..\packages\Spark\lib\NET40\Spark.dll
+11/22/2013 12:58:44 PM: [Info] Updated reference for C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics.Tests\FubuMVC.Diagnostics.Tests.csproj to ..\packages\Spark\lib\NET40\Spark.dll
+11/22/2013 12:58:44 PM: [Info] Writing changes to C:\code\FubuMVC.Diagnostics\src\FubuMVC.Diagnostics.Tests\FubuMVC.Diagnostics.Tests.csproj
+11/22/2013 1:05:37 PM: [Info] Restoring dependencies for solution diagnostics to C:\code\FubuMVC.Diagnostics\src\packages

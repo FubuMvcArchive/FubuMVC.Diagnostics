@@ -64,6 +64,9 @@
     <Reference Include="FubuMVC.OwinHost">
       <HintPath>..\packages\FubuMVC.OwinHost\lib\net40\FubuMVC.OwinHost.dll</HintPath>
     </Reference>
+    <Reference Include="FubuMVC.Spark">
+      <HintPath>..\packages\FubuMVC.Spark\lib\net40\FubuMVC.Spark.dll</HintPath>
+    </Reference>
     <Reference Include="FubuMVC.StructureMap">
       <HintPath>..\packages\FubuMVC.StructureMap\lib\net40\FubuMVC.StructureMap.dll</HintPath>
     </Reference>
@@ -107,6 +110,9 @@
     <Reference Include="Rhino.Mocks">
       <HintPath>..\packages\RhinoMocks\lib\net\Rhino.Mocks.dll</HintPath>
     </Reference>
+    <Reference Include="Spark">
+      <HintPath>..\packages\Spark\lib\NET40\Spark.dll</HintPath>
+    </Reference>
     <Reference Include="structuremap">
       <HintPath>..\packages\structuremap.2.6.3\lib\StructureMap.dll</HintPath>
     </Reference>
@@ -129,6 +135,7 @@
     <Compile Include="debugging.cs" />
     <Compile Include="DiagnosticSettings_TraceLevel_Registration_Tester.cs" />
     <Compile Include="DiagnosticsExtensionTester.cs" />
+    <Compile Include="IntegrationTestHarness.cs" />
     <Compile Include="InteractionContextExtensions.cs" />
     <Compile Include="Model\DiagnosticChainTester.cs" />
     <Compile Include="Model\DiagnosticContextTester.cs" />
