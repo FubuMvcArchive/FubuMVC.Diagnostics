@@ -26,7 +26,7 @@ namespace FubuMVC.Diagnostics
             SetServiceIfNone<IRequestHistoryCache, RequestHistoryCache>();
 
             AddService<IRequestTraceObserver, RequestHistoryObserver>();
-            AddService<ILogListener, RequestTraceListener>();
+            
 
             SetServiceIfNone<IRequestTrace, RequestTrace>();
             SetServiceIfNone<IRequestLogBuilder, RequestLogBuilder>();

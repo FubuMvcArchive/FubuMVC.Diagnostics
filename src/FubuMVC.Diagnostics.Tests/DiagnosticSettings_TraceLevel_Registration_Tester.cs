@@ -1,4 +1,6 @@
-﻿using FubuCore.Binding.InMemory;
+﻿using System.Linq;
+using FubuCore.Binding.InMemory;
+using FubuCore.Logging;
 using FubuMVC.Core;
 using FubuMVC.Core.Registration;
 using FubuMVC.Diagnostics.Runtime;
@@ -36,6 +38,49 @@ namespace FubuMVC.Diagnostics.Tests
                 x.TraceLevel = TraceLevel.None;
             });
         });
+
+        [Test]
+        public void RequestTraceListener_is_added_if_verbose()
+        {
+            verboseGraph.Services.ServicesFor<ILogListener>()
+                .Any(x => x.Type == typeof(RequestTraceListener)).ShouldBeTrue();
+        }
+
+        [Test]
+        public void RequestTraceListener_should_not_be_registered_if_production()
+        {
+            productionGraph.Services.ServicesFor<ILogListener>()
+                .Any(x => x.Type == typeof(RequestTraceListener)).ShouldBeFalse();
+        }
+
+        [Test]
+        public void RequestTraceListener_should_not_be_registered_if_none()
+        {
+            noneGraph.Services.ServicesFor<ILogListener>()
+                .Any(x => x.Type == typeof(RequestTraceListener)).ShouldBeFalse();
+        }
+
+        [Test]
+        public void ProductionModeTraceListener_is_added_if_production()
+        {
+            productionGraph.Services.ServicesFor<ILogListener>()
+                .Any(x => x.Type == typeof(ProductionModeTraceListener)).ShouldBeTrue();
+        }
+
+        [Test]
+        public void ProductionModeTraceListener_is_not_added_if_verbose()
+        {
+            verboseGraph.Services.ServicesFor<ILogListener>()
+                .Any(x => x.Type == typeof(ProductionModeTraceListener)).ShouldBeFalse();
+        }
+
+        [Test]
+        public void ProductionModeTraceListener_is_not_added_if_trace_level_is_none()
+        {
+            noneGraph.Services.ServicesFor<ILogListener>()
+                .Any(x => x.Type == typeof(ProductionModeTraceListener)).ShouldBeFalse();
+        }
+
 
         [Test]
         public void RecordingBinding_logger_is_registered_if_trace_level_is_verbose()

@@ -1,4 +1,5 @@
 using FubuCore.Binding.InMemory;
+using FubuCore.Logging;
 using FubuMVC.Core;
 using FubuMVC.Diagnostics.Model;
 using FubuMVC.Diagnostics.Runtime;
@@ -27,6 +28,13 @@ namespace FubuMVC.Diagnostics
 
                     graph.Services.Clear(typeof(IBindingHistory));
                     graph.Services.AddService<IBindingHistory, BindingHistory>();
+
+                    graph.Services.AddService<ILogListener, RequestTraceListener>();
+                }
+
+                if (settings.TraceLevel == TraceLevel.Production)
+                {
+                    graph.Services.AddService<ILogListener, ProductionModeTraceListener>();
                 }
             });
         }
