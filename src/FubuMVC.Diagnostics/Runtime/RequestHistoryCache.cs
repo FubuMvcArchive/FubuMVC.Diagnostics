@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using FubuMVC.Core;
@@ -7,7 +8,7 @@ namespace FubuMVC.Diagnostics.Runtime
 {
     public class RequestHistoryCache : IRequestHistoryCache
     {
-        private readonly Queue<RequestLog> _reports = new Queue<RequestLog>();
+        private readonly ConcurrentQueue<RequestLog> _reports = new ConcurrentQueue<RequestLog>();
         private readonly DiagnosticsSettings _settings;
 
         public RequestHistoryCache(DiagnosticsSettings settings)
@@ -20,7 +21,8 @@ namespace FubuMVC.Diagnostics.Runtime
             _reports.Enqueue(log);
             while (_reports.Count > _settings.MaxRequests)
             {
-                _reports.Dequeue();
+                RequestLog _;
+                _reports.TryDequeue(out _);
             }
         }
 
