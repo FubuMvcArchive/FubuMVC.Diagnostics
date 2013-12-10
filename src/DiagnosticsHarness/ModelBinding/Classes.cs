@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using FubuMVC.Core.Continuations;
+using FubuMVC.Core.Urls;
 using FubuMVC.Diagnostics.Runtime.Tracing;
 
 namespace DiagnosticsHarness.ModelBinding
@@ -8,15 +9,17 @@ namespace DiagnosticsHarness.ModelBinding
     public class ModelBindingSampleEndpoint
     {
         private readonly IRequestTrace _trace;
+        private readonly IUrlRegistry _urls;
 
-        public ModelBindingSampleEndpoint(IRequestTrace trace)
+        public ModelBindingSampleEndpoint(IRequestTrace trace, IUrlRegistry urls)
         {
             _trace = trace;
+            _urls = urls;
         }
 
         public FubuContinuation post_deep_data(DeepClass1 content)
         {
-            return FubuContinuation.RedirectTo(_trace.LogUrl);
+            return FubuContinuation.RedirectTo(_urls.UrlFor(_trace.Current));
 
         }
 

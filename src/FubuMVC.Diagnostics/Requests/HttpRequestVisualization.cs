@@ -1,6 +1,8 @@
 using System;
 using FubuMVC.Core.Continuations;
 using FubuMVC.Core.Registration.Nodes;
+using FubuMVC.Core.Urls;
+using FubuMVC.Diagnostics.Chains;
 using FubuMVC.Diagnostics.Runtime;
 using HtmlTags;
 
@@ -9,13 +11,15 @@ namespace FubuMVC.Diagnostics.Requests
     public class HttpRequestVisualization : IRedirectable
     {
         private readonly BehaviorChain _chain;
+        private readonly IUrlRegistry _urls;
         private readonly RequestLog _log;
 
 
-        public HttpRequestVisualization(RequestLog log, BehaviorChain chain)
+        public HttpRequestVisualization(RequestLog log, BehaviorChain chain, IUrlRegistry urls)
         {
             _log = log;
             _chain = chain;
+            _urls = urls;
         }
 
         public Guid Id { get; set; }
@@ -23,6 +27,14 @@ namespace FubuMVC.Diagnostics.Requests
         public BehaviorChain Chain
         {
             get { return _chain; }
+        }
+
+        public string ChainUrl
+        {
+            get
+            {
+                return _urls.UrlFor(new ChainRequest {Id = Log.ChainId});
+            }
         }
 
         public RequestLog Log
@@ -33,7 +45,7 @@ namespace FubuMVC.Diagnostics.Requests
 
         public HtmlTag LinksTag
         {
-            get { return new RequestLinksTag(_log); }
+            get { return new RequestLinksTag(_log, _urls); }
         }
 
         public HtmlTag BehaviorSummary

@@ -32,7 +32,7 @@ namespace FubuMVC.Diagnostics.Requests
 
             if (log == null)
             {
-                return new HttpRequestVisualization(null, null)
+                return new HttpRequestVisualization(null, null, _urls)
                 {
                     RedirectTo =
                         FubuContinuation.RedirectTo<RequestVisualizationFubuDiagnostics>(x => x.get_requests_missing())
@@ -41,7 +41,7 @@ namespace FubuMVC.Diagnostics.Requests
 
             BehaviorChain chain = _graph.Behaviors.FirstOrDefault(x => x.UniqueId == log.ChainId);
 
-            return new HttpRequestVisualization(log, chain);
+            return new HttpRequestVisualization(log, chain, _urls);
         }
 
         [FubuPartial]

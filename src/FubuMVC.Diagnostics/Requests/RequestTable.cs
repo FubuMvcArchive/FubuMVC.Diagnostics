@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using FubuMVC.Core.Urls;
 using FubuMVC.Diagnostics.Runtime;
 using HtmlTags;
 
@@ -7,7 +8,7 @@ namespace FubuMVC.Diagnostics.Requests
 {
     public class RequestTable : TableTag
     {
-        public RequestTable(IEnumerable<RequestLog> logs)
+        public RequestTable(IUrlRegistry urls, IEnumerable<RequestLog> logs)
         {
             AddClass("table");
 
@@ -20,13 +21,14 @@ namespace FubuMVC.Diagnostics.Requests
                 row.Header("Duration (ms)");
             });
 
-            logs.Each(writeLog);
+            logs.Each(log => writeLog(log, urls));
         }
 
-        private void writeLog(RequestLog log)
+        private void writeLog(RequestLog log, IUrlRegistry urls)
         {
             AddBodyRow(row => {
-                row.Cell().Add("a").Text(log.LocalTime).Attr("href", log.ReportUrl);
+                var chainUrl = urls.UrlFor(log);
+                row.Cell().Add("a").Text(log.LocalTime).Attr("href", chainUrl);
                 row.Cell(log.Endpoint);
                 row.Cell(log.HttpMethod);
                 var statusCell = row.Cell();

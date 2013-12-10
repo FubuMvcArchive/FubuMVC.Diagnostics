@@ -2,6 +2,7 @@ using System;
 using FubuMVC.Core.Behaviors;
 using FubuMVC.Core.Runtime;
 using FubuMVC.Core.Runtime.Logging;
+using FubuMVC.Core.Urls;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.Diagnostics.Runtime.Tracing;
 using FubuTestingSupport;
@@ -14,10 +15,14 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
     public class DiagnosticBehaviorTester : InteractionContext<DiagnosticBehavior>
     {
         private IActionBehavior theInnerBehavior;
+        private StubUrlRegistry theUrls;
 
         protected override void beforeEach()
         {
             Services.Inject<IExceptionHandlingObserver>(new ExceptionHandlingObserver());
+
+            theUrls = new StubUrlRegistry();
+            Services.Inject<IUrlRegistry>(theUrls);
 
             theInnerBehavior = MockFor<IActionBehavior>();
             ClassUnderTest.Inner = theInnerBehavior;
@@ -80,8 +85,11 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
         {
             MockFor<IDebugDetector>().Stub(x => x.IsDebugCall()).Return(true);
 
-            var theSessionUrl = "some url";
-            MockFor<IRequestTrace>().Stub(x => x.LogUrl).Return(theSessionUrl);
+            var log = new RequestLog();
+
+            var theSessionUrl = theUrls.UrlFor(log);
+            MockFor<IRequestTrace>().Stub(x => x.Current)
+                .Return(log);
 
             ClassUnderTest.Invoke();
 

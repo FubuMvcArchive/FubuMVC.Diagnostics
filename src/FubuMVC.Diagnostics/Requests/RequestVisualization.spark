@@ -8,7 +8,7 @@
 
 <Script src="diagnostics/requestVisualization.js" />
 
-<input type="hidden" id="chainUrl" value="!{Model.Log.ChainUrl}"></input>
+<input type="hidden" id="chainUrl" value="!{Model.ChainUrl}"></input>
 
 <div class="container-fluid">
 	<div class="row-fluid">

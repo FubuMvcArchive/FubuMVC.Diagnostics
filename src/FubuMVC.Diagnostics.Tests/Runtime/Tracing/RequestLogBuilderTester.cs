@@ -64,29 +64,6 @@ namespace FubuMVC.Diagnostics.Tests.Runtime.Tracing
         }
 
         [Test]
-        public void sets_the_report_url()
-        {
-            theLog.ReportUrl.ShouldEqual(theUrls.UrlFor(theLog));
-        }
-
-        [Test]
-        public void sets_the_chain_visualization_url()
-        {
-            theLog.ChainUrl.ShouldEqual(theUrls.UrlFor(new ChainRequest{
-                Id = theOriginatingChain.UniqueId
-            }));
-        }
-
-        [Test]
-        public void sets_the_chain_details_url()
-        {
-            theLog.ChainUrl.ShouldEqual(theUrls.UrlFor(new ChainDetailsRequest
-            {
-                Id = theOriginatingChain.UniqueId
-            }));
-        }
-
-        [Test]
         public void sets_the_request_url()
         {
             theLog.Endpoint.ShouldEqual("the relative url");

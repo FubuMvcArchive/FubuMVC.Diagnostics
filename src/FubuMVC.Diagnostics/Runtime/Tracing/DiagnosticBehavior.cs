@@ -2,6 +2,7 @@ using System;
 using FubuMVC.Core.Behaviors;
 using FubuMVC.Core.Runtime;
 using FubuMVC.Core.Runtime.Logging;
+using FubuMVC.Core.Urls;
 
 namespace FubuMVC.Diagnostics.Runtime.Tracing
 {
@@ -11,14 +12,15 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
         private readonly IRequestTrace _trace;
         private readonly IOutputWriter _writer;
         private readonly IExceptionHandlingObserver _exceptionObserver;
+        private readonly IUrlRegistry _urls;
 
-        public DiagnosticBehavior(IRequestTrace trace, IDebugDetector detector, IOutputWriter writer,
-            IExceptionHandlingObserver exceptionObserver)
+        public DiagnosticBehavior(IRequestTrace trace, IDebugDetector detector, IOutputWriter writer, IExceptionHandlingObserver exceptionObserver, IUrlRegistry urls)
         {
             _trace = trace;
             _detector = detector;
             _writer = writer;
             _exceptionObserver = exceptionObserver;
+            _urls = urls;
         }
 
         protected override void invoke(Action action)
@@ -47,7 +49,7 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
 
                 if (_detector.IsDebugCall())
                 {
-                    _writer.RedirectToUrl(_trace.LogUrl);
+                    _writer.RedirectToUrl(_urls.UrlFor(_trace.Current));
                 }
             }
         }

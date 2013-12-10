@@ -8,6 +8,7 @@ using FubuMVC.Core.Http.Headers;
 using FubuMVC.Core.Runtime;
 using FubuMVC.Core.Runtime.Logging;
 using FubuCore;
+using FubuMVC.Core.Urls;
 
 namespace FubuMVC.Diagnostics.Runtime.Tracing
 {
@@ -25,11 +26,6 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
             _response = response;
 
             Current = new NulloRequestLog(); // place holder/nullo just to avoid blowing up 
-        }
-
-        public string LogUrl
-        {
-            get { return Current.ReportUrl; }
         }
 
         public void Start()

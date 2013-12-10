@@ -190,7 +190,8 @@ namespace FubuMVC.Diagnostics.Tests.Runtime
     {
         public readonly IList<object> Logs = new List<object>();
 
-        public string LogUrl { get; private set; }
+        public RequestLog Current { get; set; }
+
         public void Start()
         {
             throw new NotImplementedException();

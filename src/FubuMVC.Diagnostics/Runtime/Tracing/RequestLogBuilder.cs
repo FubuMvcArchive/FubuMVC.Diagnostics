@@ -37,8 +37,8 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
                 ChainId    = chainId,
                 Time = _systemTime.UtcNow(),
                 RequestData = report,
-                ChainUrl = _urls.UrlFor(new ChainRequest{Id = chainId}),
-                DetailsUrl = _urls.UrlFor(new ChainDetailsRequest{Id = chainId})
+                //ChainUrl = _urls.UrlFor(new ChainRequest{Id = chainId}),
+                //DetailsUrl = _urls.UrlFor(new ChainDetailsRequest{Id = chainId})
             };
 
             if (_currentChain.OriginatingChain.Route != null)
@@ -57,7 +57,7 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
                 log.HttpMethod = "n/a";
             }
 
-            log.ReportUrl = _urls.UrlFor(log);
+            //log.ReportUrl = _urls.UrlFor(log);
 
             return log;
         }
