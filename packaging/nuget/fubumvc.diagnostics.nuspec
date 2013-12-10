@@ -13,7 +13,7 @@
     <tags>fubumvc diagnostics</tags>
     <dependencies>
       <dependency id="FubuCore" version="1.2.0.260" />
-      <dependency id="FubuMVC.Core" version="1.2.0.1656" />
+      <dependency id="FubuMVC.Core" version="1.2.0.1672" />
       <dependency id="FubuMVC.Core.UI" version="0.9.9.49" />
       <dependency id="FubuMVC.Core.Assets" version="0.9.9.43" />
       <dependency id="FubuMVC.JQueryUI" />
