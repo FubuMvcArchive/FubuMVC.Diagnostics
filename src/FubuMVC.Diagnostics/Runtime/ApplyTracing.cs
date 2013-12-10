@@ -27,6 +27,11 @@ namespace FubuMVC.Diagnostics.Runtime
 
         public static bool ShouldApply(BehaviorChain chain)
         {
+            if (chain.IsTagged(BehaviorChain.NoTracing))
+            {
+                return false;
+            }
+
             // TODO -- Get the BehaviorChainFilter thing going again?
             if ( (chain.GetRoutePattern() ?? string.Empty).Contains(DiagnosticsRegistration.DIAGNOSTICS_URL_ROOT) )
             {
