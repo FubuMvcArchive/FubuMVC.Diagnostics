@@ -9,6 +9,7 @@ using FubuMVC.Diagnostics.ModelBinding;
 
 namespace DiagnosticsHarness
 {
+    
     public class HomeEndpoint
     {
         private readonly FubuHtmlDocument _document;
@@ -93,7 +94,7 @@ namespace DiagnosticsHarness
             return "Hello!";
         }
     }
-
+    
 
     public class BadBehavior : BasicBehavior
     {

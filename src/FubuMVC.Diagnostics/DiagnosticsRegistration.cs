@@ -1,6 +1,13 @@
+using System.Linq;
+using FubuCore;
 using FubuCore.Binding.InMemory;
 using FubuCore.Logging;
 using FubuMVC.Core;
+using FubuMVC.Core.Continuations;
+using FubuMVC.Core.Registration;
+using FubuMVC.Core.Registration.Nodes;
+using FubuMVC.Core.Registration.Routes;
+using FubuMVC.Diagnostics.Dashboard;
 using FubuMVC.Diagnostics.Model;
 using FubuMVC.Diagnostics.Runtime;
 using FubuMVC.Diagnostics.Visualization;
@@ -37,6 +44,33 @@ namespace FubuMVC.Diagnostics
                     graph.Services.AddService<ILogListener, ProductionModeTraceListener>();
                 }
             });
+
+            registry.Policies.Add<DefaultHome>();
+        }
+    }
+
+    [ConfigurationType(ConfigurationType.Instrumentation)]
+    public class DefaultHome : IConfigurationAction
+    {
+        public void Configure(BehaviorGraph graph)
+        {
+            if (!graph.Behaviors.Any(x => x.Route != null && x.GetRoutePattern().IsEmpty()))
+            {
+                var action = ActionCall.For<DefaultHome>(x => x.GoToDiagnostics());
+                var continuer = new ContinuationNode();
+
+                var chain = new BehaviorChain();
+                chain.Route = new RouteDefinition("");
+                chain.AddToEnd(action);
+                chain.AddToEnd(continuer);
+
+                graph.AddChain(chain);
+            }
+        }
+
+        public FubuContinuation GoToDiagnostics()
+        {
+            return FubuContinuation.RedirectTo<DashboardFubuDiagnostics>(x => x.Index(null));
         }
     }
 }
