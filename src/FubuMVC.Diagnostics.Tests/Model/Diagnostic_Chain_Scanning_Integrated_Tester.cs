@@ -50,7 +50,7 @@ namespace FubuMVC.Diagnostics.Tests.Model
 
             group.Links().Select(x => x.GetRoutePattern())
                 .Each(x => Debug.WriteLine(x))
-                .ShouldHaveTheSameElementsAs("_fubu/package/logs", "_fubu/endpoints", "_fubu/binding/all", "_fubu/requests");
+                .ShouldHaveTheSameElementsAs("_fubu/package/logs", "_fubu/conventions", "_fubu/endpoints", "_fubu/binding/all", "_fubu/requests");
         }
     }
 }
