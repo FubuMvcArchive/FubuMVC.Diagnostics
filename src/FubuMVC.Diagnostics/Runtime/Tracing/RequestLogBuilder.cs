@@ -29,7 +29,14 @@ namespace FubuMVC.Diagnostics.Runtime.Tracing
         public RequestLog BuildForCurrentRequest()
         {
             var report = new ValueReport();
-            _requestData.WriteReport(report);
+            try
+            {
+                _requestData.WriteReport(report);
+            }
+            catch (Exception)
+            {
+                // swallow the problem
+            }
 
             var chainId = _currentChain.OriginatingChain == null ? Guid.Empty :
                 _currentChain.OriginatingChain.UniqueId;
