@@ -12,7 +12,7 @@ namespace FubuMVC.Diagnostics.Endpoints
             AddHeaderRow(row => {
                 row.Header("Details");
                 row.Header("Description");
-                row.Header("Contraints");
+                row.Header("Constraints");
                 row.Header("Action(s)");
             });
 
