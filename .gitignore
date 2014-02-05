@@ -61,3 +61,4 @@ fubu.cmd
 logs
 Gemfile.lock
 snippets
+logs/ripple.log
