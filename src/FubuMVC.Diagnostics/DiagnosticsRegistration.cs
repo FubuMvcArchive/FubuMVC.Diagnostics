@@ -59,8 +59,9 @@ namespace FubuMVC.Diagnostics
                 var action = ActionCall.For<DefaultHome>(x => x.GoToDiagnostics());
                 var continuer = new ContinuationNode();
 
-                var chain = new BehaviorChain();
-                chain.Route = new RouteDefinition("");
+                var route = new RouteDefinition("");
+                route.AddHttpMethodConstraint("GET");
+                var chain = new BehaviorChain {Route = route};
                 chain.AddToEnd(action);
                 chain.AddToEnd(continuer);
 
