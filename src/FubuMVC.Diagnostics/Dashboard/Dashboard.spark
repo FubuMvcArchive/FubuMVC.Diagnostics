@@ -21,8 +21,7 @@
       <ol>
         <li>
           <strong>
-            <a href="${this.Urls.UrlFor<FubuMVC.Diagnostics.Endpoints.RoutesRequest>()} Explore your application
-            </a>
+            <a href="${this.Urls.UrlFor(new FubuMVC.Diagnostics.Endpoints.RoutesRequest())}"> Explore your application</a>
           </strong>
           <p>The endpoint explorer allows you to sort and filter through the routes, endpoints, and chains within your application. You can also drill into the details and visualize the behavior chain.</p>
         </li>
